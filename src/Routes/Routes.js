@@ -12,22 +12,24 @@ import Account from './../Pages/DrawerPage/Account';
 import Application from './../Pages/DrawerPage/Application';
 import RiskMonitor from './../Pages/DrawerPage/RiskMonitor';
 
-export  const ApplicationRoutes =()=>{
+export  const ApplicationRoutes =({mode,handleChangeMode})=>{
     return (
         <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />}/>
-          <Route path="/" element={<Home />}>
+          <Route path="/" element={<Home mode={mode} handleChangeMode={handleChangeMode}/>}>
             <Route
                 path="/"
-                element={<Navigate to="/account" />}
+                element={<Navigate to="/account"/>}
             />
-            {/* <Route  index element={<Account />} /> */}
             <Route path="account" element={<Account />} />
             <Route path="application" element={<Application />} />
             <Route path="riskmonitor" element={<RiskMonitor />} />
           </Route>
-         
+          <Route
+                path="*"
+                element={<Navigate to="/" />}
+          />
         
         </Routes>
       </BrowserRouter>

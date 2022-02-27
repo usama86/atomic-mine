@@ -40,9 +40,9 @@ const DrawerUI = ({ mobileOpen, drawerWidth, handleDrawerToggle,handleDrawerPage
               <ListItem 
                 button key={text} onClick={(e)=>{onListItemClick(e,text)}}
               sx={{
-                background: text.replace(/\s/g, '').toLowerCase()===drawerPage ? '#00B4A4':'',
+                backgroundColor: text.replace(/\s/g, '').toLowerCase()===drawerPage ? 'secondary.main':'',
                 "&:hover":{
-                  background:text.replace(/\s/g, '').toLowerCase()===drawerPage && ('#00B4A4')
+                  backgroundColor:text.replace(/\s/g, '').toLowerCase()===drawerPage && ('secondary.light')
                 },
               }}
               >

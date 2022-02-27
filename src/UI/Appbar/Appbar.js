@@ -7,8 +7,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import Box from './../Layout/Box';
 import { useNavigate } from "react-router-dom";
+import {style} from './Appbar.style';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 
-const Appbar = ({ handleDrawerToggle, drawerWidth, ...otherProps }) => {
+const Appbar = ({ handleDrawerToggle, drawerWidth, mode, handleChangeMode, ...otherProps }) => {
     let navigate = useNavigate();
 
    const onLogout=()=>{
@@ -34,25 +37,43 @@ const Appbar = ({ handleDrawerToggle, drawerWidth, ...otherProps }) => {
         <MenuIcon />
       </IconButton>
       <Box  
-            sx={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "space-between",
-            }}
+            sx={style.box}
       >
-        <Typography variant="h6" noWrap component="div">
+        <Typography variant="h6" noWrap component="div" sx={{flexGrow:'1'}}>
             Responsive drawer
         </Typography>
-        <Typography variant="h6" noWrap component="div"
+            {mode ==='light' ? 
+            <Brightness4Icon onClick={()=>{
+                handleChangeMode("dark");
+
+            }} 
             sx={{
+                fontSize:'1.6rem',
                 "&:hover":{
                     cursor: "pointer"
                 },
-            }}
-            onClick={onLogout}
-        >
-            Logout
-        </Typography>
+            }}/> :
+            <Brightness7Icon
+            onClick={()=>{
+                handleChangeMode("light");
+            }} 
+            sx={{
+                fontSize:'1.6rem',
+                "&:hover":{
+                    cursor: "pointer"
+                },
+                }}/>}           
+            <Typography variant="h6" noWrap component="div"
+                sx={{
+                    "&:hover":{
+                        cursor: "pointer"
+                    },
+                    marginLeft:"0.8rem"
+                }}
+                onClick={onLogout}
+            >
+                Logout
+            </Typography>
       </Box>
     </Toolbar>
   </AppBar>
