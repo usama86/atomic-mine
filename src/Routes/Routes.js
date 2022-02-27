@@ -3,24 +3,25 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-// import your route components too
+//Application
 import Login from './../Pages/Login/Login';
 import Home from './../Pages/Home/Home';
+//DrawerRoutes
+import Account from './../Pages/DrawerPage/Account';
+import Application from './../Pages/DrawerPage/Application';
+import RiskMonitor from './../Pages/DrawerPage/RiskMonitor';
 
-
-function RoutesFunc() {
+export  const ApplicationRoutes =()=>{
     return (
         <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />}/>
-          <Route path="/Home" element={<Home />} />
-            {/* <Route path="teams" element={<Teams />}>
-              <Route path=":teamId" element={<Team />} />
-              <Route path="new" element={<NewTeamForm />} />
-              <Route index element={<LeagueStandings />} />*/}
+          <Route path="/login" element={<Login />}/>
+          <Route path="/" element={<Home />}>
+            <Route path="account" element={<Account />} />
+            <Route path="application" element={<Application />} />
+            <Route path="riskmonitor" element={<RiskMonitor />} />
+          </Route> 
         </Routes>
       </BrowserRouter>
     );
   }
-  
-  export default RoutesFunc;

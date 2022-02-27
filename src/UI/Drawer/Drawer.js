@@ -2,38 +2,53 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import Toolbar from '@mui/material/Toolbar';
+import { MdOutlineManageAccounts } from "react-icons/md";
+import { AiOutlineAppstore } from "react-icons/ai";
+import { DiAsterisk } from "react-icons/di";
+import { useNavigate } from "react-router-dom";
+import Img from './../../Images/Logo.png';
 
-
-const DrawerUI = ({ mobileOpen, drawerWidth, handleDrawerToggle, ...otherProps }) => {
+const DrawerUI = ({ mobileOpen, drawerWidth, handleDrawerToggle,handleDrawerPageToggle, drawerPage, ...otherProps }) => {
+    let navigate = useNavigate();
     const { window } = otherProps;
     const container = window !== undefined ? () => window().document.body : undefined;
+
+    const onListItemClick =(e,text)=>{
+      let val = text.replace(/\s/g, '').toLowerCase();
+      handleDrawerPageToggle(val);
+      navigate("/"+val);
+    }
     const drawer = (
         <div>
-          <Toolbar />
+          <Toolbar sx={{position:'relative'}}>
+                    <ListItem sx={{position:'absolute',left:0}}>
+                        <ListItemIcon>
+                            <DiAsterisk size={35}/>
+                        </ListItemIcon>
+                            <ListItemText primary={"Bella Ziong"} />
+                    </ListItem>   
+          </Toolbar>
           <Divider />
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
+            {['Account', 'Application', 'Risk Monitor'].map((text, index) => (
+              <ListItem 
+                button key={text} onClick={(e)=>{onListItemClick(e,text)}}
+              sx={{
+                background:'#00B4A4'
+              }}
+              >
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {
+                  index === 0 ? <MdOutlineManageAccounts size={21}/> : 
+                  index === 1 ? <AiOutlineAppstore size={21}/> :
+                  index === 2 ? <DiAsterisk size={21}/> : <MailIcon/>
+                  }
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>

@@ -1,10 +1,10 @@
-import Routes from './Routes/Routes';
+import {ApplicationRoutes} from './Routes/Routes';
 
 function App() {
  
   return (
     <>
-      <Routes/>
+      <ApplicationRoutes/>
     </>
   );
 }

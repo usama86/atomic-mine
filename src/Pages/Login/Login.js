@@ -27,7 +27,8 @@ function Login() {
 
 	const onSubmit = async (event) => {
 		event.preventDefault();
-		navigate('/home');
+		localStorage.setItem("signIn",true);
+		navigate('/Account');
 
 	};
 

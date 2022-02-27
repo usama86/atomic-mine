@@ -5,9 +5,16 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
+import Box from './../Layout/Box';
+import { useNavigate } from "react-router-dom";
 
 const Appbar = ({ handleDrawerToggle, drawerWidth, ...otherProps }) => {
+    let navigate = useNavigate();
 
+   const onLogout=()=>{
+       localStorage.removeItem("signIn");
+       navigate('/login');
+   } 
   return (
     <AppBar
     position="fixed"
@@ -26,9 +33,27 @@ const Appbar = ({ handleDrawerToggle, drawerWidth, ...otherProps }) => {
       >
         <MenuIcon />
       </IconButton>
-      <Typography variant="h6" noWrap component="div">
-        Responsive drawer
-      </Typography>
+      <Box  
+            sx={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+            }}
+      >
+        <Typography variant="h6" noWrap component="div">
+            Responsive drawer
+        </Typography>
+        <Typography variant="h6" noWrap component="div"
+            sx={{
+                "&:hover":{
+                    cursor: "pointer"
+                },
+            }}
+            onClick={onLogout}
+        >
+            Logout
+        </Typography>
+      </Box>
     </Toolbar>
   </AppBar>
   );
