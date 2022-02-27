@@ -4,7 +4,7 @@ function Application() {
  
     return (
       <>
-        <div>Application BROOOOOOOOOOOOo</div>
+        <div>Application</div>
       </>
     );
   }
