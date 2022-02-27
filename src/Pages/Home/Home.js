@@ -4,10 +4,7 @@ import AppBar from './../../UI/Appbar/Appbar';
 import Drawer from './../../UI/Drawer/Drawer';
 import Box from './../../UI/Layout/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import {
-  Outlet
-} from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -28,8 +25,6 @@ function Home(props) {
     let isLoggedIn = localStorage.getItem("signIn");
     if(!isLoggedIn)
       navigate('/login');
-    // else
-      // navigate('/account');
   });
 
   

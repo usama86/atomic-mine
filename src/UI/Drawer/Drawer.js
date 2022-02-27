@@ -12,7 +12,7 @@ import { MdOutlineManageAccounts } from "react-icons/md";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { DiAsterisk } from "react-icons/di";
 import { useNavigate } from "react-router-dom";
-import Img from './../../Images/Logo.png';
+// import Img from './../../Images/Logo.png';
 
 const DrawerUI = ({ mobileOpen, drawerWidth, handleDrawerToggle,handleDrawerPageToggle, drawerPage, ...otherProps }) => {
     let navigate = useNavigate();
@@ -40,7 +40,10 @@ const DrawerUI = ({ mobileOpen, drawerWidth, handleDrawerToggle,handleDrawerPage
               <ListItem 
                 button key={text} onClick={(e)=>{onListItemClick(e,text)}}
               sx={{
-                background:'#00B4A4'
+                background: text.replace(/\s/g, '').toLowerCase()===drawerPage ? '#00B4A4':'',
+                "&:hover":{
+                  background:text.replace(/\s/g, '').toLowerCase()===drawerPage && ('#00B4A4')
+                },
               }}
               >
                 <ListItemIcon>
