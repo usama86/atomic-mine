@@ -8,7 +8,8 @@ import { useNavigate, Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
 
-function Home(props) {
+function Home({mode,handleChangeMode}) {
+
   let navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [drawerPage, setDrawerPage] = React.useState("account");
@@ -32,7 +33,7 @@ function Home(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-        <AppBar drawerWidth={drawerWidth} handleDrawerToggle={handleDrawerToggle}/>
+        <AppBar drawerWidth={drawerWidth} handleDrawerToggle={handleDrawerToggle} mode={mode} handleChangeMode={handleChangeMode}/>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
