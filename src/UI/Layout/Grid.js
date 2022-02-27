@@ -21,6 +21,4 @@ CenteredGrid.propTypes = {
 CenteredGrid.defaultProps = {
   children: <div>Default Children</div>,
   xsSize: 12,
-  item: false,
-  bgColor: null,
 };

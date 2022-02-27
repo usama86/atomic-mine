@@ -3,9 +3,11 @@ import Input from './../../UI/Input/Input';
 import './Login.css';
 import { AiOutlineUser } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 
 function Login() {
+	let navigate = useNavigate();
 	const [ email, setEmail ] = React.useState({
 		value: '',
 		touch: false,
@@ -25,7 +27,8 @@ function Login() {
 
 	const onSubmit = async (event) => {
 		event.preventDefault();
-	
+		navigate('/home');
+
 	};
 
 	return (

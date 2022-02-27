@@ -3,7 +3,6 @@ import React from 'react';
 
 export default ({ value, onChange,...props }) => (
 	<input
-		
         value={value}
         onChange={onChange}
         className="form-control"
