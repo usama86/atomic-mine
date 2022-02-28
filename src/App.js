@@ -4,18 +4,16 @@ import Theme from './Store/Theme/theme';
 
 function App() {
   const [mode,setMode] = React.useState('light');
+
+  React.useEffect(()=>{
+    let modeStored = localStorage.getItem('Mode');
+    if(modeStored)
+      setMode(modeStored)
+  },[])
   const handleChangeMode = (modes) =>{
-    if(modes==='light')
-    {
-      setMode('dark');
+      setMode(modes);       
+      localStorage.setItem('Mode',modes);  
     }
-    else
-    {
-      setMode('light');
-      console.log("light"); 
-    }
-        
-  }
   return (
     <>
         <Theme mode={mode} handleChangeMode={handleChangeMode}>

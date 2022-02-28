@@ -1,6 +1,7 @@
 import { createTheme, ThemeProvider} from '@mui/material/styles';
 import {getDesignTokens} from './DesignToken';
 
+
 function ThemeFunc({children,mode}){
 
       const darkModeTheme = createTheme(getDesignTokens(mode));

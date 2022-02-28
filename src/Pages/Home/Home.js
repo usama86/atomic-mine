@@ -26,7 +26,7 @@ function Home({mode,handleChangeMode}) {
     let isLoggedIn = localStorage.getItem("signIn");
     if(!isLoggedIn)
       navigate('/login');
-  });
+  },[]);
 
   
 
