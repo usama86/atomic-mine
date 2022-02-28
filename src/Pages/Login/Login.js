@@ -76,7 +76,7 @@ const Login = () => {
                 type="password"
                 label="Enter Password"
               />
-              <Button>Login</Button>
+              <Button sx={{ marginBottom: "1rem" }}>Login</Button>
             </Stack>
           </Box>
           <Box
@@ -85,9 +85,16 @@ const Login = () => {
               background: theme.palette.primary.main,
               clipPath: "polygon(20% 0%, 100% 0, 100% 100%, 0% 100%)",
               transform: "translateX(20%)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            <img src={logo} width="100%" height="100%" alt="logo" />
+            <img
+              src={logo}
+              style={{ maxWidth: " 100%", height: "auto" }}
+              alt="logo"
+            />
           </Box>
         </Stack>
       </Card>
