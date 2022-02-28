@@ -12,6 +12,7 @@ import { MdOutlineManageAccounts } from "react-icons/md";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { DiAsterisk } from "react-icons/di";
 import { useNavigate } from "react-router-dom";
+import Constants from './../../Constants/Constants';
 // import Img from './../../Images/Logo.png';
 
 const DrawerUI = ({ mobileOpen, drawerWidth, handleDrawerToggle,handleDrawerPageToggle, drawerPage, ...otherProps }) => {
@@ -36,7 +37,7 @@ const DrawerUI = ({ mobileOpen, drawerWidth, handleDrawerToggle,handleDrawerPage
           </Toolbar>
           <Divider />
           <List>
-            {['Account', 'Application', 'Risk Monitor'].map((text, index) => (
+            {[Constants.Account, Constants.Application, Constants.RiskMonitor].map((text, index) => (
               <ListItem 
                 button key={text} onClick={(e)=>{onListItemClick(e,text)}}
               sx={{

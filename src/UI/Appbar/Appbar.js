@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import {style} from './Appbar.style';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import Constants from './../../Constants/Constants';
 
 const Appbar = ({ handleDrawerToggle, drawerWidth, mode, handleChangeMode, ...otherProps }) => {
     let navigate = useNavigate();
@@ -41,7 +42,7 @@ const Appbar = ({ handleDrawerToggle, drawerWidth, mode, handleChangeMode, ...ot
             sx={style.box}
       >
         <Typography variant="h6" noWrap component="div" sx={{flexGrow:'1'}}>
-            Responsive drawer
+            {Constants.Atomic_Vault}
         </Typography>
             {mode ==='light' ? 
             <Brightness4Icon onClick={()=>{
@@ -73,7 +74,7 @@ const Appbar = ({ handleDrawerToggle, drawerWidth, mode, handleChangeMode, ...ot
                 }}
                 onClick={onLogout}
             >
-                Logout
+                {Constants.Logout}
             </Typography>
       </Box>
     </Toolbar>
