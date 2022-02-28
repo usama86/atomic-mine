@@ -10,7 +10,6 @@ import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 
 const green = "#00B4A4";
-const black = "#121C26";
 const StyledField = styled(TextField)({
   "& label.Mui-focused": {
     color: green,
@@ -25,12 +24,12 @@ const StyledField = styled(TextField)({
     "&.Mui-focused fieldset": {
       borderColor: green,
     },
-    "& fieldset": {
-      borderTop: "none",
-      borderRight: "none",
-      borderBottom: "none",
-      borderRadius: 0,
-    },
+    // "& fieldset": {
+    //   borderTop: "none",
+    //   borderRight: "none",
+    //   borderBottom: "none",
+    //   borderRadius: 0,
+    // },
   },
 });
 

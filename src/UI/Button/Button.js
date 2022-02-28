@@ -1,6 +1,5 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import { useTheme } from "@emotion/react";
 import { styled } from "@mui/material/styles";
 
 const ThemedBtn = styled(Button)({
@@ -10,7 +9,6 @@ const ThemedBtn = styled(Button)({
   width: "12rem",
 });
 export default function ButtonComp({ children, ...otherProps }) {
-  const theme = useTheme();
   return (
     <ThemedBtn
       variant="contained"
