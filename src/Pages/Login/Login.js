@@ -7,6 +7,8 @@ import Stack from "../../UI/Layout/Stack";
 import Button from "../../UI/Button/Button";
 import { Typography, TextField, useTheme } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
+
 const green = "#00B4A4";
 const black = "#121C26";
 const StyledField = styled(TextField)({
@@ -34,7 +36,14 @@ const StyledField = styled(TextField)({
 
 const Login = () => {
   const theme = useTheme();
-  console.log(theme);
+  let navigate = useNavigate();
+ 
+  const onSubmit = async (event) => {
+		event.preventDefault();
+		localStorage.setItem("signIn",true);
+		navigate('/account');
+  }
+
   return (
     <Paper
       style={{
@@ -76,7 +85,7 @@ const Login = () => {
                 type="password"
                 label="Enter Password"
               />
-              <Button>Login</Button>
+              <Button onClick={onSubmit}>Login</Button>
             </Stack>
           </Box>
           <Box
