@@ -13,6 +13,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 const Appbar = ({ handleDrawerToggle, drawerWidth, mode, handleChangeMode, ...otherProps }) => {
     let navigate = useNavigate();
+    console.log(mode);
 
    const onLogout=()=>{
        localStorage.removeItem("signIn");
