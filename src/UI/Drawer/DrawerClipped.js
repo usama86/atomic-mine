@@ -14,13 +14,6 @@ import { AiOutlineAppstore } from "react-icons/ai";
 import { DiAsterisk } from "react-icons/di";
 import AppBar from "../Appbar/Appbar";
 import { useTheme } from "@emotion/react";
-import { Typography } from "@mui/material";
-import Stack from "../Layout/Stack";
-import Logo from "../../Store/LogoSvg";
-import CssBaseline from "@mui/material/CssBaseline";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { FiLogOut } from "react-icons/fi";
-import IconButton from "@mui/material/IconButton";
 
 export default function ClippedDrawer({
   children,
@@ -34,10 +27,9 @@ export default function ClippedDrawer({
   const theme = useTheme();
   let navigate = useNavigate();
   console.log(mode);
-  const onLogout = () => {
-    localStorage.removeItem("signIn");
-    navigate("/login");
-  };
+  // const { window } = otherProps;
+  // const container =
+  //   window !== undefined ? () => window().document.body : undefined;
 
   const onListItemClick = (e, text) => {
     let val = text.replace(/\s/g, "").toLowerCase();
@@ -50,109 +42,7 @@ export default function ClippedDrawer({
   // };
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        sx={{
-          zIndex: (theme) => theme.zIndex.drawer + 1,
-          backgroundColor: theme.palette.mode === "light" ? "#fff" : "",
-        }}
-      >
-        <Toolbar>
-          <Stack
-            direction="row"
-            sx={{ width: "100%" }}
-            justifyContent="space-between"
-            alignItems="center"
-          >
-            <Box sx={{ flexGrow: 1 }}>
-              <Typography
-                variant="body"
-                color={
-                  theme.palette.mode === "light"
-                    ? theme.palette.primary.main
-                    : "#fff"
-                }
-                noWrap
-                component="div"
-              >
-                <Stack direction="row" alignItems="center">
-                  <span style={{ marginRight: "0.6rem" }}>
-                    <Logo
-                      width="1.7rem"
-                      height="1.7rem"
-                      color={
-                        theme.palette.mode === "light"
-                          ? theme.palette.primary.main
-                          : "#fff"
-                      }
-                    />
-                  </span>
-                  {Constants.Atomic_Vault}
-                </Stack>
-              </Typography>
-            </Box>
-            <Box sx={{ mr: "0.5rem" }}>
-              <Typography
-                variant="body"
-                color={theme.palette.mode === "light" ? "#000" : "#fff"}
-                noWrap
-                component="div"
-              >
-                Bella Ziong
-              </Typography>
-            </Box>
-            <Box>
-              <Typography variant="body" noWrap component="div">
-                <Stack direction="row">
-                  {mode === "light" ? (
-                    <IconButton
-                      onClick={() => {
-                        handleChangeMode("dark");
-                      }}
-                    >
-                      <MdDarkMode
-                        style={{
-                          height: "100%",
-                          color: theme.palette.primary.main,
-                          fontSize: "1.6rem",
-
-                          cursor: "pointer",
-                        }}
-                      />
-                    </IconButton>
-                  ) : (
-                    <IconButton
-                      onClick={() => {
-                        handleChangeMode("light");
-                      }}
-                    >
-                      <MdLightMode
-                        style={{
-                          height: "100%",
-                          fontSize: "1.6rem",
-                          cursor: "pointer",
-                        }}
-                      />
-                    </IconButton>
-                  )}
-                  <IconButton onClick={onLogout}>
-                    <FiLogOut
-                      style={{
-                        display: "flex",
-                        color:
-                          theme.palette.mode === "light"
-                            ? theme.palette.primary.main
-                            : "",
-                      }}
-                    />
-                  </IconButton>
-                </Stack>
-              </Typography>
-            </Box>
-          </Stack>
-        </Toolbar>
-      </AppBar>
+      <AppBar mode={mode} handleChangeMode={handleChangeMode} />
       <Drawer
         variant="permanent"
         sx={{
