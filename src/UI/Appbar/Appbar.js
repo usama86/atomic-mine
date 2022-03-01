@@ -8,10 +8,7 @@ import Typography from "@mui/material/Typography";
 import Box from "./../Layout/Box";
 import { useNavigate } from "react-router-dom";
 import { style } from "./Appbar.style";
-import Brightness4Icon from "@mui/icons-material/Brightness4";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Constants from "./../../Constants/Constants";
-import { FiLogOut } from "react-icons/fi";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const Appbar = ({

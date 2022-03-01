@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-  useLocation,
-} from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 //Application
 import Login from "./../Pages/Login/Login";
 import Home from "./../Pages/Home/Home";
@@ -22,7 +16,7 @@ export const ApplicationRoutes = ({
   const location = useLocation();
   React.useEffect(() => {
     getCurrentPath(location.pathname);
-  }, [location.pathname]);
+  }, [location.pathname, getCurrentPath]);
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
