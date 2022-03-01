@@ -4,9 +4,6 @@ import Theme from "./Store/Theme/theme";
 import { BrowserRouter } from "react-router-dom";
 function App() {
   const [mode, setMode] = React.useState("light");
-  // React.useEffect(() => {
-  //   console.log(window.location.pathname);
-  // }, [window]);
   React.useEffect(() => {
     let modeStored = localStorage.getItem("Mode");
     if (modeStored) setMode(modeStored);
