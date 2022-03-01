@@ -9,33 +9,47 @@ import { Typography, TextField, useTheme } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 
-const green = "#00B4A4";
-const StyledField = styled(TextField)({
+const Background = styled(Paper)(({ theme }) => {
+  return {
+    backgroundColor: theme.palette.mode === "light" && "#f4f4f4",
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
+});
+
+const CardStyled = styled(Card)(({ theme }) => ({
+  width: "60vw",
+  backgroundColor: theme.palette.mode === "dark" && theme.palette.grey[900],
+}));
+
+const StyledField = styled(TextField)(({ theme }) => ({
   "& label.Mui-focused": {
-    color: green,
+    color: theme.palette.primary.main,
   },
   ".MuiInputLabel-root.Mui-error": {
-    color: "red",
+    color: theme.palette.error.main,
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: green,
+      borderColor: theme.palette.primary.main,
       borderTop: "none",
       borderRight: "none",
       borderBottom: "none",
       borderRadius: 0,
     },
     "&:hover fieldset": {
-      borderColor: green,
+      borderColor: theme.palette.primary.main,
     },
     "&.Mui-focused fieldset": {
-      borderColor: green,
+      borderColor: theme.palette.primary.main,
     },
     "&.Mui-error fieldset": {
       borderColor: "red",
     },
   },
-});
+}));
 
 const Login = () => {
   const theme = useTheme();
@@ -64,23 +78,10 @@ const Login = () => {
     access.touched = true;
     setFormData(temp);
   };
+
   return (
-    <Paper
-      style={{
-        backgroundColor: "#f4f4f4",
-        color: "red",
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Card
-        sx={{
-          width: "60vw",
-          background: "#fff",
-        }}
-      >
+    <Background>
+      <CardStyled>
         <Stack direction="row" sx={{ height: "100%" }}>
           <Box sx={{ flexGrow: 1 }}>
             <form onSubmit={submitLoginHandler}>
@@ -97,6 +98,7 @@ const Login = () => {
               >
                 <Typography
                   variant="h4"
+                  color={theme.palette.text.primary}
                   sx={{ mb: "1rem", mt: "1rem", letterSpacing: "2px" }}
                 >
                   Log in
@@ -162,8 +164,8 @@ const Login = () => {
             />
           </Box>
         </Stack>
-      </Card>
-    </Paper>
+      </CardStyled>
+    </Background>
   );
 };
 

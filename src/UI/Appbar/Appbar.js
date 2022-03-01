@@ -57,11 +57,12 @@ const Appbar = ({
             {Constants.Atomic_Vault}
           </Typography>
           {mode === "light" ? (
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                handleChangeMode("dark");
+              }}
+            >
               <MdDarkMode
-                onClick={() => {
-                  handleChangeMode("dark");
-                }}
                 /**
                * height: 100%;
     width: 1.4rem;
@@ -77,11 +78,12 @@ const Appbar = ({
               />
             </IconButton>
           ) : (
-            <IconButton>
+            <IconButton
+              onClick={() => {
+                handleChangeMode("light");
+              }}
+            >
               <MdLightMode
-                onClick={() => {
-                  handleChangeMode("light");
-                }}
                 style={{
                   height: "100%",
                   fontSize: "1.6rem",
