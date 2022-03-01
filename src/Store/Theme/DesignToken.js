@@ -1,24 +1,21 @@
 export const getDesignTokens = (mode) => ({
-    palette: {
-      mode,
-      ...(mode === 'dark' && {
-      primary: {
-          main: "#121C26",
-        },
-     secondary:{
-         main:"#00B4A4",
-     }
-      }),
-      ...(mode === 'light' && {
-        primary: {
-            main: "#121C26",
-        },
-        secondary:{
-            main:"#00B4A4",
-        }
-      }),
-
+  palette: {
+    mode,
+    ...(mode === "dark" && {
+      secondary: {
+        main: "#121C26",
       },
-      
-     
-  });
+      primary: {
+        main: "#00B4A4",
+      },
+    }),
+    ...(mode === "light" && {
+      secondary: {
+        main: "#121C26",
+      },
+      primary: {
+        main: "#00B4A4",
+      },
+    }),
+  },
+});

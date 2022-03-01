@@ -8,12 +8,18 @@ const ThemedBtn = styled(Button)({
   padding: "0.8rem 0",
   width: "12rem",
 });
-export default function ButtonComp({ children, ...otherProps }) {
+export default function ButtonComp({
+  styleOverrides,
+  variant,
+  themeColor,
+  children,
+  ...otherProps
+}) {
   return (
     <ThemedBtn
-      variant="contained"
-      color="secondary"
-      sx={{ color: "white" }}
+      variant={variant}
+      color={themeColor}
+      style={{ ...styleOverrides }}
       //   sx={{ background: theme.palette.secondary.main }}
       {...otherProps}
     >
@@ -23,5 +29,7 @@ export default function ButtonComp({ children, ...otherProps }) {
 }
 
 ButtonComp.defaultProps = {
+  variant: "contained",
   children: "No children given",
+  themeColor: "primary",
 };

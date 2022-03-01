@@ -14,9 +14,16 @@ const StyledField = styled(TextField)({
   "& label.Mui-focused": {
     color: green,
   },
+  ".MuiInputLabel-root.Mui-error": {
+    color: "red",
+  },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
       borderColor: green,
+      borderTop: "none",
+      borderRight: "none",
+      borderBottom: "none",
+      borderRadius: 0,
     },
     "&:hover fieldset": {
       borderColor: green,
@@ -24,29 +31,44 @@ const StyledField = styled(TextField)({
     "&.Mui-focused fieldset": {
       borderColor: green,
     },
-    // "& fieldset": {
-    //   borderTop: "none",
-    //   borderRight: "none",
-    //   borderBottom: "none",
-    //   borderRadius: 0,
-    // },
+    "&.Mui-error fieldset": {
+      borderColor: "red",
+    },
   },
 });
 
 const Login = () => {
   const theme = useTheme();
+  const [formData, setFormData] = React.useState({
+    username: {
+      value: "",
+      touched: false,
+    },
+    password: {
+      value: "",
+      touched: false,
+    },
+  });
   let navigate = useNavigate();
-
-  const onSubmit = async (event) => {
-    event.preventDefault();
+  const submitLoginHandler = (e) => {
+    e.preventDefault();
+    console.log("login data", formData);
     localStorage.setItem("signIn", true);
     navigate("/account");
   };
-
+  const changeValueHandler = (e) => {
+    const field = e.target.getAttribute("name");
+    let temp = { ...formData };
+    const access = temp[field];
+    access.value = e.target.value;
+    access.touched = true;
+    setFormData(temp);
+  };
   return (
     <Paper
       style={{
         backgroundColor: "#f4f4f4",
+        color: "red",
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
@@ -61,38 +83,71 @@ const Login = () => {
       >
         <Stack direction="row" sx={{ height: "100%" }}>
           <Box sx={{ flexGrow: 1 }}>
-            <Stack
-              spacing={2}
-              sx={{
-                // borderRight: `2px solid ${theme.palette.secondary.main}`,
-                height: "100%",
-                alignItems: "center",
-                padding: "1rem",
-              }}
-            >
-              <Typography variant="h4" sx={{ letterSpacing: "2px" }}>
-                Log in
-              </Typography>
-              <StyledField
-                label="Username"
-                // error
-                // helperText="Username not found!"
-              />
-              <StyledField
-                // error
-                // helperText="Incorrect Password!"
-                type="password"
-                label="Enter Password"
-              />
-              <Button sx={{ marginBottom: "1rem" }} onClick={onSubmit}>
-                Login
-              </Button>
-            </Stack>
+            <form onSubmit={submitLoginHandler}>
+              <Stack
+                spacing={2}
+                sx={{
+                  alignItems: "flex-start",
+                  padding: "1rem",
+                  paddingLeft: "2rem",
+                  paddingBottom: "2rem",
+                  height: "100%",
+                  // padding: "1rem",
+                }}
+              >
+                <Typography
+                  variant="h4"
+                  sx={{ mb: "1rem", mt: "1rem", letterSpacing: "2px" }}
+                >
+                  Log in
+                </Typography>
+                <StyledField
+                  fullWidth
+                  name="username"
+                  onChange={changeValueHandler}
+                  label="Username"
+                  value={formData.username.value ?? ""}
+                  error={
+                    formData.username.touched && formData.username.value === ""
+                  }
+                  // helperText={
+                  //   formData.username.touched &&
+                  //   formData.username.value === "" &&
+                  //   "Required!"
+                  // }
+                />
+                <StyledField
+                  fullWidth
+                  error={
+                    formData.password.touched && formData.password.value === ""
+                  }
+                  // helperText={
+                  //   formData.password.touched &&
+                  //   formData.password.value === "" &&
+                  //   "Required!"
+                  // }
+                  onChange={changeValueHandler}
+                  value={formData.password.value ?? ""}
+                  type="password"
+                  name="password"
+                  label="Enter Password"
+                />
+                <Button
+                  styleOverrides={{
+                    color: "white",
+                  }}
+                  type="submit"
+                  sx={{ marginBottom: "1rem", alignSelf: "center" }}
+                >
+                  Login
+                </Button>
+              </Stack>
+            </form>
           </Box>
           <Box
             sx={{
               width: "50%",
-              background: theme.palette.primary.main,
+              background: theme.palette.secondary.main,
               clipPath: "polygon(20% 0%, 100% 0, 100% 100%, 0% 100%)",
               transform: "translateX(20%)",
               display: "flex",
