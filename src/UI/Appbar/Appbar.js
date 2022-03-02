@@ -6,7 +6,6 @@ import { useTheme } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-
 import IconButton from "@mui/material/IconButton";
 // customized mui components
 import Box from "../Layout/Box";

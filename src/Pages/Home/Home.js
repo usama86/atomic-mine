@@ -6,6 +6,7 @@ import AppBar from "../../UI/Appbar/Appbar";
 import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
+
 const Home = ({ mode, handleChangeMode }) => {
   const navigate = useNavigate();
   const [drawerPage, setDrawerPage] = React.useState("account");
