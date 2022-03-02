@@ -1,12 +1,9 @@
 // primary
 import * as React from "react";
 import { useNavigate } from "react-router-dom";
-
 // Mui components
 import { Toolbar, List, ListItemIcon, ListItemText } from "@mui/material";
-
 import MailIcon from "@mui/icons-material/Mail";
-import Constants from "./../../Constants/Constants";
 // icons
 import { MdOutlineManageAccounts } from "react-icons/md";
 import { AiOutlineAppstore } from "react-icons/ai";
@@ -19,6 +16,7 @@ import {
   DrawerContentBox,
 } from "./DrawerClipped.style";
 // helpers
+import Constants from "./../../Constants/Constants";
 import { links } from "../../Constants/Drawerlinks";
 import { genNavLinkColor } from "../../helpers/utils";
 

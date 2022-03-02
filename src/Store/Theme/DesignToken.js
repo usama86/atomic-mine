@@ -1,20 +1,23 @@
+const black = "#121C26";
+const green = "#00B4A4";
+
 export const getDesignTokens = (mode) => ({
   palette: {
     mode,
     ...(mode === "dark" && {
       secondary: {
-        main: "#121C26",
+        main: black,
       },
       primary: {
-        main: "#00B4A4",
+        main: green,
       },
     }),
     ...(mode === "light" && {
       secondary: {
-        main: "#121C26",
+        main: black,
       },
       primary: {
-        main: "#00B4A4",
+        main: green,
       },
     }),
   },
