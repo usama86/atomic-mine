@@ -1,18 +1,26 @@
+// primary
 import * as React from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+import { useNavigate } from "react-router-dom";
+
+// Mui components
+import { Toolbar, List, ListItemIcon, ListItemText } from "@mui/material";
+
 import MailIcon from "@mui/icons-material/Mail";
 import Constants from "./../../Constants/Constants";
-import { useNavigate } from "react-router-dom";
+// icons
 import { MdOutlineManageAccounts } from "react-icons/md";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { DiAsterisk } from "react-icons/di";
-import AppBar from "../Appbar/Appbar";
+// styled components
+import {
+  StyledDrawer,
+  StyledListItem,
+  ContentBox,
+  DrawerContentBox,
+} from "./DrawerClipped.style";
+// helpers
+import { links } from "../../Constants/Drawerlinks";
+import { genNavLinkColor } from "../../helpers/utils";
 
 export default function ClippedDrawer({
   children,
@@ -20,85 +28,61 @@ export default function ClippedDrawer({
   drawerWidth,
   handleDrawerPageToggle,
   drawerPage,
-  handleChangeMode,
-  ...otherProps
 }) {
   let navigate = useNavigate();
-  console.log(mode);
-  // const { window } = otherProps;
-  // const container =
-  //   window !== undefined ? () => window().document.body : undefined;
 
   const onListItemClick = (e, text) => {
     let val = text.replace(/\s/g, "").toLowerCase();
     handleDrawerPageToggle(val);
     navigate("/" + val);
   };
-  // const onLogout = () => {
-  //   localStorage.removeItem("signIn");
-  //   navigate("/login");
-  // };
+
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar mode={mode} handleChangeMode={handleChangeMode} />
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
-      >
+    <React.Fragment>
+      <StyledDrawer drawerwidth={drawerWidth} variant="permanent">
         <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
+        <DrawerContentBox>
           <List>
-            {[
-              Constants.Account,
-              Constants.Application,
-              Constants.RiskMonitor,
-            ].map((text, index) => (
-              <ListItem
+            {links.map((text, index) => (
+              <StyledListItem
+                key={index}
                 button
-                key={text}
                 onClick={(e) => {
                   onListItemClick(e, text);
                 }}
-                sx={{
-                  backgroundColor:
-                    text.replace(/\s/g, "").toLowerCase() === drawerPage
-                      ? "primary.main"
-                      : "",
-                  "&:hover": {
-                    backgroundColor:
-                      text.replace(/\s/g, "").toLowerCase() === drawerPage &&
-                      "primary.light",
-                  },
-                }}
+                text={text}
+                drawerpage={drawerPage}
               >
                 <ListItemIcon>
                   {index === 0 ? (
-                    <MdOutlineManageAccounts size={21} />
+                    <MdOutlineManageAccounts
+                      color={genNavLinkColor(text, drawerPage)}
+                      size={Constants.IconSize}
+                    />
                   ) : index === 1 ? (
-                    <AiOutlineAppstore size={21} />
+                    <AiOutlineAppstore
+                      color={genNavLinkColor(text, drawerPage)}
+                      size={Constants.IconSize}
+                    />
                   ) : index === 2 ? (
-                    <DiAsterisk size={21} />
+                    <DiAsterisk
+                      color={genNavLinkColor(text, drawerPage)}
+                      size={Constants.IconSize}
+                    />
                   ) : (
                     <MailIcon />
                   )}
                 </ListItemIcon>
                 <ListItemText primary={text} />
-              </ListItem>
+              </StyledListItem>
             ))}
           </List>
-        </Box>
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        </DrawerContentBox>
+      </StyledDrawer>
+      <ContentBox component="main">
         <Toolbar />
         {children}
-      </Box>
-    </Box>
+      </ContentBox>
+    </React.Fragment>
   );
 }
