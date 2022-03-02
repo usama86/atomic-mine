@@ -24,7 +24,6 @@ import { genNavLinkColor } from "../../helpers/utils";
 
 export default function ClippedDrawer({
   children,
-  mode,
   drawerWidth,
   handleDrawerPageToggle,
   drawerPage,
