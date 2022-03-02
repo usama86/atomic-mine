@@ -13,7 +13,6 @@ import { MdOutlineManageAccounts } from "react-icons/md";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { DiAsterisk } from "react-icons/di";
 import AppBar from "../Appbar/Appbar";
-import { useTheme } from "@emotion/react";
 
 export default function ClippedDrawer({
   children,
@@ -24,7 +23,6 @@ export default function ClippedDrawer({
   handleChangeMode,
   ...otherProps
 }) {
-  const theme = useTheme();
   let navigate = useNavigate();
   console.log(mode);
   // const { window } = otherProps;
