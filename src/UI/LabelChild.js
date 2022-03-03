@@ -5,10 +5,10 @@ import Grid from "./Layout/Grid";
 const LabelChild = ({ label, children }) => {
   return (
     <>
-      <Grid item xsSize={4}>
+      <Grid item xs={4}>
         <Typography>{label}</Typography>
       </Grid>
-      <Grid item xsSize={4}>
+      <Grid item xs={4}>
         {children}
       </Grid>
     </>
