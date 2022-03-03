@@ -26,7 +26,7 @@ function Account() {
     {
       heading: "Tab Pages",
       controls: [
-        { label: "Balances:", value: "1", component: <Balance /> },
+        { label: "Balances", value: "1", component: <Balance /> },
         { label: "Risk Management", value: "2", component: <RiskManagement /> },
         { label: "Orders", value: "3", component: <Orders /> },
         { label: "Funds", value: "4", component: <Funds /> },
