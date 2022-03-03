@@ -43,13 +43,20 @@ function Account() {
     setValue(newValue);
   };
 
-  const onChangeSearchVal = (e, val) => {
-    setSearchVal(val.title);
+  const onChangeSearchVal = (e) => {
+    setSearchVal(e.id);
+    console.log(e.name);
   };
 
   return (
     <Stack spacing={6}>
-      <Search searchVal={searchVal} onChangeSearchVal={onChangeSearchVal} />
+      <Stack direction="row">
+        <Search
+          size="small"
+          searchVal={searchVal}
+          getSearchedValue={onChangeSearchVal}
+        />
+      </Stack>
       {searchVal && (
         <Tabs value={value}>
           <>
