@@ -62,12 +62,12 @@ function Account() {
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange}>
             {TabsVal[0].controls.map((val,index)=>(
-                <Tab label={val.label} key={index} value={val.label} />
+                <Tab label={val.label} key={index} value={val.value} />
             ))}  
           </TabList>
         </Box>
             {TabsVal[0].controls.map((val,index)=>(
-                <TabPanel value={val.label} key={index}>{val.component}</TabPanel>
+                <TabPanel value={val.value} key={index}>{val.component}</TabPanel>
                 ))}
             </>
         </Tabs>
