@@ -18,7 +18,7 @@ import {
   RightContainer,
 } from "./Login.style";
 
-import TextField from "../../UI/Input/TextFieldComp";
+import TextField from "../../UI/TextField/TextFieldComp";
 
 const Login = () => {
   const theme = useTheme();
