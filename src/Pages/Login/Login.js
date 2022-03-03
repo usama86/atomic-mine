@@ -12,12 +12,13 @@ import Constants from "../../Constants/Constants";
 import {
   Background,
   CardStyled,
-  StyledField,
   CardContent,
   Heading,
   StyledButton,
   RightContainer,
 } from "./Login.style";
+
+import TextField from "../../UI/Input/TextFieldComp";
 
 const Login = () => {
   const theme = useTheme();
@@ -34,16 +35,15 @@ const Login = () => {
   let navigate = useNavigate();
   const submitLoginHandler = (e) => {
     e.preventDefault();
-    console.log("login data", formData);
     localStorage.setItem("signIn", true);
     navigate("/account");
   };
-  const changeValueHandler = (e) => {
-    const field = e.target.getAttribute("name");
+  const changeValueHandler = (e, field) => {
     let temp = { ...formData };
-    const access = temp[field];
-    access.value = e.target.value;
-    access.touched = true;
+    temp[field] = {
+      value: e.target.value,
+      touched: true,
+    };
     setFormData(temp);
   };
   const formEntries = [
@@ -52,14 +52,12 @@ const Login = () => {
       props: {
         label: "User Name",
         fullWidth: true,
-        onChange: changeValueHandler,
       },
     },
     {
       name: "password",
       props: {
         label: "Password",
-        onChange: changeValueHandler,
         fullWidth: true,
         type: "password",
       },
@@ -76,7 +74,8 @@ const Login = () => {
                   {Constants.Log_in}
                 </Heading>
                 {formEntries.map((entry, index) => (
-                  <StyledField
+                  <TextField
+                    onChange={(e) => changeValueHandler(e, entry.name)}
                     key={index}
                     name={entry.name}
                     {...entry.props}
