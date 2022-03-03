@@ -42,18 +42,20 @@ const Balance = () => {
             <Grid item container xs={12}>
               <LabelChild label={"Good feed violations"}>22$</LabelChild>
             </Grid>
-            <Grid item container xs={12} sx={{ alignItems: "center" }}>
-              <LabelChild
-                labelXsSize={4}
-                childrenXsSize={8}
-                sxChild={{ display: "flex", gap: "0.5rem" }}
-                label={"Notes"}
-              >
-                <TextField variant="filled" />
-                <UploadButton
-                  labelStyle={{ alignSelf: "flex-end", margin: 0 }}
-                />
-              </LabelChild>
+
+            <Grid item xs={12}>
+              <TextField
+                label="Notes"
+                fullWidth
+                size="small"
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item container xs={12}>
+              <UploadButton
+                size="small"
+                labelStyle={{ alignSelf: "flex-end", margin: 0 }}
+              />
             </Grid>
           </Grid>
         </Card>
