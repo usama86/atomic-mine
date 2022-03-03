@@ -4,9 +4,9 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Login from "./../Pages/Login/Login";
 import Home from "./../Pages/Home/Home";
 //DrawerRoutes
-import Account from "./../Pages/DrawerPage/Account";
-import Application from "./../Pages/DrawerPage/Application";
-import RiskMonitor from "./../Pages/DrawerPage/RiskMonitor";
+import Account from "./../Pages/DrawerPage/Account/Account";
+import Application from "../Pages/DrawerPage/Application/Application";
+import RiskMonitor from "../Pages/DrawerPage/RiskMonitor/RiskMonitor";
 
 export const ApplicationRoutes = ({
   getCurrentPath,
