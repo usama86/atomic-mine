@@ -2,7 +2,7 @@ import LabelChild from "./../../../../UI/LabelChild";
 import Grid from "./../../../../UI/Layout/Grid";
 import Card from "./../../../../UI/Card/Card";
 import Stack from "./../../../../UI/Layout/Stack";
-import TextField from "./../../../../UI/Input/TextFieldComp";
+import TextField from "./../../../../UI/TextField/TextFieldComp";
 import UploadButton from "./../../../../UI/UploadButton/UploadButton";
 import Table from "./../../../../UI/Table/Table";
 import Box from "./../../../../UI/Layout/Box";
