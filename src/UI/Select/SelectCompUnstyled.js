@@ -151,7 +151,7 @@ export default function UnstyledSelectSimple({
     <CustomSelect
       {...otherProps}
       onChange={changeCurrCategory}
-      defaultValue={categories[1].accessor}
+      defaultValue={categories[0].accessor}
     >
       {categories.map((category) => (
         <StyledOption

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import * as React from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
@@ -10,7 +11,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import UnstyledSelect from "./../Select/SelectCompUnstyled";
 import data from "../../Constants/mock_data.json";
 
-const categories = [
+const default_categories = [
   { accessor: "accountNumber", label: "Acc. #" },
   { accessor: "name", label: "Name" },
   { accessor: "email", label: "Email" },
@@ -21,10 +22,11 @@ const categories = [
 export default function CustomizedInputBase({
   searchOptions,
   getSearchedValue,
+  categories,
 }) {
   const [category, setCategory] = React.useState({
-    accessor: "name",
-    label: "Name",
+    accessor: categories[0].accessor,
+    label: categories[0].label,
   });
   const [value, setValue] = React.useState("");
   const [options, setOptions] = React.useState([]);
@@ -131,7 +133,14 @@ export default function CustomizedInputBase({
     </Stack>
   );
 }
+
+CustomizedInputBase.propTypes = {
+  categories: PropTypes.array,
+  getSearchedValue: PropTypes.func,
+  searchOptions: PropTypes.any,
+};
 CustomizedInputBase.defaultProps = {
   searchOptions: data,
   getSearchedValue: (e) => console.log(e, "no prop given"),
+  categories: default_categories,
 };

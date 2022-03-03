@@ -1,0 +1,98 @@
+[
+  {
+    "symbol": "FU-142",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "FN-121",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "FK-122",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "FD-422",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "DS-GF2",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "DS-212",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "DD-142",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "DD-521",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "HF-124",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "BH-512",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "DW-512",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  },
+  {
+    "symbol": "SA-125",
+    "date": "01-12-2020",
+    "isOpen": false,
+    "isFilled": false,
+    "isCancelled": false,
+    "isRejected": false
+  }
+]
