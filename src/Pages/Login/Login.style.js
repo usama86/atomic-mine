@@ -1,9 +1,10 @@
 import { styled } from "@mui/material/styles";
-import { Paper, Typography } from "@mui/material";
+import { Paper } from "@mui/material";
 import Card from "../../UI/Card/Card";
 import Stack from "../../UI/Layout/Stack";
 import Button from "../../UI/Button/Button";
 import Box from "../../UI/Layout/Box";
+import Typography from "../../UI/Typography/Typography";
 
 export const Background = styled(Paper)(({ theme }) => {
   return {
