@@ -34,7 +34,6 @@ const Login = () => {
   let navigate = useNavigate();
   const submitLoginHandler = (e) => {
     e.preventDefault();
-    console.log("login data", formData);
     localStorage.setItem("signIn", true);
     navigate("/account");
   };
