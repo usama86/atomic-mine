@@ -2,48 +2,121 @@ import LabelChild from "./../../../../UI/LabelChild";
 import Grid from "./../../../../UI/Layout/Grid";
 import Card from "./../../../../UI/Card/Card";
 import Stack from "./../../../../UI/Layout/Stack";
+import TextField from "./../../../../UI/Input/TextFieldComp";
+import UploadButton from "./../../../../UI/UploadButton/UploadButton";
+import Table from "./../../../../UI/Table/Table";
+import Box from "./../../../../UI/Layout/Box";
 
 const Balance = () => {
   //9
   return (
-    <Stack direction="row" spacing={2}>
-      <Card>
-        <Grid sx={{ padding: "1rem" }} spacing={6} container>
-          <Grid item container xs={12}>
-            <LabelChild label={"Net account value"}>Hi</LabelChild>
+    <Stack spacing={2}>
+      <Stack direction="row" spacing={2}>
+        <Card>
+          <Grid sx={{ padding: "1rem" }} spacing={4} container>
+            <Grid item container xs={12}>
+              <LabelChild label={"Net account value"}>2$</LabelChild>
+            </Grid>
+            <Grid item container xs={12}>
+              <LabelChild label={"Buying Power"}>3$</LabelChild>
+            </Grid>
+            <Grid item container xs={12}>
+              <LabelChild label={"Settled"}>7$</LabelChild>
+            </Grid>
+            <Grid item container xs={12}>
+              <LabelChild label={"Unsettled"}>9$</LabelChild>
+            </Grid>
+            <Grid item container xs={12}>
+              <LabelChild label={"Pending deposit"}>15$</LabelChild>
+            </Grid>
+            <Grid item container xs={12}>
+              <LabelChild label={"Provisional Cash"}>22$</LabelChild>
+            </Grid>
           </Grid>
-          <Grid item container xs={12}>
-            <LabelChild label={"Buying Power"}>Hi</LabelChild>
+        </Card>
+        <Card>
+          <Grid sx={{ padding: "1rem" }} spacing={4} container>
+            <Grid item container xs={12}>
+              <LabelChild label={"Risk flag"}>33$</LabelChild>
+            </Grid>
+            <Grid item container xs={12}>
+              <LabelChild label={"Good feed violations"}>22$</LabelChild>
+            </Grid>
+            <Grid item container xs={12} sx={{ alignItems: "center" }}>
+              <LabelChild
+                labelXsSize={4}
+                childrenXsSize={8}
+                sxChild={{ display: "flex", gap: "0.5rem" }}
+                label={"Notes"}
+              >
+                <TextField variant="filled" />
+                <UploadButton
+                  labelStyle={{ alignSelf: "flex-end", margin: 0 }}
+                />
+              </LabelChild>
+            </Grid>
           </Grid>
-          <Grid item container xs={12}>
-            <LabelChild label={"Settled"}>Hi</LabelChild>
-          </Grid>
-          <Grid item container xs={12}>
-            <LabelChild label={"Unsettled"}>Hi</LabelChild>
-          </Grid>
-          <Grid item container xs={12}>
-            <LabelChild label={"Pending deposit"}>Hi</LabelChild>
-          </Grid>
-          <Grid item container xs={12}>
-            <LabelChild label={"Provisional Cash"}>Hi</LabelChild>
-          </Grid>
-        </Grid>
-      </Card>
-      <Card>
-        <Grid sx={{ padding: "1rem" }} spacing={6} container>
-          <Grid item container xs={12}>
-            <LabelChild label={"Risk flag"}>Hi</LabelChild>
-          </Grid>
-          <Grid item container xs={12}>
-            <LabelChild label={"Good feed violations"}>Hi</LabelChild>
-          </Grid>
-          <Grid item container xs={12}>
-            <LabelChild label={"Notes"}>Hi</LabelChild>
-          </Grid>
-        </Grid>
-      </Card>
+        </Card>
+      </Stack>
+      <Box sx={{ height: "25rem" }}>
+        <Table columns={column} rows={row} />
+      </Box>
     </Stack>
   );
 };
 
 export default Balance;
+
+const column = [
+  {
+    field: "stockposition",
+    headerName: "Stock Position",
+    flex: 1,
+  },
+  {
+    field: "datetoexpiry",
+    headerName: "Date to expiry",
+    flex: 1,
+  },
+  {
+    field: "costbases",
+    headerName: "Cost bases",
+    flex: 1,
+  },
+  {
+    field: "cmv",
+    headerName: "Current Market Value",
+    flex: 1,
+  },
+  {
+    field: "pl",
+    headerName: "P/L",
+    flex: 1,
+  },
+];
+const row = [
+  {
+    id: 0,
+    stockposition: "hello",
+    datetoexpiry: "World",
+    costbases: "5$",
+    cmv: "05-02-1990",
+    pl: "05-02-1990",
+  },
+  {
+    id: 1,
+    stockposition: "hello1",
+    datetoexpiry: "World1",
+    costbases: "6$",
+    cmv: "05-02-1991",
+    pl: "05-02-1993",
+  },
+  {
+    id: 2,
+    stockposition: "hello2",
+    datetoexpiry: "World2",
+    costbases: "7$",
+    cmv: "05-02-1992",
+    pl: "05-02-1994",
+  },
+];
