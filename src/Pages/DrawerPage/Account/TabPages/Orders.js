@@ -3,8 +3,8 @@ import React from "react";
 import Grid from "../../../../UI/Layout/Grid";
 import data from "../../../../Constants/dummy_orders.json";
 import Search from "../../../../UI/SearchField/Search";
-import Card from "../../../../UI/Card/Card";
-import Tabs from "./../../../../UI/Tabs/Tabs";
+// import Card from "../../../../UI/Card/Card";
+// import Tabs from "./../../../../UI/Tabs/Tabs";
 
 const orderCategories = [
   {
