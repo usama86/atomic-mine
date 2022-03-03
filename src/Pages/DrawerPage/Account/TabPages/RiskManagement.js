@@ -5,6 +5,8 @@ import Stack from "./../../../../UI/Layout/Stack";
 import Grid from "./../../../../UI/Layout/Grid";
 import LabelChild from "./../../../../UI/LabelChild";
 import { LabelChildStyled } from "./TabPages.styles";
+import { AiTwotoneSetting } from "react-icons/ai";
+import IconButton from "@mui/material/IconButton";
 
 const RiskManagement = () => {
   const [SwitchState, setSwitchState] = React.useState({
@@ -35,10 +37,15 @@ const RiskManagement = () => {
               childrenXsSize={2}
               sxChild={LabelChildStyled}
             >
-              <Switch
-                value={SwitchState.restrictTrading}
-                onChanged={(e) => onChangeSwitch(e, "restrictTrading")}
-              />
+              <Stack direction="row">
+                <IconButton>
+                  <AiTwotoneSetting />
+                </IconButton>
+                <Switch
+                  value={SwitchState.restrictTrading}
+                  onChanged={(e) => onChangeSwitch(e, "restrictTrading")}
+                />
+              </Stack>
             </LabelChild>
           </Grid>
           <Grid item container xs={12}>
@@ -87,10 +94,15 @@ const RiskManagement = () => {
               childrenXsSize={2}
               sxChild={LabelChildStyled}
             >
-              <Switch
-                value={SwitchState.changeProvCash}
-                onChanged={(e) => onChangeSwitch(e, "changeProvCash")}
-              />
+              <Stack direction="row">
+                <IconButton>
+                  <AiTwotoneSetting />
+                </IconButton>
+                <Switch
+                  value={SwitchState.changeProvCash}
+                  onChanged={(e) => onChangeSwitch(e, "changeProvCash")}
+                />
+              </Stack>
             </LabelChild>
           </Grid>
           <Grid item container xs={12}>
@@ -113,10 +125,15 @@ const RiskManagement = () => {
               childrenXsSize={2}
               sxChild={LabelChildStyled}
             >
-              <Switch
-                value={SwitchState.blacklistOption}
-                onChanged={(e) => onChangeSwitch(e, "blacklistOption")}
-              />
+              <Stack direction="row">
+                <IconButton>
+                  <AiTwotoneSetting />
+                </IconButton>
+                <Switch
+                  value={SwitchState.blacklistOption}
+                  onChanged={(e) => onChangeSwitch(e, "blacklistOption")}
+                />
+              </Stack>
             </LabelChild>
           </Grid>
           <Grid item container xs={12}>
@@ -126,10 +143,15 @@ const RiskManagement = () => {
               childrenXsSize={2}
               sxChild={LabelChildStyled}
             >
-              <Switch
-                value={SwitchState.riskFlag}
-                onChanged={(e) => onChangeSwitch(e, "riskFlag")}
-              />
+              <Stack direction="row">
+                <IconButton>
+                  <AiTwotoneSetting />
+                </IconButton>
+                <Switch
+                  value={SwitchState.riskFlag}
+                  onChanged={(e) => onChangeSwitch(e, "riskFlag")}
+                />
+              </Stack>
             </LabelChild>
           </Grid>
         </Grid>

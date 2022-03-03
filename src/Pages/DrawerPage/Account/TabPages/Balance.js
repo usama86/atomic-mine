@@ -6,6 +6,7 @@ import TextField from "./../../../../UI/TextField/TextFieldComp";
 import UploadButton from "./../../../../UI/UploadButton/UploadButton";
 import Table from "./../../../../UI/Table/Table";
 import Box from "./../../../../UI/Layout/Box";
+import Button from "./../../../../UI/Button/Button";
 
 const Balance = () => {
   //9
@@ -49,18 +50,30 @@ const Balance = () => {
                 fullWidth
                 size="small"
                 variant="outlined"
+                isdefault={true}
               />
             </Grid>
             <Grid item container xs={12}>
-              <UploadButton
-                size="small"
-                labelStyle={{ alignSelf: "flex-end", margin: 0 }}
-              />
+              <Stack
+                sx={{ width: "100%" }}
+                justifyContent="flex-end"
+                direction="row"
+                gap="1rem"
+              >
+                <UploadButton
+                  sx={{ color: "white" }}
+                  size="small"
+                  labelStyle={{ alignSelf: "flex-end", margin: 0 }}
+                />
+                <Button sx={{ color: "white" }} size="small">
+                  Save
+                </Button>
+              </Stack>
             </Grid>
           </Grid>
         </Card>
       </Stack>
-      <Box sx={{ height: "25rem" }}>
+      <Box sx={{ height: "20rem" }}>
         <Table columns={column} rows={row} />
       </Box>
     </Stack>
