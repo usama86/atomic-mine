@@ -39,11 +39,7 @@ const AppbarComp = ({ mode, handleChangeMode, onLogout }) => {
             <Box sx={{ flexGrow: 1 }}>
               <Typography
                 variant="body"
-                color={
-                  theme.palette.mode === "light"
-                    ? theme.palette.primary.main
-                    : "#fff"
-                }
+                color={theme.palette.appBarFontColor.main}
                 noWrap
                 component="div"
               >
@@ -55,11 +51,7 @@ const AppbarComp = ({ mode, handleChangeMode, onLogout }) => {
                   <Logo
                     width="1.7rem"
                     height="1.7rem"
-                    color={
-                      theme.palette.mode === "light"
-                        ? theme.palette.primary.main
-                        : "#fff"
-                    }
+                    color={theme.palette.appBarFontColor.main}
                   />
                   <NavLogoName>{Constants.Atomic_Vault}</NavLogoName>
                 </Stack>

@@ -42,7 +42,7 @@ export const StyledButton = styled(Button)(({ theme }) => ({
 
 export const RightContainer = styled(Box)(({ theme }) => ({
   width: "50%",
-  background: theme.palette.secondary.main,
+  background: theme.palette.black.main,
   clipPath: "polygon(20% 0%, 100% 0, 100% 100%, 0% 100%)",
   transform: "translateX(20%)",
   display: "flex",

@@ -5,16 +5,15 @@ import { FiLogOut } from "react-icons/fi";
 
 export const AppBarStyled = styled(AppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
-  backgroundColor: theme.palette.mode === "light" ? "#fff" : "",
+  backgroundColor: theme.palette.black.main,
 }));
 
 export const NavLogoName = styled("span")(() => ({}));
 
 export const DarkModeIcon = styled(MdDarkMode)(({ theme }) => ({
   height: "100%",
-  color: theme.palette.primary.main,
+  color: theme.palette.appBarFontColor.main,
   fontSize: "1.6rem",
-
   cursor: "pointer",
 }));
 
@@ -26,5 +25,5 @@ export const LightModeIcon = styled(MdLightMode)(() => ({
 
 export const LogOutIcon = styled(FiLogOut)(({ theme }) => ({
   display: "flex",
-  color: theme.palette.mode === "light" ? theme.palette.primary.main : "",
+  color: theme.palette.appBarFontColor.main,
 }));
