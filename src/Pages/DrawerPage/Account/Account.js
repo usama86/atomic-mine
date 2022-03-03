@@ -26,15 +26,21 @@ function Account() {
   const [value, setValue] = React.useState('1');
 
   const TabsVal= [
-        { label: 'Balances:', value: "1"},
-        {label:"Risk Management", value:"2"},
-        {label:"Orders", value:"3" },
-        {label:"Funds", value:"4" },
-        {label:"Cash Ledger", value:"5" },
-        {label:"Bank Link", value:"6"},
-        {label:"Docs", value:"7" },
-        {label:"Options", value:"8"},
-        {label:"Personal Info", value:"9"}
+    {
+      heading: 'Tab Pages',
+      controls: 
+      [
+        { label: 'Balances:', value: "1",component: <Balance/>},
+        {label:"Risk Management", value:"2", component:<RiskManagement/>},
+        {label:"Orders", value:"3", component:<Orders/>},
+        {label:"Funds", value:"4", component:<Funds/>},
+        {label:"Cash Ledger", value:"5", component:<CashLedger/>},
+        {label:"Bank Link", value:"6", component:<BankLink/>},
+        {label:"Docs", value:"7", component:<Docs/>},
+        {label:"Options", value:"8", component:<Options/>},
+        {label:"Personal Info", value:"9", component:<PersonalInfo/>}
+      ],
+    },
   ];
 
   const handleChange = (event, newValue) => {
@@ -55,13 +61,13 @@ function Account() {
           <>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange}>
-            {TabsVal.map((val,index)=>(
+            {TabsVal[0].controls.map((val,index)=>(
                 <Tab label={val.label} key={index} value={val.label} />
             ))}  
           </TabList>
         </Box>
-            {TabsVal.map((val,index)=>(
-                <TabPanel value={val.label} key={index}>{val.label}</TabPanel>
+            {TabsVal[0].controls.map((val,index)=>(
+                <TabPanel value={val.label} key={index}>{val.component}</TabPanel>
                 ))}
             </>
         </Tabs>
