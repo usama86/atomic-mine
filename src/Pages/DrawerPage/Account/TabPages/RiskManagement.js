@@ -8,6 +8,13 @@ import { LabelChildStyled } from "./TabPages.styles";
 import { AiTwotoneSetting } from "react-icons/ai";
 import IconButton from "@mui/material/IconButton";
 
+import Modal from "../../../../UI/Modal/Modal";
+import {
+  BlacklistOption,
+  ChangeProvCash,
+  RestrictTrading,
+  Riskflag,
+} from "./RiskManagementModals/";
 const RiskManagement = () => {
   const [SwitchState, setSwitchState] = React.useState({
     restrictTrading: false,
@@ -26,6 +33,7 @@ const RiskManagement = () => {
     else switchCopy[val] = true;
     setSwitchState(switchCopy);
   };
+
   return (
     <Stack direction="row" spacing={2}>
       <Card>
@@ -38,9 +46,11 @@ const RiskManagement = () => {
               sxChild={LabelChildStyled}
             >
               <Stack direction="row">
-                <IconButton>
-                  <AiTwotoneSetting />
-                </IconButton>
+                <Modal content={<RestrictTrading />}>
+                  <IconButton>
+                    <AiTwotoneSetting />
+                  </IconButton>
+                </Modal>
                 <Switch
                   value={SwitchState.restrictTrading}
                   onChanged={(e) => onChangeSwitch(e, "restrictTrading")}
@@ -95,9 +105,11 @@ const RiskManagement = () => {
               sxChild={LabelChildStyled}
             >
               <Stack direction="row">
-                <IconButton>
-                  <AiTwotoneSetting />
-                </IconButton>
+                <Modal content={<ChangeProvCash />}>
+                  <IconButton>
+                    <AiTwotoneSetting />
+                  </IconButton>
+                </Modal>
                 <Switch
                   value={SwitchState.changeProvCash}
                   onChanged={(e) => onChangeSwitch(e, "changeProvCash")}
@@ -126,9 +138,11 @@ const RiskManagement = () => {
               sxChild={LabelChildStyled}
             >
               <Stack direction="row">
-                <IconButton>
-                  <AiTwotoneSetting />
-                </IconButton>
+                <Modal content={<BlacklistOption />}>
+                  <IconButton>
+                    <AiTwotoneSetting />
+                  </IconButton>
+                </Modal>
                 <Switch
                   value={SwitchState.blacklistOption}
                   onChanged={(e) => onChangeSwitch(e, "blacklistOption")}
@@ -144,9 +158,11 @@ const RiskManagement = () => {
               sxChild={LabelChildStyled}
             >
               <Stack direction="row">
-                <IconButton>
-                  <AiTwotoneSetting />
-                </IconButton>
+                <Modal content={<Riskflag />}>
+                  <IconButton>
+                    <AiTwotoneSetting />
+                  </IconButton>
+                </Modal>
                 <Switch
                   value={SwitchState.riskFlag}
                   onChanged={(e) => onChangeSwitch(e, "riskFlag")}

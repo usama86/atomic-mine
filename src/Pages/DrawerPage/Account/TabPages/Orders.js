@@ -1,7 +1,5 @@
 import React from "react";
 
-import Stack from "../../../../UI/Layout/Stack";
-import Box from "../../../../UI/Layout/Box";
 import Grid from "../../../../UI/Layout/Grid";
 import data from "../../../../Constants/dummy_orders.json";
 import Search from "../../../../UI/SearchField/Search";
