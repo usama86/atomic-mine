@@ -1,6 +1,6 @@
-const black = "#121C26";
+// const black = "#121C26";
 const green = "#00B4A4";
-const white = "#fff";
+// const white = "#fff";
 
 export const getDesignTokens = (mode) => ({
   palette: {
