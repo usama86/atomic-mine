@@ -15,11 +15,13 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal({ children, content }) {
+export default function BasicModal({ children, content, closeDependancy }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  React.useEffect(() => {
+    handleClose();
+  }, [closeDependancy]);
   return (
     <div>
       <span onClick={handleOpen}>{children}</span>
@@ -37,4 +39,5 @@ export default function BasicModal({ children, content }) {
 
 BasicModal.defaultProps = {
   content: <div>no content given</div>,
+  closeDependancy: "",
 };

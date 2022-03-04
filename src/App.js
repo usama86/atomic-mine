@@ -2,6 +2,8 @@ import React from "react";
 import { ApplicationRoutes } from "./Routes/Routes";
 import Theme from "./Store/Theme/theme";
 import { BrowserRouter } from "react-router-dom";
+import SnackbarProvider from "./Store/Snackbar/SnackbarComp";
+
 function App() {
   const [mode, setMode] = React.useState("light");
   React.useEffect(() => {
@@ -20,15 +22,17 @@ function App() {
     }
   };
   return (
-    <BrowserRouter>
-      <Theme mode={mode} handleChangeMode={handleChangeMode}>
-        <ApplicationRoutes
-          getCurrentPath={getPathHandler}
-          mode={mode}
-          handleChangeMode={handleChangeMode}
-        />
-      </Theme>
-    </BrowserRouter>
+    <SnackbarProvider>
+      <BrowserRouter>
+        <Theme mode={mode} handleChangeMode={handleChangeMode}>
+          <ApplicationRoutes
+            getCurrentPath={getPathHandler}
+            mode={mode}
+            handleChangeMode={handleChangeMode}
+          />
+        </Theme>
+      </BrowserRouter>
+    </SnackbarProvider>
   );
 }
 

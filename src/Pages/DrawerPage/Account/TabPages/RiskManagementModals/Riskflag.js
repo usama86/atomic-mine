@@ -5,7 +5,7 @@ import Stack from "../../../../../UI/Layout/Stack";
 import Button from "../../../../../UI/Button/Button";
 import TextField from "../../../../../UI/TextField/TextFieldComp";
 
-const Riskflag = () => {
+const Riskflag = ({ triggerClose }) => {
   const [risk, setRisk] = React.useState("");
   const options = [
     {
@@ -28,7 +28,14 @@ const Riskflag = () => {
       />
       <TextField isdefault label="Notes" fullWidth />
       <Stack alignItems="center">
-        <Button isdefault={true} sx={{ color: "white" }}>
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            triggerClose();
+          }}
+          isdefault={true}
+          sx={{ color: "white" }}
+        >
           Save
         </Button>
       </Stack>

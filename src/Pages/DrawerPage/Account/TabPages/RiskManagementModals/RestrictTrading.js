@@ -7,7 +7,7 @@ import Stack from "../../../../../UI/Layout/Stack";
 import Box from "../../../../../UI/Layout/Box";
 import Button from "../../../../../UI/Button/Button";
 
-const RestrictTrading = () => {
+const RestrictTrading = ({ triggerClose }) => {
   const [value, setValue] = React.useState(false);
   return (
     <Stack gap={2}>
@@ -24,7 +24,15 @@ const RestrictTrading = () => {
         <TextFieldComp fullWidth isdefault={true} label="Notes" />
       </Box>
       <Stack alignItems="center">
-        <Button sx={{ color: "white" }}>Save</Button>
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            triggerClose();
+          }}
+          sx={{ color: "white" }}
+        >
+          Save
+        </Button>
       </Stack>
     </Stack>
   );

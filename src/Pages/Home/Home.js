@@ -5,7 +5,6 @@ import Box from "../../UI/Layout/Box";
 import AppBar from "../../UI/Appbar/Appbar";
 import { useNavigate } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 const drawerWidth = 240;
 
 const Home = ({ mode, handleChangeMode }) => {
@@ -23,6 +22,7 @@ const Home = ({ mode, handleChangeMode }) => {
   const toggleDrawerHandler = (e) => {
     setToggleDrawer((prevState) => !prevState);
   };
+
   return (
     <Box sx={{ display: "flex" }}>
       <AppBar

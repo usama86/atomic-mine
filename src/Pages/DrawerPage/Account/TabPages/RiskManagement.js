@@ -10,7 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import Modal from "../../../../UI/Modal/Modal";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
-
+import { useSnackbar } from "notistack";
 import {
   BlacklistOption,
   ChangeProvCash,
@@ -18,8 +18,8 @@ import {
   Riskflag,
 } from "./RiskManagementModals/";
 const RiskManagement = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
-
   const mediumScreen = useMediaQuery(theme.breakpoints.down("md"));
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const largeScreen = useMediaQuery(theme.breakpoints.up("md"));
@@ -53,7 +53,11 @@ const RiskManagement = () => {
     else switchCopy[val] = true;
     setSwitchState(switchCopy);
   };
-
+  const [random, setRandom] = React.useState("");
+  const closeModalHandler = (e) => {
+    setRandom(`${Math.random()}`);
+    enqueueSnackbar("Submitted!", { variant: "success" });
+  };
   return (
     <Stack direction="row" spacing={2}>
       <Card>
@@ -76,7 +80,10 @@ const RiskManagement = () => {
               }}
             >
               <Stack direction="row">
-                <Modal content={<RestrictTrading />}>
+                <Modal
+                  closeDependancy={random}
+                  content={<RestrictTrading triggerClose={closeModalHandler} />}
+                >
                   <IconButton sx={{ mr: "2rem" }}>
                     <FcSettings />
                   </IconButton>
@@ -147,7 +154,10 @@ const RiskManagement = () => {
               }}
             >
               <Stack direction="row">
-                <Modal content={<ChangeProvCash />}>
+                <Modal
+                  closeDependancy={random}
+                  content={<ChangeProvCash triggerClose={closeModalHandler} />}
+                >
                   <IconButton sx={{ mr: "2rem" }}>
                     <FcSettings />
                   </IconButton>
@@ -186,7 +196,10 @@ const RiskManagement = () => {
               }}
             >
               <Stack direction="row">
-                <Modal content={<BlacklistOption />}>
+                <Modal
+                  closeDependancy={random}
+                  content={<BlacklistOption triggerClose={closeModalHandler} />}
+                >
                   <IconButton sx={{ mr: "2rem" }}>
                     <FcSettings />
                   </IconButton>
@@ -209,7 +222,10 @@ const RiskManagement = () => {
               }}
             >
               <Stack direction="row">
-                <Modal content={<Riskflag />}>
+                <Modal
+                  closeDependancy={random}
+                  content={<Riskflag triggerClose={closeModalHandler} />}
+                >
                   <IconButton sx={{ mr: "2rem" }}>
                     <FcSettings />
                   </IconButton>

@@ -50,7 +50,7 @@ function Account() {
 
   const onChangeSearchVal = (e) => {
     setSearchVal(e.id);
-    console.log(e.name);
+    // console.log(e.name);
   };
 
   return (

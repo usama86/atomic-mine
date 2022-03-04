@@ -5,7 +5,7 @@ import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import DatePicker from "../../../../../UI/Date/DatePickerComp";
-const ChangeProvCash = () => {
+const ChangeProvCash = ({ triggerClose }) => {
   const [expiration, setExpiration] = React.useState(null);
   return (
     <Stack gap={2}>
@@ -17,7 +17,14 @@ const ChangeProvCash = () => {
         setValue={(e) => setExpiration(e)}
       />
       <Stack direction="row" justifyContent="center">
-        <Button sx={{ color: "white" }} isdefault={true}>
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            triggerClose();
+          }}
+          sx={{ color: "white" }}
+          isdefault={true}
+        >
           Save
         </Button>
       </Stack>
