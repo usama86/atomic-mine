@@ -6,27 +6,27 @@ export const getDesignTokens = (mode) => ({
   palette: {
     mode,
     ...(mode === "dark" && {
-      black: {
-        main: black,
-      },
+      // black: {
+      //   main: black,
+      // },
       primary: {
         main: green,
       },
-      appBarFontColor: {
-        main: "#fff",
-      },
+      // appBarFontColor: {
+      //   main: "#fff",
+      // },
     }),
     ...(mode === "light" && {
-      black: {
-        main: white,
-      },
+      // black: {
+      //   main: white,
+      // },
       primary: {
         main: green,
       },
-      appBarFontColor: {
-        main: green,
-      },
-      logInBackground: black,
+      // appBarFontColor: {
+      //   main: green,
+      // },
+      // logInBackground: black,
     }),
   },
 });
