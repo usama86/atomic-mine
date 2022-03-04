@@ -26,6 +26,7 @@ export const getDesignTokens = (mode) => ({
       appBarFontColor: {
         main: green,
       },
+      logInBackground: black,
     }),
   },
 });

@@ -1,12 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import useMediaQuery from "@mui/material/useMediaQuery";
 // custom mui components
 import Box from "../../UI/Layout/Box";
 import Stack from "../../UI/Layout/Stack";
 // mui helpers
 import { useTheme } from "@mui/material";
 // helpers
-import logo from "../../Images/Logo_2.png";
+import logo from "../../Images/stocks.png";
 import Constants from "../../Constants/Constants";
 // styles
 import {
@@ -16,12 +17,16 @@ import {
   Heading,
   StyledButton,
   RightContainer,
+  BlurredBackground,
+  LeftContainer,
+  StyledForm,
 } from "./Login.style";
 
 import TextField from "../../UI/TextField/TextFieldComp";
 
 const Login = () => {
   const theme = useTheme();
+  const matches = useMediaQuery((theme) => theme.breakpoints.down("md"));
   const [formData, setFormData] = React.useState({
     username: {
       value: "",
@@ -64,11 +69,12 @@ const Login = () => {
     },
   ];
   return (
-    <Background>
+    <Background ismedium={`${matches}`}>
+      {matches && <BlurredBackground>&nbsp;</BlurredBackground>}
       <CardStyled>
         <Stack direction="row" sx={{ height: "100%" }}>
-          <Box sx={{ flexGrow: 1 }}>
-            <form onSubmit={submitLoginHandler}>
+          <LeftContainer>
+            <StyledForm style={{}} onSubmit={submitLoginHandler}>
               <CardContent spacing={2}>
                 <Heading variant="h4" color={theme.palette.text.primary}>
                   {Constants.Log_in}
@@ -93,15 +99,17 @@ const Login = () => {
                   {Constants.Login_Btn}
                 </StyledButton>
               </CardContent>
-            </form>
-          </Box>
-          <RightContainer>
-            <img
-              src={logo}
-              style={{ maxWidth: " 100%", height: "auto" }}
-              alt="logo"
-            />
-          </RightContainer>
+            </StyledForm>
+          </LeftContainer>
+          {!matches && (
+            <RightContainer>
+              <img
+                src={logo}
+                style={{ maxWidth: " 100%", height: "auto" }}
+                alt="logo"
+              />
+            </RightContainer>
+          )}
         </Stack>
       </CardStyled>
     </Background>
