@@ -21,7 +21,7 @@ const RestrictTrading = () => {
         />
       </Stack>
       <Box>
-        <TextFieldComp fullWidth isdefault={true} size="small" label="Notes" />
+        <TextFieldComp fullWidth isdefault={true} label="Notes" />
       </Box>
       <Stack alignItems="center">
         <Button sx={{ color: "white" }}>Save</Button>

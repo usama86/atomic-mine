@@ -82,8 +82,8 @@ export default function ClippedDrawer({
         isOpen && (
           <SmallDrawer
             drawerwidth={drawerWidth}
-            isOpen={isOpen}
-            setIsOpen={(e) => toggleDrawer(e)}
+            isopen={isOpen}
+            setisopen={(e) => toggleDrawer(e)}
           >
             {content}
           </SmallDrawer>

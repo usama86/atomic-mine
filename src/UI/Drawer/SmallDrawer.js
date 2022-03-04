@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import { useTheme } from "@mui/material/styles";
 
-export default function TemporaryDrawer({ setIsOpen, isOpen, children }) {
+export default function TemporaryDrawer({ setisopen, isopen, children }) {
   const theme = useTheme();
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -13,14 +13,15 @@ export default function TemporaryDrawer({ setIsOpen, isOpen, children }) {
       return;
     }
 
-    setIsOpen(open);
+    setisopen(open);
   };
 
   return (
     <SwipeableDrawer
       anchor="left"
-      open={isOpen}
+      open={isopen}
       onClose={toggleDrawer("left", false)}
+      onOpen={toggleDrawer("left", true)}
     >
       <Box
         sx={{

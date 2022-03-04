@@ -5,7 +5,7 @@ import Stack from "./../../../../UI/Layout/Stack";
 import Grid from "./../../../../UI/Layout/Grid";
 import LabelChild from "./../../../../UI/LabelChild";
 import { LabelChildStyled } from "./TabPages.styles";
-import { GrConfigure } from "react-icons/gr";
+import { FcSettings } from "react-icons/fc";
 import IconButton from "@mui/material/IconButton";
 
 import Modal from "../../../../UI/Modal/Modal";
@@ -48,7 +48,7 @@ const RiskManagement = () => {
               <Stack direction="row">
                 <Modal content={<RestrictTrading />}>
                   <IconButton sx={{ mr: "2rem" }}>
-                    <GrConfigure />
+                    <FcSettings />
                   </IconButton>
                 </Modal>
                 {/* <Switch
@@ -107,7 +107,7 @@ const RiskManagement = () => {
               <Stack direction="row">
                 <Modal content={<ChangeProvCash />}>
                   <IconButton sx={{ mr: "2rem" }}>
-                    <GrConfigure />
+                    <FcSettings />
                   </IconButton>
                 </Modal>
                 {/* <Switch
@@ -140,7 +140,7 @@ const RiskManagement = () => {
               <Stack direction="row">
                 <Modal content={<BlacklistOption />}>
                   <IconButton sx={{ mr: "2rem" }}>
-                    <GrConfigure />
+                    <FcSettings />
                   </IconButton>
                 </Modal>
                 {/* <Switch
@@ -160,7 +160,7 @@ const RiskManagement = () => {
               <Stack direction="row">
                 <Modal content={<Riskflag />}>
                   <IconButton sx={{ mr: "2rem" }}>
-                    <GrConfigure />
+                    <FcSettings />
                   </IconButton>
                 </Modal>
                 {/* <Switch
