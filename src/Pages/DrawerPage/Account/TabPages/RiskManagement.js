@@ -5,7 +5,7 @@ import Stack from "./../../../../UI/Layout/Stack";
 import Grid from "./../../../../UI/Layout/Grid";
 import LabelChild from "./../../../../UI/LabelChild";
 import { LabelChildStyled } from "./TabPages.styles";
-import { AiTwotoneSetting } from "react-icons/ai";
+import { GrConfigure } from "react-icons/gr";
 import IconButton from "@mui/material/IconButton";
 
 import Modal from "../../../../UI/Modal/Modal";
@@ -47,14 +47,14 @@ const RiskManagement = () => {
             >
               <Stack direction="row">
                 <Modal content={<RestrictTrading />}>
-                  <IconButton>
-                    <AiTwotoneSetting />
+                  <IconButton sx={{ mr: "2rem" }}>
+                    <GrConfigure />
                   </IconButton>
                 </Modal>
-                <Switch
+                {/* <Switch
                   value={SwitchState.restrictTrading}
                   onChanged={(e) => onChangeSwitch(e, "restrictTrading")}
-                />
+                /> */}
               </Stack>
             </LabelChild>
           </Grid>
@@ -106,14 +106,14 @@ const RiskManagement = () => {
             >
               <Stack direction="row">
                 <Modal content={<ChangeProvCash />}>
-                  <IconButton>
-                    <AiTwotoneSetting />
+                  <IconButton sx={{ mr: "2rem" }}>
+                    <GrConfigure />
                   </IconButton>
                 </Modal>
-                <Switch
+                {/* <Switch
                   value={SwitchState.changeProvCash}
                   onChanged={(e) => onChangeSwitch(e, "changeProvCash")}
-                />
+                /> */}
               </Stack>
             </LabelChild>
           </Grid>
@@ -139,14 +139,14 @@ const RiskManagement = () => {
             >
               <Stack direction="row">
                 <Modal content={<BlacklistOption />}>
-                  <IconButton>
-                    <AiTwotoneSetting />
+                  <IconButton sx={{ mr: "2rem" }}>
+                    <GrConfigure />
                   </IconButton>
                 </Modal>
-                <Switch
+                {/* <Switch
                   value={SwitchState.blacklistOption}
                   onChanged={(e) => onChangeSwitch(e, "blacklistOption")}
-                />
+                /> */}
               </Stack>
             </LabelChild>
           </Grid>
@@ -159,14 +159,14 @@ const RiskManagement = () => {
             >
               <Stack direction="row">
                 <Modal content={<Riskflag />}>
-                  <IconButton>
-                    <AiTwotoneSetting />
+                  <IconButton sx={{ mr: "2rem" }}>
+                    <GrConfigure />
                   </IconButton>
                 </Modal>
-                <Switch
+                {/* <Switch
                   value={SwitchState.riskFlag}
                   onChanged={(e) => onChangeSwitch(e, "riskFlag")}
-                />
+                /> */}
               </Stack>
             </LabelChild>
           </Grid>
