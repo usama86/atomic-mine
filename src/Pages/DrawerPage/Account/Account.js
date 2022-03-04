@@ -35,11 +35,11 @@ function Account() {
         { label: "Docs", value: "7", component: <Docs /> },
         { label: "Options", value: "8", component: <Options /> },
         { label: "Personal Info", value: "9", component: <PersonalInfo /> },
-        { label: "Cash Ledger", value: "10", component: <CashLedger /> },
-        { label: "Bank Link", value: "11", component: <BankLink /> },
-        { label: "Docs", value: "12", component: <Docs /> },
-        { label: "Options", value: "13", component: <Options /> },
-        { label: "Personal Info", value: "14", component: <PersonalInfo /> },
+        // { label: "Cash Ledger", value: "10", component: <CashLedger /> },
+        // { label: "Bank Link", value: "11", component: <BankLink /> },
+        // { label: "Docs", value: "12", component: <Docs /> },
+        // { label: "Options", value: "13", component: <Options /> },
+        // { label: "Personal Info", value: "14", component: <PersonalInfo /> },
       ],
     },
   ];
@@ -63,10 +63,14 @@ function Account() {
         />
       </Stack>
       {searchVal && (
-        <Tabs scrollButtons={true} variant="scrollable" value={value}>
+        <Tabs value={value}>
           <>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-              <TabList onChange={handleChange}>
+              <TabList
+                scrollButtons="auto"
+                variant="scrollable"
+                onChange={handleChange}
+              >
                 {TabsVal[0].controls.map((val, index) => (
                   <Tab label={val.label} key={index} value={val.value} />
                 ))}

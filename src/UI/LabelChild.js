@@ -8,11 +8,12 @@ const LabelChild = ({
   childrenXsSize,
   sxChild,
   children,
+  typographyProps,
 }) => {
   return (
     <>
       <Grid item xs={labelXsSize}>
-        <Typography>{label}</Typography>
+        <Typography {...typographyProps}>{label}</Typography>
       </Grid>
       <Grid item xs={childrenXsSize} sx={sxChild}>
         {children}

@@ -7,12 +7,15 @@ import UploadButton from "./../../../../UI/UploadButton/UploadButton";
 import Table from "./../../../../UI/Table/Table";
 import Box from "./../../../../UI/Layout/Box";
 import Button from "./../../../../UI/Button/Button";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@emotion/react";
 
 const Balance = () => {
-  //9
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Stack spacing={2}>
-      <Stack direction="row" spacing={2}>
+      <Stack direction={matches ? "column" : "row"} spacing={2}>
         <Card>
           <Grid sx={{ padding: "1rem" }} spacing={4} container>
             <Grid item container xs={12}>

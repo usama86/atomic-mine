@@ -12,7 +12,7 @@ import { DiAsterisk } from "react-icons/di";
 import {
   StyledDrawer,
   StyledListItem,
-  ContentBox,
+  Main,
   DrawerContentBox,
 } from "./DrawerClipped.style";
 // helpers
@@ -94,13 +94,10 @@ export default function ClippedDrawer({
           <DrawerContentBox>{content}</DrawerContentBox>
         </StyledDrawer>
       )}
-      <ContentBox
-        sx={{ width: "calc(100vw - 250px)", overflowX: "auto" }}
-        component="main"
-      >
+      <Main component="main">
         <Toolbar />
         {children}
-      </ContentBox>
+      </Main>
     </React.Fragment>
   );
 }

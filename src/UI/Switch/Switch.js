@@ -56,11 +56,20 @@ const IOSSwitch = styled((props) => (
   },
 }));
 
-export default function CustomizedSwitches({ value, onChanged }) {
+export default function CustomizedSwitches({
+  value,
+  onChanged,
+  ...otherProps
+}) {
   return (
     <Stack direction="row" spacing={1} alignItems="center">
       <Typography>Off</Typography>
-      <IOSSwitch sx={{ m: 1 }} checked={value} onChange={onChanged} />
+      <IOSSwitch
+        {...otherProps}
+        sx={{ m: 1 }}
+        checked={value}
+        onChange={onChanged}
+      />
       <Typography>On</Typography>
     </Stack>
   );

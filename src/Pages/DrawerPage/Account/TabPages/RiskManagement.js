@@ -7,8 +7,10 @@ import LabelChild from "./../../../../UI/LabelChild";
 import { LabelChildStyled } from "./TabPages.styles";
 import { FcSettings } from "react-icons/fc";
 import IconButton from "@mui/material/IconButton";
-
 import Modal from "../../../../UI/Modal/Modal";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@emotion/react";
+
 import {
   BlacklistOption,
   ChangeProvCash,
@@ -16,6 +18,24 @@ import {
   Riskflag,
 } from "./RiskManagementModals/";
 const RiskManagement = () => {
+  const theme = useTheme();
+
+  const mediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const largeScreen = useMediaQuery(theme.breakpoints.up("md"));
+
+  const [typographyVariant, setTypographyVariant] = React.useState("body");
+  React.useEffect(() => {
+    if (mediumScreen) {
+      setTypographyVariant("body2");
+    }
+    if (smallScreen) {
+      setTypographyVariant("body");
+    }
+    if (largeScreen) {
+      setTypographyVariant("body");
+    }
+  }, [mediumScreen, smallScreen, largeScreen]);
   const [SwitchState, setSwitchState] = React.useState({
     restrictTrading: false,
     liqOnly: false,
@@ -38,12 +58,22 @@ const RiskManagement = () => {
     <Stack direction="row" spacing={2}>
       <Card>
         <Grid sx={{ padding: "1rem" }} spacing={4} container>
-          <Grid item container xs={12}>
+          <Grid
+            sx={{
+              alignItems: "center",
+            }}
+            item
+            container
+            xs={12}
+          >
             <LabelChild
               label={"Restrict Trading"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Stack direction="row">
                 <Modal content={<RestrictTrading />}>
@@ -58,12 +88,15 @@ const RiskManagement = () => {
               </Stack>
             </LabelChild>
           </Grid>
-          <Grid item container xs={12}>
+          <Grid sx={{ alignItems: "center" }} item container xs={12}>
             <LabelChild
               label={"Liq only"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Switch
                 value={SwitchState.liqOnly}
@@ -71,12 +104,15 @@ const RiskManagement = () => {
               />
             </LabelChild>
           </Grid>
-          <Grid item container xs={12}>
+          <Grid sx={{ alignItems: "center" }} item container xs={12}>
             <LabelChild
               label={"Restrict Deposits"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Switch
                 value={SwitchState.restrictDeposits}
@@ -84,12 +120,15 @@ const RiskManagement = () => {
               />
             </LabelChild>
           </Grid>
-          <Grid item container xs={12}>
+          <Grid sx={{ alignItems: "center" }} item container xs={12}>
             <LabelChild
               label={"Restrict WithDrawl"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Switch
                 value={SwitchState.restrictWithDrawl}
@@ -97,12 +136,15 @@ const RiskManagement = () => {
               />
             </LabelChild>
           </Grid>
-          <Grid item container xs={12}>
+          <Grid sx={{ alignItems: "center" }} item container xs={12}>
             <LabelChild
               label={"Change Prov Cash"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Stack direction="row">
                 <Modal content={<ChangeProvCash />}>
@@ -117,12 +159,15 @@ const RiskManagement = () => {
               </Stack>
             </LabelChild>
           </Grid>
-          <Grid item container xs={12}>
+          <Grid sx={{ alignItems: "center" }} item container xs={12}>
             <LabelChild
               label={"Change Buying Power"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Switch
                 value={SwitchState.changeBuyingPower}
@@ -130,12 +175,15 @@ const RiskManagement = () => {
               />
             </LabelChild>
           </Grid>
-          <Grid item container xs={12}>
+          <Grid sx={{ alignItems: "center" }} item container xs={12}>
             <LabelChild
               label={"Blacklist Option"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Stack direction="row">
                 <Modal content={<BlacklistOption />}>
@@ -150,12 +198,15 @@ const RiskManagement = () => {
               </Stack>
             </LabelChild>
           </Grid>
-          <Grid item container xs={12}>
+          <Grid sx={{ alignItems: "center" }} item container xs={12}>
             <LabelChild
               label={"Risk Flag"}
               labelXsSize={10}
               childrenXsSize={2}
               sxChild={LabelChildStyled}
+              typographyProps={{
+                variant: typographyVariant,
+              }}
             >
               <Stack direction="row">
                 <Modal content={<Riskflag />}>

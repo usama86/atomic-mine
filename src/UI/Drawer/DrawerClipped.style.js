@@ -28,9 +28,12 @@ export const StyledListItem = styled(ListItem)(
   })
 );
 
-export const ContentBox = styled(Box)(({ theme }) => ({
+export const Main = styled(Box)(({ theme }) => ({
   flexGrow: 1,
   padding: theme.spacing(3),
+  width: "calc(100vw - 250px)",
+  overflowX: "auto",
+  minHeight: "80vh",
 }));
 
 export const DrawerContentBox = styled(Box)(() => ({
