@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 // custom mui components
-import Box from "../../UI/Layout/Box";
 import Stack from "../../UI/Layout/Stack";
 // mui helpers
 import { useTheme } from "@mui/material";

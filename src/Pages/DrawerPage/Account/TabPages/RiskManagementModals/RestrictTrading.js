@@ -5,7 +5,6 @@ import Typography from "../../../../../UI/Typography/Typography";
 import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Stack from "../../../../../UI/Layout/Stack";
 import Box from "../../../../../UI/Layout/Box";
-import Grid from "../../../../../UI/Layout/Grid";
 import Button from "../../../../../UI/Button/Button";
 
 const RestrictTrading = () => {
