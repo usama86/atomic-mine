@@ -22,17 +22,17 @@ function App() {
     }
   };
   return (
-    <SnackbarProvider>
-      <BrowserRouter>
-        <Theme mode={mode} handleChangeMode={handleChangeMode}>
+    <Theme mode={mode} handleChangeMode={handleChangeMode}>
+      <SnackbarProvider>
+        <BrowserRouter>
           <ApplicationRoutes
             getCurrentPath={getPathHandler}
             mode={mode}
             handleChangeMode={handleChangeMode}
           />
-        </Theme>
-      </BrowserRouter>
-    </SnackbarProvider>
+        </BrowserRouter>
+      </SnackbarProvider>
+    </Theme>
   );
 }
 

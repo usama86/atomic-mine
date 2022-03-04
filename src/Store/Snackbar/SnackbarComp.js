@@ -1,5 +1,7 @@
 import React from "react";
 import { SnackbarProvider } from "notistack";
+import { styled } from "@mui/material/styles";
+
 // GUIDE
 // const { enqueueSnackbar } = useSnackbar();
 
@@ -12,9 +14,24 @@ import { SnackbarProvider } from "notistack";
 //   enqueueSnackbar("This is a success message!", { variant });
 // };
 
+const StyledSnackBar = styled(SnackbarProvider)(({ theme }) => ({
+  "&.SnackbarItem-variantSuccess": {
+    backgroundColor: theme.palette.primary.main,
+  },
+  "&.SnackbarItem-variantWarning": {
+    backgroundColor: theme.palette.warning.main,
+  },
+  "&.SnackbarItem-variantInfo": {
+    backgroundColor: theme.palette.info.main,
+  },
+  "&.SnackbarItem-variantError": {
+    backgroundColor: theme.palette.error.main,
+  },
+}));
+
 export default function IntegrationNotistack({ children }) {
   return (
-    <SnackbarProvider
+    <StyledSnackBar
       autoHideDuration={600}
       anchorOrigin={{
         vertical: "bottom",
@@ -23,6 +40,6 @@ export default function IntegrationNotistack({ children }) {
       maxSnack={3}
     >
       {children}
-    </SnackbarProvider>
+    </StyledSnackBar>
   );
 }
