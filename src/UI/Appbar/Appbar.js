@@ -45,7 +45,7 @@ const AppbarComp = ({
             alignItems="center"
           >
             <Box sx={{ flexGrow: 1 }}>
-              <Typography variant="body" color={"green"} noWrap component="div">
+              <Typography variant="body" color={"#fff"} noWrap component="div">
                 <Stack
                   sx={{ gap: "0.6rem" }}
                   direction="row"
@@ -56,7 +56,7 @@ const AppbarComp = ({
                       <GiHamburgerMenu />
                     </IconButton>
                   ) : (
-                    <Logo width="1.7rem" height="1.7rem" color={"green"} />
+                    <Logo width="1.7rem" height="1.7rem" color={"#fff"} />
                   )}
                   <NavLogoName>{Constants.Atomic_Vault}</NavLogoName>
                 </Stack>
