@@ -94,7 +94,10 @@ export default function ClippedDrawer({
           <DrawerContentBox>{content}</DrawerContentBox>
         </StyledDrawer>
       )}
-      <ContentBox component="main">
+      <ContentBox
+        sx={{ width: "calc(100vw - 250px)", overflowX: "auto" }}
+        component="main"
+      >
         <Toolbar />
         {children}
       </ContentBox>

@@ -16,7 +16,7 @@ import {
   Heading,
   StyledButton,
   RightContainer,
-  BlurredBackground,
+  // BlurredBackground,
   LeftContainer,
   StyledForm,
 } from "./Login.style";
@@ -69,7 +69,8 @@ const Login = () => {
   ];
   return (
     <Background ismedium={`${matches}`}>
-      {matches && <BlurredBackground>&nbsp;</BlurredBackground>}
+      {/* if you want to add blurred background on mobile mode, uncomment the line below */}
+      {/* {matches && <BlurredBackground>&nbsp;</BlurredBackground>} */}
       <CardStyled>
         <Stack direction="row" sx={{ height: "100%" }}>
           <LeftContainer>

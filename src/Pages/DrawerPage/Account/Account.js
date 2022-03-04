@@ -35,6 +35,11 @@ function Account() {
         { label: "Docs", value: "7", component: <Docs /> },
         { label: "Options", value: "8", component: <Options /> },
         { label: "Personal Info", value: "9", component: <PersonalInfo /> },
+        { label: "Cash Ledger", value: "10", component: <CashLedger /> },
+        { label: "Bank Link", value: "11", component: <BankLink /> },
+        { label: "Docs", value: "12", component: <Docs /> },
+        { label: "Options", value: "13", component: <Options /> },
+        { label: "Personal Info", value: "14", component: <PersonalInfo /> },
       ],
     },
   ];
@@ -58,7 +63,7 @@ function Account() {
         />
       </Stack>
       {searchVal && (
-        <Tabs value={value}>
+        <Tabs scrollButtons={true} variant="scrollable" value={value}>
           <>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
               <TabList onChange={handleChange}>
