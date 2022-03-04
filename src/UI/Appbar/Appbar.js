@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 // mui helpers
 import { useTheme } from "@emotion/react";
@@ -13,6 +14,7 @@ import Stack from "../Layout/Stack";
 import Constants from "./../../Constants/Constants";
 // resources
 import Logo from "../../Store/LogoSvg";
+import { GiHamburgerMenu } from "react-icons/gi";
 // styled components
 import {
   AppBarStyled,
@@ -22,7 +24,13 @@ import {
   LogOutIcon,
 } from "./Appbar.style";
 
-const AppbarComp = ({ mode, handleChangeMode, onLogout }) => {
+const AppbarComp = ({
+  toggleDrawerHandler,
+  mode,
+  smallScreen,
+  handleChangeMode,
+  onLogout,
+}) => {
   const theme = useTheme();
 
   return (
@@ -48,11 +56,17 @@ const AppbarComp = ({ mode, handleChangeMode, onLogout }) => {
                   direction="row"
                   alignItems="center"
                 >
-                  <Logo
-                    width="1.7rem"
-                    height="1.7rem"
-                    color={theme.palette.appBarFontColor.main}
-                  />
+                  {smallScreen ? (
+                    <IconButton onClick={(e) => toggleDrawerHandler(e)}>
+                      <GiHamburgerMenu />
+                    </IconButton>
+                  ) : (
+                    <Logo
+                      width="1.7rem"
+                      height="1.7rem"
+                      color={theme.palette.appBarFontColor.main}
+                    />
+                  )}
                   <NavLogoName>{Constants.Atomic_Vault}</NavLogoName>
                 </Stack>
               </Typography>
@@ -98,6 +112,18 @@ const AppbarComp = ({ mode, handleChangeMode, onLogout }) => {
       </AppBarStyled>
     </React.Fragment>
   );
+};
+
+AppbarComp.propTypes = {
+  handleChangeMode: PropTypes.func,
+  mode: PropTypes.string,
+  onLogout: PropTypes.func,
+  smallScreen: PropTypes.any,
+  toggleDrawerHandler: PropTypes.func,
+};
+
+AppbarComp.defaultProps = {
+  toggleDrawerHandler: (e) => console.log(e, "no props given"),
 };
 
 export default AppbarComp;
