@@ -8,6 +8,8 @@ const Constants = {
   Log_in: "Log in",
   Login_Btn: "Login",
   loginButtonStyleOverrides: { color: "white" },
+  Close_Modal_Success: "Saved!",
+  Save_Changes_Success: "Changes Saved!",
 };
 
 export default Constants;

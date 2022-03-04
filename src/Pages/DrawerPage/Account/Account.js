@@ -3,7 +3,6 @@ import Search from "../../../UI/SearchField/Search";
 import Tabs from "../../../UI/Tabs/Tabs";
 import Stack from "../../../UI/Layout/Stack";
 import Box from "../../../UI/Layout/Box";
-
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
@@ -35,11 +34,6 @@ function Account() {
         { label: "Docs", value: "7", component: <Docs /> },
         { label: "Options", value: "8", component: <Options /> },
         { label: "Personal Info", value: "9", component: <PersonalInfo /> },
-        // { label: "Cash Ledger", value: "10", component: <CashLedger /> },
-        // { label: "Bank Link", value: "11", component: <BankLink /> },
-        // { label: "Docs", value: "12", component: <Docs /> },
-        // { label: "Options", value: "13", component: <Options /> },
-        // { label: "Personal Info", value: "14", component: <PersonalInfo /> },
       ],
     },
   ];
@@ -50,7 +44,6 @@ function Account() {
 
   const onChangeSearchVal = (e) => {
     setSearchVal(e.id);
-    // console.log(e.name);
   };
 
   return (

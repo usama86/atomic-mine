@@ -11,6 +11,8 @@ import Modal from "../../../../UI/Modal/Modal";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 import { useSnackbar } from "notistack";
+import Button from "../../../../UI/Button/Button";
+import Constants from "../../../../Constants/Constants";
 import {
   BlacklistOption,
   ChangeProvCash,
@@ -56,7 +58,7 @@ const RiskManagement = () => {
   const [random, setRandom] = React.useState("");
   const closeModalHandler = (e) => {
     setRandom(`${Math.random()}`);
-    enqueueSnackbar("Submitted!", { variant: "success" });
+    enqueueSnackbar(Constants.Close_Modal_Success, { variant: "success" });
   };
   return (
     <Stack direction="row" spacing={2}>
@@ -238,6 +240,19 @@ const RiskManagement = () => {
             </LabelChild>
           </Grid>
         </Grid>
+        <Stack sx={{ p: 2 }} alignItems="center">
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              enqueueSnackbar(Constants.Save_Changes_Success, {
+                variant: "success",
+              });
+            }}
+            sx={{ color: "white" }}
+          >
+            Save Changes
+          </Button>
+        </Stack>
       </Card>
     </Stack>
   );

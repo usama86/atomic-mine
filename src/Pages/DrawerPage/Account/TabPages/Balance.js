@@ -10,7 +10,11 @@ import Button from "./../../../../UI/Button/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 
+import { useSnackbar } from "notistack";
+import Constants from "../../../../Constants/Constants";
+
 const Balance = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   return (
@@ -68,7 +72,16 @@ const Balance = () => {
                   size="small"
                   labelStyle={{ alignSelf: "flex-end", margin: 0 }}
                 />
-                <Button sx={{ color: "white" }} size="small">
+                <Button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    enqueueSnackbar(Constants.Save_Changes_Success, {
+                      variant: "success",
+                    });
+                  }}
+                  sx={{ color: "white" }}
+                  size="small"
+                >
                   Save
                 </Button>
               </Stack>
