@@ -32,7 +32,8 @@ const StyledSnackBar = styled(SnackbarProvider)(({ theme }) => ({
 export default function IntegrationNotistack({ children }) {
   return (
     <StyledSnackBar
-      autoHideDuration={600}
+      preventDuplicate={true}
+      autoHideDuration={1500}
       anchorOrigin={{
         vertical: "bottom",
         horizontal: "right",

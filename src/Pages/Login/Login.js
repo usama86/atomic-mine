@@ -93,6 +93,7 @@ const Login = () => {
                   />
                 ))}
                 <StyledButton
+                  isdefault={false}
                   styleOverrides={Constants.loginButtonStyleOverrides}
                   type="submit"
                 >

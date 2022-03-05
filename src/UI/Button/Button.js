@@ -22,6 +22,7 @@ export default function ButtonComp({
   if (isdefault) {
     return (
       <Button
+        sx={{ color: "white" }}
         width={width}
         variant={variant}
         color={themeColor}
@@ -37,6 +38,7 @@ export default function ButtonComp({
       width={width}
       variant={variant}
       color={themeColor}
+      sx={{ color: "white" }}
       style={{ ...styleOverrides }}
       {...otherProps}
     >

@@ -1,12 +1,5 @@
-
 const Funds = () => {
+  return <div>Funds</div>;
+};
 
-    return (
-        <div>
-        Funds
-        </div>
-    );
-  };
-  
-  export default Funds;
-  
+export default Funds;

@@ -8,7 +8,7 @@ import OptionUnstyled, {
 import PopperUnstyled from "@mui/base/PopperUnstyled";
 import { styled } from "@mui/system";
 
-const width = "5rem";
+const width = "7rem";
 
 const blue = {
   100: "#DAECFF",
@@ -93,7 +93,6 @@ const StyledOption = styled(OptionUnstyled)(
   padding: 8px;
   border-radius: 0.45em;
   cursor: default;
-
   &:last-of-type {
     border-bottom: none;
   }
