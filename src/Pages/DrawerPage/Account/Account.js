@@ -53,10 +53,6 @@ function Account() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  const showUsers = (e) => {
-    e.preventDefault();
-  };
   const selectRowHandler = (e) => {
     setSearchVal(e.row);
     enqueueSnackbar(`Selected user ${e.row.name}`, {
@@ -71,7 +67,7 @@ function Account() {
           width="80vw"
           content={<SearchUser getRow={selectRowHandler} />}
         >
-          <Button onClick={showUsers}>Select User</Button>
+          <Button>Select User</Button>
         </Modal>
       </Stack>
       {searchVal.accountNumber !== "" ? (

@@ -1,7 +1,6 @@
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import Search from "./TableSearch";
-import { TrendingUpRounded } from "@mui/icons-material";
 
 const default_rows = [
   { id: 1, col1: "Hello", col2: "World" },
@@ -41,10 +40,11 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
     setData(filtered);
   }, [search, rows, category]);
   return (
-    <div style={{ height: height, width: "100%" }}>
+    <div style={{ height: height, width: "100%", padding: "0.4rem" }}>
       <DataGrid
         isRowSelectable={(params) => selectRowHandler(params)}
         sx={{
+          border: "none",
           "& p": {
             margin: 0,
           },
@@ -74,4 +74,5 @@ EditableTable.defaultProps = {
   rows: default_rows,
   columns: default_columns,
   height: "500px",
+  selectRowHandler: (e) => console.log("no prop given", e),
 };
