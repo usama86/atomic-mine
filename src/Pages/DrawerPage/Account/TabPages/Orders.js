@@ -34,6 +34,7 @@ const Orders = () => {
   return (
     <Stack direction="column" alignItems="flex-start" gap={2}>
       <Modal
+        closeDependancy={selectedRow.symbol}
         width="80vw"
         content={
           <Grid container spacing={3}>

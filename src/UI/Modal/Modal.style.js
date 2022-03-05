@@ -11,7 +11,9 @@ export const Close = styled("div")(({ theme }) => ({
 }));
 
 export const StyledPaper = styled(Paper)(({ theme, width }) => ({
+  maxHeight: "90vh",
   padding: theme.spacing(5),
+  overflowY: "auto",
   // Styles applied to Box
   position: "absolute",
   top: "50%",

@@ -143,9 +143,6 @@ export default function UnstyledSelectSimple({
   changeCurrCategory,
   ...otherProps
 }) {
-  const changeValueHandler = (e) => {
-    console.log(e);
-  };
   return (
     <CustomSelect
       {...otherProps}
@@ -156,7 +153,7 @@ export default function UnstyledSelectSimple({
         <StyledOption
           key={category.accessor}
           value={category.accessor}
-          onChange={changeValueHandler}
+          // onChange={changeValueHandler}
         >
           {category.label}
         </StyledOption>
