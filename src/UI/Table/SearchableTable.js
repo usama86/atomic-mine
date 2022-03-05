@@ -1,5 +1,5 @@
 import React from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import { StyledTable } from "./SearchableTable.style";
 import Search from "./TableSearch";
 
 const default_rows = [
@@ -43,17 +43,9 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
   }, [search, rows, category]);
   return (
     <div style={{ height: height, width: "100%", padding: "0.4rem" }}>
-      <DataGrid
+      <StyledTable
         isRowSelectable={(params) => selectRowHandler(params)}
-        sx={{
-          border: "none",
-          "& p": {
-            margin: 0,
-          },
-          "& .MuiDataGrid-row": {
-            cursor: "pointer",
-          },
-        }}
+        sx={{}}
         components={{ Toolbar: Search }}
         componentsProps={{
           toolbar: {

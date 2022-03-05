@@ -1,0 +1,2702 @@
+[
+  {
+    "id": 1,
+    "amount": "9",
+    "initiated": "3/2/2022",
+    "settled": "3/13/2021",
+    "bank": "Axsome Therapeutics, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ei645vBVJdULPzbESeVFfSvy7gAp6Jasw"
+  },
+  {
+    "id": 2,
+    "amount": "5595",
+    "initiated": "3/13/2021",
+    "settled": "9/30/2021",
+    "bank": "Texas Capital Bancshares, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1YpbFViWCARTM1GA5ZkZ6GN5t6xLWcmepw"
+  },
+  {
+    "id": 3,
+    "amount": "52090",
+    "initiated": "8/21/2021",
+    "settled": "12/28/2021",
+    "bank": "ENDRA Life Sciences Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1PNB1LhPfQyhgUygLRSu3uGhy1KarAWPNZ"
+  },
+  {
+    "id": 4,
+    "amount": "4221",
+    "initiated": "5/18/2021",
+    "settled": "3/11/2021",
+    "bank": "M B T Financial Corp",
+    "type": "deposited",
+    "accountNumber": "tz1cG1BKAU3RA2iBZg1Yes6CnrE8tuBqgzTs"
+  },
+  {
+    "id": 5,
+    "amount": "78",
+    "initiated": "6/25/2021",
+    "settled": "7/9/2021",
+    "bank": "Southern California Edison Company",
+    "type": "settled",
+    "accountNumber": "tz1i9gd93HKgY5RAWS7q5uXEoQD9jXK48vwX"
+  },
+  {
+    "id": 6,
+    "amount": "70",
+    "initiated": "8/1/2021",
+    "settled": "6/13/2021",
+    "bank": "Oxbridge Re Holdings Limited",
+    "type": "deposited",
+    "accountNumber": "tz1KppiZ8qUAKfDZhxH3a2EHDeAjNy7Dia4P"
+  },
+  {
+    "id": 7,
+    "amount": "0331",
+    "initiated": "6/17/2021",
+    "settled": "5/16/2021",
+    "bank": "MFA Financial, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1fULFDcf8Ve1Wg2L6WeKUs66xiE7qVQmsS"
+  },
+  {
+    "id": 8,
+    "amount": "61",
+    "initiated": "6/20/2021",
+    "settled": "1/23/2022",
+    "bank": "Biocept, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1WYLnWGkv8sj9gaH2M2nr2bS1WjphATdky"
+  },
+  {
+    "id": 9,
+    "amount": "18",
+    "initiated": "6/4/2021",
+    "settled": "4/3/2021",
+    "bank": "CoreCivic, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1WRBhf1UmKLfAjjHkkAppJXgUjdPyzyLDG"
+  },
+  {
+    "id": 10,
+    "amount": "2",
+    "initiated": "4/12/2021",
+    "settled": "12/18/2021",
+    "bank": "Arlington Asset Investment Corp",
+    "type": "deposited",
+    "accountNumber": "tz1LHSCpt2QvGx2pg2DFAcKCCWDgVm3gfofk"
+  },
+  {
+    "id": 11,
+    "amount": "88",
+    "initiated": "6/28/2021",
+    "settled": "11/2/2021",
+    "bank": "TOP Ships Inc.",
+    "type": "settled",
+    "accountNumber": "tz1YDwFnsXGcBkqZPYJABPjn8SbZ58tN9Vhq"
+  },
+  {
+    "id": 12,
+    "amount": "82",
+    "initiated": "10/16/2021",
+    "settled": "3/2/2022",
+    "bank": "Ingles Markets, Incorporated",
+    "type": "settled",
+    "accountNumber": "tz1bg8Q5mCKY7Cp8EhEndmykS1jNNBtyBJH1"
+  },
+  {
+    "id": 13,
+    "amount": "84",
+    "initiated": "12/13/2021",
+    "settled": "3/23/2021",
+    "bank": "First Trust Nasdaq Retail ETF",
+    "type": "deposited",
+    "accountNumber": "tz1agRPobhXkjsCJxUZ9wWUug7oDu9KxpsN2"
+  },
+  {
+    "id": 14,
+    "amount": "76673",
+    "initiated": "2/20/2022",
+    "settled": "11/13/2021",
+    "bank": "Heidrick & Struggles International, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1V73dCizXuQ9PbE89U96Z1zFuetutKoqMz"
+  },
+  {
+    "id": 15,
+    "amount": "7766",
+    "initiated": "10/3/2021",
+    "settled": "12/22/2021",
+    "bank": "Drive Shack Inc.",
+    "type": "settled",
+    "accountNumber": "tz1Tnsqxt2vX5mrEVMGzfgY99dMsQA1CXC2N"
+  },
+  {
+    "id": 16,
+    "amount": "73143",
+    "initiated": "6/9/2021",
+    "settled": "11/6/2021",
+    "bank": "Dollar Tree, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1akZPPPDYZ1qCBHauKLhd3LSzaGGgjV1vq"
+  },
+  {
+    "id": 17,
+    "amount": "6256",
+    "initiated": "3/27/2021",
+    "settled": "11/1/2021",
+    "bank": "Inotek Pharmaceuticals Corporation",
+    "type": "settled",
+    "accountNumber": "tz1bTgxdM82a9yTJa7vc8feSQ93rxdhPKpk1"
+  },
+  {
+    "id": 18,
+    "amount": "1",
+    "initiated": "4/30/2021",
+    "settled": "12/20/2021",
+    "bank": "Fly Leasing Limited",
+    "type": "settled",
+    "accountNumber": "tz1e7FThts2UkhiDFH39A6GKi4ThP1L3TPUW"
+  },
+  {
+    "id": 19,
+    "amount": "454",
+    "initiated": "3/1/2022",
+    "settled": "12/27/2021",
+    "bank": "Delta Technology Holdings Limited",
+    "type": "deposited",
+    "accountNumber": "tz1VKa5DKczh8JsDtNDWEKPKPMWqpDSSg7v7"
+  },
+  {
+    "id": 20,
+    "amount": "0855",
+    "initiated": "3/29/2021",
+    "settled": "3/13/2021",
+    "bank": "Acxiom Corporation",
+    "type": "settled",
+    "accountNumber": "tz1gzphYMnwE89FamtbPAs3tfX9q5vEJMmj8"
+  },
+  {
+    "id": 21,
+    "amount": "9735",
+    "initiated": "4/12/2021",
+    "settled": "10/8/2021",
+    "bank": "Luna Innovations Incorporated",
+    "type": "settled",
+    "accountNumber": "tz1ZNBCGPaqu6UNjAJE49iQedJKhnrvABFot"
+  },
+  {
+    "id": 22,
+    "amount": "1",
+    "initiated": "11/13/2021",
+    "settled": "5/8/2021",
+    "bank": "Jason Industries, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1Yzdi8SiAo1HhAM1xoPrMph7rY4FaEWmMM"
+  },
+  {
+    "id": 23,
+    "amount": "80",
+    "initiated": "3/30/2021",
+    "settled": "9/21/2021",
+    "bank": "Liberty Expedia Holdings, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1RvkqeKzo9e8DqCafRbgsndTU3acReFhGw"
+  },
+  {
+    "id": 24,
+    "amount": "954",
+    "initiated": "10/16/2021",
+    "settled": "12/8/2021",
+    "bank": "United Community Banks, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1RdFKzYQvMwuFUh7GHGT3Xw8binYcQv8s4"
+  },
+  {
+    "id": 25,
+    "amount": "040",
+    "initiated": "7/1/2021",
+    "settled": "10/6/2021",
+    "bank": "Radius Health, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1e17EqkgpoNut5uMBZwfPbzFD2UNnCesUN"
+  },
+  {
+    "id": 26,
+    "amount": "7",
+    "initiated": "10/10/2021",
+    "settled": "1/9/2022",
+    "bank": "New York Mortgage Trust, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1axgbszFVexi3AJFueCoWNYf5Yjt7bimCv"
+  },
+  {
+    "id": 27,
+    "amount": "063",
+    "initiated": "4/13/2021",
+    "settled": "7/15/2021",
+    "bank": "Columbia Property Trust, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1fBxDgx8p7whvV1doZVPKJQFa7LyEFxWLv"
+  },
+  {
+    "id": 28,
+    "amount": "8",
+    "initiated": "1/10/2022",
+    "settled": "7/16/2021",
+    "bank": "Nuveen New York Municipal Value Fund, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1Pe586CM6bCUfZjw5nJm7NmMCaqDWr9FLx"
+  },
+  {
+    "id": 29,
+    "amount": "4438",
+    "initiated": "8/16/2021",
+    "settled": "4/7/2021",
+    "bank": "First Northwest Bancorp",
+    "type": "settled",
+    "accountNumber": "tz1eEZS3wyhT5K8Lfua6zKjbYpkJHS9XbekF"
+  },
+  {
+    "id": 30,
+    "amount": "936",
+    "initiated": "8/19/2021",
+    "settled": "2/11/2022",
+    "bank": "MoSys, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1Tj6NdFr8JM5RvFBffZcJx1ZsW2DZZiymb"
+  },
+  {
+    "id": 31,
+    "amount": "0173",
+    "initiated": "3/10/2021",
+    "settled": "6/8/2021",
+    "bank": "Gemphire Therapeutics Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ejve2xD7Z86iWZfJvea1Ea2sffhhjku5K"
+  },
+  {
+    "id": 32,
+    "amount": "6",
+    "initiated": "7/12/2021",
+    "settled": "10/19/2021",
+    "bank": "BLACKROCK INTERNATIONAL, LTD.",
+    "type": "deposited",
+    "accountNumber": "tz1UX9rGgbn4eggvKbRSbwM7kx7z8W8FC1g2"
+  },
+  {
+    "id": 33,
+    "amount": "2",
+    "initiated": "5/10/2021",
+    "settled": "4/15/2021",
+    "bank": "REX American Resources Corporation",
+    "type": "settled",
+    "accountNumber": "tz1g6mrXtx6P4mjDXSLCYt3gFa6rkcZCD8ER"
+  },
+  {
+    "id": 34,
+    "amount": "3",
+    "initiated": "6/25/2021",
+    "settled": "7/5/2021",
+    "bank": "FireEye, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1UGCjFaAcgXUE6mg3VVTqEFBG3PxuAVEW4"
+  },
+  {
+    "id": 35,
+    "amount": "8",
+    "initiated": "9/11/2021",
+    "settled": "6/2/2021",
+    "bank": "PIMCO Commercial Mortgage Securities Trust, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1czSVVVYAzHysj512CTA5ySYGivNb9n9xQ"
+  },
+  {
+    "id": 36,
+    "amount": "724",
+    "initiated": "10/15/2021",
+    "settled": "8/3/2021",
+    "bank": "Edge Therapeutics, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1SYVW2nsFrnveknbcUeK7SRYL64PCaMDjB"
+  },
+  {
+    "id": 37,
+    "amount": "886",
+    "initiated": "11/23/2021",
+    "settled": "11/23/2021",
+    "bank": "WEC Energy Group, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1PNcoHaKhC83CpVRnDLcWdFCBBmtuak4gg"
+  },
+  {
+    "id": 38,
+    "amount": "2",
+    "initiated": "12/20/2021",
+    "settled": "4/29/2021",
+    "bank": "New Media Investment Group Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1T12G71k2k1WDTVLddYNNnXH7fiE5GhPeB"
+  },
+  {
+    "id": 39,
+    "amount": "02151",
+    "initiated": "8/10/2021",
+    "settled": "6/23/2021",
+    "bank": "B. Riley Financial, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1VbPbV9fYq2ELABZVpFdVZ1u9PucFbM3Xn"
+  },
+  {
+    "id": 40,
+    "amount": "13",
+    "initiated": "12/5/2021",
+    "settled": "4/15/2021",
+    "bank": "Meridian Bioscience Inc.",
+    "type": "settled",
+    "accountNumber": "tz1hoPMZmfbJv7RrurfF5iv7RLYawjJW4JDP"
+  },
+  {
+    "id": 41,
+    "amount": "6379",
+    "initiated": "7/21/2021",
+    "settled": "2/4/2022",
+    "bank": "Federated Premier Municipal Income Fund",
+    "type": "settled",
+    "accountNumber": "tz1XdMCyAdiUArWhpehGhMBHAFpfSjdTM48R"
+  },
+  {
+    "id": 42,
+    "amount": "35826",
+    "initiated": "2/20/2022",
+    "settled": "11/3/2021",
+    "bank": "Xenith Bankshares, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1QL4V7nGZ3qdQPJCPvkQqsf6ey8pEaks68"
+  },
+  {
+    "id": 43,
+    "amount": "9",
+    "initiated": "6/27/2021",
+    "settled": "8/17/2021",
+    "bank": "MarineMax, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1VgyFESzrmxXuygnjUVQwcCGAmk9W6MEvi"
+  },
+  {
+    "id": 44,
+    "amount": "04",
+    "initiated": "2/15/2022",
+    "settled": "8/22/2021",
+    "bank": "CGG",
+    "type": "settled",
+    "accountNumber": "tz1bc59XCdrJWTgAivH9MGcQwjzeSG1JkyK3"
+  },
+  {
+    "id": 45,
+    "amount": "7",
+    "initiated": "9/13/2021",
+    "settled": "11/5/2021",
+    "bank": "Wells Fargo & Company",
+    "type": "settled",
+    "accountNumber": "tz1MbCmSvQ9193X4ftsdCueNHoqJpxEmwnnu"
+  },
+  {
+    "id": 46,
+    "amount": "25",
+    "initiated": "3/29/2021",
+    "settled": "6/15/2021",
+    "bank": "Pure Cycle Corporation",
+    "type": "settled",
+    "accountNumber": "tz1fAyE6aqeo9wtTwuPSiTHAebDeg4BhSejk"
+  },
+  {
+    "id": 47,
+    "amount": "777",
+    "initiated": "12/7/2021",
+    "settled": "3/12/2021",
+    "bank": "Tucows Inc.",
+    "type": "settled",
+    "accountNumber": "tz1hjJR4JXq2uTjXBdibpK38Xi5GHHg83Sn8"
+  },
+  {
+    "id": 48,
+    "amount": "89",
+    "initiated": "9/26/2021",
+    "settled": "12/31/2021",
+    "bank": "AgroFresh Solutions, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ZXPdkpRkPxahxKrr3zpTPhb4V6yXmabMr"
+  },
+  {
+    "id": 49,
+    "amount": "96",
+    "initiated": "12/31/2021",
+    "settled": "5/10/2021",
+    "bank": "Newtek Business Services Corp.",
+    "type": "deposited",
+    "accountNumber": "tz1ZRqHVyVbZGHBmDfu3ZJxzBj34JrpuBUXL"
+  },
+  {
+    "id": 50,
+    "amount": "56",
+    "initiated": "7/23/2021",
+    "settled": "5/13/2021",
+    "bank": "Revance Therapeutics, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1iFAArRr9W9qkn7a49UADt7qqWaRFo178g"
+  },
+  {
+    "id": 51,
+    "amount": "9",
+    "initiated": "10/21/2021",
+    "settled": "10/29/2021",
+    "bank": "Pioneer Municipal High Income Advantage Trust",
+    "type": "settled",
+    "accountNumber": "tz1PHSoXU7NR3u9pccaPcjHK3n3HME1aiRvD"
+  },
+  {
+    "id": 52,
+    "amount": "07265",
+    "initiated": "11/27/2021",
+    "settled": "12/11/2021",
+    "bank": "First Connecticut Bancorp, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1ddmULWVK7kQwZnrvQMtQT6qdWDU6ZJ1EG"
+  },
+  {
+    "id": 53,
+    "amount": "34778",
+    "initiated": "4/19/2021",
+    "settled": "10/24/2021",
+    "bank": "Ashford Hospitality Trust Inc",
+    "type": "settled",
+    "accountNumber": "tz1cRSgXJBHjcJQnEKe3g2zFzQuj3pZLZyVr"
+  },
+  {
+    "id": 54,
+    "amount": "51",
+    "initiated": "4/25/2021",
+    "settled": "3/6/2021",
+    "bank": "PowerShares S&P SmallCap Consumer Discretionary Portfolio",
+    "type": "settled",
+    "accountNumber": "tz1exCrd7yWkbD8pN74qQsHopTVQiUYbGBxK"
+  },
+  {
+    "id": 55,
+    "amount": "8229",
+    "initiated": "6/26/2021",
+    "settled": "1/16/2022",
+    "bank": "IHS Markit Ltd.",
+    "type": "deposited",
+    "accountNumber": "tz1LgvkcTv8FxmoPgjBy39wwq3anDhr4zmWx"
+  },
+  {
+    "id": 56,
+    "amount": "5",
+    "initiated": "10/16/2021",
+    "settled": "11/16/2021",
+    "bank": "Johnson Controls International plc",
+    "type": "deposited",
+    "accountNumber": "tz1NGdptcfw7TVWpCEtHsX3uGpM9gshgGYTC"
+  },
+  {
+    "id": 57,
+    "amount": "1",
+    "initiated": "3/18/2021",
+    "settled": "12/11/2021",
+    "bank": "Steelcase Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1es8TXpNqMhrL9dEq1E6Vb8FNNtm1Q9CnJ"
+  },
+  {
+    "id": 58,
+    "amount": "0315",
+    "initiated": "6/28/2021",
+    "settled": "2/22/2022",
+    "bank": "Infinity Property and Casualty Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1bPyE2FMeo7DoNsH4kcaxHgW3FsMwervUC"
+  },
+  {
+    "id": 59,
+    "amount": "37",
+    "initiated": "5/24/2021",
+    "settled": "10/29/2021",
+    "bank": "Del Taco Restaurants, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1a1U8R8Qt8uCEUsuUt1yVUZ2nFQibGAiAy"
+  },
+  {
+    "id": 60,
+    "amount": "14640",
+    "initiated": "12/29/2021",
+    "settled": "11/13/2021",
+    "bank": "Bank of South Carolina Corp.",
+    "type": "deposited",
+    "accountNumber": "tz1LgGx6LbQjgZUnxNjfUcvxSvChMxTQaFPK"
+  },
+  {
+    "id": 61,
+    "amount": "9",
+    "initiated": "12/26/2021",
+    "settled": "5/9/2021",
+    "bank": "NextEra Energy, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1cNBCRcEPSPc74Fg3LPTmxjaujrchUemZN"
+  },
+  {
+    "id": 62,
+    "amount": "31",
+    "initiated": "1/1/2022",
+    "settled": "3/3/2022",
+    "bank": "AquaBounty Technologies, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1Qh8oQug9d7HzyAwE4Caad7a9LBGd13RhD"
+  },
+  {
+    "id": 63,
+    "amount": "8",
+    "initiated": "7/9/2021",
+    "settled": "6/11/2021",
+    "bank": "Philip Morris International Inc",
+    "type": "deposited",
+    "accountNumber": "tz1Ti4sS3s5Emu7T8KghMtZJYNdPdE3PcPKK"
+  },
+  {
+    "id": 64,
+    "amount": "207",
+    "initiated": "7/29/2021",
+    "settled": "4/30/2021",
+    "bank": "WisdomTree Barclays Interest Rate Hedged U.S. Aggregate Bond F",
+    "type": "settled",
+    "accountNumber": "tz1RboLT9q7XNsRmYowXBpqUBjwi7vJoyYRg"
+  },
+  {
+    "id": 65,
+    "amount": "32",
+    "initiated": "5/6/2021",
+    "settled": "1/22/2022",
+    "bank": "Morgan Stanley Emerging Markets Debt Fund, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1dvnGXGZoBdJh5WsrLwHd3nyAKJasiUKt1"
+  },
+  {
+    "id": 66,
+    "amount": "36",
+    "initiated": "3/26/2021",
+    "settled": "12/7/2021",
+    "bank": "Rocky Brands, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1NE3fxa2WvbbxfXDVmZsyTCvfJVHo2skGs"
+  },
+  {
+    "id": 67,
+    "amount": "646",
+    "initiated": "9/16/2021",
+    "settled": "11/18/2021",
+    "bank": "NiSource, Inc",
+    "type": "settled",
+    "accountNumber": "tz1ZvTpGyGYmDYnZJMdzaQk1U34xWNAoRRzQ"
+  },
+  {
+    "id": 68,
+    "amount": "57",
+    "initiated": "7/1/2021",
+    "settled": "5/1/2021",
+    "bank": "Gladstone Investment Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1PswqDcUK3KLmQVMSQBLwczq2vwzcmzorw"
+  },
+  {
+    "id": 69,
+    "amount": "8892",
+    "initiated": "1/30/2022",
+    "settled": "12/3/2021",
+    "bank": "Acco Brands Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1hzV8JbVCSW3tivoAJ1kWoqijxN3pSWYUX"
+  },
+  {
+    "id": 70,
+    "amount": "145",
+    "initiated": "11/29/2021",
+    "settled": "9/8/2021",
+    "bank": "Brink's Company (The)",
+    "type": "settled",
+    "accountNumber": "tz1aQP6P6LhvqssirBVMXf2EiyrLTi2yz7qA"
+  },
+  {
+    "id": 71,
+    "amount": "665",
+    "initiated": "4/5/2021",
+    "settled": "2/5/2022",
+    "bank": "Sonoma Pharmaceuticals, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1T4doBhESLW4dJHm6nBXvsqZ1B2Ra43wwA"
+  },
+  {
+    "id": 72,
+    "amount": "8124",
+    "initiated": "12/9/2021",
+    "settled": "3/14/2021",
+    "bank": "DSW Inc.",
+    "type": "settled",
+    "accountNumber": "tz1XQZbqsH1nLq9X8DbRqXshXyPu33croYqu"
+  },
+  {
+    "id": 73,
+    "amount": "2261",
+    "initiated": "4/7/2021",
+    "settled": "1/1/2022",
+    "bank": "Alamo Group, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1McSDZU8cFQMbXiTaMq6kxq72VrBKpQTgR"
+  },
+  {
+    "id": 74,
+    "amount": "49242",
+    "initiated": "9/5/2021",
+    "settled": "10/22/2021",
+    "bank": "C.H. Robinson Worldwide, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1RBzo9rjCdpfvEEqooWcJgxqAWa7ddpyAW"
+  },
+  {
+    "id": 75,
+    "amount": "41888",
+    "initiated": "12/24/2021",
+    "settled": "5/5/2021",
+    "bank": "Honeywell International Inc.",
+    "type": "settled",
+    "accountNumber": "tz1ePx8mk9dRLNmK3ptwuxniUCVCSoMgw5wt"
+  },
+  {
+    "id": 76,
+    "amount": "8857",
+    "initiated": "7/11/2021",
+    "settled": "11/13/2021",
+    "bank": "JetBlue Airways Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1WMBM3zgBhLdeBZerZwMirLEm5Rbuj41Lw"
+  },
+  {
+    "id": 77,
+    "amount": "69",
+    "initiated": "12/13/2021",
+    "settled": "1/14/2022",
+    "bank": "FLIR Systems, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1LvQ9opSeZwBzaadFDiiVq5iFbZprZgTJa"
+  },
+  {
+    "id": 78,
+    "amount": "70407",
+    "initiated": "5/23/2021",
+    "settled": "9/10/2021",
+    "bank": "Jewett-Cameron Trading Company",
+    "type": "settled",
+    "accountNumber": "tz1ToVVkQYCtJqb8qREinR98FfaWRbxJQB9B"
+  },
+  {
+    "id": 79,
+    "amount": "60936",
+    "initiated": "5/26/2021",
+    "settled": "12/19/2021",
+    "bank": "Oxford Lane Capital Corp.",
+    "type": "settled",
+    "accountNumber": "tz1VfA5wXbGb47UoaDKNzhL12HhithANCaAW"
+  },
+  {
+    "id": 80,
+    "amount": "703",
+    "initiated": "11/8/2021",
+    "settled": "9/17/2021",
+    "bank": "Texas Capital Bancshares, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1hmyBYAjw4tBbEEt8ewVbGsnGpQHMEgm1m"
+  },
+  {
+    "id": 81,
+    "amount": "6",
+    "initiated": "7/10/2021",
+    "settled": "11/4/2021",
+    "bank": "Calumet Specialty Products Partners, L.P.",
+    "type": "settled",
+    "accountNumber": "tz1ePisCALTq7NmLPiur4wDSAosE7Mqzc2Cy"
+  },
+  {
+    "id": 82,
+    "amount": "33",
+    "initiated": "1/30/2022",
+    "settled": "8/11/2021",
+    "bank": "DAVIDsTEA Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1P1qgeZPEzr3TMvfc6TQ7F4SEJnnMegT8L"
+  },
+  {
+    "id": 83,
+    "amount": "5",
+    "initiated": "7/2/2021",
+    "settled": "8/4/2021",
+    "bank": "First Community Bancshares, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1b8nWDJG6Q6mf1NzrmKf2w8RpGom1iHdz4"
+  },
+  {
+    "id": 84,
+    "amount": "12",
+    "initiated": "2/15/2022",
+    "settled": "4/19/2021",
+    "bank": "America Movil, S.A.B. de C.V.",
+    "type": "deposited",
+    "accountNumber": "tz1f9bctpLcivjGorkjKZB92Qyqys656iS9Z"
+  },
+  {
+    "id": 85,
+    "amount": "72123",
+    "initiated": "8/10/2021",
+    "settled": "6/22/2021",
+    "bank": "Juniper Pharmaceuticals, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1XUjjaehKi4M3rmQNx1sEP415GibWR1TS8"
+  },
+  {
+    "id": 86,
+    "amount": "283",
+    "initiated": "7/20/2021",
+    "settled": "1/25/2022",
+    "bank": "Vanguard Russell 1000 Growth ETF",
+    "type": "settled",
+    "accountNumber": "tz1hchESncYTBoFFZaRvfkT2VFumvavXVmgv"
+  },
+  {
+    "id": 87,
+    "amount": "7714",
+    "initiated": "1/28/2022",
+    "settled": "10/6/2021",
+    "bank": "Cohen & Steers Infrastructure Fund, Inc",
+    "type": "deposited",
+    "accountNumber": "tz1TLryarVcA5pv96ysDyjPqD5u5Spm3YN9B"
+  },
+  {
+    "id": 88,
+    "amount": "49435",
+    "initiated": "3/19/2021",
+    "settled": "1/4/2022",
+    "bank": "Bioblast Pharma Ltd.",
+    "type": "settled",
+    "accountNumber": "tz1NQuJBz3K6vNzecSmSoa94PHtcm81FG894"
+  },
+  {
+    "id": 89,
+    "amount": "598",
+    "initiated": "7/5/2021",
+    "settled": "8/6/2021",
+    "bank": "Kimbell Royalty Partners",
+    "type": "deposited",
+    "accountNumber": "tz1armHAxSUADDJyfJDaYQBJYsqPNTvwqJDn"
+  },
+  {
+    "id": 90,
+    "amount": "4",
+    "initiated": "12/25/2021",
+    "settled": "12/19/2021",
+    "bank": "Legg Mason BW Global Income Opportunities Fund Inc.",
+    "type": "settled",
+    "accountNumber": "tz1WB4p9cfPP5E1YLxjJZiLXAbfGmpfbqF8G"
+  },
+  {
+    "id": 91,
+    "amount": "968",
+    "initiated": "4/10/2021",
+    "settled": "4/1/2021",
+    "bank": "SP Plus Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1fLn2xojAZqcTJPvBXCpvWA52CFbSsdV9D"
+  },
+  {
+    "id": 92,
+    "amount": "9",
+    "initiated": "8/18/2021",
+    "settled": "9/30/2021",
+    "bank": "HDFC Bank Limited",
+    "type": "settled",
+    "accountNumber": "tz1TKNBV2zmjfGhBYcN9B7gnh4Wz3K6M9RGQ"
+  },
+  {
+    "id": 93,
+    "amount": "7723",
+    "initiated": "12/6/2021",
+    "settled": "8/4/2021",
+    "bank": "Spherix Incorporated",
+    "type": "deposited",
+    "accountNumber": "tz1iVmYiVEosFMinfNrnydq1qAjLTbkyaaU3"
+  },
+  {
+    "id": 94,
+    "amount": "58",
+    "initiated": "12/4/2021",
+    "settled": "10/27/2021",
+    "bank": "Southern Company (The)",
+    "type": "settled",
+    "accountNumber": "tz1bgNz3uw3g4CiMXBUKc62oiipbJR26VMGd"
+  },
+  {
+    "id": 95,
+    "amount": "0901",
+    "initiated": "12/30/2021",
+    "settled": "11/8/2021",
+    "bank": "Central Garden & Pet Company",
+    "type": "deposited",
+    "accountNumber": "tz1UY8tJeX7ZgJdDug4YP785wPqUQtFDSL1U"
+  },
+  {
+    "id": 96,
+    "amount": "68799",
+    "initiated": "6/18/2021",
+    "settled": "5/17/2021",
+    "bank": "Pernix Therapeutics Holdings, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1ZWhoRrEk5nqLkzEWrGXMajL6NHfqgHf7R"
+  },
+  {
+    "id": 97,
+    "amount": "2103",
+    "initiated": "7/23/2021",
+    "settled": "4/12/2021",
+    "bank": "Blackrock Enhanced Equity Dividend Trust",
+    "type": "deposited",
+    "accountNumber": "tz1Ws6hPgwwtUw1CSU8trTCj9x2RZuHatGKL"
+  },
+  {
+    "id": 98,
+    "amount": "87",
+    "initiated": "6/22/2021",
+    "settled": "8/21/2021",
+    "bank": "Calamos Strategic Total Return Fund",
+    "type": "deposited",
+    "accountNumber": "tz1Wui7NAuKsczZWsmgTGVNQgvDZQceTG3Jg"
+  },
+  {
+    "id": 99,
+    "amount": "435",
+    "initiated": "10/30/2021",
+    "settled": "4/7/2021",
+    "bank": "EQT Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1i4MsWKi8oi5kVLUNxdYS3NhVJAWarFyWu"
+  },
+  {
+    "id": 100,
+    "amount": "26",
+    "initiated": "1/14/2022",
+    "settled": "1/17/2022",
+    "bank": "Occidental Petroleum Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1aVS97avmofs8Y9Fev7XYfymMf8kWh4bB4"
+  },
+  {
+    "id": 101,
+    "amount": "93436",
+    "initiated": "5/3/2021",
+    "settled": "10/12/2021",
+    "bank": "Guidewire Software, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ciZqhMLzhJaHisxK1Jzt5ewWASYKFQSjF"
+  },
+  {
+    "id": 102,
+    "amount": "868",
+    "initiated": "5/19/2021",
+    "settled": "12/21/2021",
+    "bank": "Macy's Inc",
+    "type": "settled",
+    "accountNumber": "tz1Mewzmyc7aVvy55EC2PGozq1KBqi4rkKUm"
+  },
+  {
+    "id": 103,
+    "amount": "68",
+    "initiated": "6/22/2021",
+    "settled": "11/11/2021",
+    "bank": "PartnerRe Ltd.",
+    "type": "settled",
+    "accountNumber": "tz1SEFADaTJXoQJhFoEoaPSYmTbnr3i9MvxE"
+  },
+  {
+    "id": 104,
+    "amount": "14",
+    "initiated": "5/8/2021",
+    "settled": "4/3/2021",
+    "bank": "Blackrock MuniEnhanced Fund, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1N1njHc8s2oVSQH3Sx24bxQ7sAL3TSYTxu"
+  },
+  {
+    "id": 105,
+    "amount": "25",
+    "initiated": "6/22/2021",
+    "settled": "1/9/2022",
+    "bank": "iRhythm Technologies, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1hrHNTnh89KDSxhR8NKVVmxAJpk5qRWRx7"
+  },
+  {
+    "id": 106,
+    "amount": "73",
+    "initiated": "2/9/2022",
+    "settled": "11/10/2021",
+    "bank": "Akoustis Technologies, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1eQk8xPyhcFVtMUea7cvDyFQMpnragN9yB"
+  },
+  {
+    "id": 107,
+    "amount": "84",
+    "initiated": "8/26/2021",
+    "settled": "8/23/2021",
+    "bank": "Hersha Hospitality Trust",
+    "type": "deposited",
+    "accountNumber": "tz1dZ3C4QdjvUbqwC6ND71u4YBC3q765k2Pi"
+  },
+  {
+    "id": 108,
+    "amount": "3159",
+    "initiated": "1/29/2022",
+    "settled": "5/5/2021",
+    "bank": "Brainstorm Cell Therapeutics Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1Xor1tn1G4jjAcbN1njFvp3BMZ4FchHuqW"
+  },
+  {
+    "id": 109,
+    "amount": "12631",
+    "initiated": "8/25/2021",
+    "settled": "6/2/2021",
+    "bank": "Peregrine Pharmaceuticals Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1TGxLrhpAjKNXoj7RE7os4zUVpodBrDjZJ"
+  },
+  {
+    "id": 110,
+    "amount": "49592",
+    "initiated": "4/3/2021",
+    "settled": "6/28/2021",
+    "bank": "Bank of America Corporation",
+    "type": "settled",
+    "accountNumber": "tz1c1HehARQufH4YdyXwCm2sD9igzbM51Kh1"
+  },
+  {
+    "id": 111,
+    "amount": "72617",
+    "initiated": "8/30/2021",
+    "settled": "3/25/2021",
+    "bank": "iShares Core MSCI Total International Stock ETF",
+    "type": "deposited",
+    "accountNumber": "tz1e61NUkSmLaLf8c5J6Qn4AraQZTJxqzi57"
+  },
+  {
+    "id": 112,
+    "amount": "41",
+    "initiated": "5/7/2021",
+    "settled": "3/16/2021",
+    "bank": "AdvanSix Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1SYX3tbf1Thg4CzPv5nNxTTFD7RSbCvNfa"
+  },
+  {
+    "id": 113,
+    "amount": "36306",
+    "initiated": "9/12/2021",
+    "settled": "1/25/2022",
+    "bank": "Ecopetrol S.A.",
+    "type": "deposited",
+    "accountNumber": "tz1S9U8hwG6EGqoAgUBA6tpDJMSKpqVvXqY1"
+  },
+  {
+    "id": 114,
+    "amount": "83958",
+    "initiated": "1/26/2022",
+    "settled": "11/17/2021",
+    "bank": "Lawson Products, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1SYD8BR2hmZvHoyhcLHB4RmeDK9VZuLrS9"
+  },
+  {
+    "id": 115,
+    "amount": "69719",
+    "initiated": "7/11/2021",
+    "settled": "10/10/2021",
+    "bank": "CTS Corporation",
+    "type": "settled",
+    "accountNumber": "tz1cuMCCsa9djbVcF6DoxNz5BpVuMS9QTzpz"
+  },
+  {
+    "id": 116,
+    "amount": "0792",
+    "initiated": "5/27/2021",
+    "settled": "8/30/2021",
+    "bank": "Anadarko Petroleum Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1fqP1j7iRp3wMQsCV2n9jCR5sKoRBZRueo"
+  },
+  {
+    "id": 117,
+    "amount": "8",
+    "initiated": "5/7/2021",
+    "settled": "4/13/2021",
+    "bank": "Kinder Morgan, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1XhKkJREgsN2d1qpnYZmwnSesAe3hMCBD8"
+  },
+  {
+    "id": 118,
+    "amount": "18593",
+    "initiated": "10/12/2021",
+    "settled": "11/11/2021",
+    "bank": "Liberty Broadband Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1LCECCiWqhAkLoEfu7TwzUv6Wj4ftoT9kp"
+  },
+  {
+    "id": 119,
+    "amount": "324",
+    "initiated": "3/28/2021",
+    "settled": "7/27/2021",
+    "bank": "American Tower Corporation (REIT)",
+    "type": "deposited",
+    "accountNumber": "tz1MyHDZizCrygAFmTELCNqEErJcJmWymoNV"
+  },
+  {
+    "id": 120,
+    "amount": "972",
+    "initiated": "7/24/2021",
+    "settled": "2/20/2022",
+    "bank": "Senior Housing Properties Trust",
+    "type": "settled",
+    "accountNumber": "tz1QvYbjhB17gqQFF61ZSQa34vij3Q1tiP4w"
+  },
+  {
+    "id": 121,
+    "amount": "6",
+    "initiated": "12/15/2021",
+    "settled": "10/29/2021",
+    "bank": "Deltic Timber Corporation",
+    "type": "settled",
+    "accountNumber": "tz1cHP6WmeKvvocFGjX3dXUncnYUmBw3dzKy"
+  },
+  {
+    "id": 122,
+    "amount": "57994",
+    "initiated": "5/29/2021",
+    "settled": "10/12/2021",
+    "bank": "Seaspan Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1Wozavnb3ke4XPDCwTEfcX1559JtBFmZS3"
+  },
+  {
+    "id": 123,
+    "amount": "127",
+    "initiated": "11/30/2021",
+    "settled": "6/3/2021",
+    "bank": "B Communications Ltd.",
+    "type": "deposited",
+    "accountNumber": "tz1QByBcne4xXCfdPcMyfGNtzHbiXuThTWix"
+  },
+  {
+    "id": 124,
+    "amount": "4",
+    "initiated": "8/14/2021",
+    "settled": "12/12/2021",
+    "bank": "Function(x) Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1fjyUqfw6fnaYeECWUmANuJSegBEVbgGFR"
+  },
+  {
+    "id": 125,
+    "amount": "6",
+    "initiated": "9/30/2021",
+    "settled": "3/1/2022",
+    "bank": "EchoStar Corporation",
+    "type": "settled",
+    "accountNumber": "tz1MgRgS4EVN1GYxMph2WBJxMwDtiRTzgf4b"
+  },
+  {
+    "id": 126,
+    "amount": "27700",
+    "initiated": "2/1/2022",
+    "settled": "9/15/2021",
+    "bank": "Points International, Ltd.",
+    "type": "settled",
+    "accountNumber": "tz1UpxpUxM9gmX8LsF1iKCi6kHu8ZBNuF87q"
+  },
+  {
+    "id": 127,
+    "amount": "5",
+    "initiated": "1/1/2022",
+    "settled": "5/14/2021",
+    "bank": "RiverNorth/DoubleLine Strategic Opportunity Fund, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1c1c4FfkAxqJgvvC7tYtpsmjuoAycQdfGe"
+  },
+  {
+    "id": 128,
+    "amount": "8",
+    "initiated": "6/2/2021",
+    "settled": "9/16/2021",
+    "bank": "Costamare Inc.",
+    "type": "settled",
+    "accountNumber": "tz1Ptf7ZhALFYu9aS5wTgJtpmnvyV1mt92YQ"
+  },
+  {
+    "id": 129,
+    "amount": "461",
+    "initiated": "8/22/2021",
+    "settled": "4/16/2021",
+    "bank": "Pacific Special Acquisition Corp.",
+    "type": "deposited",
+    "accountNumber": "tz1LA3qiTvQpLbNQAT8NNe3gsDdMKHR5Ynqz"
+  },
+  {
+    "id": 130,
+    "amount": "04",
+    "initiated": "11/28/2021",
+    "settled": "6/10/2021",
+    "bank": "DelMar Pharmaceuticals, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1g8z8MgndSMLu86LEcUq8K4rgczsYCbSVf"
+  },
+  {
+    "id": 131,
+    "amount": "64",
+    "initiated": "10/27/2021",
+    "settled": "3/30/2021",
+    "bank": "Aratana Therapeutics, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1TvpEhkGD821HkCXGfHyccyUGSEQRLaKqP"
+  },
+  {
+    "id": 132,
+    "amount": "6362",
+    "initiated": "7/14/2021",
+    "settled": "8/4/2021",
+    "bank": "TIM Participacoes S.A.",
+    "type": "deposited",
+    "accountNumber": "tz1aRF8FxLpeSTqoZWReB1qH7cckDSsC7ftq"
+  },
+  {
+    "id": 133,
+    "amount": "63",
+    "initiated": "3/21/2021",
+    "settled": "8/3/2021",
+    "bank": "Cincinnati Financial Corporation",
+    "type": "settled",
+    "accountNumber": "tz1egJm8PeAPf8XqpP4aitpCsKBNNfK7rvmV"
+  },
+  {
+    "id": 134,
+    "amount": "78032",
+    "initiated": "7/22/2021",
+    "settled": "10/9/2021",
+    "bank": "Inogen, Inc",
+    "type": "deposited",
+    "accountNumber": "tz1b96ZuJdbhXWyJFAhn6GyaU7yshnvdj6e8"
+  },
+  {
+    "id": 135,
+    "amount": "89",
+    "initiated": "2/11/2022",
+    "settled": "9/3/2021",
+    "bank": "Yelp Inc.",
+    "type": "settled",
+    "accountNumber": "tz1YAuxA3teRMqdDdEefmPAP1LP8swbXj7KZ"
+  },
+  {
+    "id": 136,
+    "amount": "81716",
+    "initiated": "10/2/2021",
+    "settled": "8/17/2021",
+    "bank": "Audentes Therapeutics, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ivZUxvzYYPH7zNskEhtBMHaxhb7Q81QH3"
+  },
+  {
+    "id": 137,
+    "amount": "7936",
+    "initiated": "3/25/2021",
+    "settled": "11/15/2021",
+    "bank": "Synchrony Financial",
+    "type": "settled",
+    "accountNumber": "tz1VGbgpT4ZesJaYHdVRTdLWh8DNRyPb1pju"
+  },
+  {
+    "id": 138,
+    "amount": "21",
+    "initiated": "3/20/2021",
+    "settled": "12/21/2021",
+    "bank": "First Trust RiverFront Dynamic Emerging Markets ETF",
+    "type": "settled",
+    "accountNumber": "tz1XcMseBAEo3WGdix16y296FmYqMDaeFW9e"
+  },
+  {
+    "id": 139,
+    "amount": "20003",
+    "initiated": "4/12/2021",
+    "settled": "12/30/2021",
+    "bank": "Concurrent Computer Corporation",
+    "type": "settled",
+    "accountNumber": "tz1WGVS9jzUk5Vojn7qnyrMtn24jqrUA35Xo"
+  },
+  {
+    "id": 140,
+    "amount": "576",
+    "initiated": "7/2/2021",
+    "settled": "6/27/2021",
+    "bank": "Dycom Industries, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1MmYj823qjGZtPeZuCR4DEuqFvrmWpRLRa"
+  },
+  {
+    "id": 141,
+    "amount": "7519",
+    "initiated": "1/16/2022",
+    "settled": "12/22/2021",
+    "bank": "New Relic, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1MTmJFSDx7AwnTGnEVjK6TSi2MEwFBDkEq"
+  },
+  {
+    "id": 142,
+    "amount": "9",
+    "initiated": "1/2/2022",
+    "settled": "2/27/2022",
+    "bank": "Vanguard Russell 1000 Growth ETF",
+    "type": "deposited",
+    "accountNumber": "tz1dB8nf8XGejv2pjiRKkZaHXFGRgNC15eiB"
+  },
+  {
+    "id": 143,
+    "amount": "99",
+    "initiated": "6/19/2021",
+    "settled": "5/16/2021",
+    "bank": "John Hancock Financial Opportunities Fund",
+    "type": "settled",
+    "accountNumber": "tz1X94ip4j59cuULz9hEY2YzcH6XJQE4ckKY"
+  },
+  {
+    "id": 144,
+    "amount": "87",
+    "initiated": "7/19/2021",
+    "settled": "3/12/2021",
+    "bank": "HopFed Bancorp, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1YNEt6emGnLftVFT967mjQht9MMMyiV3jQ"
+  },
+  {
+    "id": 145,
+    "amount": "813",
+    "initiated": "6/6/2021",
+    "settled": "7/17/2021",
+    "bank": "Forward Industries, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1i8ffHZvYuLcyKNmxMjWrC7LPsuzZWoe4N"
+  },
+  {
+    "id": 146,
+    "amount": "2197",
+    "initiated": "4/2/2021",
+    "settled": "9/23/2021",
+    "bank": "Verso Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1Tu1XkzmSAKPgwTMw4jYDcuS1pxdgykdWC"
+  },
+  {
+    "id": 147,
+    "amount": "583",
+    "initiated": "4/8/2021",
+    "settled": "6/13/2021",
+    "bank": "Calamos Strategic Total Return Fund",
+    "type": "deposited",
+    "accountNumber": "tz1d4q6MgznTAzpJPwqhrXuKcSYSYgPZ4KD1"
+  },
+  {
+    "id": 148,
+    "amount": "8444",
+    "initiated": "3/4/2022",
+    "settled": "4/20/2021",
+    "bank": "Microsemi Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1V3rGzkePYtvRNuXJfBkrBPXmqhTbhbrVZ"
+  },
+  {
+    "id": 149,
+    "amount": "8410",
+    "initiated": "4/23/2021",
+    "settled": "10/18/2021",
+    "bank": "Aetna Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1cLchFZyDcGWJdSSzRFocDRcUrcXUAhHQV"
+  },
+  {
+    "id": 150,
+    "amount": "40",
+    "initiated": "5/25/2021",
+    "settled": "3/26/2021",
+    "bank": "Atlassian Corporation Plc",
+    "type": "settled",
+    "accountNumber": "tz1PfUcA1DUQuEZhtr2SPTWgeHxDLQt8vUfe"
+  },
+  {
+    "id": 151,
+    "amount": "3",
+    "initiated": "10/5/2021",
+    "settled": "9/28/2021",
+    "bank": "SPAR Group, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1hask9qo6PkxMaJugPmYtz2tYY8xoCP3JM"
+  },
+  {
+    "id": 152,
+    "amount": "3",
+    "initiated": "2/16/2022",
+    "settled": "3/8/2021",
+    "bank": "SpartanNash Company",
+    "type": "deposited",
+    "accountNumber": "tz1XFffQ2bsY8SkJowy5geuUjXDn34wZN41m"
+  },
+  {
+    "id": 153,
+    "amount": "5687",
+    "initiated": "10/3/2021",
+    "settled": "9/20/2021",
+    "bank": "Thai Fund, Inc. (The)",
+    "type": "deposited",
+    "accountNumber": "tz1PypZh53Gw5wbfjBLJg9vdFttMwX5f8m8A"
+  },
+  {
+    "id": 154,
+    "amount": "0542",
+    "initiated": "3/6/2021",
+    "settled": "2/23/2022",
+    "bank": "Adecoagro S.A.",
+    "type": "settled",
+    "accountNumber": "tz1PxeC7KXUAcJSLDD4A7FQKrQXbbHCttY7q"
+  },
+  {
+    "id": 155,
+    "amount": "7005",
+    "initiated": "8/31/2021",
+    "settled": "10/3/2021",
+    "bank": "Reynolds American Inc",
+    "type": "settled",
+    "accountNumber": "tz1f6eN7KrgVCMcrbMvQx1eyx36yFWLfBni9"
+  },
+  {
+    "id": 156,
+    "amount": "581",
+    "initiated": "8/7/2021",
+    "settled": "8/13/2021",
+    "bank": "Wintrust Financial Corporation",
+    "type": "settled",
+    "accountNumber": "tz1MBeVjTRh722esDKFFmdPpU32YcG4w74Jb"
+  },
+  {
+    "id": 157,
+    "amount": "311",
+    "initiated": "6/3/2021",
+    "settled": "3/11/2021",
+    "bank": "Vuzix Corporation",
+    "type": "settled",
+    "accountNumber": "tz1UCgishtNordt2AvC5qUZeXHGXmctFx8t2"
+  },
+  {
+    "id": 158,
+    "amount": "74818",
+    "initiated": "9/7/2021",
+    "settled": "6/8/2021",
+    "bank": "Sunstone Hotel Investors, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1VNX84CYoeyAuLTWK732T4BJgs9ECxqwk4"
+  },
+  {
+    "id": 159,
+    "amount": "83",
+    "initiated": "12/15/2021",
+    "settled": "6/29/2021",
+    "bank": "PowerShares DWA Momentum & Low Volatility Rotation Portfolio",
+    "type": "deposited",
+    "accountNumber": "tz1VABVZ7TTk29LgE7Ry38Je2MQM5kS9zEwm"
+  },
+  {
+    "id": 160,
+    "amount": "93",
+    "initiated": "4/17/2021",
+    "settled": "8/28/2021",
+    "bank": "Mid Penn Bancorp",
+    "type": "deposited",
+    "accountNumber": "tz1NGdde3726BYe9muXh4cwkwW2zg1XPANht"
+  },
+  {
+    "id": 161,
+    "amount": "401",
+    "initiated": "4/11/2021",
+    "settled": "6/6/2021",
+    "bank": "Nathan's Famous, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1NUsi614h7c6xbmUNMEaMVFp2BDYsT4xMe"
+  },
+  {
+    "id": 162,
+    "amount": "176",
+    "initiated": "9/16/2021",
+    "settled": "1/1/2022",
+    "bank": "The Middleby Corporation",
+    "type": "settled",
+    "accountNumber": "tz1ZH8SzWTaPMSAMDs4gEepCBJFdq1RJ6sKz"
+  },
+  {
+    "id": 163,
+    "amount": "961",
+    "initiated": "10/23/2021",
+    "settled": "9/3/2021",
+    "bank": "Voya Asia Pacific High Dividend Equity Income Fund",
+    "type": "deposited",
+    "accountNumber": "tz1ReGzgDfPskjqz9gpGLhEoohBU8z8w6hu9"
+  },
+  {
+    "id": 164,
+    "amount": "057",
+    "initiated": "5/22/2021",
+    "settled": "11/26/2021",
+    "bank": "HealthEquity, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ed6ymTDRg1jsjXDK21Kc1d2hHS9bXGB1n"
+  },
+  {
+    "id": 165,
+    "amount": "0",
+    "initiated": "3/23/2021",
+    "settled": "5/6/2021",
+    "bank": "Arlington Asset Investment Corp",
+    "type": "deposited",
+    "accountNumber": "tz1bzakyxsMhWes3auWMHkcLStpS7jDnZY7r"
+  },
+  {
+    "id": 166,
+    "amount": "60210",
+    "initiated": "8/8/2021",
+    "settled": "11/21/2021",
+    "bank": "Inter Parfums, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1i48yz9ckzXqyaRykozjKRXSpeNvdAYkmP"
+  },
+  {
+    "id": 167,
+    "amount": "60",
+    "initiated": "12/6/2021",
+    "settled": "5/28/2021",
+    "bank": "Equitable Financial Corp.",
+    "type": "settled",
+    "accountNumber": "tz1ZPHhMM2KvEQ6DULM1nfyJYiksQuqrijkq"
+  },
+  {
+    "id": 168,
+    "amount": "85",
+    "initiated": "8/28/2021",
+    "settled": "1/27/2022",
+    "bank": "Ames National Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1hv2M38k5SkxCQANArEp2k3vXHWV1b2FdA"
+  },
+  {
+    "id": 169,
+    "amount": "2662",
+    "initiated": "7/8/2021",
+    "settled": "8/21/2021",
+    "bank": "Vident Core US Equity ETF",
+    "type": "deposited",
+    "accountNumber": "tz1gbViJMSixqn2AY2y1fdDkeTWcqVWSBzJa"
+  },
+  {
+    "id": 170,
+    "amount": "38230",
+    "initiated": "11/28/2021",
+    "settled": "8/12/2021",
+    "bank": "Aegion Corp",
+    "type": "deposited",
+    "accountNumber": "tz1LP2uriiAK7U1ehqpmSqJ5gYgrUozUnSFx"
+  },
+  {
+    "id": 171,
+    "amount": "412",
+    "initiated": "9/18/2021",
+    "settled": "8/5/2021",
+    "bank": "LaSalle Hotel Properties",
+    "type": "deposited",
+    "accountNumber": "tz1QBbxmg2iJdRetCbfafKYjKAUD4i9nvA2T"
+  },
+  {
+    "id": 172,
+    "amount": "9920",
+    "initiated": "3/29/2021",
+    "settled": "9/17/2021",
+    "bank": "Diversified Real Asset Income Fund",
+    "type": "settled",
+    "accountNumber": "tz1eegtBQxVyQTM2JPc4hqnA6GWeSghjiFit"
+  },
+  {
+    "id": 173,
+    "amount": "896",
+    "initiated": "8/8/2021",
+    "settled": "4/11/2021",
+    "bank": "National Western Life Group, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1bWqrczRtcNFxc33e3v24Vg8S6VJGzgvVM"
+  },
+  {
+    "id": 174,
+    "amount": "811",
+    "initiated": "6/15/2021",
+    "settled": "3/2/2022",
+    "bank": "Zosano Pharma Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1LLXoVN8y9nekstcRkuMta7iq7EQgyXsF3"
+  },
+  {
+    "id": 175,
+    "amount": "3820",
+    "initiated": "5/17/2021",
+    "settled": "10/1/2021",
+    "bank": "Regulus Therapeutics Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1P22BFtEqgYd5FtpcKaxnwDaxYWTZKDkh2"
+  },
+  {
+    "id": 176,
+    "amount": "73",
+    "initiated": "12/11/2021",
+    "settled": "3/29/2021",
+    "bank": "Splunk Inc.",
+    "type": "settled",
+    "accountNumber": "tz1UyefzTAUDsSNeXHyh5cFksBLWbpKRubLe"
+  },
+  {
+    "id": 177,
+    "amount": "676",
+    "initiated": "9/16/2021",
+    "settled": "4/26/2021",
+    "bank": "Embraer-Empresa Brasileira de Aeronautica",
+    "type": "deposited",
+    "accountNumber": "tz1SBwv4DQuoVsoLxLHnigWwgkUrG8uKn2X9"
+  },
+  {
+    "id": 178,
+    "amount": "35",
+    "initiated": "2/1/2022",
+    "settled": "7/2/2021",
+    "bank": "Ivy NextShares",
+    "type": "deposited",
+    "accountNumber": "tz1QAxnEYYjSrZj2GrFqAAhPGPhuDCMGWqBh"
+  },
+  {
+    "id": 179,
+    "amount": "2517",
+    "initiated": "11/11/2021",
+    "settled": "12/31/2021",
+    "bank": "Mid-America Apartment Communities, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1TSQYXM4FadTXLjwEvz938RWFkepC6MGJQ"
+  },
+  {
+    "id": 180,
+    "amount": "3696",
+    "initiated": "4/8/2021",
+    "settled": "1/30/2022",
+    "bank": "PAVmed Inc.",
+    "type": "settled",
+    "accountNumber": "tz1dYzzmQaCeEgrmyPNdeQBEsjryRkJyFySY"
+  },
+  {
+    "id": 181,
+    "amount": "5",
+    "initiated": "4/11/2021",
+    "settled": "1/23/2022",
+    "bank": "Oracle Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1MnjuLV3oJBNkymLhmka3cyXpZi2NwHqEf"
+  },
+  {
+    "id": 182,
+    "amount": "17",
+    "initiated": "3/8/2021",
+    "settled": "12/31/2021",
+    "bank": "Pool Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1ZXTegZ1bMD5mkkz2fwfoKwfLCdwrNpBG4"
+  },
+  {
+    "id": 183,
+    "amount": "85",
+    "initiated": "10/26/2021",
+    "settled": "11/12/2021",
+    "bank": "TransUnion",
+    "type": "deposited",
+    "accountNumber": "tz1NF2BKPmTPkBaNaGP7UqT63hVfdUQH1gyN"
+  },
+  {
+    "id": 184,
+    "amount": "22",
+    "initiated": "12/5/2021",
+    "settled": "5/25/2021",
+    "bank": "Pacific Gas & Electric Co.",
+    "type": "deposited",
+    "accountNumber": "tz1R7BjQBXnKL6U5jKfREiScpp8qMqDMf4WU"
+  },
+  {
+    "id": 185,
+    "amount": "99971",
+    "initiated": "2/1/2022",
+    "settled": "10/18/2021",
+    "bank": "SS&C Technologies Holdings, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ah4Tre9ECu6q8FVuQqw3TzBV733qUA6bY"
+  },
+  {
+    "id": 186,
+    "amount": "14",
+    "initiated": "2/7/2022",
+    "settled": "3/11/2021",
+    "bank": "Kaiser Aluminum Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1Yush5xDUtef1XbqEvaTPp4X8MeVnxcfeg"
+  },
+  {
+    "id": 187,
+    "amount": "62",
+    "initiated": "9/8/2021",
+    "settled": "1/4/2022",
+    "bank": "RealPage, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1h7eB7EEzJxtMv2vFLA5ppgKzvXA74NNLs"
+  },
+  {
+    "id": 188,
+    "amount": "034",
+    "initiated": "12/9/2021",
+    "settled": "7/6/2021",
+    "bank": "Estee Lauder Companies, Inc. (The)",
+    "type": "settled",
+    "accountNumber": "tz1LAZYi11VFwzHqR1DTLf3A2HeXbAkEtgr6"
+  },
+  {
+    "id": 189,
+    "amount": "66480",
+    "initiated": "4/23/2021",
+    "settled": "11/2/2021",
+    "bank": "Lumber Liquidators Holdings, Inc",
+    "type": "settled",
+    "accountNumber": "tz1bePo5sHk2Bmbceo5qBVoWGe3V1gVzjDAi"
+  },
+  {
+    "id": 190,
+    "amount": "07992",
+    "initiated": "2/17/2022",
+    "settled": "10/16/2021",
+    "bank": "WellCare Health Plans, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1SjEGPtfrrk75PjpB7246fDDzGsciFD3yD"
+  },
+  {
+    "id": 191,
+    "amount": "1008",
+    "initiated": "11/16/2021",
+    "settled": "2/25/2022",
+    "bank": "Capitol Acquisition Corp. III",
+    "type": "deposited",
+    "accountNumber": "tz1WioWkc5taMHQ3b8ZL7csGw64Zhe2EAZum"
+  },
+  {
+    "id": 192,
+    "amount": "704",
+    "initiated": "4/21/2021",
+    "settled": "9/5/2021",
+    "bank": "WisdomTree United Kingdom Hedged Equity Fund",
+    "type": "settled",
+    "accountNumber": "tz1Qm6FRBTB8wf7XhGgreHbSxk9wzHLqKy4u"
+  },
+  {
+    "id": 193,
+    "amount": "07233",
+    "initiated": "5/16/2021",
+    "settled": "5/15/2021",
+    "bank": "PIMCO California Municipal Income Fund",
+    "type": "settled",
+    "accountNumber": "tz1P45KvGnRb5eM6ikeFJwgwMLaxpWodtSGR"
+  },
+  {
+    "id": 194,
+    "amount": "6",
+    "initiated": "10/26/2021",
+    "settled": "1/18/2022",
+    "bank": "Thai Fund, Inc. (The)",
+    "type": "settled",
+    "accountNumber": "tz1XN9YND6nAheDPjKtH5udGvdemPWBwtEzz"
+  },
+  {
+    "id": 195,
+    "amount": "7884",
+    "initiated": "5/5/2021",
+    "settled": "12/29/2021",
+    "bank": "Fidelity National Information Services, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1gEKiW3grXUJTJAuSvNCB5vUg9441GGBR8"
+  },
+  {
+    "id": 196,
+    "amount": "14",
+    "initiated": "4/18/2021",
+    "settled": "12/30/2021",
+    "bank": "BullMark LatAm Select Leaders ETF",
+    "type": "settled",
+    "accountNumber": "tz1XCcpvAPiv5hyuSyTmYKKmTXU8Zc4LDdPX"
+  },
+  {
+    "id": 197,
+    "amount": "01592",
+    "initiated": "1/23/2022",
+    "settled": "11/19/2021",
+    "bank": "First Trust Emerging Markets Local Currency Bond ETF",
+    "type": "settled",
+    "accountNumber": "tz1h5A4GDmrYwAaLaVXWSKj67bcLXBmiZv5V"
+  },
+  {
+    "id": 198,
+    "amount": "4",
+    "initiated": "8/7/2021",
+    "settled": "4/22/2021",
+    "bank": "Cavium, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1b45NqmQxuNPkfqtEtrZTvha1j7PdWXoZB"
+  },
+  {
+    "id": 199,
+    "amount": "9590",
+    "initiated": "7/1/2021",
+    "settled": "9/4/2021",
+    "bank": "KKR & Co. L.P.",
+    "type": "settled",
+    "accountNumber": "tz1dzH7bv2AA6JyLrfXM95mnqRdZ5vo4BYkS"
+  },
+  {
+    "id": 200,
+    "amount": "075",
+    "initiated": "3/2/2022",
+    "settled": "3/19/2021",
+    "bank": "Landmark Bancorp Inc.",
+    "type": "settled",
+    "accountNumber": "tz1V8o1yeq6ST5tJAU6WZpxQV6GNuFVKDgy1"
+  },
+  {
+    "id": 201,
+    "amount": "1199",
+    "initiated": "6/15/2021",
+    "settled": "5/14/2021",
+    "bank": "Culp, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1hyamPMHkgL9VieESFtAqnKHiRtFAfsFDt"
+  },
+  {
+    "id": 202,
+    "amount": "44",
+    "initiated": "6/16/2021",
+    "settled": "10/22/2021",
+    "bank": "First Trust Large Cap Value AlphaDEX Fund",
+    "type": "deposited",
+    "accountNumber": "tz1QW1k2VqKEgTdRtJvrPPeqqDiinWy2CbYV"
+  },
+  {
+    "id": 203,
+    "amount": "98",
+    "initiated": "11/3/2021",
+    "settled": "10/29/2021",
+    "bank": "Atossa Genetics Inc.",
+    "type": "settled",
+    "accountNumber": "tz1M1WccEqUbFYt6Momm2n5QPqesJyJrB6cF"
+  },
+  {
+    "id": 204,
+    "amount": "41",
+    "initiated": "1/17/2022",
+    "settled": "4/14/2021",
+    "bank": "Sorrento Therapeutics, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1fVUBxi65esdHJ1siSHGDv41HfFAGjMNyH"
+  },
+  {
+    "id": 205,
+    "amount": "5456",
+    "initiated": "2/9/2022",
+    "settled": "5/7/2021",
+    "bank": "Axon Enterprise, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1PboJkNdxTfqo1ftsDytFUnnYSfoAaq51N"
+  },
+  {
+    "id": 206,
+    "amount": "7",
+    "initiated": "4/11/2021",
+    "settled": "9/21/2021",
+    "bank": "Gray Television, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1eYdyAKjLqYFLuyoapjyoFhaGTL3dX4kqB"
+  },
+  {
+    "id": 207,
+    "amount": "842",
+    "initiated": "5/16/2021",
+    "settled": "4/13/2021",
+    "bank": "ICON plc",
+    "type": "settled",
+    "accountNumber": "tz1aJc19tMZWeAzCWMbUchkMVG8EQNiY6CQv"
+  },
+  {
+    "id": 208,
+    "amount": "84",
+    "initiated": "9/30/2021",
+    "settled": "8/14/2021",
+    "bank": "SharpSpring, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1WWexMKMj2Akz9VMhS5kN3jQx3YZKC6rpp"
+  },
+  {
+    "id": 209,
+    "amount": "71",
+    "initiated": "10/24/2021",
+    "settled": "8/13/2021",
+    "bank": "ClearBridge Energy MLP Total Return Fund Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1heeDZcNG7TPEixv6V4tsHBdp5cLnKfSsk"
+  },
+  {
+    "id": 210,
+    "amount": "318",
+    "initiated": "2/15/2022",
+    "settled": "4/2/2021",
+    "bank": "KKR & Co. L.P.",
+    "type": "deposited",
+    "accountNumber": "tz1gH4HMxQHsuYf8KiuXGgaGCrW1uyZtjGMU"
+  },
+  {
+    "id": 211,
+    "amount": "0427",
+    "initiated": "2/27/2022",
+    "settled": "6/10/2021",
+    "bank": "Patrick Industries, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1hAJA7QTG8T5YG5HshJXwG3kLkSAWuKcvQ"
+  },
+  {
+    "id": 212,
+    "amount": "5712",
+    "initiated": "1/20/2022",
+    "settled": "1/14/2022",
+    "bank": "CSX Corporation",
+    "type": "settled",
+    "accountNumber": "tz1Yhr33mBH4Na1YowkrCdPTQW7BuzgmVNh2"
+  },
+  {
+    "id": 213,
+    "amount": "1",
+    "initiated": "4/27/2021",
+    "settled": "3/1/2022",
+    "bank": "UCP, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1QF3EQ2JQjrra13H9NWcwWeVBtPseM12uy"
+  },
+  {
+    "id": 214,
+    "amount": "09096",
+    "initiated": "9/30/2021",
+    "settled": "4/10/2021",
+    "bank": "DTE Energy Company",
+    "type": "deposited",
+    "accountNumber": "tz1MWV4onMEoUGjQ6ULtQxHNucFSTKo6FSzA"
+  },
+  {
+    "id": 215,
+    "amount": "3",
+    "initiated": "12/14/2021",
+    "settled": "9/10/2021",
+    "bank": "Teekay Tankers Ltd.",
+    "type": "settled",
+    "accountNumber": "tz1dn25rB48U3un46eNcAmdXK9PPujXc6N2Z"
+  },
+  {
+    "id": 216,
+    "amount": "62",
+    "initiated": "3/2/2022",
+    "settled": "4/20/2021",
+    "bank": "Agrium Inc.",
+    "type": "settled",
+    "accountNumber": "tz1UHjWtXzMxJHELTZ2uNXvrJ2kg2CALDCpL"
+  },
+  {
+    "id": 217,
+    "amount": "63463",
+    "initiated": "4/28/2021",
+    "settled": "1/2/2022",
+    "bank": "Horizon Technology Finance Corporation",
+    "type": "settled",
+    "accountNumber": "tz1MXDkmqTiYSHpTTE461GUj9935otqhfpNi"
+  },
+  {
+    "id": 218,
+    "amount": "2140",
+    "initiated": "7/31/2021",
+    "settled": "2/8/2022",
+    "bank": "National Retail Properties",
+    "type": "settled",
+    "accountNumber": "tz1SnPngFqcet5f3eS3ifnn1LLzJC9t1cMDa"
+  },
+  {
+    "id": 219,
+    "amount": "566",
+    "initiated": "3/18/2021",
+    "settled": "12/1/2021",
+    "bank": "Martin Midstream Partners L.P.",
+    "type": "deposited",
+    "accountNumber": "tz1TTmxah2SahwcYn86fxJSE4xnFM4PNbYm4"
+  },
+  {
+    "id": 220,
+    "amount": "39",
+    "initiated": "6/13/2021",
+    "settled": "3/25/2021",
+    "bank": "Dillard's, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1WxB53GGmW6acUMJWBwZZwWg7NME9uyr1X"
+  },
+  {
+    "id": 221,
+    "amount": "4",
+    "initiated": "7/18/2021",
+    "settled": "1/24/2022",
+    "bank": "Iridium Communications Inc",
+    "type": "settled",
+    "accountNumber": "tz1cov38S68m4g8QnD1qZf5XdGRf8WMM4EyX"
+  },
+  {
+    "id": 222,
+    "amount": "582",
+    "initiated": "6/5/2021",
+    "settled": "11/15/2021",
+    "bank": "BGC Partners, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1YdLAdJ85e5udigKdYXJD6851cF1QF3Kyn"
+  },
+  {
+    "id": 223,
+    "amount": "7727",
+    "initiated": "2/8/2022",
+    "settled": "4/1/2021",
+    "bank": "Mexico Fund, Inc. (The)",
+    "type": "settled",
+    "accountNumber": "tz1LfEG7Q6SdHfJYbbHJu5v6oDJTyDSwrb8A"
+  },
+  {
+    "id": 224,
+    "amount": "49",
+    "initiated": "2/24/2022",
+    "settled": "10/23/2021",
+    "bank": "United-Guardian, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1dbaXLGx1V1PnBfKQ6m35eMFXEZgqrxBjv"
+  },
+  {
+    "id": 225,
+    "amount": "8287",
+    "initiated": "6/7/2021",
+    "settled": "4/3/2021",
+    "bank": "Vince Holding Corp.",
+    "type": "deposited",
+    "accountNumber": "tz1h2EQiHxzjr7Mw3rQQCzya9mts4m2G4LH1"
+  },
+  {
+    "id": 226,
+    "amount": "1",
+    "initiated": "11/24/2021",
+    "settled": "7/23/2021",
+    "bank": "Zions Bancorporation",
+    "type": "deposited",
+    "accountNumber": "tz1SXhVqJ49yYSARLoJ4xqQ4uyGFwAWpDeMo"
+  },
+  {
+    "id": 227,
+    "amount": "66625",
+    "initiated": "8/1/2021",
+    "settled": "2/19/2022",
+    "bank": "Mackinac Financial Corporation",
+    "type": "settled",
+    "accountNumber": "tz1c4muWJuMtc8SaDk7E62DXJw77Ye7UXebW"
+  },
+  {
+    "id": 228,
+    "amount": "66",
+    "initiated": "10/11/2021",
+    "settled": "1/19/2022",
+    "bank": "Universal Electronics Inc.",
+    "type": "settled",
+    "accountNumber": "tz1My3145UyFgcRHqiw8Ehy52fpZYLk4pmuS"
+  },
+  {
+    "id": 229,
+    "amount": "5017",
+    "initiated": "11/18/2021",
+    "settled": "6/4/2021",
+    "bank": "Community Trust Bancorp, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1VqRgJPuKLxWVum4mNYgfJcLPCmtpZ8HU6"
+  },
+  {
+    "id": 230,
+    "amount": "8764",
+    "initiated": "10/18/2021",
+    "settled": "4/6/2021",
+    "bank": "Valhi, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1KmbigeeYRnQhRmxn6dyVeXwaPmVJZtyY1"
+  },
+  {
+    "id": 231,
+    "amount": "4",
+    "initiated": "7/8/2021",
+    "settled": "6/12/2021",
+    "bank": "iPath US Treasury Long Bond Bull ETN",
+    "type": "settled",
+    "accountNumber": "tz1eFFTPZpCFv2az3KcUrWANrWLeFzKnRoz7"
+  },
+  {
+    "id": 232,
+    "amount": "8",
+    "initiated": "11/15/2021",
+    "settled": "3/30/2021",
+    "bank": "First Trust Emerging Markets Local Currency Bond ETF",
+    "type": "settled",
+    "accountNumber": "tz1i88CqGvCYAAQ5myxZdTxzk54e1GQbGNx4"
+  },
+  {
+    "id": 233,
+    "amount": "5707",
+    "initiated": "4/10/2021",
+    "settled": "6/13/2021",
+    "bank": "G-III Apparel Group, LTD.",
+    "type": "settled",
+    "accountNumber": "tz1NkEjCePn1UW4zSquq3NFVMHhkdFcgQC2R"
+  },
+  {
+    "id": 234,
+    "amount": "37248",
+    "initiated": "6/24/2021",
+    "settled": "10/6/2021",
+    "bank": "Titan Machinery Inc.",
+    "type": "settled",
+    "accountNumber": "tz1cWwUQZ9GdhCvtuKyQ5Rb6JFuGGhhAjz8U"
+  },
+  {
+    "id": 235,
+    "amount": "688",
+    "initiated": "10/12/2021",
+    "settled": "12/1/2021",
+    "bank": "TriplePoint Venture Growth BDC Corp.",
+    "type": "deposited",
+    "accountNumber": "tz1TN34zLMinobrunbtzsHVUce7ZqHQZhN8i"
+  },
+  {
+    "id": 236,
+    "amount": "2370",
+    "initiated": "7/24/2021",
+    "settled": "12/6/2021",
+    "bank": "United Financial Bancorp, Inc. ",
+    "type": "deposited",
+    "accountNumber": "tz1fnP3XTp4XhPgyWSCBbwCviXfZ7nJUBsxK"
+  },
+  {
+    "id": 237,
+    "amount": "43856",
+    "initiated": "2/20/2022",
+    "settled": "1/23/2022",
+    "bank": "Santander Holdings USA, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1PbKPj4VJJyAmGgCTQcSJZdEsoFSoH4NgU"
+  },
+  {
+    "id": 238,
+    "amount": "60974",
+    "initiated": "3/29/2021",
+    "settled": "12/10/2021",
+    "bank": "Host Hotels & Resorts, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1bM7eL6hu65fTZzSxgfoR5nq1NFduh1UzU"
+  },
+  {
+    "id": 239,
+    "amount": "5",
+    "initiated": "3/5/2022",
+    "settled": "6/27/2021",
+    "bank": "Discover Financial Services",
+    "type": "settled",
+    "accountNumber": "tz1dLsB5Cv8RUUvQdsJn4SnAri55Nk52zbS8"
+  },
+  {
+    "id": 240,
+    "amount": "0",
+    "initiated": "7/19/2021",
+    "settled": "5/19/2021",
+    "bank": "Mercer International Inc.",
+    "type": "settled",
+    "accountNumber": "tz1V72VcvxHMdqk96RLj4k8sfYHDzkFCBiKJ"
+  },
+  {
+    "id": 241,
+    "amount": "8",
+    "initiated": "3/22/2021",
+    "settled": "11/4/2021",
+    "bank": "Fidelity National Financial, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1L28os7afifnaAGgXanwjqu39h8UfayuKu"
+  },
+  {
+    "id": 242,
+    "amount": "89",
+    "initiated": "10/16/2021",
+    "settled": "7/21/2021",
+    "bank": "First Capital, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1buAUFsFCVxWG2B5jisHsngZQq4Yzp1EXh"
+  },
+  {
+    "id": 243,
+    "amount": "99413",
+    "initiated": "3/8/2021",
+    "settled": "12/18/2021",
+    "bank": "Globus Medical, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1XGCq6MMGVvXPgPej8zj4L8aix1ZkHpUzE"
+  },
+  {
+    "id": 244,
+    "amount": "4890",
+    "initiated": "12/26/2021",
+    "settled": "7/10/2021",
+    "bank": "Nuveen North Carolina Quality Municipal Income Fd",
+    "type": "deposited",
+    "accountNumber": "tz1dyHRRjLzLikcmH3MgRGyjG7qpbrc6irkM"
+  },
+  {
+    "id": 245,
+    "amount": "93315",
+    "initiated": "12/30/2021",
+    "settled": "3/28/2021",
+    "bank": "Yum China Holdings, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1Ma8KUaZYL91cUwMt2VU5Hq8E8R4KpQhZY"
+  },
+  {
+    "id": 246,
+    "amount": "2",
+    "initiated": "9/10/2021",
+    "settled": "10/25/2021",
+    "bank": "Citizens Financial Group, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1UwNB2Z25pgc1yJGPmGVikjpcym1jAeR2C"
+  },
+  {
+    "id": 247,
+    "amount": "2266",
+    "initiated": "1/3/2022",
+    "settled": "6/12/2021",
+    "bank": "BGC Partners, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1T3oJcDLt2x78W3XQy7XZHnwBgb35Vmzjf"
+  },
+  {
+    "id": 248,
+    "amount": "16",
+    "initiated": "2/26/2022",
+    "settled": "5/30/2021",
+    "bank": "Edison International",
+    "type": "deposited",
+    "accountNumber": "tz1hUhL8EvVkN9JLpiacbFf71BkY3PG16T5h"
+  },
+  {
+    "id": 249,
+    "amount": "6",
+    "initiated": "1/22/2022",
+    "settled": "3/8/2021",
+    "bank": "TrustCo Bank Corp NY",
+    "type": "settled",
+    "accountNumber": "tz1hwa9CL7UCwgDGj65m974YLNMKnxeC26Ge"
+  },
+  {
+    "id": 250,
+    "amount": "86",
+    "initiated": "10/5/2021",
+    "settled": "4/22/2021",
+    "bank": "Colony NorthStar, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1LqHhzEspQqfV7joPsodK9iXS4ZAV7HsUE"
+  },
+  {
+    "id": 251,
+    "amount": "67034",
+    "initiated": "12/24/2021",
+    "settled": "6/23/2021",
+    "bank": "A.H. Belo Corporation",
+    "type": "settled",
+    "accountNumber": "tz1Yb2L1j6rtgB3mrdH3oKCwraGTg5jTHzpv"
+  },
+  {
+    "id": 252,
+    "amount": "24",
+    "initiated": "2/7/2022",
+    "settled": "1/21/2022",
+    "bank": "Cadence Design Systems, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1cSErZgXzNHkhwRAKUp7z22Yc9Wk2jWZrE"
+  },
+  {
+    "id": 253,
+    "amount": "72064",
+    "initiated": "5/31/2021",
+    "settled": "12/26/2021",
+    "bank": "Costco Wholesale Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1gQL8rtfP22LY5WLuz8jiFtk6NVvHyFZHL"
+  },
+  {
+    "id": 254,
+    "amount": "7",
+    "initiated": "8/23/2021",
+    "settled": "2/10/2022",
+    "bank": "Simon Property Group, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1YtXFuspLcVYe8o4YhyV8qvwQGKgDTu9zM"
+  },
+  {
+    "id": 255,
+    "amount": "6540",
+    "initiated": "2/21/2022",
+    "settled": "6/13/2021",
+    "bank": "CHS Inc",
+    "type": "settled",
+    "accountNumber": "tz1ZCJx6DHwc8vWmNN1jsBK7HyS2tM6vaXVT"
+  },
+  {
+    "id": 256,
+    "amount": "080",
+    "initiated": "12/22/2021",
+    "settled": "10/11/2021",
+    "bank": "Aegion Corp",
+    "type": "deposited",
+    "accountNumber": "tz1hPLAyoi6fNSmh2axmyJbWeqTeHcZMsmQo"
+  },
+  {
+    "id": 257,
+    "amount": "493",
+    "initiated": "9/4/2021",
+    "settled": "11/13/2021",
+    "bank": "Perficient, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1Ksd3kbPS8JyLMoEAyQo3bS9kPBdGwyQ3J"
+  },
+  {
+    "id": 258,
+    "amount": "5",
+    "initiated": "11/12/2021",
+    "settled": "11/1/2021",
+    "bank": "Colony NorthStar, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1aiKmpfZFAPNUG7zHQyktqpiDFLuve8Dx6"
+  },
+  {
+    "id": 259,
+    "amount": "6153",
+    "initiated": "4/19/2021",
+    "settled": "5/4/2021",
+    "bank": "U.S. Silica Holdings, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1TX9yf2pmX4Gi4ZinZb98iYJv51PmBjwke"
+  },
+  {
+    "id": 260,
+    "amount": "64628",
+    "initiated": "3/29/2021",
+    "settled": "1/29/2022",
+    "bank": "Handy & Harman Ltd.",
+    "type": "deposited",
+    "accountNumber": "tz1RLEwPQyQ5MHRYzwZTaqYnUhS4dDUf4jL8"
+  },
+  {
+    "id": 261,
+    "amount": "475",
+    "initiated": "1/4/2022",
+    "settled": "11/7/2021",
+    "bank": "Speedway Motorsports, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1QdXxwSvveXg2GasquFdqdtHxE2Jn6dmnr"
+  },
+  {
+    "id": 262,
+    "amount": "55",
+    "initiated": "4/13/2021",
+    "settled": "8/1/2021",
+    "bank": "Nokia Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1iQos4n6pf156hiLB9poANb2AwjvckfKer"
+  },
+  {
+    "id": 263,
+    "amount": "77557",
+    "initiated": "11/27/2021",
+    "settled": "3/1/2022",
+    "bank": "Pretium Resources, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1S4JozYrWjt4YXQpn7xSwAEzYvK7CE8nZ9"
+  },
+  {
+    "id": 264,
+    "amount": "842",
+    "initiated": "12/24/2021",
+    "settled": "4/27/2021",
+    "bank": "Equifax, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1eTz3nCTze2qVPb4rRqWHHXMvRHhgBBNnd"
+  },
+  {
+    "id": 265,
+    "amount": "8793",
+    "initiated": "1/10/2022",
+    "settled": "10/6/2021",
+    "bank": "Allied World Assurance Company Holdings, AG",
+    "type": "settled",
+    "accountNumber": "tz1Z4yzyR9xoykdrc43aRZFbt31TL5jHcEyG"
+  },
+  {
+    "id": 266,
+    "amount": "5774",
+    "initiated": "9/30/2021",
+    "settled": "1/17/2022",
+    "bank": "Terra Nitrogen Company, L.P.",
+    "type": "deposited",
+    "accountNumber": "tz1WqDX4NkRhULSNMxJafmTttKEtaiLszjd7"
+  },
+  {
+    "id": 267,
+    "amount": "38836",
+    "initiated": "5/7/2021",
+    "settled": "2/15/2022",
+    "bank": "Dominion Energy, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1iYDBwUsRd65SoYLviAcbUKrZZbgsndSrn"
+  },
+  {
+    "id": 268,
+    "amount": "92129",
+    "initiated": "2/18/2022",
+    "settled": "12/23/2021",
+    "bank": "Impinj, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1i6nWProCRgHmXXAu2CofN9vDxxMqwiKAC"
+  },
+  {
+    "id": 269,
+    "amount": "04",
+    "initiated": "8/27/2021",
+    "settled": "8/19/2021",
+    "bank": "Sanmina Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1cpfbKpZVyKi67i9ZS1rvizGCCFEHK3sde"
+  },
+  {
+    "id": 270,
+    "amount": "16646",
+    "initiated": "4/14/2021",
+    "settled": "1/19/2022",
+    "bank": "Owens Corning Inc",
+    "type": "deposited",
+    "accountNumber": "tz1LxVbLnf9aK35DM5HKdxd61uXqiXL91QQ5"
+  },
+  {
+    "id": 271,
+    "amount": "6844",
+    "initiated": "10/5/2021",
+    "settled": "3/7/2021",
+    "bank": "Vipshop Holdings Limited",
+    "type": "settled",
+    "accountNumber": "tz1fEeDutza3epFN4NyrbrJjNTQK63AGL1ou"
+  },
+  {
+    "id": 272,
+    "amount": "97",
+    "initiated": "8/3/2021",
+    "settled": "1/30/2022",
+    "bank": "Willis Towers Watson Public Limited Company",
+    "type": "settled",
+    "accountNumber": "tz1RKTyPDHSxnCUtQQkzhCAS6HPxWvW5ym1B"
+  },
+  {
+    "id": 273,
+    "amount": "660",
+    "initiated": "10/27/2021",
+    "settled": "10/14/2021",
+    "bank": "C.H. Robinson Worldwide, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1YcPMY2N4ASVTmSHvjRMHjMm9JCs4iUbux"
+  },
+  {
+    "id": 274,
+    "amount": "78338",
+    "initiated": "11/11/2021",
+    "settled": "11/22/2021",
+    "bank": "Columbia Seligman Premium Technology Growth Fund, Inc",
+    "type": "deposited",
+    "accountNumber": "tz1PGA1DiVCBe7XvuNhWNDZx16GHGVGbtgcN"
+  },
+  {
+    "id": 275,
+    "amount": "9",
+    "initiated": "3/6/2021",
+    "settled": "3/17/2021",
+    "bank": "Morgan Stanley",
+    "type": "deposited",
+    "accountNumber": "tz1Z8EEPeNUiXc2CpdLPgFKkSXczvUig24ut"
+  },
+  {
+    "id": 276,
+    "amount": "74",
+    "initiated": "10/12/2021",
+    "settled": "9/1/2021",
+    "bank": "Polaris Industries Inc.",
+    "type": "settled",
+    "accountNumber": "tz1N4v8KDqJoBRQAQq3gbqJ6geuPKoVyFMEk"
+  },
+  {
+    "id": 277,
+    "amount": "1023",
+    "initiated": "5/7/2021",
+    "settled": "1/17/2022",
+    "bank": "Varex Imaging Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1fdGFp8yXSD3BtyVYm8KHH8TuA768phzQn"
+  },
+  {
+    "id": 278,
+    "amount": "2436",
+    "initiated": "10/1/2021",
+    "settled": "12/2/2021",
+    "bank": "Golden Ocean Group Limited",
+    "type": "settled",
+    "accountNumber": "tz1gKebFGBdVczdH5yqM77PZR9zWQNzsxikv"
+  },
+  {
+    "id": 279,
+    "amount": "2",
+    "initiated": "9/4/2021",
+    "settled": "8/19/2021",
+    "bank": "Playa Hotels & Resorts N.V.",
+    "type": "deposited",
+    "accountNumber": "tz1eZuzV9RtYcLviQiWhhhHqcbJFxTZKs82k"
+  },
+  {
+    "id": 280,
+    "amount": "44818",
+    "initiated": "8/26/2021",
+    "settled": "3/8/2021",
+    "bank": "iShares S&P/Citigroup 1-3 Year International Treasury Bond Fun",
+    "type": "settled",
+    "accountNumber": "tz1esMeEhVWcMcTqofV27JMoCU6ELaQAxEJr"
+  },
+  {
+    "id": 281,
+    "amount": "63232",
+    "initiated": "12/17/2021",
+    "settled": "12/10/2021",
+    "bank": "China Jo-Jo Drugstores, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1iNxkTujPZKXCkP6Wrnaqcz7P6tLDhcRMG"
+  },
+  {
+    "id": 282,
+    "amount": "803",
+    "initiated": "3/5/2022",
+    "settled": "1/4/2022",
+    "bank": "Amyris, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1ewNCCo4ziPARzx3Swr1DbCxvZSXcJFpgp"
+  },
+  {
+    "id": 283,
+    "amount": "209",
+    "initiated": "4/11/2021",
+    "settled": "10/11/2021",
+    "bank": "Prospect Capital Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1Pg4wgB1Q6XNBrhTT6zkqSsfbw2g7sKmtQ"
+  },
+  {
+    "id": 284,
+    "amount": "46",
+    "initiated": "11/21/2021",
+    "settled": "12/24/2021",
+    "bank": "Xperi Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1LMoqKp2caJyHWgRnEsCdREWoS1vnqBC5N"
+  },
+  {
+    "id": 285,
+    "amount": "05707",
+    "initiated": "12/15/2021",
+    "settled": "11/21/2021",
+    "bank": "Cal-Maine Foods, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1VrjYMwfXQs6y9kLzfAn1V3A5Lf8sheaGh"
+  },
+  {
+    "id": 286,
+    "amount": "941",
+    "initiated": "11/2/2021",
+    "settled": "3/28/2021",
+    "bank": "Olympic Steel, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1L1CGWrjNAMnw6TptJn92hE3LG5zjNECiH"
+  },
+  {
+    "id": 287,
+    "amount": "91",
+    "initiated": "3/10/2021",
+    "settled": "4/5/2021",
+    "bank": "Floor & Decor Holdings, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1QjFje8UGnGbMFQ2dj4sthdd2GkyfMkzPR"
+  },
+  {
+    "id": 288,
+    "amount": "01",
+    "initiated": "12/1/2021",
+    "settled": "3/3/2022",
+    "bank": "Genesis Energy, L.P.",
+    "type": "deposited",
+    "accountNumber": "tz1YKzNsMWJteNkuBSNGM9GxEV1cyRkuq7o6"
+  },
+  {
+    "id": 289,
+    "amount": "470",
+    "initiated": "4/9/2021",
+    "settled": "10/13/2021",
+    "bank": "VOXX International Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1WY3Y5um5wfVTHTRFpZ2KAZ6gHxpwHnHWA"
+  },
+  {
+    "id": 290,
+    "amount": "8015",
+    "initiated": "4/5/2021",
+    "settled": "9/29/2021",
+    "bank": "Qorvo, Inc.",
+    "type": "deposited",
+    "accountNumber": "tz1br7qSUtHateYLQHeu3Tt4RXJoUxYWxDPy"
+  },
+  {
+    "id": 291,
+    "amount": "19",
+    "initiated": "9/27/2021",
+    "settled": "6/10/2021",
+    "bank": "Pacific Drilling S.A.",
+    "type": "deposited",
+    "accountNumber": "tz1U48Y5q6fmq88Xwwxmks3oxLJBCp6WFzyh"
+  },
+  {
+    "id": 292,
+    "amount": "16",
+    "initiated": "2/14/2022",
+    "settled": "3/12/2021",
+    "bank": "First Trust NASDAQ Smartphone Index Fund",
+    "type": "settled",
+    "accountNumber": "tz1iKbUiFtp8QCVLfmvKW4GbBUNjTZcdKcaK"
+  },
+  {
+    "id": 293,
+    "amount": "05",
+    "initiated": "10/15/2021",
+    "settled": "7/6/2021",
+    "bank": "Dillard's, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1fpUJ2VTNLAAkpf6pqVn67AtFWUydU154L"
+  },
+  {
+    "id": 294,
+    "amount": "40043",
+    "initiated": "1/1/2022",
+    "settled": "5/7/2021",
+    "bank": "WisdomTree Emerging Markets Quality Dividend Growth Fund",
+    "type": "settled",
+    "accountNumber": "tz1MmPx47zfj56beb2rHZT6hBJhJdHnB3Prg"
+  },
+  {
+    "id": 295,
+    "amount": "02605",
+    "initiated": "12/26/2021",
+    "settled": "8/16/2021",
+    "bank": "LM Funding America, Inc.",
+    "type": "settled",
+    "accountNumber": "tz1iQjMvCuxuu54vPjPcTnCnVSZ1Lhgbvwgp"
+  },
+  {
+    "id": 296,
+    "amount": "3815",
+    "initiated": "1/21/2022",
+    "settled": "9/26/2021",
+    "bank": "Navistar International Corporation",
+    "type": "settled",
+    "accountNumber": "tz1ieQFD42yB5YKrw2hGFuH8K1S6kDDtquqH"
+  },
+  {
+    "id": 297,
+    "amount": "05295",
+    "initiated": "7/19/2021",
+    "settled": "3/22/2021",
+    "bank": "REX American Resources Corporation",
+    "type": "deposited",
+    "accountNumber": "tz1hRSLLTF5r4b7zjGYhMFMp6vuj2UMw6z94"
+  },
+  {
+    "id": 298,
+    "amount": "2285",
+    "initiated": "11/4/2021",
+    "settled": "4/28/2021",
+    "bank": "Pennsylvania Real Estate Investment Trust",
+    "type": "deposited",
+    "accountNumber": "tz1Mrpa8TiJFWMwWGYNKpzbuigSxYT6tgWhp"
+  },
+  {
+    "id": 299,
+    "amount": "9",
+    "initiated": "1/6/2022",
+    "settled": "3/29/2021",
+    "bank": "Alliance Resource Partners, L.P.",
+    "type": "deposited",
+    "accountNumber": "tz1hYUnMnnrmgaXpesXs3UMvzgamHgm72jkZ"
+  },
+  {
+    "id": 300,
+    "amount": "76",
+    "initiated": "8/24/2021",
+    "settled": "12/21/2021",
+    "bank": "Houghton Mifflin Harcourt Company",
+    "type": "settled",
+    "accountNumber": "tz1RNHuG3p3VcZWyq3wyaEjMcVBNC17BYsdY"
+  }
+]
