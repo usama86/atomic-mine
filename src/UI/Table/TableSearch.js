@@ -101,8 +101,6 @@ export default function CustomizedInputBase({
   const medium = useMediaQuery(theme.breakpoints.down("md"));
   const small = useMediaQuery(theme.breakpoints.down("sm"));
   const selectCategoryHandler = (e) => {
-    console.log(e);
-    console.log(categories);
     const cat = categories.find((category) => category.accessor === e);
     getCategory(cat);
   };

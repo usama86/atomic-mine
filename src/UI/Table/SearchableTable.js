@@ -36,7 +36,9 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
   };
   React.useMemo(() => {
     let temp = [...rows];
-    const filtered = temp.filter((row) => row[category].includes(search));
+    const filtered = temp.filter((row) =>
+      row[category].toLowerCase().includes(search.toLowerCase())
+    );
     setData(filtered);
   }, [search, rows, category]);
   return (
