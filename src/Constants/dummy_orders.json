@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "symbol": "FU-142",
     "date": "01-12-2020",
     "isOpen": false,
@@ -8,6 +9,7 @@
     "isRejected": false
   },
   {
+    "id": 1,
     "symbol": "FN-121",
     "date": "01-12-2020",
     "isOpen": false,
@@ -16,6 +18,7 @@
     "isRejected": false
   },
   {
+    "id": 2,
     "symbol": "FK-122",
     "date": "01-12-2020",
     "isOpen": false,
@@ -24,6 +27,7 @@
     "isRejected": false
   },
   {
+    "id": 3,
     "symbol": "FD-422",
     "date": "01-12-2020",
     "isOpen": false,
@@ -32,6 +36,7 @@
     "isRejected": false
   },
   {
+    "id": 4,
     "symbol": "DS-GF2",
     "date": "01-12-2020",
     "isOpen": false,
@@ -40,6 +45,7 @@
     "isRejected": false
   },
   {
+    "id": 5,
     "symbol": "DS-212",
     "date": "01-12-2020",
     "isOpen": false,
@@ -48,6 +54,7 @@
     "isRejected": false
   },
   {
+    "id": 6,
     "symbol": "DD-142",
     "date": "01-12-2020",
     "isOpen": false,
@@ -56,6 +63,7 @@
     "isRejected": false
   },
   {
+    "id": 7,
     "symbol": "DD-521",
     "date": "01-12-2020",
     "isOpen": false,
@@ -64,6 +72,7 @@
     "isRejected": false
   },
   {
+    "id": 8,
     "symbol": "HF-124",
     "date": "01-12-2020",
     "isOpen": false,
@@ -72,6 +81,7 @@
     "isRejected": false
   },
   {
+    "id": 9,
     "symbol": "BH-512",
     "date": "01-12-2020",
     "isOpen": false,
@@ -80,6 +90,7 @@
     "isRejected": false
   },
   {
+    "id": 10,
     "symbol": "DW-512",
     "date": "01-12-2020",
     "isOpen": false,
@@ -88,6 +99,7 @@
     "isRejected": false
   },
   {
+    "id": 11,
     "symbol": "SA-125",
     "date": "01-12-2020",
     "isOpen": false,

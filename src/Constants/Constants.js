@@ -10,6 +10,7 @@ const Constants = {
   loginButtonStyleOverrides: { color: "white" },
   Close_Modal_Success: "Saved!",
   Save_Changes_Success: "Changes Saved!",
+  Select_Order: "Select Order",
 };
 
 export default Constants;

@@ -8,7 +8,7 @@ import OptionUnstyled, {
 import PopperUnstyled from "@mui/base/PopperUnstyled";
 import { styled } from "@mui/system";
 
-const width = "5rem";
+const width = "7rem";
 
 const blue = {
   100: "#DAECFF",
@@ -93,7 +93,6 @@ const StyledOption = styled(OptionUnstyled)(
   padding: 8px;
   border-radius: 0.45em;
   cursor: default;
-
   &:last-of-type {
     border-bottom: none;
   }
@@ -144,9 +143,6 @@ export default function UnstyledSelectSimple({
   changeCurrCategory,
   ...otherProps
 }) {
-  const changeValueHandler = (e) => {
-    console.log(e);
-  };
   return (
     <CustomSelect
       {...otherProps}
@@ -157,7 +153,7 @@ export default function UnstyledSelectSimple({
         <StyledOption
           key={category.accessor}
           value={category.accessor}
-          onChange={changeValueHandler}
+          // onChange={changeValueHandler}
         >
           {category.label}
         </StyledOption>

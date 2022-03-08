@@ -1,11 +1,12 @@
 import React from "react";
-import Search from "../../../UI/SearchField/Search";
 import Tabs from "../../../UI/Tabs/Tabs";
 import Stack from "../../../UI/Layout/Stack";
 import Box from "../../../UI/Layout/Box";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
+import Button from "../../../UI/Button/Button";
+import SearchUser from "./../PageUtils/SearchUser";
 //AccountPages
 import Balance from "./TabPages/Balance";
 import RiskManagement from "./TabPages/RiskManagement";
@@ -16,9 +17,20 @@ import BankLink from "./TabPages/BankLink";
 import Docs from "./TabPages/Docs";
 import Options from "./TabPages/Options";
 import PersonalInfo from "./TabPages/PersonalInfo";
+import Modal from "../../../UI/Modal/Modal";
+import Alert from "../../../UI/Alert/Alert";
+import { useSnackbar } from "notistack";
 
 function Account() {
-  const [searchVal, setSearchVal] = React.useState("");
+  const { enqueueSnackbar } = useSnackbar();
+  const [searchVal, setSearchVal] = React.useState({
+    accountNumber: "",
+    contact: "",
+    email: "",
+    id: "",
+    name: "",
+    social: "",
+  });
   const [value, setValue] = React.useState("1");
 
   const TabsVal = [
@@ -41,21 +53,24 @@ function Account() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  const onChangeSearchVal = (e) => {
-    setSearchVal(e.id);
+  const selectRowHandler = (e) => {
+    setSearchVal(e.row);
+    enqueueSnackbar(`Selected user ${e.row.name}`, {
+      variant: "success",
+    });
   };
-
   return (
     <Stack spacing={6}>
-      <Stack direction="row">
-        <Search
-          size="small"
-          searchVal={searchVal}
-          getSearchedValue={onChangeSearchVal}
-        />
+      <Stack direction="column" alignItems="flex-start" gap={2}>
+        <Modal
+          closeDependancy={searchVal.accountNumber}
+          width="80vw"
+          content={<SearchUser getRow={selectRowHandler} />}
+        >
+          <Button>Select User</Button>
+        </Modal>
       </Stack>
-      {searchVal && (
+      {searchVal.accountNumber !== "" ? (
         <Tabs value={value}>
           <>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -76,6 +91,12 @@ function Account() {
             ))}
           </>
         </Tabs>
+      ) : (
+        <Alert
+          title="No User Selected!"
+          severity="info"
+          message="Please select a user!"
+        />
       )}
     </Stack>
   );
