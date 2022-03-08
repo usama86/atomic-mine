@@ -6,7 +6,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import Button from "../../../UI/Button/Button";
-import SearchUser from "./SearchUser";
+import SearchUser from "./../PageUtils/SearchUser";
 //AccountPages
 import Balance from "./TabPages/Balance";
 import RiskManagement from "./TabPages/RiskManagement";
