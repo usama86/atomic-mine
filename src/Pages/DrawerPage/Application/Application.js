@@ -12,6 +12,11 @@ import OrderTable from "./../PageUtils/OrderTable";
 import Modal from "../../../UI/Modal/Modal";
 import { useSnackbar } from "notistack";
 
+import { GridActionsCellItem } from "@mui/x-data-grid";
+import DoneIcon from "@mui/icons-material/Done";
+import CloseIcon from "@mui/icons-material/Close";
+import TableNoteField from "../../../UI/Table/TableNoteField";
+
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
   const [searchVal, setSearchVal] = React.useState({
@@ -23,7 +28,77 @@ function Application() {
     social: "",
   });
   const [value, setValue] = React.useState("1");
-
+  const acceptHandler = (e) => {
+    console.log("ACCEPT");
+  };
+  const rejectHandler = (e) => {
+    console.log("REJECT");
+  };
+  const column = [
+    {
+      field: "account",
+      headerName: "Account #",
+      flex: 0.4,
+    },
+    {
+      field: "name",
+      headerName: "Name",
+      flex: 1,
+    },
+    {
+      field: "acceptReject",
+      headerName: "Accept/Reject",
+      flex: 1,
+    },
+    {
+      field: "decision",
+      headerName: "Accept/Reject",
+      type: "actions",
+      flex: 0.3,
+      getActions: (params) => {
+        console.log(params);
+        return [
+          <GridActionsCellItem
+            label="Accept"
+            onClick={acceptHandler}
+            icon={<DoneIcon />}
+            color="success"
+          />,
+          <GridActionsCellItem
+            label="Reject"
+            onClick={rejectHandler}
+            icon={<CloseIcon />}
+            color="error"
+          />,
+        ];
+      },
+    },
+    {
+      field: "notes",
+      headerName: "Notes",
+      flex: 0.8,
+      renderCell: (params) => {
+        return (
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <TableNoteField
+              label="Add note"
+              style={{
+                border: "none",
+                outline: "none",
+                background: "transparent",
+              }}
+            />
+          </div>
+        );
+      },
+    },
+  ];
   const TabsVal = [
     {
       heading: "Tab Pages",
@@ -106,23 +181,6 @@ function Application() {
   );
 }
 
-const column = [
-  {
-    field: "account",
-    headerName: "Account #",
-    flex: 1,
-  },
-  {
-    field: "name",
-    headerName: "Name",
-    flex: 1,
-  },
-  {
-    field: "acceptReject",
-    headerName: "Accept/Reject",
-    flex: 1,
-  },
-];
 const row = [
   {
     id: 0,
@@ -131,13 +189,13 @@ const row = [
     acceptReject: "true",
   },
   {
-    id: 0,
+    id: 1,
     account: "13452",
     name: "Brockley",
     acceptReject: "false",
   },
   {
-    id: 0,
+    id: 2,
     account: "14523",
     name: "Brandom",
     acceptReject: "true",

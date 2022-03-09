@@ -16,6 +16,7 @@ import Tabs from "./../../../../UI/Tabs/Tabs";
 import OrderTable from "./../../PageUtils/OrderTable";
 
 import Constants from "../../../../Constants/Constants";
+import orders from "../../../../Constants/mock_data_orders.json";
 
 const fields = [
   { field: "symbol", flex: 0.5, headerName: "Symbol" },
@@ -50,24 +51,46 @@ const Orders = () => {
         {
           label: "Open",
           value: "1",
-          component: <OrderTable type={"Open"} column={column} row={row} />,
+          component: (
+            <OrderTable
+              type={"Open"}
+              column={getFields("Open")}
+              row={orders.filter((order) => order["status"] === "open")}
+            />
+          ),
         },
         {
           label: "Filled",
           value: "2",
-          component: <OrderTable type={"Filled"} column={column} row={row} />,
+          component: (
+            <OrderTable
+              type={"Filled"}
+              column={getFields("Filled")}
+              row={orders.filter((order) => order["status"] === "filled")}
+            />
+          ),
         },
         {
           label: "Cancelled",
           value: "3",
           component: (
-            <OrderTable type={"Cancelled"} column={column} row={row} />
+            <OrderTable
+              type={"Cancelled"}
+              column={getFields("Cancelled")}
+              row={orders.filter((order) => order["status"] === "cancelled")}
+            />
           ),
         },
         {
           label: "Rejected",
           value: "4",
-          component: <OrderTable type={"Rejected"} column={column} row={row} />,
+          component: (
+            <OrderTable
+              type={"Rejected"}
+              column={getFields("Rejected")}
+              row={orders.filter((order) => order["status"] === "rejected")}
+            />
+          ),
         },
       ],
     },
@@ -118,65 +141,131 @@ const Orders = () => {
   );
 };
 
-const column = [
-  {
-    field: "contract",
-    headerName: "Contract",
-    flex: 1,
-  },
-  {
-    field: "placeTime",
-    headerName: "Place Time",
-    flex: 1,
-  },
-  {
-    field: "fillTime",
-    headerName: "Fill time",
-    flex: 1,
-  },
-  {
-    field: "exceutingBroker",
-    headerName: "Executing Broker",
-    flex: 1,
-  },
-  {
-    field: "information",
-    headerName: "Information",
-    flex: 1,
-  },
-  {
-    field: "close",
-    headerName: "Close",
-    flex: 1,
-  },
-];
-const row = [
-  {
-    id: 0,
-    contract: "hello",
-    placeTime: "World",
-    fillTime: "5$",
-    exceutingBroker: "05-02-1990",
-    information: "05-02-1990",
-    close: "yes",
-  },
-  {
-    id: 1,
-    contract: "hello1",
-    placeTime: "World1",
-    fillTime: "6$",
-    exceutingBroker: "05-02-1991",
-    information: "05-02-1993",
-    close: "yes",
-  },
-  {
-    id: 2,
-    contract: "hello2",
-    placeTime: "World2",
-    fillTime: "7$",
-    exceutingBroker: "05-02-1992",
-    information: "05-02-1994",
-    close: "yes",
-  },
-];
+const getFields = (type) => {
+  if (type === "Open")
+    return [
+      {
+        field: "symbol",
+        flex: 1,
+        headerName: "Symbol/Contract",
+      },
+      {
+        field: "place_time",
+        flex: 0.7,
+        headerName: "Place Time",
+        type: "dateTime",
+      },
+      {
+        field: "fill_time",
+        flex: 0.7,
+        headerName: "Fill Time",
+        type: "dateTime",
+      },
+      {
+        field: "executive_broker",
+        flex: 1,
+        headerName: "Exec Broker",
+      },
+      {
+        field: "cancel-btn",
+        flex: 1,
+        headerName: "Cancel",
+        renderCell: (params) => <Button isdefault={true}>Cancel</Button>,
+      },
+    ];
+
+  if (type === "Filled")
+    return [
+      {
+        field: "symbol",
+        flex: 1,
+        headerName: "Symbol/Contract",
+      },
+      {
+        field: "place_time",
+        flex: 1,
+        headerName: "Place Time",
+        type: "dateTime",
+      },
+      {
+        field: "fill_time",
+        flex: 1,
+        headerName: "Fill Time",
+        type: "dateTime",
+      },
+      {
+        field: "executive_broker",
+        flex: 1,
+        headerName: "Exec Broker",
+      },
+      {
+        field: "close-btn",
+        flex: 1,
+        headerName: "Close",
+        renderCell: (params) => <Button isdefault={true}>Close</Button>,
+      },
+    ];
+
+  if (type === "Cancelled")
+    return [
+      {
+        field: "symbol",
+        flex: 1,
+        headerName: "Symbol/Contract",
+      },
+      {
+        field: "place_time",
+        flex: 1,
+        headerName: "Place Time",
+        type: "dateTime",
+      },
+      {
+        field: "fill_time",
+        flex: 1,
+        headerName: "Fill Time",
+        type: "dateTime",
+      },
+      {
+        field: "executive_broker",
+        flex: 1,
+        headerName: "Exec Broker",
+      },
+      {
+        field: "reason",
+        flex: 1.4,
+        headerName: "Reason",
+      },
+    ];
+  if (type === "Rejected")
+    return [
+      {
+        field: "symbol",
+        flex: 1,
+        headerName: "Symbol/Contract",
+      },
+      {
+        field: "place_time",
+        flex: 1,
+        headerName: "Place Time",
+        type: "dateTime",
+      },
+      {
+        field: "fill_time",
+        flex: 1,
+        headerName: "Fill Time",
+        type: "dateTime",
+      },
+      {
+        field: "executive_broker",
+        flex: 1,
+        headerName: "Exec Broker",
+      },
+      {
+        field: "reason",
+        flex: 1.4,
+        headerName: "Reason",
+      },
+    ];
+};
+
 export default Orders;
