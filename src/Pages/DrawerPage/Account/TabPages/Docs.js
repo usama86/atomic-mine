@@ -104,7 +104,7 @@ const Docs = () => {
   return (
     <Stack spacing={2}>
       <Card>
-        <Tabs height="55vh" value={value}>
+        <Tabs height="30rem" value={value}>
           <>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
               <TabList

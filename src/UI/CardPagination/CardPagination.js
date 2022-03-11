@@ -6,8 +6,9 @@ import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Pagination from "./../Pagination/Pagination";
+import Stack from "./../Layout/Stack";
 
-export default function CheckboxList({
+export default function CardPagination({
   docs,
   perPage,
   showIcon,
@@ -33,7 +34,7 @@ export default function CheckboxList({
   };
 
   return (
-    <>
+    <Stack alignItems="space-between" sx={{ height: "100%" }}>
       <List
         sx={{
           width: "100%",
@@ -68,12 +69,12 @@ export default function CheckboxList({
       {docs.length > perPage && (
         <Pagination count={maxPages} page={page} onChange={handleChange} />
       )}
-    </>
+    </Stack>
   );
 }
-CheckboxList.defaultProps = {
+CardPagination.defaultProps = {
   arr: ["hello", "hi"],
   perPage: 6,
   showIcon: true,
-  customHeight: "40vh",
+  customHeight: "53vh",
 };
