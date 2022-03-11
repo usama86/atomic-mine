@@ -18,7 +18,7 @@ import {
   ChangeProvCash,
   RestrictTrading,
   Riskflag,
-} from "./RiskManagementModals/";
+} from "./Modals/";
 const RiskManagement = () => {
   const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
