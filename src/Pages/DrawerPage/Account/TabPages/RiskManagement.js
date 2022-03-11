@@ -107,10 +107,14 @@ const RiskManagement = () => {
                 variant: typographyVariant,
               }}
             >
-              <Switch
-                value={SwitchState.liqOnly}
-                onChanged={(e) => onChangeSwitch(e, "liqOnly")}
-              />
+              <Modal
+                closeDependancy={random}
+                content={<RestrictTrading triggerClose={closeModalHandler} />}
+              >
+                <IconButton sx={{ mr: "2rem" }}>
+                  <FcSettings />
+                </IconButton>
+              </Modal>
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -123,10 +127,14 @@ const RiskManagement = () => {
                 variant: typographyVariant,
               }}
             >
-              <Switch
-                value={SwitchState.restrictDeposits}
-                onChanged={(e) => onChangeSwitch(e, "restrictDeposits")}
-              />
+              <Modal
+                closeDependancy={random}
+                content={<RestrictTrading triggerClose={closeModalHandler} />}
+              >
+                <IconButton sx={{ mr: "2rem" }}>
+                  <FcSettings />
+                </IconButton>
+              </Modal>
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -139,10 +147,14 @@ const RiskManagement = () => {
                 variant: typographyVariant,
               }}
             >
-              <Switch
-                value={SwitchState.restrictWithDrawl}
-                onChanged={(e) => onChangeSwitch(e, "restrictWithDrawl")}
-              />
+              <Modal
+                closeDependancy={random}
+                content={<RestrictTrading triggerClose={closeModalHandler} />}
+              >
+                <IconButton sx={{ mr: "2rem" }}>
+                  <FcSettings />
+                </IconButton>
+              </Modal>
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -181,10 +193,14 @@ const RiskManagement = () => {
                 variant: typographyVariant,
               }}
             >
-              <Switch
-                value={SwitchState.changeBuyingPower}
-                onChanged={(e) => onChangeSwitch(e, "changeBuyingPower")}
-              />
+              <Modal
+                closeDependancy={random}
+                content={<ChangeProvCash triggerClose={closeModalHandler} />}
+              >
+                <IconButton sx={{ mr: "2rem" }}>
+                  <FcSettings />
+                </IconButton>
+              </Modal>
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
