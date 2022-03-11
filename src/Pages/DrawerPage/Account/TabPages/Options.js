@@ -2,6 +2,8 @@ import Card from "./../../../../UI/Card/Card";
 import Stack from "./../../../../UI/Layout/Stack";
 import Table from "./../../../../UI/Table/Table";
 import Box from "./../../../../UI/Layout/Box";
+import Modal from "../../../../UI/Modal/Modal";
+import Button from "../../../../UI/Button/Button";
 
 const Options = () => {
   return (
@@ -29,14 +31,32 @@ const column = [
     flex: 1,
   },
   {
-    field: "approval",
-    headerName: "Approval",
+    field: "approved",
+    headerName: "Approved",
     flex: 1,
+    type: "boolean",
   },
   {
     field: "info",
     headerName: "Info",
-    flex: 1,
+    flex: 0.3,
+    renderCell: (params) => {
+      return (
+        <Modal
+          content={
+            <div>
+              {params.row.id}
+              <br />
+              {params.row.dateTime}
+              <br />
+              {params.row.level}
+            </div>
+          }
+        >
+          <Button>Info</Button>
+        </Modal>
+      );
+    },
   },
 ];
 const row = [
@@ -44,21 +64,21 @@ const row = [
     id: 0,
     dateTime: "hello",
     level: "World",
-    approval: "5$",
+    approved: true,
     info: "05-02-1990",
   },
   {
     id: 1,
     dateTime: "hello1",
     level: "World1",
-    approval: "6$",
+    approved: true,
     info: "05-02-1991",
   },
   {
     id: 2,
     dateTime: "hello2",
     level: "World2",
-    approval: "7$",
+    approved: false,
     info: "05-02-1992",
   },
 ];
