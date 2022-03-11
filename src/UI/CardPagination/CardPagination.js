@@ -1,62 +1,79 @@
-import React from "react";
-import Grid from "./../Layout/Grid";
-import LabelChild from "./../LabelChild";
-import { AiOutlineCloudDownload } from "react-icons/ai";
+import * as React from "react";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
+import { AiOutlineCloudDownload } from "react-icons/ai";
 import Pagination from "./../Pagination/Pagination";
 
-const FlexStackWithPagination = ({ docs }) => {
-  const perPage = 7;
+export default function CheckboxList({
+  docs,
+  perPage,
+  showIcon,
+  customHeight,
+}) {
+  const [checked, setChecked] = React.useState([0]);
   const maxPages = ~~(docs.length / perPage) + 1;
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
   };
-  const LabelChildStyled = {
-    display: "flex",
-    justifyContent: "end",
+  const handleToggle = (value) => () => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+
+    setChecked(newChecked);
   };
+
   return (
-    <Grid sx={{ padding: "1rem" }} spacing={4} container>
-      <Grid
+    <>
+      <List
         sx={{
-          alignItems: "center",
-          height: "20rem",
+          width: "100%",
+          height: customHeight,
           overflow: "hidden",
+          bgcolor: "background.paper",
         }}
-        item
-        container
-        xs={12}
       >
         {docs
           .slice(perPage * page - perPage, perPage * page)
-          .map((doc, index) => (
-            <Grid key={index} item xs={12} container>
-              <LabelChild
-                label={doc}
-                labelXsSize={10}
-                childrenXsSize={2}
-                sxChild={LabelChildStyled}
+          .map((value, index) => {
+            const labelId = `checkbox-list-label-${value}`;
+            return (
+              <ListItem
                 key={index}
+                secondaryAction={
+                  showIcon && (
+                    <IconButton edge="end" aria-label="comments">
+                      <AiOutlineCloudDownload />
+                    </IconButton>
+                  )
+                }
+                disablePadding
               >
-                <IconButton>
-                  <AiOutlineCloudDownload />
-                </IconButton>
-              </LabelChild>
-            </Grid>
-          ))}
-      </Grid>
-      {docs.length > 7 && (
-        <Grid item xs={12}>
-          <Pagination count={maxPages} page={page} onChange={handleChange} />
-        </Grid>
+                <ListItemButton role={undefined} onClick={handleToggle(value)}>
+                  <ListItemText id={labelId} primary={value} />
+                </ListItemButton>
+              </ListItem>
+            );
+          })}
+      </List>
+      {docs.length > perPage && (
+        <Pagination count={maxPages} page={page} onChange={handleChange} />
       )}
-    </Grid>
+    </>
   );
-};
-
-export default FlexStackWithPagination;
-
-FlexStackWithPagination.defaultProps = {
-  docs: [],
+}
+CheckboxList.defaultProps = {
+  arr: ["hello", "hi"],
+  perPage: 6,
+  showIcon: true,
+  customHeight: "40vh",
 };
