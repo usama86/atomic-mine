@@ -12,9 +12,7 @@ const RestrictTrading = ({ triggerClose }) => {
   return (
     <Stack gap={2}>
       <Stack direction="row" justifyContent="space-between">
-        <Typography color="error.main" variant="h6">
-          Restrict Trading
-        </Typography>
+        <Typography variant="h6">Restrict Trading</Typography>
         <Switch
           value={value}
           onChanged={(e) => setValue((prevState) => !prevState)}
