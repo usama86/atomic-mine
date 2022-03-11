@@ -5,9 +5,9 @@ export const Close = styled("div")(({ theme }) => ({
   position: "absolute",
   top: "5px",
   right: "5px",
-  "& svg": {
-    color: theme.palette.error.main,
-  },
+  // "& svg": {
+  //   color: theme.palette.error.main,
+  // },
 }));
 
 export const StyledPaper = styled(Paper)(({ theme, width }) => ({

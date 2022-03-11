@@ -1,14 +1,16 @@
 import React from "react";
 import Stack from "../../../../../UI/Layout/Stack";
-/**add the following on onclick on button
- * 
- * onClick={(e) => {
-            e.preventDefault();
-            triggerClose();
-          }}
- */
+import Search from "./../../../../../UI/Table/TableSearch";
+import Checkbox from "./../../../../../UI/Checkbox/Checkbox";
+
 const BlacklistOption = ({ triggerClose }) => {
-  return <Stack>BlacklistOption</Stack>;
+  return (
+    <Stack>
+      <Search />
+      <Checkbox Label="No Trade" />
+      <Checkbox Label="Liq Only" />
+    </Stack>
+  );
 };
 
 export default BlacklistOption;

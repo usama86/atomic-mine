@@ -119,7 +119,7 @@ const column = [
     field: "read",
     headerName: "Read",
     flex: 0.2,
-    renderCell: (params) => <Checkbox />,
+    renderCell: (params) => <Checkbox onlyCheckbox />,
   },
 ];
 const row = [
