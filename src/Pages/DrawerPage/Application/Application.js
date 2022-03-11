@@ -147,14 +147,15 @@ function Application() {
   };
   return (
     <Stack spacing={6}>
-      <Stack direction="column" alignItems="flex-start" gap={2}>
-        <Modal
+      <Stack direction="row" sx={{ width: "100%" }} gap={2}>
+        {/* <Modal
           closeDependancy={searchVal.accountNumber}
           width="80vw"
           content={<SearchUser getRow={selectRowHandler} />}
         >
           <Button>Select User</Button>
-        </Modal>
+        </Modal> */}
+        <SearchUser getRow={selectRowHandler} />
       </Stack>
 
       <Tabs value={value}>

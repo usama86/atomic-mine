@@ -97,7 +97,7 @@ const Orders = () => {
   ];
   return (
     <Stack direction="column" alignItems="flex-start" gap={2}>
-      <Modal
+      {/* <Modal
         closeDependancy={selectedRow.symbol}
         width="80vw"
         content={
@@ -113,7 +113,16 @@ const Orders = () => {
         }
       >
         <Button>{Constants.Select_Order}</Button>
-      </Modal>
+      </Modal> */}
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <SearchableTable
+            selectRowHandler={selectOrderHandler}
+            rows={data}
+            columns={fields}
+          />
+        </Grid>
+      </Grid>
       {selectedRow.symbol}
       {selectedRow.symbol && (
         <Tabs value={value}>
@@ -162,6 +171,16 @@ const getFields = (type) => {
         type: "dateTime",
       },
       {
+        field: "fillPrice",
+        flex: 0.7,
+        headerName: "Fill Price",
+      },
+      {
+        field: "placedBy",
+        flex: 0.7,
+        headerName: "Placed by",
+      },
+      {
         field: "executive_broker",
         flex: 1,
         headerName: "Exec Broker",
@@ -192,6 +211,16 @@ const getFields = (type) => {
         flex: 1,
         headerName: "Fill Time",
         type: "dateTime",
+      },
+      {
+        field: "fillPrice",
+        flex: 0.7,
+        headerName: "Fill Price",
+      },
+      {
+        field: "placedBy",
+        flex: 0.7,
+        headerName: "Placed by",
       },
       {
         field: "executive_broker",
@@ -226,6 +255,16 @@ const getFields = (type) => {
         type: "dateTime",
       },
       {
+        field: "fillPrice",
+        flex: 0.7,
+        headerName: "Fill Price",
+      },
+      {
+        field: "placedBy",
+        flex: 0.7,
+        headerName: "Placed by",
+      },
+      {
         field: "executive_broker",
         flex: 1,
         headerName: "Exec Broker",
@@ -254,6 +293,16 @@ const getFields = (type) => {
         flex: 1,
         headerName: "Fill Time",
         type: "dateTime",
+      },
+      {
+        field: "fillPrice",
+        flex: 0.7,
+        headerName: "Fill Price",
+      },
+      {
+        field: "placedBy",
+        flex: 0.7,
+        headerName: "Placed by",
       },
       {
         field: "executive_broker",
