@@ -8,6 +8,8 @@ import { LabelChildStyled } from "./TabPages.styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 
+import DatePicker from "../../../../UI/Date/DatePickerComp";
+
 const PersonalInfo = () => {
   const theme = useTheme();
   const mediumScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -48,7 +50,7 @@ const PersonalInfo = () => {
                 variant: typographyVariant,
               }}
             >
-              <TextField value={"Chase"} isdefault />
+              <TextField label="Name" isdefault />
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -61,7 +63,7 @@ const PersonalInfo = () => {
                 variant: typographyVariant,
               }}
             >
-              <TextField value={"12345"} isdefault />
+              <TextField label="SSN" isdefault />
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -74,7 +76,7 @@ const PersonalInfo = () => {
                 variant: typographyVariant,
               }}
             >
-              <TextField value={"12/2/2025"} isdefault />
+              <DatePicker label="Date of Birth" />
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>

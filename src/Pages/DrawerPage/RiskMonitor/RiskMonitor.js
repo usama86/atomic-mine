@@ -5,23 +5,15 @@ import Box from "../../../UI/Layout/Box";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
-import Button from "../../../UI/Button/Button";
 import SearchUser from "./../PageUtils/SearchUser";
+import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
-import Modal from "../../../UI/Modal/Modal";
 import { useSnackbar } from "notistack";
 
 function RiskMonitor() {
   const { enqueueSnackbar } = useSnackbar();
-  const [searchVal, setSearchVal] = React.useState({
-    accountNumber: "",
-    contact: "",
-    email: "",
-    id: "",
-    name: "",
-    social: "",
-  });
+
   const [value, setValue] = React.useState("1");
 
   const TabsVal = [
@@ -48,21 +40,14 @@ function RiskMonitor() {
     setValue(newValue);
   };
   const selectRowHandler = (e) => {
-    setSearchVal(e.row);
     enqueueSnackbar(`Selected user ${e.row.name}`, {
       variant: "success",
     });
   };
   return (
     <Stack spacing={6}>
-      <Stack direction="column" alignItems="flex-start" gap={2}>
-        <Modal
-          closeDependancy={searchVal.accountNumber}
-          width="80vw"
-          content={<SearchUser getRow={selectRowHandler} />}
-        >
-          <Button>Select User</Button>
-        </Modal>
+      <Stack direction="row" sx={{ width: "100%" }} gap={2}>
+        <SearchUser getRow={selectRowHandler} />
       </Stack>
 
       <Tabs value={value}>
@@ -111,14 +96,15 @@ const column = [
     flex: 1,
   },
   {
-    field: "read",
-    headerName: "Read",
-    flex: 1,
-  },
-  {
     field: "date",
     headerName: "Date",
     flex: 1,
+  },
+  {
+    field: "read",
+    headerName: "Read",
+    flex: 0.2,
+    renderCell: (params) => <Checkbox onlyCheckbox />,
   },
 ];
 const row = [

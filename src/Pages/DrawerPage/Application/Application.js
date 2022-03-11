@@ -12,6 +12,15 @@ import OrderTable from "./../PageUtils/OrderTable";
 import Modal from "../../../UI/Modal/Modal";
 import { useSnackbar } from "notistack";
 
+import DoneIcon from "@mui/icons-material/Done";
+import CloseIcon from "@mui/icons-material/Close";
+import TableNoteField from "../../../UI/Table/TableNoteField";
+import IconButton from "@mui/material/IconButton";
+import {
+  ApplicationAccept,
+  ApplicationReject,
+} from "./../Account/TabPages/Modals/";
+
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
   const [searchVal, setSearchVal] = React.useState({
@@ -22,8 +31,78 @@ function Application() {
     name: "",
     social: "",
   });
-  const [value, setValue] = React.useState("1");
 
+  const [value, setValue] = React.useState("1");
+  const [random, setRandom] = React.useState("");
+  const acceptHandler = () => {
+    setRandom(`${Math.random()}`);
+  };
+  const rejectHandler = (e) => {
+    console.log("REJECT");
+  };
+  const column = [
+    {
+      field: "account",
+      headerName: "Account #",
+      flex: 0.4,
+    },
+    {
+      field: "name",
+      headerName: "Name",
+      flex: 1,
+    },
+    {
+      field: "decision",
+      headerName: "Accept/Reject",
+      type: "actions",
+      flex: 0.3,
+      getActions: (params) => {
+        return [
+          <Modal
+            closeDependancy={random}
+            content={<ApplicationAccept triggerClose={acceptHandler} />}
+          >
+            <IconButton>
+              <DoneIcon color="success" />
+            </IconButton>
+          </Modal>,
+          <Modal
+            closeDependancy={random}
+            content={<ApplicationReject triggerClose={acceptHandler} />}
+          >
+            <IconButton>
+              <CloseIcon color="error" />
+            </IconButton>
+          </Modal>,
+        ];
+      },
+    },
+    {
+      field: "notes",
+      headerName: "Notes",
+      flex: 0.8,
+      renderCell: (params) => {
+        return (
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <TableNoteField
+              label="Add note"
+              style={{
+                border: "none",
+                outline: "none",
+                background: "transparent",
+              }}
+            />
+          </div>
+        );
+      },
+    },
+  ];
   const TabsVal = [
     {
       heading: "Tab Pages",
@@ -72,14 +151,15 @@ function Application() {
   };
   return (
     <Stack spacing={6}>
-      <Stack direction="column" alignItems="flex-start" gap={2}>
-        <Modal
+      <Stack direction="row" sx={{ width: "100%" }} gap={2}>
+        {/* <Modal
           closeDependancy={searchVal.accountNumber}
           width="80vw"
           content={<SearchUser getRow={selectRowHandler} />}
         >
           <Button>Select User</Button>
-        </Modal>
+        </Modal> */}
+        <SearchUser getRow={selectRowHandler} />
       </Stack>
 
       <Tabs value={value}>
@@ -106,23 +186,6 @@ function Application() {
   );
 }
 
-const column = [
-  {
-    field: "account",
-    headerName: "Account #",
-    flex: 1,
-  },
-  {
-    field: "name",
-    headerName: "Name",
-    flex: 1,
-  },
-  {
-    field: "acceptReject",
-    headerName: "Accept/Reject",
-    flex: 1,
-  },
-];
 const row = [
   {
     id: 0,
@@ -131,13 +194,13 @@ const row = [
     acceptReject: "true",
   },
   {
-    id: 0,
+    id: 1,
     account: "13452",
     name: "Brockley",
     acceptReject: "false",
   },
   {
-    id: 0,
+    id: 2,
     account: "14523",
     name: "Brandom",
     acceptReject: "true",
