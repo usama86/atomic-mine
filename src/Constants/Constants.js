@@ -4,6 +4,7 @@ const Constants = {
   Account: "Account",
   Application: "Application",
   RiskMonitor: "Risk Monitor",
+  Logs: "Logs",
   IconSize: 21,
   Log_in: "Log in",
   Login_Btn: "Login",
