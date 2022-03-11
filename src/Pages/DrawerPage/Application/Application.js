@@ -5,7 +5,6 @@ import Box from "../../../UI/Layout/Box";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
-import Button from "../../../UI/Button/Button";
 import SearchUser from "./../PageUtils/SearchUser";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
@@ -23,22 +22,19 @@ import {
 
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
-  const [searchVal, setSearchVal] = React.useState({
-    accountNumber: "",
-    contact: "",
-    email: "",
-    id: "",
-    name: "",
-    social: "",
-  });
+  // const [searchVal, setSearchVal] = React.useState({
+  //   accountNumber: "",
+  //   contact: "",
+  //   email: "",
+  //   id: "",
+  //   name: "",
+  //   social: "",
+  // });
 
   const [value, setValue] = React.useState("1");
   const [random, setRandom] = React.useState("");
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
-  };
-  const rejectHandler = (e) => {
-    console.log("REJECT");
   };
   const column = [
     {
@@ -144,7 +140,7 @@ function Application() {
     setValue(newValue);
   };
   const selectRowHandler = (e) => {
-    setSearchVal(e.row);
+    // setSearchVal(e.row);
     enqueueSnackbar(`Selected user ${e.row.name}`, {
       variant: "success",
     });
