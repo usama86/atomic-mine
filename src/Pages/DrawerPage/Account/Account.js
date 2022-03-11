@@ -5,7 +5,6 @@ import Box from "../../../UI/Layout/Box";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
-import Button from "../../../UI/Button/Button";
 import SearchUser from "./../PageUtils/SearchUser";
 //AccountPages
 import Balance from "./TabPages/Balance";
@@ -17,7 +16,6 @@ import BankLink from "./TabPages/BankLink";
 import Docs from "./TabPages/Docs";
 import Options from "./TabPages/Options";
 import PersonalInfo from "./TabPages/PersonalInfo";
-import Modal from "../../../UI/Modal/Modal";
 import Alert from "../../../UI/Alert/Alert";
 import { useSnackbar } from "notistack";
 
@@ -62,13 +60,6 @@ function Account() {
   return (
     <Stack spacing={6}>
       <Stack direction="row" gap={2} sx={{ width: "100%" }}>
-        {/* <Modal
-          closeDependancy={searchVal.accountNumber}
-          width="80vw"
-          content={<SearchUser getRow={selectRowHandler} />}
-        > */}
-        {/* <Button>Select User</Button> */}
-        {/* </Modal> */}
         <SearchUser getRow={selectRowHandler} />
       </Stack>
       {searchVal.accountNumber !== "" ? (

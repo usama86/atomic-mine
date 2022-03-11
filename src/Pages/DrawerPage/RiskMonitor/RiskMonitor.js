@@ -13,14 +13,7 @@ import { useSnackbar } from "notistack";
 
 function RiskMonitor() {
   const { enqueueSnackbar } = useSnackbar();
-  const [searchVal, setSearchVal] = React.useState({
-    accountNumber: "",
-    contact: "",
-    email: "",
-    id: "",
-    name: "",
-    social: "",
-  });
+
   const [value, setValue] = React.useState("1");
 
   const TabsVal = [
@@ -47,7 +40,6 @@ function RiskMonitor() {
     setValue(newValue);
   };
   const selectRowHandler = (e) => {
-    setSearchVal(e.row);
     enqueueSnackbar(`Selected user ${e.row.name}`, {
       variant: "success",
     });
@@ -55,13 +47,6 @@ function RiskMonitor() {
   return (
     <Stack spacing={6}>
       <Stack direction="row" sx={{ width: "100%" }} gap={2}>
-        {/* <Modal
-          closeDependancy={searchVal.accountNumber}
-          width="80vw"
-          content={<SearchUser getRow={selectRowHandler} />}
-        >
-          <Button>Select User</Button>
-        </Modal> */}
         <SearchUser getRow={selectRowHandler} />
       </Stack>
 

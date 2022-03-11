@@ -5,7 +5,6 @@ import data from "../../../../Constants/dummy_orders.json";
 import SearchableTable from "../../../../UI/Table/SearchableTable";
 // import Card from "../../../../UI/Card/Card";
 import Stack from "../../../../UI/Layout/Stack";
-import Modal from "../../../../UI/Modal/Modal";
 import Button from "../../../../UI/Button/Button";
 import { useSnackbar } from "notistack";
 import Box from "./../../../../UI/Layout/Box";
@@ -15,7 +14,6 @@ import Tab from "@mui/material/Tab";
 import Tabs from "./../../../../UI/Tabs/Tabs";
 import OrderTable from "./../../PageUtils/OrderTable";
 
-import Constants from "../../../../Constants/Constants";
 import orders from "../../../../Constants/mock_data_orders.json";
 
 const fields = [
@@ -97,23 +95,6 @@ const Orders = () => {
   ];
   return (
     <Stack direction="column" alignItems="flex-start" gap={2}>
-      {/* <Modal
-        closeDependancy={selectedRow.symbol}
-        width="80vw"
-        content={
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <SearchableTable
-                selectRowHandler={selectOrderHandler}
-                rows={data}
-                columns={fields}
-              />
-            </Grid>
-          </Grid>
-        }
-      >
-        <Button>{Constants.Select_Order}</Button>
-      </Modal> */}
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <SearchableTable

@@ -4,7 +4,7 @@ import Checkbox from "@mui/material/Checkbox";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
+// const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const CheckboxComp = ({ onlyCheckbox, Label, ...otherProps }) => {
   const [checked, setChecked] = React.useState(false);

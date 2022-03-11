@@ -5,9 +5,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import { AiOutlineCloudDownload } from "react-icons/ai";
-import Pagination from "./../Pagination/Pagination";
+// import Pagination from "./../Pagination/Pagination";
 import Stack from "./../Layout/Stack";
-
+/** ~~~~ apply pagination later */
 export default function CardPagination({
   docs,
   perPage,
@@ -15,11 +15,11 @@ export default function CardPagination({
   customHeight,
 }) {
   const [checked, setChecked] = React.useState([0]);
-  const maxPages = ~~(docs.length / perPage) + 1;
-  const [page, setPage] = React.useState(1);
-  const handleChange = (event, value) => {
-    setPage(value);
-  };
+  // const maxPages = ~~(docs.length / perPage) + 1;
+  // const [page, setPage] = React.useState(1);
+  // const handleChange = (event, value) => {
+  //   setPage(value);
+  // };
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -39,12 +39,12 @@ export default function CardPagination({
         sx={{
           width: "100%",
           height: customHeight,
-          overflow: "hidden",
+          overflow: "auto",
           bgcolor: "background.paper",
         }}
       >
         {docs
-          .slice(perPage * page - perPage, perPage * page)
+          // .slice(perPage * page - perPage, perPage * page)
           .map((value, index) => {
             const labelId = `checkbox-list-label-${value}`;
             return (
@@ -66,9 +66,9 @@ export default function CardPagination({
             );
           })}
       </List>
-      {docs.length > perPage && (
+      {/* {docs.length > perPage && (
         <Pagination count={maxPages} page={page} onChange={handleChange} />
-      )}
+      )} */}
     </Stack>
   );
 }
