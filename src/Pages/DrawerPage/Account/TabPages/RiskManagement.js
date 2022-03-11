@@ -1,5 +1,5 @@
 import React from "react";
-import Switch from "./../../../../UI/Switch/Switch";
+// import Switch from "./../../../../UI/Switch/Switch";
 import Card from "./../../../../UI/Card/Card";
 import Stack from "./../../../../UI/Layout/Stack";
 import Grid from "./../../../../UI/Layout/Grid";
@@ -38,23 +38,23 @@ const RiskManagement = () => {
       setTypographyVariant("body");
     }
   }, [mediumScreen, smallScreen, largeScreen]);
-  const [SwitchState, setSwitchState] = React.useState({
-    restrictTrading: false,
-    liqOnly: false,
-    restrictDeposits: false,
-    restrictWithDrawl: false,
-    changeProvCash: false,
-    changeBuyingPower: false,
-    blacklistOption: false,
-    riskFlag: false,
-  });
+  // const [SwitchState, setSwitchState] = React.useState({
+  //   restrictTrading: false,
+  //   liqOnly: false,
+  //   restrictDeposits: false,
+  //   restrictWithDrawl: false,
+  //   changeProvCash: false,
+  //   changeBuyingPower: false,
+  //   blacklistOption: false,
+  //   riskFlag: false,
+  // });
 
-  const onChangeSwitch = (e, val) => {
-    let switchCopy = { ...SwitchState };
-    if (switchCopy[val] === true) switchCopy[val] = false;
-    else switchCopy[val] = true;
-    setSwitchState(switchCopy);
-  };
+  // const onChangeSwitch = (e, val) => {
+  //   let switchCopy = { ...SwitchState };
+  //   if (switchCopy[val] === true) switchCopy[val] = false;
+  //   else switchCopy[val] = true;
+  //   setSwitchState(switchCopy);
+  // };
   const [random, setRandom] = React.useState("");
   const closeModalHandler = (e) => {
     setRandom(`${Math.random()}`);
@@ -84,7 +84,12 @@ const RiskManagement = () => {
               <Stack direction="row">
                 <Modal
                   closeDependancy={random}
-                  content={<RestrictTrading triggerClose={closeModalHandler} />}
+                  content={
+                    <RestrictTrading
+                      label={"Restrict Trading"}
+                      triggerClose={closeModalHandler}
+                    />
+                  }
                 >
                   <IconButton sx={{ mr: "2rem" }}>
                     <FcSettings />
@@ -109,7 +114,12 @@ const RiskManagement = () => {
             >
               <Modal
                 closeDependancy={random}
-                content={<RestrictTrading triggerClose={closeModalHandler} />}
+                content={
+                  <RestrictTrading
+                    label={"Liq only"}
+                    triggerClose={closeModalHandler}
+                  />
+                }
               >
                 <IconButton sx={{ mr: "2rem" }}>
                   <FcSettings />
@@ -129,7 +139,12 @@ const RiskManagement = () => {
             >
               <Modal
                 closeDependancy={random}
-                content={<RestrictTrading triggerClose={closeModalHandler} />}
+                content={
+                  <RestrictTrading
+                    label={"Restrict Deposits"}
+                    triggerClose={closeModalHandler}
+                  />
+                }
               >
                 <IconButton sx={{ mr: "2rem" }}>
                   <FcSettings />
@@ -149,7 +164,12 @@ const RiskManagement = () => {
             >
               <Modal
                 closeDependancy={random}
-                content={<RestrictTrading triggerClose={closeModalHandler} />}
+                content={
+                  <RestrictTrading
+                    label={"Restrict WithDrawl"}
+                    triggerClose={closeModalHandler}
+                  />
+                }
               >
                 <IconButton sx={{ mr: "2rem" }}>
                   <FcSettings />
@@ -170,7 +190,12 @@ const RiskManagement = () => {
               <Stack direction="row">
                 <Modal
                   closeDependancy={random}
-                  content={<ChangeProvCash triggerClose={closeModalHandler} />}
+                  content={
+                    <ChangeProvCash
+                      label={"Change Prov Cash"}
+                      triggerClose={closeModalHandler}
+                    />
+                  }
                 >
                   <IconButton sx={{ mr: "2rem" }}>
                     <FcSettings />
@@ -195,7 +220,12 @@ const RiskManagement = () => {
             >
               <Modal
                 closeDependancy={random}
-                content={<ChangeProvCash triggerClose={closeModalHandler} />}
+                content={
+                  <ChangeProvCash
+                    label={"Change Buying Power"}
+                    triggerClose={closeModalHandler}
+                  />
+                }
               >
                 <IconButton sx={{ mr: "2rem" }}>
                   <FcSettings />

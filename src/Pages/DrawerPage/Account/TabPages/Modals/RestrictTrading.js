@@ -7,12 +7,12 @@ import Stack from "../../../../../UI/Layout/Stack";
 import Box from "../../../../../UI/Layout/Box";
 import Button from "../../../../../UI/Button/Button";
 
-const RestrictTrading = ({ triggerClose }) => {
+const RestrictTrading = ({ triggerClose, label }) => {
   const [value, setValue] = React.useState(false);
   return (
     <Stack gap={2}>
       <Stack direction="row" justifyContent="space-between">
-        <Typography variant="h6">Restrict Trading</Typography>
+        <Typography variant="h6">{label}</Typography>
         <Switch
           value={value}
           onChanged={(e) => setValue((prevState) => !prevState)}

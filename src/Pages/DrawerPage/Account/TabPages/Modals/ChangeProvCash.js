@@ -5,11 +5,11 @@ import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import DatePicker from "../../../../../UI/Date/DatePickerComp";
-const ChangeProvCash = ({ triggerClose }) => {
+const ChangeProvCash = ({ triggerClose, label }) => {
   const [expiration, setExpiration] = React.useState(null);
   return (
     <Stack gap={2}>
-      <Typography variant="h6">Change Provisional Cash</Typography>
+      <Typography variant="h6">{label}</Typography>
       <TextFieldComp isdefault={true} label="New" />
       <DatePicker
         label="Expiration"
