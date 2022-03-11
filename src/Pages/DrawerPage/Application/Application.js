@@ -12,10 +12,14 @@ import OrderTable from "./../PageUtils/OrderTable";
 import Modal from "../../../UI/Modal/Modal";
 import { useSnackbar } from "notistack";
 
-import { GridActionsCellItem } from "@mui/x-data-grid";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import TableNoteField from "../../../UI/Table/TableNoteField";
+import IconButton from "@mui/material/IconButton";
+import {
+  ApplicationAccept,
+  ApplicationReject,
+} from "./../Account/TabPages/Modals/";
 
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
@@ -27,9 +31,11 @@ function Application() {
     name: "",
     social: "",
   });
+
   const [value, setValue] = React.useState("1");
-  const acceptHandler = (e) => {
-    console.log("ACCEPT");
+  const [random, setRandom] = React.useState("");
+  const acceptHandler = () => {
+    setRandom(`${Math.random()}`);
   };
   const rejectHandler = (e) => {
     console.log("REJECT");
@@ -46,29 +52,28 @@ function Application() {
       flex: 1,
     },
     {
-      field: "acceptReject",
-      headerName: "Accept/Reject",
-      flex: 1,
-    },
-    {
       field: "decision",
       headerName: "Accept/Reject",
       type: "actions",
       flex: 0.3,
       getActions: (params) => {
         return [
-          <GridActionsCellItem
-            label="Accept"
-            onClick={acceptHandler}
-            icon={<DoneIcon />}
-            color="success"
-          />,
-          <GridActionsCellItem
-            label="Reject"
-            onClick={rejectHandler}
-            icon={<CloseIcon />}
-            color="error"
-          />,
+          <Modal
+            closeDependancy={random}
+            content={<ApplicationAccept triggerClose={acceptHandler} />}
+          >
+            <IconButton>
+              <DoneIcon color="success" />
+            </IconButton>
+          </Modal>,
+          <Modal
+            closeDependancy={random}
+            content={<ApplicationReject triggerClose={acceptHandler} />}
+          >
+            <IconButton>
+              <CloseIcon color="error" />
+            </IconButton>
+          </Modal>,
         ];
       },
     },

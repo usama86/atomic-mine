@@ -4,6 +4,8 @@ import RestrictTrading from "./RestrictTrading";
 import Riskflag from "./Riskflag";
 import StatusModel from "./StatusModel";
 import UnlinkModel from "./UnlinkModel";
+import ApplicationAccept from "./ApplicationAccept";
+import ApplicationReject from "./ApplicationReject";
 
 export {
   BlacklistOption,
@@ -12,4 +14,6 @@ export {
   Riskflag,
   StatusModel,
   UnlinkModel,
+  ApplicationAccept,
+  ApplicationReject,
 };

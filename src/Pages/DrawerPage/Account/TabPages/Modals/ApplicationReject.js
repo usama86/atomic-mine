@@ -5,14 +5,18 @@ import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
+import Search from "./../../../../../UI/AutoComplete/Autocomplete";
 
-const Status = ({ triggerClose }) => {
+const ApplicationReject = ({ triggerClose }) => {
   return (
     <Stack gap={2}>
-      <Typography variant="h6">Status</Typography>
-      <Checkbox Label="Freeze" />
+      <Typography variant="h6">Reject</Typography>
       <TextFieldComp isdefault={true} label="Notes" />
-      <Stack direction="row" justifyContent="center">
+      <Search Label="Rejected Because" />
+      <Stack direction="row" justifyContent="space-between">
+        <Button sx={{ color: "white" }} isdefault={true}>
+          BlackList
+        </Button>
         <Button
           onClick={(e) => {
             e.preventDefault();
@@ -28,4 +32,4 @@ const Status = ({ triggerClose }) => {
   );
 };
 
-export default Status;
+export default ApplicationReject;
