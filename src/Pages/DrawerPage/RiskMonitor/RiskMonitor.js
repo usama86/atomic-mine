@@ -5,12 +5,10 @@ import Box from "../../../UI/Layout/Box";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
-import Button from "../../../UI/Button/Button";
 import SearchUser from "./../PageUtils/SearchUser";
 import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
-import Modal from "../../../UI/Modal/Modal";
 import { useSnackbar } from "notistack";
 
 function RiskMonitor() {
