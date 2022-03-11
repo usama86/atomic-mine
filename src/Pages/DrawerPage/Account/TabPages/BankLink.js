@@ -11,7 +11,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
-import { ChangeProvCash, Riskflag } from "./RiskManagementModals/";
+import { StatusModel, UnlinkModel } from "./Modals";
 const BankLink = () => {
   const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
@@ -113,7 +113,7 @@ const BankLink = () => {
               <Stack direction="row">
                 <Modal
                   closeDependancy={random}
-                  content={<ChangeProvCash triggerClose={closeModalHandler} />}
+                  content={<StatusModel triggerClose={closeModalHandler} />}
                 >
                   <IconButton>
                     <FcSettings />
@@ -165,7 +165,7 @@ const BankLink = () => {
               <Stack direction="row">
                 <Modal
                   closeDependancy={random}
-                  content={<Riskflag triggerClose={closeModalHandler} />}
+                  content={<UnlinkModel triggerClose={closeModalHandler} />}
                 >
                   <IconButton>
                     <FcSettings />
