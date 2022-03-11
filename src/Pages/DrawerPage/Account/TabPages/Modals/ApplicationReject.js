@@ -4,7 +4,6 @@ import Typography from "../../../../../UI/Typography/Typography";
 import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
-import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 import Search from "./../../../../../UI/AutoComplete/Autocomplete";
 
 const ApplicationReject = ({ triggerClose }) => {
