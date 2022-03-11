@@ -56,7 +56,6 @@ function Application() {
       type: "actions",
       flex: 0.3,
       getActions: (params) => {
-        console.log(params);
         return [
           <GridActionsCellItem
             label="Accept"

@@ -7,6 +7,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import Button from "../../../UI/Button/Button";
 import SearchUser from "./../PageUtils/SearchUser";
+import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
 import Modal from "../../../UI/Modal/Modal";
@@ -111,14 +112,15 @@ const column = [
     flex: 1,
   },
   {
-    field: "read",
-    headerName: "Read",
-    flex: 1,
-  },
-  {
     field: "date",
     headerName: "Date",
     flex: 1,
+  },
+  {
+    field: "read",
+    headerName: "Read",
+    flex: 0.2,
+    renderCell: (params) => <Checkbox />,
   },
 ];
 const row = [
