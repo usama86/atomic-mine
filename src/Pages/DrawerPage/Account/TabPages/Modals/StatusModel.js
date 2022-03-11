@@ -7,7 +7,6 @@ import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
 const Status = ({ triggerClose }) => {
-  const [expiration, setExpiration] = React.useState(null);
   return (
     <Stack gap={2}>
       <Typography variant="h6">Status</Typography>
