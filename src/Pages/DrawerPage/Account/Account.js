@@ -61,14 +61,15 @@ function Account() {
   };
   return (
     <Stack spacing={6}>
-      <Stack direction="column" alignItems="flex-start" gap={2}>
-        <Modal
+      <Stack direction="row" gap={2} sx={{ width: "100%" }}>
+        {/* <Modal
           closeDependancy={searchVal.accountNumber}
           width="80vw"
           content={<SearchUser getRow={selectRowHandler} />}
-        >
-          <Button>Select User</Button>
-        </Modal>
+        > */}
+        {/* <Button>Select User</Button> */}
+        {/* </Modal> */}
+        <SearchUser getRow={selectRowHandler} />
       </Stack>
       {searchVal.accountNumber !== "" ? (
         <Tabs value={value}>

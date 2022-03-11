@@ -6,7 +6,9 @@
     "place_time": "10/19/2021",
     "fill_time": "8/20/2021",
     "status": "rejected",
-    "reason": "Juvenile arthritis, unspecified, wrist"
+    "reason": "Juvenile arthritis, unspecified, wrist",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "place_time": "5/14/2021",
     "fill_time": "5/16/2021",
     "status": "rejected",
-    "reason": "Unspecified injury of unspecified part of colon, sequela"
+    "reason": "Unspecified injury of unspecified part of colon, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 3,
@@ -24,7 +28,9 @@
     "place_time": "11/13/2021",
     "fill_time": "5/5/2021",
     "status": "cancelled",
-    "reason": "Postprocedural urethral stricture"
+    "reason": "Postprocedural urethral stricture",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 4,
@@ -33,7 +39,9 @@
     "place_time": "3/4/2022",
     "fill_time": "10/8/2021",
     "status": "rejected",
-    "reason": "Inj oth blood vessels at ank/ft level, left leg, subs"
+    "reason": "Inj oth blood vessels at ank/ft level, left leg, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 5,
@@ -42,7 +50,9 @@
     "place_time": "4/20/2021",
     "fill_time": "11/8/2021",
     "status": "open",
-    "reason": "Activity, sewing"
+    "reason": "Activity, sewing",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 6,
@@ -51,7 +61,9 @@
     "place_time": "5/26/2021",
     "fill_time": "9/9/2021",
     "status": "rejected",
-    "reason": "Maternal care for excess fetal growth, second trimester, oth"
+    "reason": "Maternal care for excess fetal growth, second trimester, oth",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 7,
@@ -60,7 +72,9 @@
     "place_time": "6/18/2021",
     "fill_time": "8/3/2021",
     "status": "cancelled",
-    "reason": "Sprain of other ligament of left ankle, subsequent encounter"
+    "reason": "Sprain of other ligament of left ankle, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 8,
@@ -69,7 +83,9 @@
     "place_time": "6/17/2021",
     "fill_time": "3/17/2021",
     "status": "rejected",
-    "reason": "Toxic effect of nitrogen oxides, accidental (unintentional)"
+    "reason": "Toxic effect of nitrogen oxides, accidental (unintentional)",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 9,
@@ -78,7 +94,9 @@
     "place_time": "9/5/2021",
     "fill_time": "6/3/2021",
     "status": "cancelled",
-    "reason": "Unspecified primary angle-closure glaucoma, severe stage"
+    "reason": "Unspecified primary angle-closure glaucoma, severe stage",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 10,
@@ -87,7 +105,9 @@
     "place_time": "7/29/2021",
     "fill_time": "6/17/2021",
     "status": "rejected",
-    "reason": "Nondisp fx of trapezium, right wrist, init for clos fx"
+    "reason": "Nondisp fx of trapezium, right wrist, init for clos fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 11,
@@ -96,7 +116,9 @@
     "place_time": "4/12/2021",
     "fill_time": "2/16/2022",
     "status": "rejected",
-    "reason": "Unspecified fracture of right toe(s), sequela"
+    "reason": "Unspecified fracture of right toe(s), sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 12,
@@ -105,7 +127,9 @@
     "place_time": "5/7/2021",
     "fill_time": "9/6/2021",
     "status": "rejected",
-    "reason": "Newborn small for gestational age, unspecified weight"
+    "reason": "Newborn small for gestational age, unspecified weight",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 13,
@@ -114,7 +138,9 @@
     "place_time": "3/13/2021",
     "fill_time": "9/28/2021",
     "status": "rejected",
-    "reason": "Unspecified dislocation of right thumb, subsequent encounter"
+    "reason": "Unspecified dislocation of right thumb, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 14,
@@ -123,7 +149,9 @@
     "place_time": "2/9/2022",
     "fill_time": "8/16/2021",
     "status": "rejected",
-    "reason": "Traum hemor left cerebrum w LOC of 31-59 min, subs"
+    "reason": "Traum hemor left cerebrum w LOC of 31-59 min, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 15,
@@ -132,7 +160,9 @@
     "place_time": "1/12/2022",
     "fill_time": "11/24/2021",
     "status": "open",
-    "reason": "Disp fx of medial wall of unsp acetabulum, init for clos fx"
+    "reason": "Disp fx of medial wall of unsp acetabulum, init for clos fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 16,
@@ -141,7 +171,9 @@
     "place_time": "4/2/2021",
     "fill_time": "6/30/2021",
     "status": "filled",
-    "reason": "Non-prs chronic ulcer of left calf limited to brkdwn skin"
+    "reason": "Non-prs chronic ulcer of left calf limited to brkdwn skin",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 17,
@@ -150,7 +182,9 @@
     "place_time": "3/3/2022",
     "fill_time": "12/17/2021",
     "status": "open",
-    "reason": "Laceration w fb of unsp external genital organs, female"
+    "reason": "Laceration w fb of unsp external genital organs, female",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 18,
@@ -159,7 +193,9 @@
     "place_time": "4/3/2021",
     "fill_time": "7/24/2021",
     "status": "cancelled",
-    "reason": "Contusion of unsp ring finger w/o damage to nail, subs"
+    "reason": "Contusion of unsp ring finger w/o damage to nail, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 19,
@@ -168,7 +204,9 @@
     "place_time": "6/13/2021",
     "fill_time": "5/25/2021",
     "status": "filled",
-    "reason": "Struck by field hockey stick, initial encounter"
+    "reason": "Struck by field hockey stick, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 20,
@@ -177,7 +215,9 @@
     "place_time": "10/14/2021",
     "fill_time": "7/9/2021",
     "status": "filled",
-    "reason": "Unspecified dislocation of right patella"
+    "reason": "Unspecified dislocation of right patella",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 21,
@@ -186,7 +226,9 @@
     "place_time": "11/6/2021",
     "fill_time": "11/19/2021",
     "status": "filled",
-    "reason": "Adverse effect of other antidepressants, initial encounter"
+    "reason": "Adverse effect of other antidepressants, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 22,
@@ -195,7 +237,9 @@
     "place_time": "3/16/2021",
     "fill_time": "1/26/2022",
     "status": "filled",
-    "reason": "Struck by thrown, projected or falling object"
+    "reason": "Struck by thrown, projected or falling object",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 23,
@@ -204,7 +248,9 @@
     "place_time": "7/23/2021",
     "fill_time": "5/17/2021",
     "status": "open",
-    "reason": "Strain of extensor musc/fasc/tend thumb at wrs/hnd lv"
+    "reason": "Strain of extensor musc/fasc/tend thumb at wrs/hnd lv",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 24,
@@ -213,7 +259,9 @@
     "place_time": "11/27/2021",
     "fill_time": "5/8/2021",
     "status": "cancelled",
-    "reason": "Cont preg aft spon abort of one fts or more, first tri, oth"
+    "reason": "Cont preg aft spon abort of one fts or more, first tri, oth",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 25,
@@ -222,7 +270,9 @@
     "place_time": "2/12/2022",
     "fill_time": "12/17/2021",
     "status": "open",
-    "reason": "Oth fracture of shaft of l humerus, subs for fx w malunion"
+    "reason": "Oth fracture of shaft of l humerus, subs for fx w malunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 26,
@@ -231,7 +281,9 @@
     "place_time": "2/11/2022",
     "fill_time": "10/6/2021",
     "status": "open",
-    "reason": "Dislocation of tarsometatarsal joint of unsp foot, init"
+    "reason": "Dislocation of tarsometatarsal joint of unsp foot, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 27,
@@ -240,7 +292,9 @@
     "place_time": "7/6/2021",
     "fill_time": "9/15/2021",
     "status": "rejected",
-    "reason": "Other recurrent vertebral dislocation"
+    "reason": "Other recurrent vertebral dislocation",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 28,
@@ -249,7 +303,9 @@
     "place_time": "8/16/2021",
     "fill_time": "4/10/2021",
     "status": "filled",
-    "reason": "Displaced pilon fx unsp tibia, init for opn fx type 3A/B/C"
+    "reason": "Displaced pilon fx unsp tibia, init for opn fx type 3A/B/C",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 29,
@@ -258,7 +314,9 @@
     "place_time": "1/20/2022",
     "fill_time": "3/24/2021",
     "status": "open",
-    "reason": "Toxic effect of contact with venomous frog, assault"
+    "reason": "Toxic effect of contact with venomous frog, assault",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 30,
@@ -267,7 +325,9 @@
     "place_time": "5/13/2021",
     "fill_time": "10/17/2021",
     "status": "rejected",
-    "reason": "Unsp injury of other muscles and tendons at lower leg level"
+    "reason": "Unsp injury of other muscles and tendons at lower leg level",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 31,
@@ -276,7 +336,9 @@
     "place_time": "6/7/2021",
     "fill_time": "2/1/2022",
     "status": "open",
-    "reason": "Nondisp commnt fx r patella, 7thE"
+    "reason": "Nondisp commnt fx r patella, 7thE",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 32,
@@ -285,7 +347,9 @@
     "place_time": "7/15/2021",
     "fill_time": "8/15/2021",
     "status": "rejected",
-    "reason": "Nodular episcleritis, unspecified eye"
+    "reason": "Nodular episcleritis, unspecified eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 33,
@@ -294,7 +358,9 @@
     "place_time": "12/21/2021",
     "fill_time": "7/11/2021",
     "status": "filled",
-    "reason": "Burn of first degree of single finger (nail) except thumb"
+    "reason": "Burn of first degree of single finger (nail) except thumb",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 34,
@@ -303,7 +369,9 @@
     "place_time": "12/27/2021",
     "fill_time": "2/4/2022",
     "status": "rejected",
-    "reason": "Chalcosis, right eye"
+    "reason": "Chalcosis, right eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 35,
@@ -312,7 +380,9 @@
     "place_time": "3/9/2021",
     "fill_time": "7/11/2021",
     "status": "rejected",
-    "reason": "Malignant neoplasm of ovrlp sites of unsp eye and adnexa"
+    "reason": "Malignant neoplasm of ovrlp sites of unsp eye and adnexa",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 36,
@@ -321,7 +391,9 @@
     "place_time": "6/11/2021",
     "fill_time": "1/19/2022",
     "status": "rejected",
-    "reason": "Oth osteopor w crnt path fx, unsp low leg, 7thD"
+    "reason": "Oth osteopor w crnt path fx, unsp low leg, 7thD",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 37,
@@ -330,7 +402,9 @@
     "place_time": "2/20/2022",
     "fill_time": "8/4/2021",
     "status": "rejected",
-    "reason": "Unspecified subluxation and dislocation of shoulder joint"
+    "reason": "Unspecified subluxation and dislocation of shoulder joint",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 38,
@@ -339,7 +413,9 @@
     "place_time": "2/1/2022",
     "fill_time": "8/30/2021",
     "status": "open",
-    "reason": "Laceration of transverse colon, sequela"
+    "reason": "Laceration of transverse colon, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 39,
@@ -348,7 +424,9 @@
     "place_time": "11/21/2021",
     "fill_time": "12/5/2021",
     "status": "cancelled",
-    "reason": "Occup of pk-up/van injured in clsn w oth and unsp mv in traf"
+    "reason": "Occup of pk-up/van injured in clsn w oth and unsp mv in traf",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 40,
@@ -357,7 +435,9 @@
     "place_time": "5/1/2021",
     "fill_time": "6/4/2021",
     "status": "rejected",
-    "reason": "2-part nondisp fx of surg nk of r humer, 7thK"
+    "reason": "2-part nondisp fx of surg nk of r humer, 7thK",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 41,
@@ -366,7 +446,9 @@
     "place_time": "3/18/2021",
     "fill_time": "7/6/2021",
     "status": "open",
-    "reason": "Cont preg aft spon abort of one fts or more, unsp tri, fts4"
+    "reason": "Cont preg aft spon abort of one fts or more, unsp tri, fts4",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 42,
@@ -375,7 +457,9 @@
     "place_time": "9/30/2021",
     "fill_time": "4/12/2021",
     "status": "open",
-    "reason": "Poisoning by ganglionic blocking drugs, self-harm, init"
+    "reason": "Poisoning by ganglionic blocking drugs, self-harm, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 43,
@@ -384,7 +468,9 @@
     "place_time": "6/13/2021",
     "fill_time": "12/4/2021",
     "status": "cancelled",
-    "reason": "Nondisp spiral fx shaft of r femr, 7thM"
+    "reason": "Nondisp spiral fx shaft of r femr, 7thM",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 44,
@@ -393,7 +479,9 @@
     "place_time": "8/21/2021",
     "fill_time": "7/21/2021",
     "status": "rejected",
-    "reason": "Inflammatory polyps of colon without complications"
+    "reason": "Inflammatory polyps of colon without complications",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 45,
@@ -402,7 +490,9 @@
     "place_time": "11/25/2021",
     "fill_time": "5/22/2021",
     "status": "filled",
-    "reason": "Epidural hemorrhage w LOC w death due to oth causes bf consc"
+    "reason": "Epidural hemorrhage w LOC w death due to oth causes bf consc",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 46,
@@ -411,7 +501,9 @@
     "place_time": "1/9/2022",
     "fill_time": "1/7/2022",
     "status": "rejected",
-    "reason": "Puckering of macula, right eye"
+    "reason": "Puckering of macula, right eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 47,
@@ -420,7 +512,9 @@
     "place_time": "12/1/2021",
     "fill_time": "5/16/2021",
     "status": "open",
-    "reason": "Sprain of metacarpophalangeal joint of left ring finger"
+    "reason": "Sprain of metacarpophalangeal joint of left ring finger",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 48,
@@ -429,7 +523,9 @@
     "place_time": "12/11/2021",
     "fill_time": "6/25/2021",
     "status": "rejected",
-    "reason": "Disp fx of nk of 3rd MC bone, l hand, subs for fx w nonunion"
+    "reason": "Disp fx of nk of 3rd MC bone, l hand, subs for fx w nonunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 49,
@@ -438,7 +534,9 @@
     "place_time": "9/28/2021",
     "fill_time": "9/26/2021",
     "status": "rejected",
-    "reason": "Malignant neoplasm of short bones of lower limb"
+    "reason": "Malignant neoplasm of short bones of lower limb",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 50,
@@ -447,7 +545,9 @@
     "place_time": "12/21/2021",
     "fill_time": "7/21/2021",
     "status": "rejected",
-    "reason": "Laceration w foreign body of unsp part of thorax, init"
+    "reason": "Laceration w foreign body of unsp part of thorax, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 51,
@@ -456,7 +556,9 @@
     "place_time": "6/23/2021",
     "fill_time": "6/4/2021",
     "status": "open",
-    "reason": "Underdosing of unsp drugs acting on muscles, subs encntr"
+    "reason": "Underdosing of unsp drugs acting on muscles, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 52,
@@ -465,7 +567,9 @@
     "place_time": "9/23/2021",
     "fill_time": "6/21/2021",
     "status": "cancelled",
-    "reason": "Unsp place in apartment as place"
+    "reason": "Unsp place in apartment as place",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 53,
@@ -474,7 +578,9 @@
     "place_time": "1/1/2022",
     "fill_time": "5/18/2021",
     "status": "rejected",
-    "reason": "Fat embolism (traumatic), subsequent encounter"
+    "reason": "Fat embolism (traumatic), subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 54,
@@ -483,7 +589,9 @@
     "place_time": "4/19/2021",
     "fill_time": "11/25/2021",
     "status": "open",
-    "reason": "Legal intervnt w unsp sharp obj, law enforc offl inj, init"
+    "reason": "Legal intervnt w unsp sharp obj, law enforc offl inj, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 55,
@@ -492,7 +600,9 @@
     "place_time": "3/8/2022",
     "fill_time": "9/10/2021",
     "status": "rejected",
-    "reason": "Syphilis of kidney and ureter"
+    "reason": "Syphilis of kidney and ureter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 56,
@@ -501,7 +611,9 @@
     "place_time": "5/11/2021",
     "fill_time": "4/22/2021",
     "status": "cancelled",
-    "reason": "Displ spiral fx shaft of l tibia, 7thG"
+    "reason": "Displ spiral fx shaft of l tibia, 7thG",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 57,
@@ -510,7 +622,9 @@
     "place_time": "1/13/2022",
     "fill_time": "5/11/2021",
     "status": "open",
-    "reason": "Oth fx upr and low end unsp fibula, init for opn fx type I/2"
+    "reason": "Oth fx upr and low end unsp fibula, init for opn fx type I/2",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 58,
@@ -519,7 +633,9 @@
     "place_time": "8/21/2021",
     "fill_time": "11/24/2021",
     "status": "rejected",
-    "reason": "Displaced fracture of neck of other metacarpal bone, sequela"
+    "reason": "Displaced fracture of neck of other metacarpal bone, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 59,
@@ -528,7 +644,9 @@
     "place_time": "5/28/2021",
     "fill_time": "4/28/2021",
     "status": "cancelled",
-    "reason": "Inj oth blood vessels at lower leg level, unsp leg, init"
+    "reason": "Inj oth blood vessels at lower leg level, unsp leg, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 60,
@@ -537,7 +655,9 @@
     "place_time": "9/26/2021",
     "fill_time": "9/27/2021",
     "status": "rejected",
-    "reason": "Subluxation of T6/T7 thoracic vertebra, sequela"
+    "reason": "Subluxation of T6/T7 thoracic vertebra, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 61,
@@ -546,7 +666,9 @@
     "place_time": "5/27/2021",
     "fill_time": "6/24/2021",
     "status": "open",
-    "reason": "External constrict of unsp eyelid and periocular area, subs"
+    "reason": "External constrict of unsp eyelid and periocular area, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 62,
@@ -555,7 +677,9 @@
     "place_time": "5/19/2021",
     "fill_time": "9/8/2021",
     "status": "filled",
-    "reason": "Nondisp fx of proximal phalanx of thmb, init for opn fx"
+    "reason": "Nondisp fx of proximal phalanx of thmb, init for opn fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 63,
@@ -564,7 +688,9 @@
     "place_time": "8/15/2021",
     "fill_time": "2/14/2022",
     "status": "rejected",
-    "reason": "Toxic effect of venom of other snake, undetermined, sequela"
+    "reason": "Toxic effect of venom of other snake, undetermined, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 64,
@@ -573,7 +699,9 @@
     "place_time": "3/14/2021",
     "fill_time": "1/3/2022",
     "status": "filled",
-    "reason": "Acute infarction of spinal cord (embolic) (nonembolic)"
+    "reason": "Acute infarction of spinal cord (embolic) (nonembolic)",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 65,
@@ -582,7 +710,9 @@
     "place_time": "10/23/2021",
     "fill_time": "11/30/2021",
     "status": "rejected",
-    "reason": "Unsp physl fx low end humer, l arm, subs for fx w routn heal"
+    "reason": "Unsp physl fx low end humer, l arm, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 66,
@@ -591,7 +721,9 @@
     "place_time": "8/2/2021",
     "fill_time": "2/21/2022",
     "status": "open",
-    "reason": "Cocaine use, unspecified with cocaine-induced mood disorder"
+    "reason": "Cocaine use, unspecified with cocaine-induced mood disorder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 67,
@@ -600,7 +732,9 @@
     "place_time": "9/3/2021",
     "fill_time": "10/8/2021",
     "status": "cancelled",
-    "reason": "Pasngr in hv veh inj in clsn w rail trn/veh nontraf, sequela"
+    "reason": "Pasngr in hv veh inj in clsn w rail trn/veh nontraf, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 68,
@@ -609,7 +743,9 @@
     "place_time": "5/7/2021",
     "fill_time": "3/5/2022",
     "status": "filled",
-    "reason": "Toxic effect of lead and its compounds, assault, subs encntr"
+    "reason": "Toxic effect of lead and its compounds, assault, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 69,
@@ -618,7 +754,9 @@
     "place_time": "5/28/2021",
     "fill_time": "2/2/2022",
     "status": "rejected",
-    "reason": "Oth comp of fb acc left in body following endoscopic exam"
+    "reason": "Oth comp of fb acc left in body following endoscopic exam",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 70,
@@ -627,7 +765,9 @@
     "place_time": "12/17/2021",
     "fill_time": "10/28/2021",
     "status": "rejected",
-    "reason": "Blister (nonthermal) of unspecified parts of thorax"
+    "reason": "Blister (nonthermal) of unspecified parts of thorax",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 71,
@@ -636,7 +776,9 @@
     "place_time": "4/8/2021",
     "fill_time": "3/30/2021",
     "status": "open",
-    "reason": "Oth injury of right internal jugular vein, sequela"
+    "reason": "Oth injury of right internal jugular vein, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 72,
@@ -645,7 +787,9 @@
     "place_time": "4/28/2021",
     "fill_time": "12/27/2021",
     "status": "rejected",
-    "reason": "Nondisp transverse fx shaft of r fibula, 7thG"
+    "reason": "Nondisp transverse fx shaft of r fibula, 7thG",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 73,
@@ -654,7 +798,9 @@
     "place_time": "12/9/2021",
     "fill_time": "12/19/2021",
     "status": "rejected",
-    "reason": "Displ oblique fx shaft of unsp fibula, 7thF"
+    "reason": "Displ oblique fx shaft of unsp fibula, 7thF",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 74,
@@ -663,7 +809,9 @@
     "place_time": "3/28/2021",
     "fill_time": "7/7/2021",
     "status": "filled",
-    "reason": "Type 1 diabetes mellitus with other diabetic arthropathy"
+    "reason": "Type 1 diabetes mellitus with other diabetic arthropathy",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 75,
@@ -672,7 +820,9 @@
     "place_time": "8/4/2021",
     "fill_time": "8/6/2021",
     "status": "cancelled",
-    "reason": "Oth speech/lang deficits following oth ntrm intcrn hemor"
+    "reason": "Oth speech/lang deficits following oth ntrm intcrn hemor",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 76,
@@ -681,7 +831,9 @@
     "place_time": "5/2/2021",
     "fill_time": "2/28/2022",
     "status": "filled",
-    "reason": "Disp fx of shaft of third MC bone, l hand, init for opn fx"
+    "reason": "Disp fx of shaft of third MC bone, l hand, init for opn fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 77,
@@ -690,7 +842,9 @@
     "place_time": "11/16/2021",
     "fill_time": "7/9/2021",
     "status": "rejected",
-    "reason": "Unsp injury of other part of small intestine, init encntr"
+    "reason": "Unsp injury of other part of small intestine, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 78,
@@ -699,7 +853,9 @@
     "place_time": "1/16/2022",
     "fill_time": "8/5/2021",
     "status": "filled",
-    "reason": "Leakage of heart valve prosthesis, subsequent encounter"
+    "reason": "Leakage of heart valve prosthesis, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 79,
@@ -708,7 +864,9 @@
     "place_time": "11/27/2021",
     "fill_time": "3/21/2021",
     "status": "open",
-    "reason": "Oth periradicular pathology assoc w prev endodontic trtmt"
+    "reason": "Oth periradicular pathology assoc w prev endodontic trtmt",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 80,
@@ -717,7 +875,9 @@
     "place_time": "5/5/2021",
     "fill_time": "11/14/2021",
     "status": "filled",
-    "reason": "Poisoning by cardi-stim glycos/drug simlar act, accidental"
+    "reason": "Poisoning by cardi-stim glycos/drug simlar act, accidental",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 81,
@@ -726,7 +886,9 @@
     "place_time": "7/25/2021",
     "fill_time": "8/31/2021",
     "status": "cancelled",
-    "reason": "Other fluke infections"
+    "reason": "Other fluke infections",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 82,
@@ -735,7 +897,9 @@
     "place_time": "3/19/2021",
     "fill_time": "8/5/2021",
     "status": "open",
-    "reason": "Occup of pk-up/van injured in clsn w hv veh nontraf, sequela"
+    "reason": "Occup of pk-up/van injured in clsn w hv veh nontraf, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 83,
@@ -744,7 +908,9 @@
     "place_time": "8/27/2021",
     "fill_time": "1/16/2022",
     "status": "rejected",
-    "reason": "Nondisplaced fracture of head of left radius, sequela"
+    "reason": "Nondisplaced fracture of head of left radius, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 84,
@@ -753,7 +919,9 @@
     "place_time": "11/7/2021",
     "fill_time": "8/28/2021",
     "status": "rejected",
-    "reason": "Dislocation of radiocarpal joint of right wrist, init encntr"
+    "reason": "Dislocation of radiocarpal joint of right wrist, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 85,
@@ -762,7 +930,9 @@
     "place_time": "5/6/2021",
     "fill_time": "9/26/2021",
     "status": "rejected",
-    "reason": "Follicular lymphoma grade II, extrnod and solid organ sites"
+    "reason": "Follicular lymphoma grade II, extrnod and solid organ sites",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 86,
@@ -771,7 +941,9 @@
     "place_time": "1/10/2022",
     "fill_time": "5/19/2021",
     "status": "filled",
-    "reason": "Nondisp pilon fx unsp tibia, 7thF"
+    "reason": "Nondisp pilon fx unsp tibia, 7thF",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 87,
@@ -780,7 +952,9 @@
     "place_time": "11/14/2021",
     "fill_time": "11/14/2021",
     "status": "filled",
-    "reason": "Nondisp spiral fx shaft of r fibula, 7thN"
+    "reason": "Nondisp spiral fx shaft of r fibula, 7thN",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 88,
@@ -789,7 +963,9 @@
     "place_time": "4/4/2021",
     "fill_time": "12/2/2021",
     "status": "open",
-    "reason": "Pretrm prem ROM, unsp time betw rupt and onst labr, 3rd tri"
+    "reason": "Pretrm prem ROM, unsp time betw rupt and onst labr, 3rd tri",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 89,
@@ -798,7 +974,9 @@
     "place_time": "10/26/2021",
     "fill_time": "11/16/2021",
     "status": "rejected",
-    "reason": "Tuberculosis of genitourinary system, unspecified"
+    "reason": "Tuberculosis of genitourinary system, unspecified",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 90,
@@ -807,7 +985,9 @@
     "place_time": "5/6/2021",
     "fill_time": "6/23/2021",
     "status": "rejected",
-    "reason": "Unsp sequelae of other nontraumatic intracranial hemorrhage"
+    "reason": "Unsp sequelae of other nontraumatic intracranial hemorrhage",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 91,
@@ -816,7 +996,9 @@
     "place_time": "12/12/2021",
     "fill_time": "2/8/2022",
     "status": "rejected",
-    "reason": "Other sprain of sternum, initial encounter"
+    "reason": "Other sprain of sternum, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 92,
@@ -825,7 +1007,9 @@
     "place_time": "1/6/2022",
     "fill_time": "4/29/2021",
     "status": "rejected",
-    "reason": "Other abdominal pain"
+    "reason": "Other abdominal pain",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 93,
@@ -834,7 +1018,9 @@
     "place_time": "4/3/2021",
     "fill_time": "11/7/2021",
     "status": "filled",
-    "reason": "Intentional self-harm by steam or hot vapors, init encntr"
+    "reason": "Intentional self-harm by steam or hot vapors, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 94,
@@ -843,7 +1029,9 @@
     "place_time": "7/3/2021",
     "fill_time": "3/9/2021",
     "status": "rejected",
-    "reason": "Subluxation of T11/T12 thoracic vertebra, sequela"
+    "reason": "Subluxation of T11/T12 thoracic vertebra, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 95,
@@ -852,7 +1040,9 @@
     "place_time": "7/13/2021",
     "fill_time": "7/21/2021",
     "status": "rejected",
-    "reason": "Displ seg fx shaft of r femur, init for opn fx type 3A/B/C"
+    "reason": "Displ seg fx shaft of r femur, init for opn fx type 3A/B/C",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 96,
@@ -861,7 +1051,9 @@
     "place_time": "5/9/2021",
     "fill_time": "4/28/2021",
     "status": "open",
-    "reason": "Oth sexual dysfnct not due to a sub or known physiol cond"
+    "reason": "Oth sexual dysfnct not due to a sub or known physiol cond",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 97,
@@ -870,7 +1062,9 @@
     "place_time": "2/23/2022",
     "fill_time": "12/4/2021",
     "status": "open",
-    "reason": "Sprain of unspecified parts of left shoulder girdle"
+    "reason": "Sprain of unspecified parts of left shoulder girdle",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 98,
@@ -879,7 +1073,9 @@
     "place_time": "6/26/2021",
     "fill_time": "6/23/2021",
     "status": "rejected",
-    "reason": "Oth extrartic fx low end unsp rad, 7thJ"
+    "reason": "Oth extrartic fx low end unsp rad, 7thJ",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 99,
@@ -888,7 +1084,9 @@
     "place_time": "11/5/2021",
     "fill_time": "11/5/2021",
     "status": "cancelled",
-    "reason": "Nondisp fx of l radial styloid pro, 7thJ"
+    "reason": "Nondisp fx of l radial styloid pro, 7thJ",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 100,
@@ -897,7 +1095,9 @@
     "place_time": "9/21/2021",
     "fill_time": "10/25/2021",
     "status": "rejected",
-    "reason": "Fracture of angle of mandible, unspecified side, 7thG"
+    "reason": "Fracture of angle of mandible, unspecified side, 7thG",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 101,
@@ -906,7 +1106,9 @@
     "place_time": "9/1/2021",
     "fill_time": "3/13/2021",
     "status": "rejected",
-    "reason": "Inj cutan sensory nerve at lower leg level, unsp leg, subs"
+    "reason": "Inj cutan sensory nerve at lower leg level, unsp leg, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 102,
@@ -915,7 +1117,9 @@
     "place_time": "1/17/2022",
     "fill_time": "1/11/2022",
     "status": "rejected",
-    "reason": "Dislocation of internal right hip prosthesis, sequela"
+    "reason": "Dislocation of internal right hip prosthesis, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 103,
@@ -924,7 +1128,9 @@
     "place_time": "7/14/2021",
     "fill_time": "6/24/2021",
     "status": "rejected",
-    "reason": "Other fish poisoning, undetermined, subsequent encounter"
+    "reason": "Other fish poisoning, undetermined, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 104,
@@ -933,7 +1139,9 @@
     "place_time": "7/23/2021",
     "fill_time": "1/10/2022",
     "status": "rejected",
-    "reason": "Pain due to vascular prosthetic devices, implants and grafts"
+    "reason": "Pain due to vascular prosthetic devices, implants and grafts",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 105,
@@ -942,7 +1150,9 @@
     "place_time": "3/28/2021",
     "fill_time": "7/4/2021",
     "status": "cancelled",
-    "reason": "Obst due to fb acc left in body fol oth procedure, sequela"
+    "reason": "Obst due to fb acc left in body fol oth procedure, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 106,
@@ -951,7 +1161,9 @@
     "place_time": "7/13/2021",
     "fill_time": "3/3/2022",
     "status": "rejected",
-    "reason": "Stress fracture, left tibia, subs for fx w delay heal"
+    "reason": "Stress fracture, left tibia, subs for fx w delay heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 107,
@@ -960,7 +1172,9 @@
     "place_time": "7/16/2021",
     "fill_time": "1/5/2022",
     "status": "filled",
-    "reason": "Disorders of copper metabolism"
+    "reason": "Disorders of copper metabolism",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 108,
@@ -969,7 +1183,9 @@
     "place_time": "9/27/2021",
     "fill_time": "3/24/2021",
     "status": "cancelled",
-    "reason": "Unsp injury of musc/fasc/tend prt biceps, right arm, init"
+    "reason": "Unsp injury of musc/fasc/tend prt biceps, right arm, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 109,
@@ -978,7 +1194,9 @@
     "place_time": "3/27/2021",
     "fill_time": "4/18/2021",
     "status": "cancelled",
-    "reason": "Laceration of uterus"
+    "reason": "Laceration of uterus",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 110,
@@ -987,7 +1205,9 @@
     "place_time": "6/6/2021",
     "fill_time": "1/17/2022",
     "status": "rejected",
-    "reason": "Lacerat flexor musc/fasc/tend l mid fngr at forarm lv, init"
+    "reason": "Lacerat flexor musc/fasc/tend l mid fngr at forarm lv, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 111,
@@ -996,7 +1216,9 @@
     "place_time": "7/25/2021",
     "fill_time": "2/4/2022",
     "status": "rejected",
-    "reason": "Nondisplaced Rolando's fracture, left hand, sequela"
+    "reason": "Nondisplaced Rolando's fracture, left hand, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 112,
@@ -1005,7 +1227,9 @@
     "place_time": "12/13/2021",
     "fill_time": "2/16/2022",
     "status": "rejected",
-    "reason": "Opioid dependence"
+    "reason": "Opioid dependence",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 113,
@@ -1014,7 +1238,9 @@
     "place_time": "2/12/2022",
     "fill_time": "2/13/2022",
     "status": "open",
-    "reason": "Unsp injury of vein at forearm level, unsp arm, init encntr"
+    "reason": "Unsp injury of vein at forearm level, unsp arm, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 114,
@@ -1023,7 +1249,9 @@
     "place_time": "1/29/2022",
     "fill_time": "2/11/2022",
     "status": "rejected",
-    "reason": "Strain of long flexor musc/fasc/tend l thm at wrs/hnd lv"
+    "reason": "Strain of long flexor musc/fasc/tend l thm at wrs/hnd lv",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 115,
@@ -1032,7 +1260,9 @@
     "place_time": "12/29/2021",
     "fill_time": "4/17/2021",
     "status": "rejected",
-    "reason": "Nondisp bimalleol fx r low leg, init for opn fx type 3A/B/C"
+    "reason": "Nondisp bimalleol fx r low leg, init for opn fx type 3A/B/C",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 116,
@@ -1041,7 +1271,9 @@
     "place_time": "2/10/2022",
     "fill_time": "4/12/2021",
     "status": "rejected",
-    "reason": "Digestants"
+    "reason": "Digestants",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 117,
@@ -1050,7 +1282,9 @@
     "place_time": "10/30/2021",
     "fill_time": "8/1/2021",
     "status": "rejected",
-    "reason": "Squamous blepharitis"
+    "reason": "Squamous blepharitis",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 118,
@@ -1059,7 +1293,9 @@
     "place_time": "5/5/2021",
     "fill_time": "8/24/2021",
     "status": "cancelled",
-    "reason": "Contusion of bronchus, unilateral, sequela"
+    "reason": "Contusion of bronchus, unilateral, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 119,
@@ -1068,7 +1304,9 @@
     "place_time": "8/17/2021",
     "fill_time": "3/11/2021",
     "status": "rejected",
-    "reason": "Nondisplaced unspecified fracture of right lesser toe(s)"
+    "reason": "Nondisplaced unspecified fracture of right lesser toe(s)",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 120,
@@ -1077,7 +1315,9 @@
     "place_time": "9/13/2021",
     "fill_time": "6/12/2021",
     "status": "rejected",
-    "reason": "Laceration w foreign body of l mid finger w/o damage to nail"
+    "reason": "Laceration w foreign body of l mid finger w/o damage to nail",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 121,
@@ -1086,7 +1326,9 @@
     "place_time": "6/9/2021",
     "fill_time": "8/30/2021",
     "status": "rejected",
-    "reason": "Poisoning by unsp narcotics, intentional self-harm, init"
+    "reason": "Poisoning by unsp narcotics, intentional self-harm, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 122,
@@ -1095,7 +1337,9 @@
     "place_time": "1/24/2022",
     "fill_time": "7/12/2021",
     "status": "open",
-    "reason": "Displ oblique fx shaft of unsp fibula, 7thC"
+    "reason": "Displ oblique fx shaft of unsp fibula, 7thC",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 123,
@@ -1104,7 +1348,9 @@
     "place_time": "8/4/2021",
     "fill_time": "8/6/2021",
     "status": "cancelled",
-    "reason": "Lead-induced chronic gout, right hand"
+    "reason": "Lead-induced chronic gout, right hand",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 124,
@@ -1113,7 +1359,9 @@
     "place_time": "3/8/2022",
     "fill_time": "5/13/2021",
     "status": "rejected",
-    "reason": "Contact with oth agricultural machinery, subs encntr"
+    "reason": "Contact with oth agricultural machinery, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 125,
@@ -1122,7 +1370,9 @@
     "place_time": "11/6/2021",
     "fill_time": "12/20/2021",
     "status": "filled",
-    "reason": "Nondisplaced trimalleolar fracture of right lower leg, init"
+    "reason": "Nondisplaced trimalleolar fracture of right lower leg, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 126,
@@ -1131,7 +1381,9 @@
     "place_time": "4/15/2021",
     "fill_time": "11/8/2021",
     "status": "rejected",
-    "reason": "Auditory recruitment, left ear"
+    "reason": "Auditory recruitment, left ear",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 127,
@@ -1140,7 +1392,9 @@
     "place_time": "3/21/2021",
     "fill_time": "11/8/2021",
     "status": "open",
-    "reason": "Oth physl fx upper end rad, r arm, subs for fx w routn heal"
+    "reason": "Oth physl fx upper end rad, r arm, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 128,
@@ -1149,7 +1403,9 @@
     "place_time": "3/21/2021",
     "fill_time": "10/16/2021",
     "status": "filled",
-    "reason": "Burn of first degree of scalp, subsequent encounter"
+    "reason": "Burn of first degree of scalp, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 129,
@@ -1158,7 +1414,9 @@
     "place_time": "7/18/2021",
     "fill_time": "10/24/2021",
     "status": "filled",
-    "reason": "Medial dislocation of proximal end of tibia, right knee"
+    "reason": "Medial dislocation of proximal end of tibia, right knee",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 130,
@@ -1167,7 +1425,9 @@
     "place_time": "12/29/2021",
     "fill_time": "11/1/2021",
     "status": "rejected",
-    "reason": "Asphyx d/t smothr under another person's body, asslt, sqla"
+    "reason": "Asphyx d/t smothr under another person's body, asslt, sqla",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 131,
@@ -1176,7 +1436,9 @@
     "place_time": "11/12/2021",
     "fill_time": "5/28/2021",
     "status": "open",
-    "reason": "Embolism due to cardiac prosth dev/grft"
+    "reason": "Embolism due to cardiac prosth dev/grft",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 132,
@@ -1185,7 +1447,9 @@
     "place_time": "5/13/2021",
     "fill_time": "6/3/2021",
     "status": "open",
-    "reason": "Sltr-haris Type IV physeal fx unspecified metatarsal, init"
+    "reason": "Sltr-haris Type IV physeal fx unspecified metatarsal, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 133,
@@ -1194,7 +1458,9 @@
     "place_time": "3/21/2021",
     "fill_time": "3/31/2021",
     "status": "open",
-    "reason": "Burn of unsp deg mult sites of head, face, and neck"
+    "reason": "Burn of unsp deg mult sites of head, face, and neck",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 134,
@@ -1203,7 +1469,9 @@
     "place_time": "6/10/2021",
     "fill_time": "12/3/2021",
     "status": "rejected",
-    "reason": "Traum cereb edema w LOC w death d/t oth cause bf consc, subs"
+    "reason": "Traum cereb edema w LOC w death d/t oth cause bf consc, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 135,
@@ -1212,7 +1480,9 @@
     "place_time": "5/9/2021",
     "fill_time": "1/29/2022",
     "status": "filled",
-    "reason": "Major laceration of femoral artery, unsp leg, subs encntr"
+    "reason": "Major laceration of femoral artery, unsp leg, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 136,
@@ -1221,7 +1491,9 @@
     "place_time": "7/30/2021",
     "fill_time": "1/7/2022",
     "status": "open",
-    "reason": "Problems related to social environment"
+    "reason": "Problems related to social environment",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 137,
@@ -1230,7 +1502,9 @@
     "place_time": "5/3/2021",
     "fill_time": "6/11/2021",
     "status": "cancelled",
-    "reason": "Strain msl/tnd lng flxr msl toe at ank/ft level, unsp foot"
+    "reason": "Strain msl/tnd lng flxr msl toe at ank/ft level, unsp foot",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 138,
@@ -1239,7 +1513,9 @@
     "place_time": "9/15/2021",
     "fill_time": "12/1/2021",
     "status": "rejected",
-    "reason": "Separation of muscle (nontraumatic), shoulder"
+    "reason": "Separation of muscle (nontraumatic), shoulder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 139,
@@ -1248,7 +1524,9 @@
     "place_time": "6/11/2021",
     "fill_time": "3/22/2021",
     "status": "open",
-    "reason": "Displ unsp condyle fx low end r femr, 7thJ"
+    "reason": "Displ unsp condyle fx low end r femr, 7thJ",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 140,
@@ -1257,7 +1535,9 @@
     "place_time": "5/14/2021",
     "fill_time": "8/29/2021",
     "status": "cancelled",
-    "reason": "Poisoning by aminoglycosides, intentional self-harm"
+    "reason": "Poisoning by aminoglycosides, intentional self-harm",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 141,
@@ -1266,7 +1546,9 @@
     "place_time": "10/3/2021",
     "fill_time": "10/8/2021",
     "status": "open",
-    "reason": "Malingerer [conscious simulation]"
+    "reason": "Malingerer [conscious simulation]",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 142,
@@ -1275,7 +1557,9 @@
     "place_time": "5/20/2021",
     "fill_time": "11/13/2021",
     "status": "rejected",
-    "reason": "Torus fracture of lower end of unspecified tibia, sequela"
+    "reason": "Torus fracture of lower end of unspecified tibia, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 143,
@@ -1284,7 +1568,9 @@
     "place_time": "2/9/2022",
     "fill_time": "4/19/2021",
     "status": "filled",
-    "reason": "Disp fx of lateral malleolus of unsp fibula, 7thG"
+    "reason": "Disp fx of lateral malleolus of unsp fibula, 7thG",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 144,
@@ -1293,7 +1579,9 @@
     "place_time": "9/1/2021",
     "fill_time": "9/7/2021",
     "status": "rejected",
-    "reason": "Adolescent idiopathic scoliosis, site unspecified"
+    "reason": "Adolescent idiopathic scoliosis, site unspecified",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 145,
@@ -1302,7 +1590,9 @@
     "place_time": "5/23/2021",
     "fill_time": "8/18/2021",
     "status": "open",
-    "reason": "Toxic effect of oth tobacco and nicotine, undetermined, subs"
+    "reason": "Toxic effect of oth tobacco and nicotine, undetermined, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 146,
@@ -1311,7 +1601,9 @@
     "place_time": "3/30/2021",
     "fill_time": "9/14/2021",
     "status": "open",
-    "reason": "Lacerat extn musc/fasc/tend r mid finger at forarm lv, init"
+    "reason": "Lacerat extn musc/fasc/tend r mid finger at forarm lv, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 147,
@@ -1320,7 +1612,9 @@
     "place_time": "6/13/2021",
     "fill_time": "9/30/2021",
     "status": "rejected",
-    "reason": "Asphyxiation due to smothering in furniture, assault"
+    "reason": "Asphyxiation due to smothering in furniture, assault",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 148,
@@ -1329,7 +1623,9 @@
     "place_time": "9/27/2021",
     "fill_time": "3/17/2021",
     "status": "rejected",
-    "reason": "Cognitive deficits following oth ntrm intcrn hemorrhage"
+    "reason": "Cognitive deficits following oth ntrm intcrn hemorrhage",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 149,
@@ -1338,7 +1634,9 @@
     "place_time": "9/22/2021",
     "fill_time": "6/21/2021",
     "status": "rejected",
-    "reason": "Displ oth extrartic fx l calcaneus, subs for fx w routn heal"
+    "reason": "Displ oth extrartic fx l calcaneus, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 150,
@@ -1347,7 +1645,9 @@
     "place_time": "9/22/2021",
     "fill_time": "3/13/2021",
     "status": "rejected",
-    "reason": "Dislocation of other parts of neck, subsequent encounter"
+    "reason": "Dislocation of other parts of neck, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 151,
@@ -1356,7 +1656,9 @@
     "place_time": "12/12/2021",
     "fill_time": "6/8/2021",
     "status": "rejected",
-    "reason": "Glasgow coma scale score 9-12"
+    "reason": "Glasgow coma scale score 9-12",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 152,
@@ -1365,7 +1667,9 @@
     "place_time": "3/19/2021",
     "fill_time": "10/28/2021",
     "status": "open",
-    "reason": "Nondisplaced apophyseal fracture of left femur, sequela"
+    "reason": "Nondisplaced apophyseal fracture of left femur, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 153,
@@ -1374,7 +1678,9 @@
     "place_time": "4/9/2021",
     "fill_time": "6/6/2021",
     "status": "rejected",
-    "reason": "Displ spiral fx shaft of rad, unsp arm, 7thP"
+    "reason": "Displ spiral fx shaft of rad, unsp arm, 7thP",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 154,
@@ -1383,7 +1689,9 @@
     "place_time": "8/6/2021",
     "fill_time": "9/9/2021",
     "status": "open",
-    "reason": "Encounter for screening for respiratory disorder NEC"
+    "reason": "Encounter for screening for respiratory disorder NEC",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 155,
@@ -1392,7 +1700,9 @@
     "place_time": "8/26/2021",
     "fill_time": "4/18/2021",
     "status": "rejected",
-    "reason": "Disp fx (avulsion) of lateral epicondyle of right humerus"
+    "reason": "Disp fx (avulsion) of lateral epicondyle of right humerus",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 156,
@@ -1401,7 +1711,9 @@
     "place_time": "11/11/2021",
     "fill_time": "4/21/2021",
     "status": "filled",
-    "reason": "Complete traumatic trnsphal amputation of l mid finger"
+    "reason": "Complete traumatic trnsphal amputation of l mid finger",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 157,
@@ -1410,7 +1722,9 @@
     "place_time": "3/4/2022",
     "fill_time": "7/19/2021",
     "status": "rejected",
-    "reason": "Displaced transverse fx shaft of humerus, right arm, sequela"
+    "reason": "Displaced transverse fx shaft of humerus, right arm, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 158,
@@ -1419,7 +1733,9 @@
     "place_time": "1/25/2022",
     "fill_time": "8/21/2021",
     "status": "rejected",
-    "reason": "Displaced intartic fracture of r calcaneus, init for opn fx"
+    "reason": "Displaced intartic fracture of r calcaneus, init for opn fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 159,
@@ -1428,7 +1744,9 @@
     "place_time": "6/26/2021",
     "fill_time": "8/8/2021",
     "status": "rejected",
-    "reason": "War op involving unarmed hand to hand combat, civilian"
+    "reason": "War op involving unarmed hand to hand combat, civilian",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 160,
@@ -1437,7 +1755,9 @@
     "place_time": "6/8/2021",
     "fill_time": "12/10/2021",
     "status": "rejected",
-    "reason": "Penetrating wound w foreign body of right eyeball, sequela"
+    "reason": "Penetrating wound w foreign body of right eyeball, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 161,
@@ -1446,7 +1766,9 @@
     "place_time": "9/24/2021",
     "fill_time": "3/11/2021",
     "status": "cancelled",
-    "reason": "Nontraumatic subdural hemorrhage, unspecified"
+    "reason": "Nontraumatic subdural hemorrhage, unspecified",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 162,
@@ -1455,7 +1777,9 @@
     "place_time": "3/3/2022",
     "fill_time": "4/8/2021",
     "status": "rejected",
-    "reason": "Milt op involving explosion of unsp marine weapon"
+    "reason": "Milt op involving explosion of unsp marine weapon",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 163,
@@ -1464,7 +1788,9 @@
     "place_time": "8/14/2021",
     "fill_time": "3/24/2021",
     "status": "rejected",
-    "reason": "Other superficial injuries of hip"
+    "reason": "Other superficial injuries of hip",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 164,
@@ -1473,7 +1799,9 @@
     "place_time": "1/3/2022",
     "fill_time": "8/15/2021",
     "status": "filled",
-    "reason": "Laceration of dorsal artery of left foot, subs encntr"
+    "reason": "Laceration of dorsal artery of left foot, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 165,
@@ -1482,7 +1810,9 @@
     "place_time": "9/11/2021",
     "fill_time": "2/25/2022",
     "status": "cancelled",
-    "reason": "Chronic iridocyclitis, unspecified eye"
+    "reason": "Chronic iridocyclitis, unspecified eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 166,
@@ -1491,7 +1821,9 @@
     "place_time": "10/31/2021",
     "fill_time": "10/4/2021",
     "status": "rejected",
-    "reason": "Hemophagocytic syndrome, infection-associated"
+    "reason": "Hemophagocytic syndrome, infection-associated",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 167,
@@ -1500,7 +1832,9 @@
     "place_time": "5/15/2021",
     "fill_time": "12/7/2021",
     "status": "rejected",
-    "reason": "Alcohol depend w alcoh-induce persisting amnestic disorder"
+    "reason": "Alcohol depend w alcoh-induce persisting amnestic disorder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 168,
@@ -1509,7 +1843,9 @@
     "place_time": "4/3/2021",
     "fill_time": "9/2/2021",
     "status": "rejected",
-    "reason": "Nondisp transverse fx shaft of humerus, left arm, sequela"
+    "reason": "Nondisp transverse fx shaft of humerus, left arm, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 169,
@@ -1518,7 +1854,9 @@
     "place_time": "7/25/2021",
     "fill_time": "8/14/2021",
     "status": "open",
-    "reason": "Other specified fracture of left acetabulum, sequela"
+    "reason": "Other specified fracture of left acetabulum, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 170,
@@ -1527,7 +1865,9 @@
     "place_time": "8/15/2021",
     "fill_time": "5/2/2021",
     "status": "rejected",
-    "reason": "Abrasion of vagina and vulva"
+    "reason": "Abrasion of vagina and vulva",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 171,
@@ -1536,7 +1876,9 @@
     "place_time": "8/23/2021",
     "fill_time": "11/21/2021",
     "status": "rejected",
-    "reason": "Abnormal innervation syndrome right upper eyelid"
+    "reason": "Abnormal innervation syndrome right upper eyelid",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 172,
@@ -1545,7 +1887,9 @@
     "place_time": "9/16/2021",
     "fill_time": "8/13/2021",
     "status": "cancelled",
-    "reason": "Explosn of mine place dur war op but expld aft, milt, init"
+    "reason": "Explosn of mine place dur war op but expld aft, milt, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 173,
@@ -1554,7 +1898,9 @@
     "place_time": "11/20/2021",
     "fill_time": "3/18/2021",
     "status": "rejected",
-    "reason": "Superficial foreign body of left elbow"
+    "reason": "Superficial foreign body of left elbow",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 174,
@@ -1563,7 +1909,9 @@
     "place_time": "7/26/2021",
     "fill_time": "12/5/2021",
     "status": "rejected",
-    "reason": "Erosn implnt urethral mesh to surrnd org/tiss, init"
+    "reason": "Erosn implnt urethral mesh to surrnd org/tiss, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 175,
@@ -1572,7 +1920,9 @@
     "place_time": "12/4/2021",
     "fill_time": "12/23/2021",
     "status": "rejected",
-    "reason": "Idiopathic aseptic necrosis of left shoulder"
+    "reason": "Idiopathic aseptic necrosis of left shoulder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 176,
@@ -1581,7 +1931,9 @@
     "place_time": "2/22/2022",
     "fill_time": "8/7/2021",
     "status": "open",
-    "reason": "Disp fx of neck of third metacarpal bone, right hand, init"
+    "reason": "Disp fx of neck of third metacarpal bone, right hand, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 177,
@@ -1590,7 +1942,9 @@
     "place_time": "8/28/2021",
     "fill_time": "2/21/2022",
     "status": "rejected",
-    "reason": "Unsp injury of unsp tibial artery, left leg, init encntr"
+    "reason": "Unsp injury of unsp tibial artery, left leg, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 178,
@@ -1599,7 +1953,9 @@
     "place_time": "7/14/2021",
     "fill_time": "7/24/2021",
     "status": "rejected",
-    "reason": "Corrosion of second degree of right ankle and foot, subs"
+    "reason": "Corrosion of second degree of right ankle and foot, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 179,
@@ -1608,7 +1964,9 @@
     "place_time": "4/7/2021",
     "fill_time": "3/26/2021",
     "status": "rejected",
-    "reason": "Prsn brd/alit hv veh injured in clsn w nonmtr vehicle, subs"
+    "reason": "Prsn brd/alit hv veh injured in clsn w nonmtr vehicle, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 180,
@@ -1617,7 +1975,9 @@
     "place_time": "2/12/2022",
     "fill_time": "5/29/2021",
     "status": "open",
-    "reason": "Glaucoma secondary to eye inflam, left eye, moderate stage"
+    "reason": "Glaucoma secondary to eye inflam, left eye, moderate stage",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 181,
@@ -1626,7 +1986,9 @@
     "place_time": "9/19/2021",
     "fill_time": "2/22/2022",
     "status": "rejected",
-    "reason": "Secondary syphilitic osteopathy"
+    "reason": "Secondary syphilitic osteopathy",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 182,
@@ -1635,7 +1997,9 @@
     "place_time": "11/29/2021",
     "fill_time": "5/19/2021",
     "status": "open",
-    "reason": "Disloc of distal interphaln joint of r idx fngr, sequela"
+    "reason": "Disloc of distal interphaln joint of r idx fngr, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 183,
@@ -1644,7 +2008,9 @@
     "place_time": "8/2/2021",
     "fill_time": "6/27/2021",
     "status": "filled",
-    "reason": "Drown due to fall/jump fr crushed inflatbl crft, sequela"
+    "reason": "Drown due to fall/jump fr crushed inflatbl crft, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 184,
@@ -1653,7 +2019,9 @@
     "place_time": "1/20/2022",
     "fill_time": "7/28/2021",
     "status": "rejected",
-    "reason": "Unspecified open wound, unspecified thigh, initial encounter"
+    "reason": "Unspecified open wound, unspecified thigh, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 185,
@@ -1662,7 +2030,9 @@
     "place_time": "7/24/2021",
     "fill_time": "7/13/2021",
     "status": "rejected",
-    "reason": "Rheumatoid polyneuropathy w rheumatoid arthritis mult site"
+    "reason": "Rheumatoid polyneuropathy w rheumatoid arthritis mult site",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 186,
@@ -1671,7 +2041,9 @@
     "place_time": "11/3/2021",
     "fill_time": "3/18/2021",
     "status": "open",
-    "reason": "Multiple endocrine neoplasia [MEN] type IIB"
+    "reason": "Multiple endocrine neoplasia [MEN] type IIB",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 187,
@@ -1680,7 +2052,9 @@
     "place_time": "8/20/2021",
     "fill_time": "3/18/2021",
     "status": "filled",
-    "reason": "Pathological fracture, unspecified ulna and radius"
+    "reason": "Pathological fracture, unspecified ulna and radius",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 188,
@@ -1689,7 +2063,9 @@
     "place_time": "9/16/2021",
     "fill_time": "1/24/2022",
     "status": "rejected",
-    "reason": "Open bite, right foot, subsequent encounter"
+    "reason": "Open bite, right foot, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 189,
@@ -1698,7 +2074,9 @@
     "place_time": "7/23/2021",
     "fill_time": "12/22/2021",
     "status": "rejected",
-    "reason": "Burn of third degree of right toe(s) (nail), subs encntr"
+    "reason": "Burn of third degree of right toe(s) (nail), subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 190,
@@ -1707,7 +2085,9 @@
     "place_time": "7/30/2021",
     "fill_time": "1/4/2022",
     "status": "rejected",
-    "reason": "Disp fx of post column of r acetab, subs for fx w delay heal"
+    "reason": "Disp fx of post column of r acetab, subs for fx w delay heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 191,
@@ -1716,7 +2096,9 @@
     "place_time": "4/3/2021",
     "fill_time": "8/19/2021",
     "status": "rejected",
-    "reason": "Macula scars of posterior pole (post-traumatic), left eye"
+    "reason": "Macula scars of posterior pole (post-traumatic), left eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 192,
@@ -1725,7 +2107,9 @@
     "place_time": "7/11/2021",
     "fill_time": "5/9/2021",
     "status": "open",
-    "reason": "Sprain of calcaneofibular ligament of right ankle"
+    "reason": "Sprain of calcaneofibular ligament of right ankle",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 193,
@@ -1734,7 +2118,9 @@
     "place_time": "5/15/2021",
     "fill_time": "11/6/2021",
     "status": "filled",
-    "reason": "Obstructed labor due to oth malpos and malpresent, fetus 5"
+    "reason": "Obstructed labor due to oth malpos and malpresent, fetus 5",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 194,
@@ -1743,7 +2129,9 @@
     "place_time": "5/5/2021",
     "fill_time": "1/5/2022",
     "status": "filled",
-    "reason": "Hypertrophy of bone, hand"
+    "reason": "Hypertrophy of bone, hand",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 195,
@@ -1752,7 +2140,9 @@
     "place_time": "11/9/2021",
     "fill_time": "8/27/2021",
     "status": "filled",
-    "reason": "Oth injury of right external jugular vein, sequela"
+    "reason": "Oth injury of right external jugular vein, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 196,
@@ -1761,7 +2151,9 @@
     "place_time": "12/18/2021",
     "fill_time": "9/21/2021",
     "status": "rejected",
-    "reason": "Other injury of fallopian tube, unspecified, init encntr"
+    "reason": "Other injury of fallopian tube, unspecified, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 197,
@@ -1770,7 +2162,9 @@
     "place_time": "9/22/2021",
     "fill_time": "3/13/2021",
     "status": "rejected",
-    "reason": "Inflammatory polyps of colon with abscess"
+    "reason": "Inflammatory polyps of colon with abscess",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 198,
@@ -1779,7 +2173,9 @@
     "place_time": "7/27/2021",
     "fill_time": "3/11/2021",
     "status": "rejected",
-    "reason": "Puncture wound w/o foreign body of left elbow, init encntr"
+    "reason": "Puncture wound w/o foreign body of left elbow, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 199,
@@ -1788,7 +2184,9 @@
     "place_time": "11/7/2021",
     "fill_time": "3/5/2022",
     "status": "rejected",
-    "reason": "Nondisp fx of medial cuneiform of left foot, sequela"
+    "reason": "Nondisp fx of medial cuneiform of left foot, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 200,
@@ -1797,7 +2195,9 @@
     "place_time": "3/6/2022",
     "fill_time": "1/18/2022",
     "status": "open",
-    "reason": "Poisoning by barbiturates, intentional self-harm, subs"
+    "reason": "Poisoning by barbiturates, intentional self-harm, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 201,
@@ -1806,7 +2206,9 @@
     "place_time": "12/9/2021",
     "fill_time": "1/26/2022",
     "status": "cancelled",
-    "reason": "Adverse effect of antineoplastic and immunosup drugs, subs"
+    "reason": "Adverse effect of antineoplastic and immunosup drugs, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 202,
@@ -1815,7 +2217,9 @@
     "place_time": "10/24/2021",
     "fill_time": "1/19/2022",
     "status": "rejected",
-    "reason": "Otitis media, unspecified, unspecified ear"
+    "reason": "Otitis media, unspecified, unspecified ear",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 203,
@@ -1824,7 +2228,9 @@
     "place_time": "1/14/2022",
     "fill_time": "6/28/2021",
     "status": "filled",
-    "reason": "Disorders of aromatic amino-acid metabolism"
+    "reason": "Disorders of aromatic amino-acid metabolism",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 204,
@@ -1833,7 +2239,9 @@
     "place_time": "12/23/2021",
     "fill_time": "11/3/2021",
     "status": "cancelled",
-    "reason": "Displacement of implanted urinary sphincter, sequela"
+    "reason": "Displacement of implanted urinary sphincter, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 205,
@@ -1842,7 +2250,9 @@
     "place_time": "4/4/2021",
     "fill_time": "7/12/2021",
     "status": "rejected",
-    "reason": "Other color vision deficiencies"
+    "reason": "Other color vision deficiencies",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 206,
@@ -1851,7 +2261,9 @@
     "place_time": "10/31/2021",
     "fill_time": "4/30/2021",
     "status": "open",
-    "reason": "Stress fracture, unspecified humerus"
+    "reason": "Stress fracture, unspecified humerus",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 207,
@@ -1860,7 +2272,9 @@
     "place_time": "12/24/2021",
     "fill_time": "12/8/2021",
     "status": "rejected",
-    "reason": "Unsp superficial injury of unspecified ear, init encntr"
+    "reason": "Unsp superficial injury of unspecified ear, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 208,
@@ -1869,7 +2283,9 @@
     "place_time": "10/25/2021",
     "fill_time": "1/13/2022",
     "status": "open",
-    "reason": "Unsp fx shaft of humer, right arm, subs for fx w routn heal"
+    "reason": "Unsp fx shaft of humer, right arm, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 209,
@@ -1878,7 +2294,9 @@
     "place_time": "7/10/2021",
     "fill_time": "3/17/2021",
     "status": "open",
-    "reason": "Unsp injury at C5 level of cervical spinal cord, subs encntr"
+    "reason": "Unsp injury at C5 level of cervical spinal cord, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 210,
@@ -1887,7 +2305,9 @@
     "place_time": "9/1/2021",
     "fill_time": "5/13/2021",
     "status": "open",
-    "reason": "Idiopathic chronic gout, left hand"
+    "reason": "Idiopathic chronic gout, left hand",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 211,
@@ -1896,7 +2316,9 @@
     "place_time": "1/9/2022",
     "fill_time": "8/3/2021",
     "status": "rejected",
-    "reason": "Premature separation of placenta, unspecified"
+    "reason": "Premature separation of placenta, unspecified",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 212,
@@ -1905,7 +2327,9 @@
     "place_time": "5/22/2021",
     "fill_time": "6/19/2021",
     "status": "rejected",
-    "reason": "Ligneous conjunctivitis, bilateral"
+    "reason": "Ligneous conjunctivitis, bilateral",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 213,
@@ -1914,7 +2338,9 @@
     "place_time": "5/17/2021",
     "fill_time": "9/22/2021",
     "status": "rejected",
-    "reason": "Regular astigmatism, right eye"
+    "reason": "Regular astigmatism, right eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 214,
@@ -1923,7 +2349,9 @@
     "place_time": "6/6/2021",
     "fill_time": "10/13/2021",
     "status": "rejected",
-    "reason": "Papyraceous fetus, third trimester, fetus 5"
+    "reason": "Papyraceous fetus, third trimester, fetus 5",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 215,
@@ -1932,7 +2360,9 @@
     "place_time": "8/30/2021",
     "fill_time": "3/24/2021",
     "status": "rejected",
-    "reason": "Displaced transcondylar fracture of unsp humerus, sequela"
+    "reason": "Displaced transcondylar fracture of unsp humerus, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 216,
@@ -1941,7 +2371,9 @@
     "place_time": "8/19/2021",
     "fill_time": "1/23/2022",
     "status": "rejected",
-    "reason": "Driver injured in collision w unsp mv in nontraffic accident"
+    "reason": "Driver injured in collision w unsp mv in nontraffic accident",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 217,
@@ -1950,7 +2382,9 @@
     "place_time": "10/28/2021",
     "fill_time": "11/20/2021",
     "status": "open",
-    "reason": "Fx humerus following insrt ortho implnt/prosth/bone plt"
+    "reason": "Fx humerus following insrt ortho implnt/prosth/bone plt",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 218,
@@ -1959,7 +2393,9 @@
     "place_time": "5/12/2021",
     "fill_time": "12/15/2021",
     "status": "rejected",
-    "reason": "Pnctr w fb of r mid finger w/o damage to nail, init"
+    "reason": "Pnctr w fb of r mid finger w/o damage to nail, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 219,
@@ -1968,7 +2404,9 @@
     "place_time": "5/3/2021",
     "fill_time": "11/8/2021",
     "status": "rejected",
-    "reason": "Toxic effect of ingested mushrooms, accidental, sequela"
+    "reason": "Toxic effect of ingested mushrooms, accidental, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 220,
@@ -1977,7 +2415,9 @@
     "place_time": "5/23/2021",
     "fill_time": "11/25/2021",
     "status": "cancelled",
-    "reason": "Abrasion of left upper arm, initial encounter"
+    "reason": "Abrasion of left upper arm, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 221,
@@ -1986,7 +2426,9 @@
     "place_time": "6/10/2021",
     "fill_time": "8/18/2021",
     "status": "open",
-    "reason": "Athscl autol vein bypass of the extrm w rest pain, oth extrm"
+    "reason": "Athscl autol vein bypass of the extrm w rest pain, oth extrm",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 222,
@@ -1995,7 +2437,9 @@
     "place_time": "1/28/2022",
     "fill_time": "2/20/2022",
     "status": "rejected",
-    "reason": "Pasngr in 3-whl mv inj in clsn w 2/3-whl mv nontraf, subs"
+    "reason": "Pasngr in 3-whl mv inj in clsn w 2/3-whl mv nontraf, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 223,
@@ -2004,7 +2448,9 @@
     "place_time": "2/16/2022",
     "fill_time": "1/28/2022",
     "status": "filled",
-    "reason": "Ganglion, left ankle and foot"
+    "reason": "Ganglion, left ankle and foot",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 224,
@@ -2013,7 +2459,9 @@
     "place_time": "9/4/2021",
     "fill_time": "11/8/2021",
     "status": "open",
-    "reason": "Emphysema"
+    "reason": "Emphysema",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 225,
@@ -2022,7 +2470,9 @@
     "place_time": "4/4/2021",
     "fill_time": "4/3/2021",
     "status": "cancelled",
-    "reason": "Conjunctival cysts, right eye"
+    "reason": "Conjunctival cysts, right eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 226,
@@ -2031,7 +2481,9 @@
     "place_time": "11/15/2021",
     "fill_time": "5/27/2021",
     "status": "filled",
-    "reason": "Other reduction defects of unspecified limb(s)"
+    "reason": "Other reduction defects of unspecified limb(s)",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 227,
@@ -2040,7 +2492,9 @@
     "place_time": "12/4/2021",
     "fill_time": "1/28/2022",
     "status": "rejected",
-    "reason": "Strain extensor musc/fasc/tend l thm at wrs/hnd lv, sequela"
+    "reason": "Strain extensor musc/fasc/tend l thm at wrs/hnd lv, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 228,
@@ -2049,7 +2503,9 @@
     "place_time": "1/16/2022",
     "fill_time": "8/10/2021",
     "status": "filled",
-    "reason": "Nondisp fx of shaft of 1st MC bone, r hand, 7thK"
+    "reason": "Nondisp fx of shaft of 1st MC bone, r hand, 7thK",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 229,
@@ -2058,7 +2514,9 @@
     "place_time": "5/20/2021",
     "fill_time": "4/9/2021",
     "status": "filled",
-    "reason": "Postmastectomy lymphedema syndrome"
+    "reason": "Postmastectomy lymphedema syndrome",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 230,
@@ -2067,7 +2525,9 @@
     "place_time": "12/26/2021",
     "fill_time": "1/28/2022",
     "status": "cancelled",
-    "reason": "Age-rel osteopor w current path fracture, r humerus, sequela"
+    "reason": "Age-rel osteopor w current path fracture, r humerus, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 231,
@@ -2076,7 +2536,9 @@
     "place_time": "8/30/2021",
     "fill_time": "10/10/2021",
     "status": "open",
-    "reason": "Other sprain of left ring finger, initial encounter"
+    "reason": "Other sprain of left ring finger, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 232,
@@ -2085,7 +2547,9 @@
     "place_time": "10/10/2021",
     "fill_time": "4/25/2021",
     "status": "rejected",
-    "reason": "Toxic effect of taipan venom"
+    "reason": "Toxic effect of taipan venom",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 233,
@@ -2094,7 +2558,9 @@
     "place_time": "2/3/2022",
     "fill_time": "6/9/2021",
     "status": "rejected",
-    "reason": "Displ transverse fx shaft of unsp rad, 7thH"
+    "reason": "Displ transverse fx shaft of unsp rad, 7thH",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 234,
@@ -2103,7 +2569,9 @@
     "place_time": "11/27/2021",
     "fill_time": "9/30/2021",
     "status": "rejected",
-    "reason": "Complex regional pain syndrome I of upper limb"
+    "reason": "Complex regional pain syndrome I of upper limb",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 235,
@@ -2112,7 +2580,9 @@
     "place_time": "5/11/2021",
     "fill_time": "6/12/2021",
     "status": "filled",
-    "reason": "Fibrosis due to other internal prosth dev/grft, init"
+    "reason": "Fibrosis due to other internal prosth dev/grft, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 236,
@@ -2121,7 +2591,9 @@
     "place_time": "10/24/2021",
     "fill_time": "8/27/2021",
     "status": "open",
-    "reason": "Sprain of interphalangeal joint of right index finger"
+    "reason": "Sprain of interphalangeal joint of right index finger",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 237,
@@ -2130,7 +2602,9 @@
     "place_time": "1/1/2022",
     "fill_time": "3/5/2022",
     "status": "rejected",
-    "reason": "Puncture wound with foreign body of right upper arm, sequela"
+    "reason": "Puncture wound with foreign body of right upper arm, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 238,
@@ -2139,7 +2613,9 @@
     "place_time": "8/23/2021",
     "fill_time": "7/21/2021",
     "status": "rejected",
-    "reason": "Hyperacusis"
+    "reason": "Hyperacusis",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 239,
@@ -2148,7 +2624,9 @@
     "place_time": "2/28/2022",
     "fill_time": "7/22/2021",
     "status": "open",
-    "reason": "Poisoning by tetracyclines, assault"
+    "reason": "Poisoning by tetracyclines, assault",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 240,
@@ -2157,7 +2635,9 @@
     "place_time": "4/15/2021",
     "fill_time": "6/1/2021",
     "status": "open",
-    "reason": "Chronic venous htn w ulcer and inflammation of r low extrem"
+    "reason": "Chronic venous htn w ulcer and inflammation of r low extrem",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 241,
@@ -2166,7 +2646,9 @@
     "place_time": "9/25/2021",
     "fill_time": "9/22/2021",
     "status": "rejected",
-    "reason": "Other antepartum hemorrhage"
+    "reason": "Other antepartum hemorrhage",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 242,
@@ -2175,7 +2657,9 @@
     "place_time": "8/22/2021",
     "fill_time": "12/6/2021",
     "status": "rejected",
-    "reason": "Oth fracture of left ilium, subs for fx w routn heal"
+    "reason": "Oth fracture of left ilium, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 243,
@@ -2184,7 +2668,9 @@
     "place_time": "3/7/2022",
     "fill_time": "9/1/2021",
     "status": "open",
-    "reason": "Displ commnt fx shaft of humerus, unsp arm, init for opn fx"
+    "reason": "Displ commnt fx shaft of humerus, unsp arm, init for opn fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 244,
@@ -2193,7 +2679,9 @@
     "place_time": "2/6/2022",
     "fill_time": "9/3/2021",
     "status": "open",
-    "reason": "Unsp injury at C2 level of cervical spinal cord, subs encntr"
+    "reason": "Unsp injury at C2 level of cervical spinal cord, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 245,
@@ -2202,7 +2690,9 @@
     "place_time": "4/26/2021",
     "fill_time": "12/25/2021",
     "status": "rejected",
-    "reason": "Path fx in oth disease, l ankle, subs for fx w nonunion"
+    "reason": "Path fx in oth disease, l ankle, subs for fx w nonunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 246,
@@ -2211,7 +2701,9 @@
     "place_time": "8/17/2021",
     "fill_time": "12/6/2021",
     "status": "rejected",
-    "reason": "Spontaneous rupture of extensor tendons, right upper arm"
+    "reason": "Spontaneous rupture of extensor tendons, right upper arm",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 247,
@@ -2220,7 +2712,9 @@
     "place_time": "9/8/2021",
     "fill_time": "5/13/2021",
     "status": "rejected",
-    "reason": "Unsp mtrcy rider injured in clsn w statnry object in traf"
+    "reason": "Unsp mtrcy rider injured in clsn w statnry object in traf",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 248,
@@ -2229,7 +2723,9 @@
     "place_time": "1/11/2022",
     "fill_time": "10/30/2021",
     "status": "cancelled",
-    "reason": "Laceration w/o fb of r rng fngr w damage to nail, sequela"
+    "reason": "Laceration w/o fb of r rng fngr w damage to nail, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 249,
@@ -2238,7 +2734,9 @@
     "place_time": "11/30/2021",
     "fill_time": "7/24/2021",
     "status": "filled",
-    "reason": "Nondisp intertroch fx l femr, 7thH"
+    "reason": "Nondisp intertroch fx l femr, 7thH",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 250,
@@ -2247,7 +2745,9 @@
     "place_time": "9/8/2021",
     "fill_time": "3/17/2021",
     "status": "cancelled",
-    "reason": "Legal intervnt w injury by mch gun, bystand injured, init"
+    "reason": "Legal intervnt w injury by mch gun, bystand injured, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 251,
@@ -2256,7 +2756,9 @@
     "place_time": "9/30/2021",
     "fill_time": "2/5/2022",
     "status": "open",
-    "reason": "Unsp fb in resp tract, part unsp causing asphyx, subs"
+    "reason": "Unsp fb in resp tract, part unsp causing asphyx, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 252,
@@ -2265,7 +2767,9 @@
     "place_time": "9/11/2021",
     "fill_time": "4/8/2021",
     "status": "rejected",
-    "reason": "Toxic effect of carb monx from unsp source, acc, init"
+    "reason": "Toxic effect of carb monx from unsp source, acc, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 253,
@@ -2274,7 +2778,9 @@
     "place_time": "9/2/2021",
     "fill_time": "6/30/2021",
     "status": "rejected",
-    "reason": "Contusion of liver, sequela"
+    "reason": "Contusion of liver, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 254,
@@ -2283,7 +2789,9 @@
     "place_time": "2/11/2022",
     "fill_time": "4/7/2021",
     "status": "filled",
-    "reason": "Open bite of unspecified shoulder, subsequent encounter"
+    "reason": "Open bite of unspecified shoulder, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 255,
@@ -2292,7 +2800,9 @@
     "place_time": "9/14/2021",
     "fill_time": "5/8/2021",
     "status": "rejected",
-    "reason": "Ankylosis, right knee"
+    "reason": "Ankylosis, right knee",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 256,
@@ -2301,7 +2811,9 @@
     "place_time": "10/16/2021",
     "fill_time": "1/23/2022",
     "status": "cancelled",
-    "reason": "Displ commnt fx shaft of rad, l arm, 7thD"
+    "reason": "Displ commnt fx shaft of rad, l arm, 7thD",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 257,
@@ -2310,7 +2822,9 @@
     "place_time": "2/19/2022",
     "fill_time": "3/16/2021",
     "status": "rejected",
-    "reason": "Osteopathy after poliomyelitis, right upper arm"
+    "reason": "Osteopathy after poliomyelitis, right upper arm",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 258,
@@ -2319,7 +2833,9 @@
     "place_time": "2/21/2022",
     "fill_time": "9/22/2021",
     "status": "rejected",
-    "reason": "Other superficial bite of hip, unspecified hip, sequela"
+    "reason": "Other superficial bite of hip, unspecified hip, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 259,
@@ -2328,7 +2844,9 @@
     "place_time": "2/23/2022",
     "fill_time": "2/13/2022",
     "status": "cancelled",
-    "reason": "Preterm newborn, gestational age 36 completed weeks"
+    "reason": "Preterm newborn, gestational age 36 completed weeks",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 260,
@@ -2337,7 +2855,9 @@
     "place_time": "3/31/2021",
     "fill_time": "9/26/2021",
     "status": "cancelled",
-    "reason": "Oth disrd involving the immune mechanism, NEC"
+    "reason": "Oth disrd involving the immune mechanism, NEC",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 261,
@@ -2346,7 +2866,9 @@
     "place_time": "11/16/2021",
     "fill_time": "2/15/2022",
     "status": "rejected",
-    "reason": "Laceration of blood vessel of left little finger, init"
+    "reason": "Laceration of blood vessel of left little finger, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 262,
@@ -2355,7 +2877,9 @@
     "place_time": "6/7/2021",
     "fill_time": "4/16/2021",
     "status": "rejected",
-    "reason": "Aneurysmal bone cyst, left ankle and foot"
+    "reason": "Aneurysmal bone cyst, left ankle and foot",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 263,
@@ -2364,7 +2888,9 @@
     "place_time": "11/28/2021",
     "fill_time": "3/14/2021",
     "status": "rejected",
-    "reason": "Burn of second degree of unspecified lower leg, subs encntr"
+    "reason": "Burn of second degree of unspecified lower leg, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 264,
@@ -2373,7 +2899,9 @@
     "place_time": "10/1/2021",
     "fill_time": "11/27/2021",
     "status": "rejected",
-    "reason": "Chronic multifocal osteomyelitis, left hand"
+    "reason": "Chronic multifocal osteomyelitis, left hand",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 265,
@@ -2382,7 +2910,9 @@
     "place_time": "5/16/2021",
     "fill_time": "8/18/2021",
     "status": "open",
-    "reason": "Unspecified open wound of right eyelid and periocular area"
+    "reason": "Unspecified open wound of right eyelid and periocular area",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 266,
@@ -2391,7 +2921,9 @@
     "place_time": "8/4/2021",
     "fill_time": "4/20/2021",
     "status": "rejected",
-    "reason": "Postimmunization arthropathy, left hand"
+    "reason": "Postimmunization arthropathy, left hand",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 267,
@@ -2400,7 +2932,9 @@
     "place_time": "7/7/2021",
     "fill_time": "9/16/2021",
     "status": "rejected",
-    "reason": "Salter-Harris Type II physeal fracture of lower end radius"
+    "reason": "Salter-Harris Type II physeal fracture of lower end radius",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 268,
@@ -2409,7 +2943,9 @@
     "place_time": "4/25/2021",
     "fill_time": "5/17/2021",
     "status": "rejected",
-    "reason": "Traumatic rupture of oth ligament of unsp wrist, init encntr"
+    "reason": "Traumatic rupture of oth ligament of unsp wrist, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 269,
@@ -2418,7 +2954,9 @@
     "place_time": "2/28/2022",
     "fill_time": "9/19/2021",
     "status": "open",
-    "reason": "Disp fx of olecran pro w/o intartic extn right ulna, init"
+    "reason": "Disp fx of olecran pro w/o intartic extn right ulna, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 270,
@@ -2427,7 +2965,9 @@
     "place_time": "6/7/2021",
     "fill_time": "12/28/2021",
     "status": "open",
-    "reason": "Nondisp fx of lateral condyle of unsp femr, 7thJ"
+    "reason": "Nondisp fx of lateral condyle of unsp femr, 7thJ",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 271,
@@ -2436,7 +2976,9 @@
     "place_time": "1/22/2022",
     "fill_time": "9/12/2021",
     "status": "rejected",
-    "reason": "Intentional self-harm by unsp firearm discharge, init encntr"
+    "reason": "Intentional self-harm by unsp firearm discharge, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 272,
@@ -2445,7 +2987,9 @@
     "place_time": "10/18/2021",
     "fill_time": "8/23/2021",
     "status": "rejected",
-    "reason": "Burn 3rd deg mu right fingers (nail), not inc thumb, sequela"
+    "reason": "Burn 3rd deg mu right fingers (nail), not inc thumb, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 273,
@@ -2454,7 +2998,9 @@
     "place_time": "9/22/2021",
     "fill_time": "3/21/2021",
     "status": "rejected",
-    "reason": "Displ seg fx shaft of ulna, unsp arm, 7thD"
+    "reason": "Displ seg fx shaft of ulna, unsp arm, 7thD",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 274,
@@ -2463,7 +3009,9 @@
     "place_time": "9/6/2021",
     "fill_time": "5/9/2021",
     "status": "filled",
-    "reason": "Superficial foreign body of right middle finger"
+    "reason": "Superficial foreign body of right middle finger",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 275,
@@ -2472,7 +3020,9 @@
     "place_time": "8/22/2021",
     "fill_time": "1/14/2022",
     "status": "open",
-    "reason": "Striking against or struck by unsp sports equipment, init"
+    "reason": "Striking against or struck by unsp sports equipment, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 276,
@@ -2481,7 +3031,9 @@
     "place_time": "5/31/2021",
     "fill_time": "12/11/2021",
     "status": "rejected",
-    "reason": "Encntr for checking and test of card pacemaker pulse gnrtr"
+    "reason": "Encntr for checking and test of card pacemaker pulse gnrtr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 277,
@@ -2490,7 +3042,9 @@
     "place_time": "2/9/2022",
     "fill_time": "7/3/2021",
     "status": "cancelled",
-    "reason": "Sepsis of newborn due to unspecified staphylococci"
+    "reason": "Sepsis of newborn due to unspecified staphylococci",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 278,
@@ -2499,7 +3053,9 @@
     "place_time": "6/14/2021",
     "fill_time": "9/28/2021",
     "status": "rejected",
-    "reason": "Inj to rider of nonrecr wtrcrft puld beh oth wtrcrft, subs"
+    "reason": "Inj to rider of nonrecr wtrcrft puld beh oth wtrcrft, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 279,
@@ -2508,7 +3064,9 @@
     "place_time": "10/28/2021",
     "fill_time": "12/18/2021",
     "status": "rejected",
-    "reason": "Complete traumatic trnsphal amputation of right thumb, init"
+    "reason": "Complete traumatic trnsphal amputation of right thumb, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 280,
@@ -2517,7 +3075,9 @@
     "place_time": "9/21/2021",
     "fill_time": "2/9/2022",
     "status": "cancelled",
-    "reason": "Dislocation of MTP joint of right lesser toe(s), init"
+    "reason": "Dislocation of MTP joint of right lesser toe(s), init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 281,
@@ -2526,7 +3086,9 @@
     "place_time": "9/4/2021",
     "fill_time": "12/27/2021",
     "status": "rejected",
-    "reason": "Bent bone of r radius, subs for opn fx type I/2 w delay heal"
+    "reason": "Bent bone of r radius, subs for opn fx type I/2 w delay heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 282,
@@ -2535,7 +3097,9 @@
     "place_time": "11/5/2021",
     "fill_time": "10/2/2021",
     "status": "rejected",
-    "reason": "Polyhydramnios, second trimester, fetus 2"
+    "reason": "Polyhydramnios, second trimester, fetus 2",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 283,
@@ -2544,7 +3108,9 @@
     "place_time": "5/2/2021",
     "fill_time": "10/12/2021",
     "status": "rejected",
-    "reason": "Wear of artic bearing surface of int prosth l hip jt, init"
+    "reason": "Wear of artic bearing surface of int prosth l hip jt, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 284,
@@ -2553,7 +3119,9 @@
     "place_time": "4/20/2021",
     "fill_time": "2/9/2022",
     "status": "filled",
-    "reason": "Oth types of non-Hodgkin lymphoma, intra-abd lymph nodes"
+    "reason": "Oth types of non-Hodgkin lymphoma, intra-abd lymph nodes",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 285,
@@ -2562,7 +3130,9 @@
     "place_time": "1/24/2022",
     "fill_time": "4/23/2021",
     "status": "cancelled",
-    "reason": "Pathological dislocation of wrist, not elsewhere classified"
+    "reason": "Pathological dislocation of wrist, not elsewhere classified",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 286,
@@ -2571,7 +3141,9 @@
     "place_time": "11/22/2021",
     "fill_time": "10/18/2021",
     "status": "rejected",
-    "reason": "Adverse effect of benzodiazepines"
+    "reason": "Adverse effect of benzodiazepines",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 287,
@@ -2580,7 +3152,9 @@
     "place_time": "8/20/2021",
     "fill_time": "3/2/2022",
     "status": "rejected",
-    "reason": "Oth physeal fracture of lower end of radius, left arm, init"
+    "reason": "Oth physeal fracture of lower end of radius, left arm, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 288,
@@ -2589,7 +3163,9 @@
     "place_time": "8/7/2021",
     "fill_time": "8/8/2021",
     "status": "rejected",
-    "reason": "Crohn's disease, unspecified, with complications"
+    "reason": "Crohn's disease, unspecified, with complications",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 289,
@@ -2598,7 +3174,9 @@
     "place_time": "8/5/2021",
     "fill_time": "12/27/2021",
     "status": "rejected",
-    "reason": "Unsp inj muscles and tendons at ank/ft level, unsp foot"
+    "reason": "Unsp inj muscles and tendons at ank/ft level, unsp foot",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 290,
@@ -2607,7 +3185,9 @@
     "place_time": "2/18/2022",
     "fill_time": "12/26/2021",
     "status": "rejected",
-    "reason": "Dislocation of distal radioulnar joint of unsp wrist, subs"
+    "reason": "Dislocation of distal radioulnar joint of unsp wrist, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 291,
@@ -2616,7 +3196,9 @@
     "place_time": "4/16/2021",
     "fill_time": "7/7/2021",
     "status": "rejected",
-    "reason": "Poisoning by antidotes and chelating agents, acc, sequela"
+    "reason": "Poisoning by antidotes and chelating agents, acc, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 292,
@@ -2625,7 +3207,9 @@
     "place_time": "4/12/2021",
     "fill_time": "9/22/2021",
     "status": "rejected",
-    "reason": "Brkdwn internal orthopedic devices, implants and grafts"
+    "reason": "Brkdwn internal orthopedic devices, implants and grafts",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 293,
@@ -2634,7 +3218,9 @@
     "place_time": "11/10/2021",
     "fill_time": "11/24/2021",
     "status": "rejected",
-    "reason": "Ped on sktbrd injured in collision w hv veh nontraf, init"
+    "reason": "Ped on sktbrd injured in collision w hv veh nontraf, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 294,
@@ -2643,7 +3229,9 @@
     "place_time": "12/19/2021",
     "fill_time": "10/3/2021",
     "status": "rejected",
-    "reason": "Burn of unspecified degree of wrist"
+    "reason": "Burn of unspecified degree of wrist",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 295,
@@ -2652,7 +3240,9 @@
     "place_time": "10/1/2021",
     "fill_time": "7/3/2021",
     "status": "open",
-    "reason": "Unspecified open wound of ear"
+    "reason": "Unspecified open wound of ear",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 296,
@@ -2661,7 +3251,9 @@
     "place_time": "4/26/2021",
     "fill_time": "1/6/2022",
     "status": "rejected",
-    "reason": "Hydroxyapatite deposition disease, right ankle and foot"
+    "reason": "Hydroxyapatite deposition disease, right ankle and foot",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 297,
@@ -2670,7 +3262,9 @@
     "place_time": "1/23/2022",
     "fill_time": "1/1/2022",
     "status": "cancelled",
-    "reason": "Acute lymphangitis of right upper limb"
+    "reason": "Acute lymphangitis of right upper limb",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 298,
@@ -2679,7 +3273,9 @@
     "place_time": "7/4/2021",
     "fill_time": "11/30/2021",
     "status": "open",
-    "reason": "Malignant neoplasm of axillary tail of breast, female"
+    "reason": "Malignant neoplasm of axillary tail of breast, female",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 299,
@@ -2688,7 +3284,9 @@
     "place_time": "4/21/2021",
     "fill_time": "3/11/2021",
     "status": "cancelled",
-    "reason": "Sltr-haris Type II physl fx low end humer, r arm, 7thK"
+    "reason": "Sltr-haris Type II physl fx low end humer, r arm, 7thK",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 300,
@@ -2697,7 +3295,9 @@
     "place_time": "8/23/2021",
     "fill_time": "10/3/2021",
     "status": "rejected",
-    "reason": "Marker chromosomes in normal individual"
+    "reason": "Marker chromosomes in normal individual",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 301,
@@ -2706,7 +3306,9 @@
     "place_time": "4/1/2021",
     "fill_time": "4/10/2021",
     "status": "rejected",
-    "reason": "Unspecified sprain of unspecified wrist, initial encounter"
+    "reason": "Unspecified sprain of unspecified wrist, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 302,
@@ -2715,7 +3317,9 @@
     "place_time": "11/26/2021",
     "fill_time": "10/21/2021",
     "status": "open",
-    "reason": "Displ longitud fx unsp patella, 7thF"
+    "reason": "Displ longitud fx unsp patella, 7thF",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 303,
@@ -2724,7 +3328,9 @@
     "place_time": "11/23/2021",
     "fill_time": "10/30/2021",
     "status": "rejected",
-    "reason": "Unsp comp of fb acc left in body fol unsp procedure, init"
+    "reason": "Unsp comp of fb acc left in body fol unsp procedure, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 304,
@@ -2733,7 +3339,9 @@
     "place_time": "9/11/2021",
     "fill_time": "11/9/2021",
     "status": "rejected",
-    "reason": "Contact w mining and earth-drilling machinery, init encntr"
+    "reason": "Contact w mining and earth-drilling machinery, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 305,
@@ -2742,7 +3350,9 @@
     "place_time": "5/5/2021",
     "fill_time": "7/6/2021",
     "status": "rejected",
-    "reason": "Other specified bursopathies, multiple sites"
+    "reason": "Other specified bursopathies, multiple sites",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 306,
@@ -2751,7 +3361,9 @@
     "place_time": "12/20/2021",
     "fill_time": "11/26/2021",
     "status": "filled",
-    "reason": "Laceration without foreign body of left elbow"
+    "reason": "Laceration without foreign body of left elbow",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 307,
@@ -2760,7 +3372,9 @@
     "place_time": "10/5/2021",
     "fill_time": "11/1/2021",
     "status": "filled",
-    "reason": "Crushing injury of right lesser toe(s), subsequent encounter"
+    "reason": "Crushing injury of right lesser toe(s), subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 308,
@@ -2769,7 +3383,9 @@
     "place_time": "1/12/2022",
     "fill_time": "10/15/2021",
     "status": "open",
-    "reason": "Smith's fracture of right radius, init for clos fx"
+    "reason": "Smith's fracture of right radius, init for clos fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 309,
@@ -2778,7 +3394,9 @@
     "place_time": "5/8/2021",
     "fill_time": "11/27/2021",
     "status": "open",
-    "reason": "Accidental malfunction from unsp firearms or gun, subs"
+    "reason": "Accidental malfunction from unsp firearms or gun, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 310,
@@ -2787,7 +3405,9 @@
     "place_time": "2/22/2022",
     "fill_time": "10/9/2021",
     "status": "rejected",
-    "reason": "Nondisp fx of anterior process of left calcaneus, init"
+    "reason": "Nondisp fx of anterior process of left calcaneus, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 311,
@@ -2796,7 +3416,9 @@
     "place_time": "5/19/2021",
     "fill_time": "6/8/2021",
     "status": "rejected",
-    "reason": "Unsp fx fourth thor vertebra, subs for fx w delay heal"
+    "reason": "Unsp fx fourth thor vertebra, subs for fx w delay heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 312,
@@ -2805,7 +3427,9 @@
     "place_time": "12/3/2021",
     "fill_time": "3/15/2021",
     "status": "rejected",
-    "reason": "Poisn by antiparkns drug/centr musc-tone depr, undet, sqla"
+    "reason": "Poisn by antiparkns drug/centr musc-tone depr, undet, sqla",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 313,
@@ -2814,7 +3438,9 @@
     "place_time": "1/17/2022",
     "fill_time": "1/30/2022",
     "status": "rejected",
-    "reason": "Eczematous dermatitis of right upper eyelid"
+    "reason": "Eczematous dermatitis of right upper eyelid",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 314,
@@ -2823,7 +3449,9 @@
     "place_time": "10/21/2021",
     "fill_time": "4/2/2021",
     "status": "rejected",
-    "reason": "Other injuries of lung, unspecified"
+    "reason": "Other injuries of lung, unspecified",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 315,
@@ -2832,7 +3460,9 @@
     "place_time": "12/29/2021",
     "fill_time": "5/29/2021",
     "status": "rejected",
-    "reason": "Partial traumatic transphalangeal amputation of thmb, init"
+    "reason": "Partial traumatic transphalangeal amputation of thmb, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 316,
@@ -2841,7 +3471,9 @@
     "place_time": "12/5/2021",
     "fill_time": "6/16/2021",
     "status": "rejected",
-    "reason": "Displ commnt fx shaft of humer, unsp arm, 7thK"
+    "reason": "Displ commnt fx shaft of humer, unsp arm, 7thK",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 317,
@@ -2850,7 +3482,9 @@
     "place_time": "1/16/2022",
     "fill_time": "9/24/2021",
     "status": "open",
-    "reason": "2-part disp fx of surgical neck of right humerus, init"
+    "reason": "2-part disp fx of surgical neck of right humerus, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 318,
@@ -2859,7 +3493,9 @@
     "place_time": "4/15/2021",
     "fill_time": "5/17/2021",
     "status": "rejected",
-    "reason": "Crystalline deposits in vitreous body, right eye"
+    "reason": "Crystalline deposits in vitreous body, right eye",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 319,
@@ -2868,7 +3504,9 @@
     "place_time": "12/15/2021",
     "fill_time": "3/6/2022",
     "status": "open",
-    "reason": "Laceration of unsp blood vessel at wrist and hand level"
+    "reason": "Laceration of unsp blood vessel at wrist and hand level",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 320,
@@ -2877,7 +3515,9 @@
     "place_time": "8/19/2021",
     "fill_time": "1/15/2022",
     "status": "filled",
-    "reason": "Poisoning by mixed antiepileptics, assault, init encntr"
+    "reason": "Poisoning by mixed antiepileptics, assault, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 321,
@@ -2886,7 +3526,9 @@
     "place_time": "7/2/2021",
     "fill_time": "4/2/2021",
     "status": "open",
-    "reason": "Disp fx of shaft of 1st MC bone, unsp hand, 7thD"
+    "reason": "Disp fx of shaft of 1st MC bone, unsp hand, 7thD",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 322,
@@ -2895,7 +3537,9 @@
     "place_time": "10/27/2021",
     "fill_time": "9/11/2021",
     "status": "cancelled",
-    "reason": "Pressure ulcer of right hip, stage 4"
+    "reason": "Pressure ulcer of right hip, stage 4",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 323,
@@ -2904,7 +3548,9 @@
     "place_time": "8/28/2021",
     "fill_time": "1/22/2022",
     "status": "cancelled",
-    "reason": "Frostbite with tissue necrosis of left toe(s), subs encntr"
+    "reason": "Frostbite with tissue necrosis of left toe(s), subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 324,
@@ -2913,7 +3559,9 @@
     "place_time": "2/8/2022",
     "fill_time": "6/4/2021",
     "status": "rejected",
-    "reason": "Poisn by unsp hormones and synthetic sub, assault, sequela"
+    "reason": "Poisn by unsp hormones and synthetic sub, assault, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 325,
@@ -2922,7 +3570,9 @@
     "place_time": "6/23/2021",
     "fill_time": "9/5/2021",
     "status": "cancelled",
-    "reason": "Newborn affected by unspecified maternal condition"
+    "reason": "Newborn affected by unspecified maternal condition",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 326,
@@ -2931,7 +3581,9 @@
     "place_time": "5/6/2021",
     "fill_time": "10/27/2021",
     "status": "rejected",
-    "reason": "Melanocytic nevi of right lower limb, including hip"
+    "reason": "Melanocytic nevi of right lower limb, including hip",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 327,
@@ -2940,7 +3592,9 @@
     "place_time": "11/8/2021",
     "fill_time": "1/14/2022",
     "status": "rejected",
-    "reason": "Injury of r int carotid, intcr w LOC of 31-59 min"
+    "reason": "Injury of r int carotid, intcr w LOC of 31-59 min",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 328,
@@ -2949,7 +3603,9 @@
     "place_time": "10/21/2021",
     "fill_time": "5/17/2021",
     "status": "rejected",
-    "reason": "Ganglion"
+    "reason": "Ganglion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 329,
@@ -2958,7 +3614,9 @@
     "place_time": "5/25/2021",
     "fill_time": "6/10/2021",
     "status": "rejected",
-    "reason": "Hyperaldosteronism"
+    "reason": "Hyperaldosteronism",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 330,
@@ -2967,7 +3625,9 @@
     "place_time": "12/22/2021",
     "fill_time": "7/22/2021",
     "status": "cancelled",
-    "reason": "Toxic effect of lacrimogenic gas, accidental, sequela"
+    "reason": "Toxic effect of lacrimogenic gas, accidental, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 331,
@@ -2976,7 +3636,9 @@
     "place_time": "4/15/2021",
     "fill_time": "8/8/2021",
     "status": "rejected",
-    "reason": "Encounter for mental health services for perp of abuse"
+    "reason": "Encounter for mental health services for perp of abuse",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 332,
@@ -2985,7 +3647,9 @@
     "place_time": "10/9/2021",
     "fill_time": "5/15/2021",
     "status": "cancelled",
-    "reason": "Fx superior rim of right pubis, subs for fx w nonunion"
+    "reason": "Fx superior rim of right pubis, subs for fx w nonunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 333,
@@ -2994,7 +3658,9 @@
     "place_time": "5/25/2021",
     "fill_time": "5/31/2021",
     "status": "rejected",
-    "reason": "Monoarthritis, not elsewhere classified, unspecified site"
+    "reason": "Monoarthritis, not elsewhere classified, unspecified site",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 334,
@@ -3003,7 +3669,9 @@
     "place_time": "1/20/2022",
     "fill_time": "7/16/2021",
     "status": "rejected",
-    "reason": "Nondisp transverse fx shaft of r fibula, 7thN"
+    "reason": "Nondisp transverse fx shaft of r fibula, 7thN",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 335,
@@ -3012,7 +3680,9 @@
     "place_time": "10/7/2021",
     "fill_time": "12/19/2021",
     "status": "filled",
-    "reason": "Other shellfish poisoning, undetermined, initial encounter"
+    "reason": "Other shellfish poisoning, undetermined, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 336,
@@ -3021,7 +3691,9 @@
     "place_time": "4/27/2021",
     "fill_time": "11/26/2021",
     "status": "rejected",
-    "reason": "Poisoning by antiallerg/antiemetic, assault, sequela"
+    "reason": "Poisoning by antiallerg/antiemetic, assault, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 337,
@@ -3030,7 +3702,9 @@
     "place_time": "5/21/2021",
     "fill_time": "10/2/2021",
     "status": "rejected",
-    "reason": "Acute pharyngitis due to other specified organisms"
+    "reason": "Acute pharyngitis due to other specified organisms",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 338,
@@ -3039,7 +3713,9 @@
     "place_time": "11/30/2021",
     "fill_time": "10/16/2021",
     "status": "open",
-    "reason": "Pressure ulcer of unspecified elbow"
+    "reason": "Pressure ulcer of unspecified elbow",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 339,
@@ -3048,7 +3724,9 @@
     "place_time": "7/27/2021",
     "fill_time": "1/14/2022",
     "status": "rejected",
-    "reason": "Strain of muscle, fascia and tendon of lower back, sequela"
+    "reason": "Strain of muscle, fascia and tendon of lower back, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 340,
@@ -3057,7 +3735,9 @@
     "place_time": "2/9/2022",
     "fill_time": "12/24/2021",
     "status": "open",
-    "reason": "Toxic effect of venom of snake, intentional self-harm, init"
+    "reason": "Toxic effect of venom of snake, intentional self-harm, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 341,
@@ -3066,7 +3746,9 @@
     "place_time": "10/3/2021",
     "fill_time": "1/6/2022",
     "status": "rejected",
-    "reason": "Halitosis"
+    "reason": "Halitosis",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 342,
@@ -3075,7 +3757,9 @@
     "place_time": "12/26/2021",
     "fill_time": "8/28/2021",
     "status": "rejected",
-    "reason": "Poisoning by other antipsychotics and neuroleptics, assault"
+    "reason": "Poisoning by other antipsychotics and neuroleptics, assault",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 343,
@@ -3084,7 +3768,9 @@
     "place_time": "7/14/2021",
     "fill_time": "2/2/2022",
     "status": "rejected",
-    "reason": "Displacement of internal fixation device of right humerus"
+    "reason": "Displacement of internal fixation device of right humerus",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 344,
@@ -3093,7 +3779,9 @@
     "place_time": "7/16/2021",
     "fill_time": "1/12/2022",
     "status": "rejected",
-    "reason": "Disp fx of unsp ulna styloid pro, 7thE"
+    "reason": "Disp fx of unsp ulna styloid pro, 7thE",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 345,
@@ -3102,7 +3790,9 @@
     "place_time": "6/14/2021",
     "fill_time": "12/3/2021",
     "status": "cancelled",
-    "reason": "Blister (nonthermal) of left middle finger, init encntr"
+    "reason": "Blister (nonthermal) of left middle finger, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 346,
@@ -3111,7 +3801,9 @@
     "place_time": "7/9/2021",
     "fill_time": "3/3/2022",
     "status": "cancelled",
-    "reason": "Corrosion of second degree of buttock, subsequent encounter"
+    "reason": "Corrosion of second degree of buttock, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 347,
@@ -3120,7 +3812,9 @@
     "place_time": "1/15/2022",
     "fill_time": "5/10/2021",
     "status": "filled",
-    "reason": "Asymptomatic menopausal state"
+    "reason": "Asymptomatic menopausal state",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 348,
@@ -3129,7 +3823,9 @@
     "place_time": "12/22/2021",
     "fill_time": "5/15/2021",
     "status": "cancelled",
-    "reason": "Poisoning by vitamins, intentional self-harm, sequela"
+    "reason": "Poisoning by vitamins, intentional self-harm, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 349,
@@ -3138,7 +3834,9 @@
     "place_time": "2/2/2022",
     "fill_time": "6/3/2021",
     "status": "rejected",
-    "reason": "Displaced comminuted fracture of shaft of unspecified tibia"
+    "reason": "Displaced comminuted fracture of shaft of unspecified tibia",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 350,
@@ -3147,7 +3845,9 @@
     "place_time": "11/26/2021",
     "fill_time": "7/23/2021",
     "status": "cancelled",
-    "reason": "Pressure ulcer of unspecified part of back, stage 4"
+    "reason": "Pressure ulcer of unspecified part of back, stage 4",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 351,
@@ -3156,7 +3856,9 @@
     "place_time": "1/14/2022",
     "fill_time": "12/1/2021",
     "status": "open",
-    "reason": "Other viral infections of unspecified site"
+    "reason": "Other viral infections of unspecified site",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 352,
@@ -3165,7 +3867,9 @@
     "place_time": "10/29/2021",
     "fill_time": "11/20/2021",
     "status": "filled",
-    "reason": "Blepharophimosis right lower eyelid"
+    "reason": "Blepharophimosis right lower eyelid",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 353,
@@ -3174,7 +3878,9 @@
     "place_time": "8/6/2021",
     "fill_time": "5/4/2021",
     "status": "filled",
-    "reason": "Fall from scooter (nonmotorized), initial encounter"
+    "reason": "Fall from scooter (nonmotorized), initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 354,
@@ -3183,7 +3889,9 @@
     "place_time": "11/17/2021",
     "fill_time": "7/30/2021",
     "status": "rejected",
-    "reason": "Poisoning by unspecified anesthetic, assault, subs encntr"
+    "reason": "Poisoning by unspecified anesthetic, assault, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 355,
@@ -3192,7 +3900,9 @@
     "place_time": "1/22/2022",
     "fill_time": "5/23/2021",
     "status": "open",
-    "reason": "Oth disrd of mid ear and mastoid in dis classd elswhr, bi"
+    "reason": "Oth disrd of mid ear and mastoid in dis classd elswhr, bi",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 356,
@@ -3201,7 +3911,9 @@
     "place_time": "10/19/2021",
     "fill_time": "8/28/2021",
     "status": "rejected",
-    "reason": "Inadequate social skills, not elsewhere classified"
+    "reason": "Inadequate social skills, not elsewhere classified",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 357,
@@ -3210,7 +3922,9 @@
     "place_time": "7/21/2021",
     "fill_time": "6/6/2021",
     "status": "rejected",
-    "reason": "Deletions with other complex rearrangements"
+    "reason": "Deletions with other complex rearrangements",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 358,
@@ -3219,7 +3933,9 @@
     "place_time": "12/22/2021",
     "fill_time": "2/7/2022",
     "status": "rejected",
-    "reason": "Lacerat extn musc/fasc/tend unsp finger at forarm lv, sqla"
+    "reason": "Lacerat extn musc/fasc/tend unsp finger at forarm lv, sqla",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 359,
@@ -3228,7 +3944,9 @@
     "place_time": "1/29/2022",
     "fill_time": "2/13/2022",
     "status": "filled",
-    "reason": "Personal history of cervical dysplasia"
+    "reason": "Personal history of cervical dysplasia",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 360,
@@ -3237,7 +3955,9 @@
     "place_time": "5/24/2021",
     "fill_time": "10/28/2021",
     "status": "filled",
-    "reason": "Corrosion of unspecified degree of right ankle, init encntr"
+    "reason": "Corrosion of unspecified degree of right ankle, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 361,
@@ -3246,7 +3966,9 @@
     "place_time": "5/10/2021",
     "fill_time": "3/25/2021",
     "status": "rejected",
-    "reason": "Injury of r int carotid, intcr w LOC of 6-24 hrs, subs"
+    "reason": "Injury of r int carotid, intcr w LOC of 6-24 hrs, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 362,
@@ -3255,7 +3977,9 @@
     "place_time": "9/10/2021",
     "fill_time": "9/16/2021",
     "status": "rejected",
-    "reason": "Cutan T-cell lymphoma, unsp, nodes of axilla and upper limb"
+    "reason": "Cutan T-cell lymphoma, unsp, nodes of axilla and upper limb",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 363,
@@ -3264,7 +3988,9 @@
     "place_time": "12/11/2021",
     "fill_time": "5/5/2021",
     "status": "open",
-    "reason": "Accidental pnctr & lac of skin, subcu during oth procedure"
+    "reason": "Accidental pnctr & lac of skin, subcu during oth procedure",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 364,
@@ -3273,7 +3999,9 @@
     "place_time": "6/20/2021",
     "fill_time": "4/25/2021",
     "status": "rejected",
-    "reason": "Other calcerous corneal degeneration"
+    "reason": "Other calcerous corneal degeneration",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 365,
@@ -3282,7 +4010,9 @@
     "place_time": "5/24/2021",
     "fill_time": "10/16/2021",
     "status": "filled",
-    "reason": "Fracture of unsp phalanx of right middle finger, init"
+    "reason": "Fracture of unsp phalanx of right middle finger, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 366,
@@ -3291,7 +4021,9 @@
     "place_time": "5/12/2021",
     "fill_time": "11/18/2021",
     "status": "rejected",
-    "reason": "Other superficial bite of oral cavity, subsequent encounter"
+    "reason": "Other superficial bite of oral cavity, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 367,
@@ -3300,7 +4032,9 @@
     "place_time": "2/12/2022",
     "fill_time": "10/13/2021",
     "status": "rejected",
-    "reason": "Encntr for obs for suspected exposure to anthrax ruled out"
+    "reason": "Encntr for obs for suspected exposure to anthrax ruled out",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 368,
@@ -3309,7 +4043,9 @@
     "place_time": "11/16/2021",
     "fill_time": "9/2/2021",
     "status": "open",
-    "reason": "Poisoning by unsp antipsychot/neurolept, self-harm, sequela"
+    "reason": "Poisoning by unsp antipsychot/neurolept, self-harm, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 369,
@@ -3318,7 +4054,9 @@
     "place_time": "1/14/2022",
     "fill_time": "3/14/2021",
     "status": "rejected",
-    "reason": "Occup of 3-whl mv inj in nonclsn trnsp acc nontraf, sequela"
+    "reason": "Occup of 3-whl mv inj in nonclsn trnsp acc nontraf, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 370,
@@ -3327,7 +4065,9 @@
     "place_time": "9/29/2021",
     "fill_time": "11/25/2021",
     "status": "rejected",
-    "reason": "Derang of post horn of medial mensc d/t old tear/inj, r knee"
+    "reason": "Derang of post horn of medial mensc d/t old tear/inj, r knee",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 371,
@@ -3336,7 +4076,9 @@
     "place_time": "9/26/2021",
     "fill_time": "1/10/2022",
     "status": "rejected",
-    "reason": "Nondisp artic fx head of r femr, 7thN"
+    "reason": "Nondisp artic fx head of r femr, 7thN",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 372,
@@ -3345,7 +4087,9 @@
     "place_time": "5/5/2021",
     "fill_time": "3/19/2021",
     "status": "rejected",
-    "reason": "Lacerat musc/tend the rotator cuff of left shoulder, subs"
+    "reason": "Lacerat musc/tend the rotator cuff of left shoulder, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 373,
@@ -3354,7 +4098,9 @@
     "place_time": "8/5/2021",
     "fill_time": "10/14/2021",
     "status": "filled",
-    "reason": "Unspecified injury of right innominate or subclavian vein"
+    "reason": "Unspecified injury of right innominate or subclavian vein",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 374,
@@ -3363,7 +4109,9 @@
     "place_time": "10/8/2021",
     "fill_time": "5/6/2021",
     "status": "open",
-    "reason": "Person injured in unspecified vehicle accident, init encntr"
+    "reason": "Person injured in unspecified vehicle accident, init encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 375,
@@ -3372,7 +4120,9 @@
     "place_time": "8/9/2021",
     "fill_time": "2/23/2022",
     "status": "open",
-    "reason": "Sltr-haris Type II physl fx low end ulna, l arm, 7thP"
+    "reason": "Sltr-haris Type II physl fx low end ulna, l arm, 7thP",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 376,
@@ -3381,7 +4131,9 @@
     "place_time": "7/28/2021",
     "fill_time": "11/15/2021",
     "status": "open",
-    "reason": "Osteophyte, wrist"
+    "reason": "Osteophyte, wrist",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 377,
@@ -3390,7 +4142,9 @@
     "place_time": "10/8/2021",
     "fill_time": "8/1/2021",
     "status": "rejected",
-    "reason": "Disp fx of olecran pro w intartic extn l ulna, 7thN"
+    "reason": "Disp fx of olecran pro w intartic extn l ulna, 7thN",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 378,
@@ -3399,7 +4153,9 @@
     "place_time": "5/23/2021",
     "fill_time": "6/10/2021",
     "status": "open",
-    "reason": "Oth symptoms and signs involving the musculoskeletal system"
+    "reason": "Oth symptoms and signs involving the musculoskeletal system",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 379,
@@ -3408,7 +4164,9 @@
     "place_time": "4/21/2021",
     "fill_time": "8/9/2021",
     "status": "rejected",
-    "reason": "Car driver injured in clsn with statnry object in traf, init"
+    "reason": "Car driver injured in clsn with statnry object in traf, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 380,
@@ -3417,7 +4175,9 @@
     "place_time": "12/5/2021",
     "fill_time": "1/14/2022",
     "status": "filled",
-    "reason": "Wear of artic bearing surface of unsp int prosth joint, init"
+    "reason": "Wear of artic bearing surface of unsp int prosth joint, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 381,
@@ -3426,7 +4186,9 @@
     "place_time": "6/4/2021",
     "fill_time": "5/26/2021",
     "status": "rejected",
-    "reason": "Displ avuls fx tuberosity of l calcaneus, 7thP"
+    "reason": "Displ avuls fx tuberosity of l calcaneus, 7thP",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 382,
@@ -3435,7 +4197,9 @@
     "place_time": "3/28/2021",
     "fill_time": "6/5/2021",
     "status": "open",
-    "reason": "Predominantly alpha-adrenoreceptor agonists"
+    "reason": "Predominantly alpha-adrenoreceptor agonists",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 383,
@@ -3444,7 +4208,9 @@
     "place_time": "9/3/2021",
     "fill_time": "9/29/2021",
     "status": "open",
-    "reason": "Subluxation of radiocarpal joint of left wrist, sequela"
+    "reason": "Subluxation of radiocarpal joint of left wrist, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 384,
@@ -3453,7 +4219,9 @@
     "place_time": "7/22/2021",
     "fill_time": "1/26/2022",
     "status": "open",
-    "reason": "Oral mucositis (ulcerative)"
+    "reason": "Oral mucositis (ulcerative)",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 385,
@@ -3462,7 +4230,9 @@
     "place_time": "4/3/2021",
     "fill_time": "11/21/2021",
     "status": "rejected",
-    "reason": "Enteroviral meningitis"
+    "reason": "Enteroviral meningitis",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 386,
@@ -3471,7 +4241,9 @@
     "place_time": "3/26/2021",
     "fill_time": "5/31/2021",
     "status": "cancelled",
-    "reason": "Driver of hv veh injured in collision w hv veh nontraf, init"
+    "reason": "Driver of hv veh injured in collision w hv veh nontraf, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 387,
@@ -3480,7 +4252,9 @@
     "place_time": "5/22/2021",
     "fill_time": "3/25/2021",
     "status": "cancelled",
-    "reason": "Laceration with foreign body of unspecified part of head"
+    "reason": "Laceration with foreign body of unspecified part of head",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 388,
@@ -3489,7 +4263,9 @@
     "place_time": "8/24/2021",
     "fill_time": "10/31/2021",
     "status": "rejected",
-    "reason": "Mech compl of femoral arterial graft (bypass), sequela"
+    "reason": "Mech compl of femoral arterial graft (bypass), sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 389,
@@ -3498,7 +4274,9 @@
     "place_time": "7/22/2021",
     "fill_time": "6/7/2021",
     "status": "rejected",
-    "reason": "Pnctr w/o fb of low back and pelv w penet retroperiton, subs"
+    "reason": "Pnctr w/o fb of low back and pelv w penet retroperiton, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 390,
@@ -3507,7 +4285,9 @@
     "place_time": "12/17/2021",
     "fill_time": "6/22/2021",
     "status": "rejected",
-    "reason": "Nondisp fx of pisiform, unsp wrist, subs for fx w routn heal"
+    "reason": "Nondisp fx of pisiform, unsp wrist, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 391,
@@ -3516,7 +4296,9 @@
     "place_time": "2/2/2022",
     "fill_time": "6/25/2021",
     "status": "open",
-    "reason": "Pain in thigh"
+    "reason": "Pain in thigh",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 392,
@@ -3525,7 +4307,9 @@
     "place_time": "5/1/2021",
     "fill_time": "1/10/2022",
     "status": "filled",
-    "reason": "Unspecified sequelae of nontraumatic subarachnoid hemorrhage"
+    "reason": "Unspecified sequelae of nontraumatic subarachnoid hemorrhage",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 393,
@@ -3534,7 +4318,9 @@
     "place_time": "7/6/2021",
     "fill_time": "1/6/2022",
     "status": "filled",
-    "reason": "Otorrhea, right ear"
+    "reason": "Otorrhea, right ear",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 394,
@@ -3543,7 +4329,9 @@
     "place_time": "1/19/2022",
     "fill_time": "4/2/2021",
     "status": "cancelled",
-    "reason": "Sprain of unspecified site of left knee, initial encounter"
+    "reason": "Sprain of unspecified site of left knee, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 395,
@@ -3552,7 +4340,9 @@
     "place_time": "7/21/2021",
     "fill_time": "10/28/2021",
     "status": "rejected",
-    "reason": "Person inj in clsn betw car and pk-up/van, nontraf, sequela"
+    "reason": "Person inj in clsn betw car and pk-up/van, nontraf, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 396,
@@ -3561,7 +4351,9 @@
     "place_time": "10/14/2021",
     "fill_time": "9/3/2021",
     "status": "rejected",
-    "reason": "Nondisp fx of prox phalanx of finger, subs for fx w malunion"
+    "reason": "Nondisp fx of prox phalanx of finger, subs for fx w malunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 397,
@@ -3570,7 +4362,9 @@
     "place_time": "9/1/2021",
     "fill_time": "4/13/2021",
     "status": "filled",
-    "reason": "Burn of unspecified degree of back of left hand, sequela"
+    "reason": "Burn of unspecified degree of back of left hand, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 398,
@@ -3579,7 +4373,9 @@
     "place_time": "5/8/2021",
     "fill_time": "12/20/2021",
     "status": "open",
-    "reason": "Presence of unspecified artificial elbow joint"
+    "reason": "Presence of unspecified artificial elbow joint",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 399,
@@ -3588,7 +4384,9 @@
     "place_time": "3/23/2021",
     "fill_time": "7/18/2021",
     "status": "cancelled",
-    "reason": "Disp fx of glenoid cav of scapula, r shldr, init for opn fx"
+    "reason": "Disp fx of glenoid cav of scapula, r shldr, init for opn fx",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 400,
@@ -3597,7 +4395,9 @@
     "place_time": "9/21/2021",
     "fill_time": "7/20/2021",
     "status": "rejected",
-    "reason": "Poisoning by intravenous anesthetics, undetermined"
+    "reason": "Poisoning by intravenous anesthetics, undetermined",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 401,
@@ -3606,7 +4406,9 @@
     "place_time": "1/1/2022",
     "fill_time": "8/15/2021",
     "status": "filled",
-    "reason": "Basal cell carcinoma of skin of other and unsp parts of face"
+    "reason": "Basal cell carcinoma of skin of other and unsp parts of face",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 402,
@@ -3615,7 +4417,9 @@
     "place_time": "9/13/2021",
     "fill_time": "5/7/2021",
     "status": "open",
-    "reason": "Acute on chronic combined systolic and diastolic hrt fail"
+    "reason": "Acute on chronic combined systolic and diastolic hrt fail",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 403,
@@ -3624,7 +4428,9 @@
     "place_time": "1/10/2022",
     "fill_time": "9/12/2021",
     "status": "rejected",
-    "reason": "Malignant neoplasm of ventral surface of tongue"
+    "reason": "Malignant neoplasm of ventral surface of tongue",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 404,
@@ -3633,7 +4439,9 @@
     "place_time": "12/2/2021",
     "fill_time": "5/8/2021",
     "status": "filled",
-    "reason": "Unsp injury of blood vessel of left ring finger, subs encntr"
+    "reason": "Unsp injury of blood vessel of left ring finger, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 405,
@@ -3642,7 +4450,9 @@
     "place_time": "2/14/2022",
     "fill_time": "10/18/2021",
     "status": "open",
-    "reason": "Blepharophimosis unspecified eye, unspecified lid"
+    "reason": "Blepharophimosis unspecified eye, unspecified lid",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 406,
@@ -3651,7 +4461,9 @@
     "place_time": "8/26/2021",
     "fill_time": "12/19/2021",
     "status": "filled",
-    "reason": "Accident to, on or involving cable-car, not on rails"
+    "reason": "Accident to, on or involving cable-car, not on rails",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 407,
@@ -3660,7 +4472,9 @@
     "place_time": "7/9/2021",
     "fill_time": "4/9/2021",
     "status": "open",
-    "reason": "Sltr-haris Type I physl fx low end ulna, unsp arm, 7thP"
+    "reason": "Sltr-haris Type I physl fx low end ulna, unsp arm, 7thP",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 408,
@@ -3669,7 +4483,9 @@
     "place_time": "7/12/2021",
     "fill_time": "8/28/2021",
     "status": "open",
-    "reason": "Nondisp fx of lateral malleolus of unsp fibula, 7thP"
+    "reason": "Nondisp fx of lateral malleolus of unsp fibula, 7thP",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 409,
@@ -3678,7 +4494,9 @@
     "place_time": "8/27/2021",
     "fill_time": "2/19/2022",
     "status": "open",
-    "reason": "Sprain of unspecified part of right wrist and hand"
+    "reason": "Sprain of unspecified part of right wrist and hand",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 410,
@@ -3687,7 +4505,9 @@
     "place_time": "3/26/2021",
     "fill_time": "8/2/2021",
     "status": "open",
-    "reason": "Unspecified subluxation of unspecified radial head, sequela"
+    "reason": "Unspecified subluxation of unspecified radial head, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 411,
@@ -3696,7 +4516,9 @@
     "place_time": "5/25/2021",
     "fill_time": "5/8/2021",
     "status": "open",
-    "reason": "Adverse effect of aminoglycosides, sequela"
+    "reason": "Adverse effect of aminoglycosides, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 412,
@@ -3705,7 +4527,9 @@
     "place_time": "7/12/2021",
     "fill_time": "3/3/2022",
     "status": "rejected",
-    "reason": "Unsp car occupant injured in nonclsn trnsp accident in traf"
+    "reason": "Unsp car occupant injured in nonclsn trnsp accident in traf",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 413,
@@ -3714,7 +4538,9 @@
     "place_time": "5/2/2021",
     "fill_time": "4/21/2021",
     "status": "rejected",
-    "reason": "Traumatic arthropathy, unspecified hip"
+    "reason": "Traumatic arthropathy, unspecified hip",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 414,
@@ -3723,7 +4549,9 @@
     "place_time": "4/6/2021",
     "fill_time": "8/8/2021",
     "status": "rejected",
-    "reason": "Tox eff of corrosv alkalis and alk-like substnc, acc, init"
+    "reason": "Tox eff of corrosv alkalis and alk-like substnc, acc, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 415,
@@ -3732,7 +4560,9 @@
     "place_time": "9/24/2021",
     "fill_time": "5/30/2021",
     "status": "open",
-    "reason": "Superficial frostbite of head"
+    "reason": "Superficial frostbite of head",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 416,
@@ -3741,7 +4571,9 @@
     "place_time": "6/1/2021",
     "fill_time": "3/29/2021",
     "status": "rejected",
-    "reason": "Strain of musc/fasc/tend at thigh level, right thigh, init"
+    "reason": "Strain of musc/fasc/tend at thigh level, right thigh, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 417,
@@ -3750,7 +4582,9 @@
     "place_time": "6/26/2021",
     "fill_time": "11/23/2021",
     "status": "cancelled",
-    "reason": "Nondisp commnt fx shaft of ulna, unsp arm, 7thC"
+    "reason": "Nondisp commnt fx shaft of ulna, unsp arm, 7thC",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 418,
@@ -3759,7 +4593,9 @@
     "place_time": "11/9/2021",
     "fill_time": "7/18/2021",
     "status": "rejected",
-    "reason": "Oth intraop and postproc comp and disord of circ sys, NEC"
+    "reason": "Oth intraop and postproc comp and disord of circ sys, NEC",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 419,
@@ -3768,7 +4604,9 @@
     "place_time": "9/10/2021",
     "fill_time": "4/14/2021",
     "status": "open",
-    "reason": "Oth disorders of bone development and growth, multiple sites"
+    "reason": "Oth disorders of bone development and growth, multiple sites",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 420,
@@ -3777,7 +4615,9 @@
     "place_time": "12/10/2021",
     "fill_time": "8/9/2021",
     "status": "filled",
-    "reason": "Adverse effect of rifampicins, subsequent encounter"
+    "reason": "Adverse effect of rifampicins, subsequent encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 421,
@@ -3786,7 +4626,9 @@
     "place_time": "2/22/2022",
     "fill_time": "9/20/2021",
     "status": "rejected",
-    "reason": "Nondisp fx of 3rd metatarsal bone, l ft, 7thP"
+    "reason": "Nondisp fx of 3rd metatarsal bone, l ft, 7thP",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 422,
@@ -3795,7 +4637,9 @@
     "place_time": "6/30/2021",
     "fill_time": "9/30/2021",
     "status": "rejected",
-    "reason": "Other chronic osteomyelitis, left shoulder"
+    "reason": "Other chronic osteomyelitis, left shoulder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 423,
@@ -3804,7 +4648,9 @@
     "place_time": "12/12/2021",
     "fill_time": "1/16/2022",
     "status": "rejected",
-    "reason": "Juvenile rheumatoid arthritis w systemic onset, r shoulder"
+    "reason": "Juvenile rheumatoid arthritis w systemic onset, r shoulder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 424,
@@ -3813,7 +4659,9 @@
     "place_time": "12/20/2021",
     "fill_time": "4/22/2021",
     "status": "open",
-    "reason": "Poisoning by oth psychotropic drugs, accidental, sequela"
+    "reason": "Poisoning by oth psychotropic drugs, accidental, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 425,
@@ -3822,7 +4670,9 @@
     "place_time": "2/7/2022",
     "fill_time": "6/20/2021",
     "status": "rejected",
-    "reason": "Sltr-haris Type I physeal fx phalanx of unsp toe, 7thB"
+    "reason": "Sltr-haris Type I physeal fx phalanx of unsp toe, 7thB",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 426,
@@ -3831,7 +4681,9 @@
     "place_time": "6/3/2021",
     "fill_time": "12/8/2021",
     "status": "filled",
-    "reason": "Fall down embankment (hill)"
+    "reason": "Fall down embankment (hill)",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 427,
@@ -3840,7 +4692,9 @@
     "place_time": "8/16/2021",
     "fill_time": "11/10/2021",
     "status": "open",
-    "reason": "Corros second deg of head, face, and neck, unsp site, init"
+    "reason": "Corros second deg of head, face, and neck, unsp site, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 428,
@@ -3849,7 +4703,9 @@
     "place_time": "7/18/2021",
     "fill_time": "2/7/2022",
     "status": "rejected",
-    "reason": "Excessive crying of infant (baby)"
+    "reason": "Excessive crying of infant (baby)",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 429,
@@ -3858,7 +4714,9 @@
     "place_time": "6/30/2021",
     "fill_time": "1/2/2022",
     "status": "open",
-    "reason": "Injury of brachial artery"
+    "reason": "Injury of brachial artery",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 430,
@@ -3867,7 +4725,9 @@
     "place_time": "5/17/2021",
     "fill_time": "11/2/2021",
     "status": "filled",
-    "reason": "Inj flexor musc/fasc/tend unsp finger at wrs/hnd lv, init"
+    "reason": "Inj flexor musc/fasc/tend unsp finger at wrs/hnd lv, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 431,
@@ -3876,7 +4736,9 @@
     "place_time": "2/11/2022",
     "fill_time": "10/26/2021",
     "status": "rejected",
-    "reason": "Unspecified fracture of facial bones"
+    "reason": "Unspecified fracture of facial bones",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 432,
@@ -3885,7 +4747,9 @@
     "place_time": "9/17/2021",
     "fill_time": "11/3/2021",
     "status": "open",
-    "reason": "Unspecified injury of axillary artery, right side"
+    "reason": "Unspecified injury of axillary artery, right side",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 433,
@@ -3894,7 +4758,9 @@
     "place_time": "3/16/2021",
     "fill_time": "10/15/2021",
     "status": "cancelled",
-    "reason": "Displ suprcndl fx w intrcndl extn low end r femr, 7thN"
+    "reason": "Displ suprcndl fx w intrcndl extn low end r femr, 7thN",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 434,
@@ -3903,7 +4769,9 @@
     "place_time": "10/21/2021",
     "fill_time": "11/11/2021",
     "status": "rejected",
-    "reason": "Occupant of streetcar injured by fall from streetcar"
+    "reason": "Occupant of streetcar injured by fall from streetcar",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 435,
@@ -3912,7 +4780,9 @@
     "place_time": "1/1/2022",
     "fill_time": "7/20/2021",
     "status": "rejected",
-    "reason": "Burns of 50-59% of body surface w 10-19% third degree burns"
+    "reason": "Burns of 50-59% of body surface w 10-19% third degree burns",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 436,
@@ -3921,7 +4791,9 @@
     "place_time": "7/20/2021",
     "fill_time": "2/23/2022",
     "status": "rejected",
-    "reason": "Fx unsp part of scapula, l shoulder, subs for fx w nonunion"
+    "reason": "Fx unsp part of scapula, l shoulder, subs for fx w nonunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 437,
@@ -3930,7 +4802,9 @@
     "place_time": "3/4/2022",
     "fill_time": "2/10/2022",
     "status": "filled",
-    "reason": "Congenital kyphosis, thoracic region"
+    "reason": "Congenital kyphosis, thoracic region",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 438,
@@ -3939,7 +4813,9 @@
     "place_time": "10/14/2021",
     "fill_time": "7/31/2021",
     "status": "filled",
-    "reason": "Nondisp commnt fx shaft of ulna, r arm, 7thK"
+    "reason": "Nondisp commnt fx shaft of ulna, r arm, 7thK",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 439,
@@ -3948,7 +4824,9 @@
     "place_time": "11/2/2021",
     "fill_time": "12/31/2021",
     "status": "open",
-    "reason": "Military operations involving unarmed hand to hand combat"
+    "reason": "Military operations involving unarmed hand to hand combat",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 440,
@@ -3957,7 +4835,9 @@
     "place_time": "1/25/2022",
     "fill_time": "7/10/2021",
     "status": "filled",
-    "reason": "Other acute osteomyelitis, unspecified shoulder"
+    "reason": "Other acute osteomyelitis, unspecified shoulder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 441,
@@ -3966,7 +4846,9 @@
     "place_time": "7/22/2021",
     "fill_time": "7/9/2021",
     "status": "rejected",
-    "reason": "Obst due to fb acc left in body following punctr/cath, init"
+    "reason": "Obst due to fb acc left in body following punctr/cath, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 442,
@@ -3975,7 +4857,9 @@
     "place_time": "3/2/2022",
     "fill_time": "8/1/2021",
     "status": "filled",
-    "reason": "Term delivery with preterm labor, third trimester, fetus 4"
+    "reason": "Term delivery with preterm labor, third trimester, fetus 4",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 443,
@@ -3984,7 +4868,9 @@
     "place_time": "4/27/2021",
     "fill_time": "7/23/2021",
     "status": "rejected",
-    "reason": "Nondisp fx of low epiphy (separation) of l femr, 7thC"
+    "reason": "Nondisp fx of low epiphy (separation) of l femr, 7thC",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 444,
@@ -3993,7 +4879,9 @@
     "place_time": "7/10/2021",
     "fill_time": "3/27/2021",
     "status": "rejected",
-    "reason": "Nondisp artic fx head of r femr, subs for clos fx w nonunion"
+    "reason": "Nondisp artic fx head of r femr, subs for clos fx w nonunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 445,
@@ -4002,7 +4890,9 @@
     "place_time": "11/7/2021",
     "fill_time": "10/17/2021",
     "status": "rejected",
-    "reason": "Cyst of kidney, acquired"
+    "reason": "Cyst of kidney, acquired",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 446,
@@ -4011,7 +4901,9 @@
     "place_time": "9/12/2021",
     "fill_time": "9/6/2021",
     "status": "rejected",
-    "reason": "Spastic quadriplegic cerebral palsy"
+    "reason": "Spastic quadriplegic cerebral palsy",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 447,
@@ -4020,7 +4912,9 @@
     "place_time": "10/29/2021",
     "fill_time": "5/2/2021",
     "status": "rejected",
-    "reason": "Discordant atrioventricular connection"
+    "reason": "Discordant atrioventricular connection",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 448,
@@ -4029,7 +4923,9 @@
     "place_time": "9/13/2021",
     "fill_time": "10/30/2021",
     "status": "filled",
-    "reason": "Osteonecrosis due to drugs, multiple sites"
+    "reason": "Osteonecrosis due to drugs, multiple sites",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 449,
@@ -4038,7 +4934,9 @@
     "place_time": "3/30/2021",
     "fill_time": "6/26/2021",
     "status": "open",
-    "reason": "Disp fx of greater trochanter of l femr, 7thK"
+    "reason": "Disp fx of greater trochanter of l femr, 7thK",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 450,
@@ -4047,7 +4945,9 @@
     "place_time": "1/22/2022",
     "fill_time": "4/18/2021",
     "status": "rejected",
-    "reason": "Other injury of unspecified part of colon, initial encounter"
+    "reason": "Other injury of unspecified part of colon, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 451,
@@ -4056,7 +4956,9 @@
     "place_time": "1/16/2022",
     "fill_time": "5/31/2021",
     "status": "open",
-    "reason": "Liver and biliary tract disord in pregnancy, third trimester"
+    "reason": "Liver and biliary tract disord in pregnancy, third trimester",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 452,
@@ -4065,7 +4967,9 @@
     "place_time": "1/13/2022",
     "fill_time": "1/23/2022",
     "status": "open",
-    "reason": "Sltr-haris Type I physl fx upr end l tibia, 7thK"
+    "reason": "Sltr-haris Type I physl fx upr end l tibia, 7thK",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 453,
@@ -4074,7 +4978,9 @@
     "place_time": "6/4/2021",
     "fill_time": "1/9/2022",
     "status": "rejected",
-    "reason": "Lac w/o fb of right lesser toe(s) w damage to nail, init"
+    "reason": "Lac w/o fb of right lesser toe(s) w damage to nail, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 454,
@@ -4083,7 +4989,9 @@
     "place_time": "5/28/2021",
     "fill_time": "2/19/2022",
     "status": "rejected",
-    "reason": "Leakage of umbrella device, sequela"
+    "reason": "Leakage of umbrella device, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 455,
@@ -4092,7 +5000,9 @@
     "place_time": "2/12/2022",
     "fill_time": "1/2/2022",
     "status": "rejected",
-    "reason": "Unsp inj great saphenous at low leg level, left leg, sequela"
+    "reason": "Unsp inj great saphenous at low leg level, left leg, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 456,
@@ -4101,7 +5011,9 @@
     "place_time": "10/4/2021",
     "fill_time": "10/30/2021",
     "status": "filled",
-    "reason": "Displ Rolando's fracture, r hand, subs for fx w delay heal"
+    "reason": "Displ Rolando's fracture, r hand, subs for fx w delay heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 457,
@@ -4110,7 +5022,9 @@
     "place_time": "1/21/2022",
     "fill_time": "5/22/2021",
     "status": "rejected",
-    "reason": "Therapeutic and rehab cardiovasc devices assoc w incdt"
+    "reason": "Therapeutic and rehab cardiovasc devices assoc w incdt",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 458,
@@ -4119,7 +5033,9 @@
     "place_time": "5/6/2021",
     "fill_time": "8/3/2021",
     "status": "rejected",
-    "reason": "Toxic effect of other alcohols, assault, initial encounter"
+    "reason": "Toxic effect of other alcohols, assault, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 459,
@@ -4128,7 +5044,9 @@
     "place_time": "10/4/2021",
     "fill_time": "11/22/2021",
     "status": "open",
-    "reason": "Unspecified injury of unspecified foot, sequela"
+    "reason": "Unspecified injury of unspecified foot, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 460,
@@ -4137,7 +5055,9 @@
     "place_time": "5/17/2021",
     "fill_time": "12/27/2021",
     "status": "rejected",
-    "reason": "Corrosion of third degree of right knee"
+    "reason": "Corrosion of third degree of right knee",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 461,
@@ -4146,7 +5066,9 @@
     "place_time": "10/25/2021",
     "fill_time": "7/3/2021",
     "status": "rejected",
-    "reason": "Burn 3rd deg mu sites of right lower limb, ex ank/ft, sqla"
+    "reason": "Burn 3rd deg mu sites of right lower limb, ex ank/ft, sqla",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 462,
@@ -4155,7 +5077,9 @@
     "place_time": "2/11/2022",
     "fill_time": "7/20/2021",
     "status": "rejected",
-    "reason": "Encounter for exam and obs following alleged child rape"
+    "reason": "Encounter for exam and obs following alleged child rape",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 463,
@@ -4164,7 +5088,9 @@
     "place_time": "8/3/2021",
     "fill_time": "8/19/2021",
     "status": "open",
-    "reason": "Unsp injury of unspecified intra-abdominal organ, sequela"
+    "reason": "Unsp injury of unspecified intra-abdominal organ, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 464,
@@ -4173,7 +5099,9 @@
     "place_time": "11/9/2021",
     "fill_time": "1/29/2022",
     "status": "cancelled",
-    "reason": "Toxic effect of mycotoxin food contaminants, undetermined"
+    "reason": "Toxic effect of mycotoxin food contaminants, undetermined",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 465,
@@ -4182,7 +5110,9 @@
     "place_time": "9/16/2021",
     "fill_time": "10/3/2021",
     "status": "cancelled",
-    "reason": "Lac w fb of right lesser toe(s) w/o damage to nail, subs"
+    "reason": "Lac w fb of right lesser toe(s) w/o damage to nail, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 466,
@@ -4191,7 +5121,9 @@
     "place_time": "1/21/2022",
     "fill_time": "5/23/2021",
     "status": "rejected",
-    "reason": "Puncture wound w foreign body, right lower leg, subs encntr"
+    "reason": "Puncture wound w foreign body, right lower leg, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 467,
@@ -4200,7 +5132,9 @@
     "place_time": "8/16/2021",
     "fill_time": "6/13/2021",
     "status": "filled",
-    "reason": "Path fx in neopltc dis, r tibia, subs for fx w routn heal"
+    "reason": "Path fx in neopltc dis, r tibia, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 468,
@@ -4209,7 +5143,9 @@
     "place_time": "6/16/2021",
     "fill_time": "8/6/2021",
     "status": "open",
-    "reason": "Nondisp seg fx shaft of unsp tibia, 7thG"
+    "reason": "Nondisp seg fx shaft of unsp tibia, 7thG",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 469,
@@ -4218,7 +5154,9 @@
     "place_time": "9/3/2021",
     "fill_time": "11/8/2021",
     "status": "open",
-    "reason": "Nondisp fx of base of MC bone, subs for fx w routn heal"
+    "reason": "Nondisp fx of base of MC bone, subs for fx w routn heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 470,
@@ -4227,7 +5165,9 @@
     "place_time": "10/15/2021",
     "fill_time": "8/7/2021",
     "status": "cancelled",
-    "reason": "Laceration of long flexor musc/fasc/tend thumb at wrs/hnd lv"
+    "reason": "Laceration of long flexor musc/fasc/tend thumb at wrs/hnd lv",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 471,
@@ -4236,7 +5176,9 @@
     "place_time": "12/13/2021",
     "fill_time": "4/27/2021",
     "status": "open",
-    "reason": "Person outside bus injured in clsn w ped/anml nontraf, subs"
+    "reason": "Person outside bus injured in clsn w ped/anml nontraf, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 472,
@@ -4245,7 +5187,9 @@
     "place_time": "7/10/2021",
     "fill_time": "6/11/2021",
     "status": "open",
-    "reason": "Superficial foreign body of left shoulder"
+    "reason": "Superficial foreign body of left shoulder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 473,
@@ -4254,7 +5198,9 @@
     "place_time": "5/15/2021",
     "fill_time": "12/16/2021",
     "status": "rejected",
-    "reason": "Ankylosing hyperostosis, sacral and sacrococcygeal region"
+    "reason": "Ankylosing hyperostosis, sacral and sacrococcygeal region",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 474,
@@ -4263,7 +5209,9 @@
     "place_time": "9/6/2021",
     "fill_time": "5/7/2021",
     "status": "rejected",
-    "reason": "Disp fx of shaft of unsp clavicle, subs for fx w nonunion"
+    "reason": "Disp fx of shaft of unsp clavicle, subs for fx w nonunion",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 475,
@@ -4272,7 +5220,9 @@
     "place_time": "1/8/2022",
     "fill_time": "10/21/2021",
     "status": "open",
-    "reason": "Dacryops of left lacrimal gland"
+    "reason": "Dacryops of left lacrimal gland",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 476,
@@ -4281,7 +5231,9 @@
     "place_time": "6/22/2021",
     "fill_time": "9/20/2021",
     "status": "cancelled",
-    "reason": "Strain extn musc/fasc/tend unsp finger at wrs/hnd lv, init"
+    "reason": "Strain extn musc/fasc/tend unsp finger at wrs/hnd lv, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 477,
@@ -4290,7 +5242,9 @@
     "place_time": "5/7/2021",
     "fill_time": "1/9/2022",
     "status": "open",
-    "reason": "Unsp injury of fallopian tube, unilateral, subs encntr"
+    "reason": "Unsp injury of fallopian tube, unilateral, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 478,
@@ -4299,7 +5253,9 @@
     "place_time": "12/26/2021",
     "fill_time": "7/1/2021",
     "status": "open",
-    "reason": "Abscess of eyelid right eye, unspecified eyelid"
+    "reason": "Abscess of eyelid right eye, unspecified eyelid",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 479,
@@ -4308,7 +5264,9 @@
     "place_time": "7/28/2021",
     "fill_time": "9/19/2021",
     "status": "rejected",
-    "reason": "Postdysenteric arthropathy, right shoulder"
+    "reason": "Postdysenteric arthropathy, right shoulder",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 480,
@@ -4317,7 +5275,9 @@
     "place_time": "10/5/2021",
     "fill_time": "11/29/2021",
     "status": "cancelled",
-    "reason": "Contusion of left little finger w damage to nail, subs"
+    "reason": "Contusion of left little finger w damage to nail, subs",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 481,
@@ -4326,7 +5286,9 @@
     "place_time": "4/7/2021",
     "fill_time": "10/12/2021",
     "status": "open",
-    "reason": "Gammaherpesviral mononucleosis with other complications"
+    "reason": "Gammaherpesviral mononucleosis with other complications",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 482,
@@ -4335,7 +5297,9 @@
     "place_time": "3/19/2021",
     "fill_time": "1/6/2022",
     "status": "rejected",
-    "reason": "Open bite of unsp external genital organs, male, subs encntr"
+    "reason": "Open bite of unsp external genital organs, male, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 483,
@@ -4344,7 +5308,9 @@
     "place_time": "8/20/2021",
     "fill_time": "12/26/2021",
     "status": "filled",
-    "reason": "Oth therapist or healthcare prov, perp of maltreat & neglect"
+    "reason": "Oth therapist or healthcare prov, perp of maltreat & neglect",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 484,
@@ -4353,7 +5319,9 @@
     "place_time": "9/9/2021",
     "fill_time": "8/15/2021",
     "status": "filled",
-    "reason": "Other nondisplaced fracture of lower end of left humerus"
+    "reason": "Other nondisplaced fracture of lower end of left humerus",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 485,
@@ -4362,7 +5330,9 @@
     "place_time": "2/25/2022",
     "fill_time": "5/1/2021",
     "status": "rejected",
-    "reason": "Other injury of unsp part of small intestine, subs encntr"
+    "reason": "Other injury of unsp part of small intestine, subs encntr",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 486,
@@ -4371,7 +5341,9 @@
     "place_time": "6/12/2021",
     "fill_time": "4/9/2021",
     "status": "rejected",
-    "reason": "Terrorism involving firearms, civilian injured, sequela"
+    "reason": "Terrorism involving firearms, civilian injured, sequela",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 487,
@@ -4380,7 +5352,9 @@
     "place_time": "6/29/2021",
     "fill_time": "11/7/2021",
     "status": "rejected",
-    "reason": "Abnormal retinal correspondence"
+    "reason": "Abnormal retinal correspondence",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 488,
@@ -4389,7 +5363,9 @@
     "place_time": "3/12/2021",
     "fill_time": "11/22/2021",
     "status": "rejected",
-    "reason": "Defects of catalase and peroxidase"
+    "reason": "Defects of catalase and peroxidase",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 489,
@@ -4398,7 +5374,9 @@
     "place_time": "9/3/2021",
     "fill_time": "5/18/2021",
     "status": "open",
-    "reason": "Occup of 3-whl mv inj pk-up truck, pk-up/van nontraf, sqla"
+    "reason": "Occup of 3-whl mv inj pk-up truck, pk-up/van nontraf, sqla",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 490,
@@ -4407,7 +5385,9 @@
     "place_time": "7/1/2021",
     "fill_time": "2/27/2022",
     "status": "cancelled",
-    "reason": "Fx unsp carpal bone, right wrist, subs for fx w delay heal"
+    "reason": "Fx unsp carpal bone, right wrist, subs for fx w delay heal",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 491,
@@ -4416,7 +5396,9 @@
     "place_time": "5/26/2021",
     "fill_time": "11/12/2021",
     "status": "open",
-    "reason": "Postauricular fistula"
+    "reason": "Postauricular fistula",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 492,
@@ -4425,7 +5407,9 @@
     "place_time": "1/30/2022",
     "fill_time": "11/6/2021",
     "status": "open",
-    "reason": "Postsurgical lordosis"
+    "reason": "Postsurgical lordosis",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 493,
@@ -4434,7 +5418,9 @@
     "place_time": "7/17/2021",
     "fill_time": "8/4/2021",
     "status": "open",
-    "reason": "Lgl intervnt w inj by explosv shl, law enforc offl inj, sqla"
+    "reason": "Lgl intervnt w inj by explosv shl, law enforc offl inj, sqla",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 494,
@@ -4443,7 +5429,9 @@
     "place_time": "10/5/2021",
     "fill_time": "1/1/2022",
     "status": "rejected",
-    "reason": "Unsp opn wnd abd wall, r upper q w/o penet perit cav, init"
+    "reason": "Unsp opn wnd abd wall, r upper q w/o penet perit cav, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 495,
@@ -4452,7 +5440,9 @@
     "place_time": "7/26/2021",
     "fill_time": "7/29/2021",
     "status": "rejected",
-    "reason": "Calcific tendinitis, right ankle and foot"
+    "reason": "Calcific tendinitis, right ankle and foot",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 496,
@@ -4461,7 +5451,9 @@
     "place_time": "12/2/2021",
     "fill_time": "5/6/2021",
     "status": "open",
-    "reason": "Blister (nonthermal) of ear"
+    "reason": "Blister (nonthermal) of ear",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 497,
@@ -4470,7 +5462,9 @@
     "place_time": "8/20/2021",
     "fill_time": "10/2/2021",
     "status": "rejected",
-    "reason": "Commrcl fix-wing aircraft explosion injuring occupant, init"
+    "reason": "Commrcl fix-wing aircraft explosion injuring occupant, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 498,
@@ -4479,7 +5473,9 @@
     "place_time": "10/21/2021",
     "fill_time": "12/1/2021",
     "status": "cancelled",
-    "reason": "Fall same lev from slip/trip w strike agnst unsp obj, init"
+    "reason": "Fall same lev from slip/trip w strike agnst unsp obj, init",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 499,
@@ -4488,7 +5484,9 @@
     "place_time": "3/24/2021",
     "fill_time": "10/23/2021",
     "status": "rejected",
-    "reason": "Contusion of oral cavity, initial encounter"
+    "reason": "Contusion of oral cavity, initial encounter",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   },
   {
     "id": 500,
@@ -4497,6 +5495,8 @@
     "place_time": "3/15/2021",
     "fill_time": "2/28/2022",
     "status": "open",
-    "reason": "Injury of stomach"
+    "reason": "Injury of stomach",
+    "fillPrice": "$30",
+    "placedBy": "Kevin"
   }
 ]

@@ -48,7 +48,7 @@ const Balance = () => {
               <LabelChild label={"Risk flag"}>33$</LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Good feed violations"}>22$</LabelChild>
+              <LabelChild label={"Good faith violation"}>22$</LabelChild>
             </Grid>
 
             <Grid item xs={12}>
