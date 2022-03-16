@@ -41,6 +41,7 @@ const column = [
     field: "info",
     headerName: "Info",
     flex: 0.3,
+    preventSearch: true,
     renderCell: (params) => {
       return (
         <Modal content={<OptionsInfo {...params.row} />}>

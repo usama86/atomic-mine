@@ -104,6 +104,7 @@ const column = [
     field: "reviewed",
     headerName: "Reviewed",
     flex: 1,
+    preventSearch: true,
     renderCell: (params) => <Checkbox onlyCheckbox />,
   },
 ];

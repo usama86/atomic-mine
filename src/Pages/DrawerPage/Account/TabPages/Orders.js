@@ -170,6 +170,7 @@ const getFields = (type) => {
         field: "cancel-btn",
         flex: 1,
         headerName: "Cancel",
+        preventSearch: true,
         renderCell: (params) => <Button isdefault={true}>Cancel</Button>,
       },
     ];

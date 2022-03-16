@@ -24,7 +24,7 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
   React.useEffect(() => {
     let temp = [];
     columns.forEach((column) => {
-      if (!column.renderCell) {
+      if (!column.preventSearch) {
         temp.push({
           accessor: column.field,
           label: column.headerName || column.field,
@@ -56,7 +56,10 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
             },
             getCategory: getCategory,
             value: search,
-            setValue: (e) => setSearch(e.target.value),
+            setValue: (e) => {
+              console.log(e.target.value);
+              setSearch(e.target.value);
+            },
             categories: fields,
           },
         }}
@@ -73,5 +76,7 @@ EditableTable.defaultProps = {
   rows: default_rows,
   columns: default_columns,
   height: "500px",
-  selectRowHandler: (e) => console.log("no prop given", e),
+  selectRowHandler: (e) => {
+    return;
+  },
 };
