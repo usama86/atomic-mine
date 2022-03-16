@@ -57,7 +57,6 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
             getCategory: getCategory,
             value: search,
             setValue: (e) => {
-              console.log(e.target.value);
               setSearch(e.target.value);
             },
             categories: fields,

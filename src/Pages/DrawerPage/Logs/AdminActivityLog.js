@@ -1,6 +1,5 @@
 import React from "react";
 import Stack from "../../../UI/Layout/Stack";
-import CardPagination from "../../../UI/CardPagination/CardPagination";
 
 import Table from "../../../UI/Table/SearchableTable";
 
@@ -29,26 +28,5 @@ function AdminActivityLog() {
     </Stack>
   );
 }
-
-const row = [
-  "Kevin logged in",
-  "Raven Deleted a user",
-  "James approved a user",
-  "Kevin logged in",
-  "Raven Deleted a user",
-  "James approved a user",
-  "Kevin logged in",
-  "Raven Deleted a user",
-  "James approved a user",
-  "Kevin logged in",
-  "Raven Deleted a user",
-  "James approved a user",
-  "Kevin logged in",
-  "Raven Deleted a user",
-  "James approved a user",
-  "Kevin logged in",
-  "Raven Deleted a user",
-  "James approved a user",
-];
 
 export default AdminActivityLog;

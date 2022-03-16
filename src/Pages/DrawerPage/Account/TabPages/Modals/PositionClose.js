@@ -3,7 +3,6 @@ import Typography from "../../../../../UI/Typography/Typography";
 import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
-import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 import { useTheme } from "@emotion/react";
 
 const PositionClose = ({ triggerClose }) => {
@@ -14,7 +13,7 @@ const PositionClose = ({ triggerClose }) => {
     <Stack gap={2}>
       <Typography variant="h6">Current bid: 9.10</Typography>
       <Typography variant="h6">Current ask: 9.80</Typography>
-      {/* <TextFieldComp isdefault={true} label="Notes" /> */}
+
       <Stack direction="row" gap={3} justifyContent="center">
         <Button
           onClick={() => setType("Limit")}
@@ -24,7 +23,6 @@ const PositionClose = ({ triggerClose }) => {
               : { background: theme.palette.primary.dark }
           }
         >
-          {/* theme.palette.primary.main */}
           Limit
         </Button>
         <Button
