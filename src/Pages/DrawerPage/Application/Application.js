@@ -141,8 +141,15 @@ function Application() {
           ),
         },
         {
-          label: "3210/407",
+          label: "Waiting for Info",
           value: "5",
+          component: (
+            <OrderTable type="Additional Info" column={column} row={row} />
+          ),
+        },
+        {
+          label: "3210/407",
+          value: "6",
           component: <OrderTable type="3210/407" column={column} row={row} />,
         },
       ],
