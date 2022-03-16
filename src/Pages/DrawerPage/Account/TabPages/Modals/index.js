@@ -6,6 +6,7 @@ import StatusModel from "./StatusModel";
 import UnlinkModel from "./UnlinkModel";
 import ApplicationAccept from "./ApplicationAccept";
 import ApplicationReject from "./ApplicationReject";
+import PositionClose from "./PositionClose";
 
 export {
   BlacklistOption,
@@ -16,4 +17,5 @@ export {
   UnlinkModel,
   ApplicationAccept,
   ApplicationReject,
+  PositionClose,
 };
