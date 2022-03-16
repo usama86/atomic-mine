@@ -50,9 +50,9 @@ function Application() {
     {
       field: "decision",
       headerName: "Accept/Reject",
-      type: "actions",
+      // type: "actions",
       flex: 0.3,
-      getActions: (params) => {
+      renderCell: (params) => {
         return [
           <Modal
             closeDependancy={random}
