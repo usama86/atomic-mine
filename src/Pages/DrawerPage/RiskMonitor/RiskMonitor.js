@@ -101,9 +101,9 @@ const column = [
     flex: 1,
   },
   {
-    field: "read",
-    headerName: "Read",
-    flex: 0.2,
+    field: "reviewed",
+    headerName: "Reviewed",
+    flex: 1,
     renderCell: (params) => <Checkbox onlyCheckbox />,
   },
 ];
@@ -114,7 +114,7 @@ const row = [
     reason: "reversed",
     equity: "50%",
     nav: "$900",
-    read: "yes",
+    reviewed: "yes",
     date: "12/2/2025",
   },
   {
@@ -123,7 +123,7 @@ const row = [
     reason: "reversed",
     equity: "50%",
     nav: "$900",
-    read: "yes",
+    reviewed: "yes",
     date: "12/2/2025",
   },
   {
@@ -132,7 +132,7 @@ const row = [
     reason: "reversed",
     equity: "50%",
     nav: "$900",
-    read: "yes",
+    reviewed: "yes",
     date: "12/2/2025",
   },
 ];
