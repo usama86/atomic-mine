@@ -137,7 +137,7 @@ const getFields = (type) => {
       {
         field: "symbol",
         flex: 1,
-        headerName: "Symbol/Contract",
+        headerName: "Symbol",
       },
       {
         field: "place_time",
@@ -180,7 +180,7 @@ const getFields = (type) => {
       {
         field: "symbol",
         flex: 1,
-        headerName: "Symbol/Contract",
+        headerName: "Symbol",
       },
       {
         field: "place_time",
@@ -222,7 +222,7 @@ const getFields = (type) => {
       {
         field: "symbol",
         flex: 1,
-        headerName: "Symbol/Contract",
+        headerName: "Symbol",
       },
       {
         field: "place_time",
@@ -262,7 +262,7 @@ const getFields = (type) => {
       {
         field: "symbol",
         flex: 1,
-        headerName: "Symbol/Contract",
+        headerName: "Symbol",
       },
       {
         field: "place_time",
