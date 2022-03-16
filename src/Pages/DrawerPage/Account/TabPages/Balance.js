@@ -1,3 +1,4 @@
+import React from "react";
 import LabelChild from "./../../../../UI/LabelChild";
 import Grid from "./../../../../UI/Layout/Grid";
 import Card from "./../../../../UI/Card/Card";
@@ -12,11 +13,58 @@ import { useTheme } from "@emotion/react";
 
 import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
+import { PositionClose } from "./../../Account/TabPages/Modals/";
+import Modal from "../../../../UI/Modal/Modal";
 
 const Balance = () => {
   const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const [random, setRandom] = React.useState("");
+  const acceptHandler = () => {
+    setRandom(`${Math.random()}`);
+  };
+  const column = [
+    {
+      field: "stockposition",
+      headerName: "Stock Position",
+      flex: 1,
+    },
+    {
+      field: "daysToExpiration",
+      headerName: "Days to expiration",
+      flex: 1,
+    },
+    {
+      field: "costBasis",
+      headerName: "Cost Basis",
+      flex: 1,
+    },
+    {
+      field: "cmv",
+      headerName: "Current Market Value",
+      flex: 1,
+    },
+    {
+      field: "pl",
+      headerName: "P/L",
+      flex: 1,
+    },
+    {
+      field: "close-btn",
+      flex: 1,
+      headerName: "CLOSE",
+      renderCell: (params) => (
+        <Modal
+          closeDependancy={random}
+          content={<PositionClose triggerClose={acceptHandler} />}
+        >
+          <Button isdefault={true}>CLOSE</Button>
+        </Modal>
+      ),
+    },
+  ];
+
   return (
     <Stack spacing={2}>
       <Stack direction={matches ? "column" : "row"} spacing={2}>
@@ -98,55 +146,28 @@ const Balance = () => {
 
 export default Balance;
 
-const column = [
-  {
-    field: "stockposition",
-    headerName: "Stock Position",
-    flex: 1,
-  },
-  {
-    field: "datetoexpiry",
-    headerName: "Date to expiry",
-    flex: 1,
-  },
-  {
-    field: "costbases",
-    headerName: "Cost bases",
-    flex: 1,
-  },
-  {
-    field: "cmv",
-    headerName: "Current Market Value",
-    flex: 1,
-  },
-  {
-    field: "pl",
-    headerName: "P/L",
-    flex: 1,
-  },
-];
 const row = [
   {
     id: 0,
     stockposition: "hello",
-    datetoexpiry: "World",
-    costbases: "5$",
+    daysToExpiration: "World",
+    costBasis: "5$",
     cmv: "05-02-1990",
     pl: "05-02-1990",
   },
   {
     id: 1,
     stockposition: "hello1",
-    datetoexpiry: "World1",
-    costbases: "6$",
+    daysToExpiration: "World1",
+    costBasis: "6$",
     cmv: "05-02-1991",
     pl: "05-02-1993",
   },
   {
     id: 2,
     stockposition: "hello2",
-    datetoexpiry: "World2",
-    costbases: "7$",
+    daysToExpiration: "World2",
+    costBasis: "7$",
     cmv: "05-02-1992",
     pl: "05-02-1994",
   },

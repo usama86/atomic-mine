@@ -10,7 +10,7 @@ import SearchUser from "./../PageUtils/SearchUser";
 import OrderTable from "./../PageUtils/OrderTable";
 import Modal from "../../../UI/Modal/Modal";
 import { useSnackbar } from "notistack";
-
+import InfoApplication from "../Account/TabPages/Modals/InfoApplication";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import TableNoteField from "../../../UI/Table/TableNoteField";
@@ -19,17 +19,9 @@ import {
   ApplicationAccept,
   ApplicationReject,
 } from "./../Account/TabPages/Modals/";
-
+import { IoMdOpen } from "react-icons/io";
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
-  // const [searchVal, setSearchVal] = React.useState({
-  //   accountNumber: "",
-  //   contact: "",
-  //   email: "",
-  //   id: "",
-  //   name: "",
-  //   social: "",
-  // });
 
   const [value, setValue] = React.useState("1");
   const [random, setRandom] = React.useState("");
@@ -46,36 +38,57 @@ function Application() {
       field: "name",
       headerName: "Name",
       flex: 1,
+      renderCell: (params) => {
+        return (
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            sx={{ width: "100%" }}
+            alignItems="center"
+          >
+            {params.row.name}
+            <Modal content={<InfoApplication {...params.row} />}>
+              <IconButton>
+                <IoMdOpen />
+              </IconButton>
+            </Modal>
+          </Stack>
+        );
+      },
     },
     {
       field: "decision",
       headerName: "Accept/Reject",
-      type: "actions",
+      preventSearch: true,
       flex: 0.3,
-      getActions: (params) => {
-        return [
-          <Modal
-            closeDependancy={random}
-            content={<ApplicationAccept triggerClose={acceptHandler} />}
-          >
-            <IconButton>
-              <DoneIcon color="success" />
-            </IconButton>
-          </Modal>,
-          <Modal
-            closeDependancy={random}
-            content={<ApplicationReject triggerClose={acceptHandler} />}
-          >
-            <IconButton>
-              <CloseIcon color="error" />
-            </IconButton>
-          </Modal>,
-        ];
+      renderCell: (params) => {
+        return (
+          <>
+            <Modal
+              closeDependancy={random}
+              content={<ApplicationAccept triggerClose={acceptHandler} />}
+            >
+              <IconButton>
+                <DoneIcon color="success" />
+              </IconButton>
+            </Modal>
+
+            <Modal
+              closeDependancy={random}
+              content={<ApplicationReject triggerClose={acceptHandler} />}
+            >
+              <IconButton>
+                <CloseIcon color="error" />
+              </IconButton>
+            </Modal>
+          </>
+        );
       },
     },
     {
       field: "notes",
       headerName: "Notes",
+      preventSearch: true,
       flex: 0.8,
       renderCell: (params) => {
         return (
@@ -128,8 +141,15 @@ function Application() {
           ),
         },
         {
-          label: "3210/407",
+          label: "Waiting for Info",
           value: "5",
+          component: (
+            <OrderTable type="Additional Info" column={column} row={row} />
+          ),
+        },
+        {
+          label: "3210/407",
+          value: "6",
           component: <OrderTable type="3210/407" column={column} row={row} />,
         },
       ],
