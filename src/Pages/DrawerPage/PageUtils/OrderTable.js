@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 import Box from "../../../UI/Layout/Box";
-import Table from "../../../UI/Table/Table";
+import Table from "../../../UI/Table/SearchableTable";
 
 function Orders({ type, column, row }) {
   return (
     <>
-      {type}
       <Box sx={{ height: "20rem", width: "100%" }}>
         <Table columns={column} rows={row} />
       </Box>

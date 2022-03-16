@@ -49,6 +49,9 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
         components={{ Toolbar: Search }}
         componentsProps={{
           toolbar: {
+            style: {
+              height: "5rem",
+            },
             getCategory: getCategory,
             value: search,
             setValue: (e) => setSearch(e.target.value),
