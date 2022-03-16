@@ -24,10 +24,12 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
   React.useEffect(() => {
     let temp = [];
     columns.forEach((column) => {
-      temp.push({
-        accessor: column.field,
-        label: column.headerName || column.field,
-      });
+      if (!column.renderCell) {
+        temp.push({
+          accessor: column.field,
+          label: column.headerName || column.field,
+        });
+      }
     });
     setFields(temp);
   }, [columns]);
