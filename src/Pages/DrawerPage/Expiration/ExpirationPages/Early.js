@@ -12,11 +12,16 @@ import orders from "../../../../Constants/mock_data_expiration_autoLiquidation.j
 import Modal from "../../../../UI/Modal/Modal";
 import TextField from "../../../../UI/TextField/TextFieldComp";
 import DatePicker from "../../../../UI/Date/DatePickerComp";
+import { useSnackbar } from "notistack";
 
 export const AddNew = ({ setRandom }) => {
+  const { enqueueSnackbar } = useSnackbar();
   const [date, setDate] = React.useState(new Date());
   const clickBtnHandler = (e) => {
     setRandom(`${Math.random()}`);
+    enqueueSnackbar(`Added Successfully!`, {
+      variant: "success",
+    });
   };
   return (
     <Stack justifyContent="space-between" gap="16px" alignItems="center">

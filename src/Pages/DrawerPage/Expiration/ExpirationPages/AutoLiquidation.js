@@ -11,13 +11,18 @@ import Stack from "../../../../UI/Layout/Stack";
 import { getFields } from "./getFields";
 import orders from "../../../../Constants/mock_data_expiration_autoLiquidation.json";
 import Modal from "../../../../UI/Modal/Modal";
+import { useSnackbar } from "notistack";
 
 const ClosePositions = ({ setRandom }) => {
+  const { enqueueSnackbar } = useSnackbar();
   const [verify, setVerify] = React.useState(false);
   const clickBtnHandler = (e) => {
     setVerify((prevState) => !prevState);
     if (verify) {
       setRandom(`${Math.random()}`);
+      enqueueSnackbar(`Closed all positions successfully!`, {
+        variant: "success",
+      });
     }
   };
   return (
