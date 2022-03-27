@@ -6,9 +6,10 @@ import { Toolbar, List, ListItemIcon, ListItemText } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 // icons
 import { MdOutlineManageAccounts } from "react-icons/md";
-import { AiOutlineAppstore } from "react-icons/ai";
+import { AiOutlineAppstore, AiFillHourglass } from "react-icons/ai";
 import { DiAsterisk } from "react-icons/di";
 import { SiLogstash } from "react-icons/si";
+
 // styled components
 import {
   StyledDrawer,
@@ -68,6 +69,11 @@ export default function ClippedDrawer({
                 size={Constants.IconSize}
               />
             ) : index === 3 ? (
+              <AiFillHourglass
+                color={genNavLinkColor(text, drawerPage)}
+                size={Constants.IconSize}
+              />
+            ) : index === 4 ? (
               <SiLogstash
                 color={genNavLinkColor(text, drawerPage)}
                 size={Constants.IconSize}

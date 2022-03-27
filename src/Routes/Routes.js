@@ -8,6 +8,7 @@ import Account from "./../Pages/DrawerPage/Account/Account";
 import Application from "../Pages/DrawerPage/Application/Application";
 import RiskMonitor from "../Pages/DrawerPage/RiskMonitor/RiskMonitor";
 import AdminActivityLog from "../Pages/DrawerPage/Logs/AdminActivityLog";
+import Expiration from "../Pages/DrawerPage/Expiration/Expiration";
 
 export const ApplicationRoutes = ({
   getCurrentPath,
@@ -29,6 +30,7 @@ export const ApplicationRoutes = ({
         <Route path="account" element={<Account />} />
         <Route path="application" element={<Application />} />
         <Route path="riskmonitor" element={<RiskMonitor />} />
+        <Route path="exerciseexpiration" element={<Expiration />} />
         <Route path="logs" element={<AdminActivityLog />} />
       </Route>
       <Route path="*" element={<Navigate to="/" />} />
