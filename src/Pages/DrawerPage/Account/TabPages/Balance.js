@@ -10,7 +10,7 @@ import Box from "./../../../../UI/Layout/Box";
 import Button from "./../../../../UI/Button/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
-
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 import { PositionClose } from "./../../Account/TabPages/Modals/";
@@ -96,7 +96,20 @@ const Balance = () => {
               <LabelChild label={"Risk flag"}>33$</LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Good faith violation"}>22$</LabelChild>
+              <LabelChild
+                Icons
+                labelXsSize={10}
+                childrenXsSize={2}
+                label={"Good faith violation"}
+                sxChild={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "center",
+                }}
+              >
+                22$
+                <AiOutlineInfoCircle size={23} />
+              </LabelChild>
             </Grid>
 
             <Grid item xs={12}>
