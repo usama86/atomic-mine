@@ -31,6 +31,16 @@ const Balance = () => {
       flex: 1,
     },
     {
+      field: "underlying_price",
+      headerName: "Underlying Price",
+      flex: 0.5,
+    },
+    {
+      field: "quantity",
+      headerName: "Quantity",
+      flex: 0.5,
+    },
+    {
       field: "daysToExpiration",
       headerName: "Days to expiration",
       flex: 1,
@@ -162,6 +172,8 @@ export default Balance;
 const row = [
   {
     id: 0,
+    underlying_price: "4.00",
+    quantity: "8",
     stockposition: "hello",
     daysToExpiration: "World",
     costBasis: "5$",
@@ -170,6 +182,8 @@ const row = [
   },
   {
     id: 1,
+    underlying_price: "4.00",
+    quantity: "8",
     stockposition: "hello1",
     daysToExpiration: "World1",
     costBasis: "6$",
@@ -178,6 +192,8 @@ const row = [
   },
   {
     id: 2,
+    underlying_price: "4.00",
+    quantity: "8",
     stockposition: "hello2",
     daysToExpiration: "World2",
     costBasis: "7$",
