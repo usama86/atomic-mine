@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "quantity": "4",
     "symbol": "MNK",
     "executive_broker": "hello",
     "place_time": "10/19/2021",
@@ -12,6 +13,7 @@
   },
   {
     "id": 2,
+    "quantity": "4",
     "symbol": "RRGB",
     "executive_broker": "hello",
     "place_time": "5/14/2021",
@@ -23,6 +25,7 @@
   },
   {
     "id": 3,
+    "quantity": "4",
     "symbol": "OBLN",
     "executive_broker": "hello",
     "place_time": "11/13/2021",
@@ -34,6 +37,7 @@
   },
   {
     "id": 4,
+    "quantity": "4",
     "symbol": "AKRX",
     "executive_broker": "hello",
     "place_time": "3/4/2022",
@@ -45,6 +49,7 @@
   },
   {
     "id": 5,
+    "quantity": "4",
     "symbol": "TLP",
     "executive_broker": "hello",
     "place_time": "4/20/2021",
@@ -56,6 +61,7 @@
   },
   {
     "id": 6,
+    "quantity": "4",
     "symbol": "PLYAW",
     "executive_broker": "hello",
     "place_time": "5/26/2021",
@@ -67,6 +73,7 @@
   },
   {
     "id": 7,
+    "quantity": "4",
     "symbol": "AGO",
     "executive_broker": "hello",
     "place_time": "6/18/2021",
@@ -78,6 +85,7 @@
   },
   {
     "id": 8,
+    "quantity": "4",
     "symbol": "YECO",
     "executive_broker": "hello",
     "place_time": "6/17/2021",
@@ -89,6 +97,7 @@
   },
   {
     "id": 9,
+    "quantity": "4",
     "symbol": "WBAI",
     "executive_broker": "hello",
     "place_time": "9/5/2021",
@@ -100,6 +109,7 @@
   },
   {
     "id": 10,
+    "quantity": "4",
     "symbol": "GRVY",
     "executive_broker": "hello",
     "place_time": "7/29/2021",
@@ -111,6 +121,7 @@
   },
   {
     "id": 11,
+    "quantity": "4",
     "symbol": "NCS",
     "executive_broker": "hello",
     "place_time": "4/12/2021",
@@ -122,6 +133,7 @@
   },
   {
     "id": 12,
+    "quantity": "4",
     "symbol": "GCH",
     "executive_broker": "hello",
     "place_time": "5/7/2021",
@@ -133,6 +145,7 @@
   },
   {
     "id": 13,
+    "quantity": "4",
     "symbol": "PSA^Y",
     "executive_broker": "hello",
     "place_time": "3/13/2021",
@@ -144,6 +157,7 @@
   },
   {
     "id": 14,
+    "quantity": "4",
     "symbol": "CEL",
     "executive_broker": "hello",
     "place_time": "2/9/2022",
@@ -155,6 +169,7 @@
   },
   {
     "id": 15,
+    "quantity": "4",
     "symbol": "NTEST.C",
     "executive_broker": "hello",
     "place_time": "1/12/2022",
@@ -166,6 +181,7 @@
   },
   {
     "id": 16,
+    "quantity": "4",
     "symbol": "KN",
     "executive_broker": "hello",
     "place_time": "4/2/2021",
@@ -177,6 +193,7 @@
   },
   {
     "id": 17,
+    "quantity": "4",
     "symbol": "SCE^J",
     "executive_broker": "hello",
     "place_time": "3/3/2022",
@@ -188,6 +205,7 @@
   },
   {
     "id": 18,
+    "quantity": "4",
     "symbol": "CLRBZ",
     "executive_broker": "hello",
     "place_time": "4/3/2021",
@@ -199,6 +217,7 @@
   },
   {
     "id": 19,
+    "quantity": "4",
     "symbol": "DATA",
     "executive_broker": "hello",
     "place_time": "6/13/2021",
@@ -210,6 +229,7 @@
   },
   {
     "id": 20,
+    "quantity": "4",
     "symbol": "WIX",
     "executive_broker": "hello",
     "place_time": "10/14/2021",
@@ -221,6 +241,7 @@
   },
   {
     "id": 21,
+    "quantity": "4",
     "symbol": "JKHY",
     "executive_broker": "hello",
     "place_time": "11/6/2021",
@@ -232,6 +253,7 @@
   },
   {
     "id": 22,
+    "quantity": "4",
     "symbol": "ZEUS",
     "executive_broker": "hello",
     "place_time": "3/16/2021",

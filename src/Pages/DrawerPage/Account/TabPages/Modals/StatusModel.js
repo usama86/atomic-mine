@@ -6,11 +6,19 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
-const Status = ({ triggerClose }) => {
+const Status = ({ triggerClose, status, onChangeStatus }) => {
+  const onChange = (e) => {
+    console.log("hi");
+    onChangeStatus(e);
+  };
   return (
     <Stack gap={2}>
       <Typography variant="h6">Status</Typography>
-      <Checkbox Label="Freeze" />
+      <Checkbox
+        Label="Freeze"
+        onChange={onChange}
+        checked={status === "Active" ? false : true}
+      />
       <TextFieldComp isdefault={true} label="Notes" />
       <Stack direction="row" justifyContent="center">
         <Button

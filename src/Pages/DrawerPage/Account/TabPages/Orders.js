@@ -13,32 +13,10 @@ import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import Tabs from "./../../../../UI/Tabs/Tabs";
 import OrderTable from "./../../PageUtils/OrderTable";
-
 import orders from "../../../../Constants/mock_data_orders.json";
 
-// const fields = [
-//   { field: "symbol", flex: 0.5, headerName: "Symbol" },
-//   { field: "date", flex: 1, headerName: "Date" },
-// ];
-
 const Orders = () => {
-  // const [selectedRow, setSelectedRow] = React.useState({
-  //   date: "",
-  //   id: 0,
-  //   isCancelled: false,
-  //   isFilled: false,
-  //   isOpen: false,
-  //   isRejected: false,
-  //   symbol: "",
-  // });
   const [value, setValue] = React.useState("1");
-  // const { enqueueSnackbar } = useSnackbar();
-  // const selectOrderHandler = (e) => {
-  //   enqueueSnackbar(`Order ${e.row.symbol} selected!`, {
-  //     variant: "success",
-  //   });
-  //   setSelectedRow({ ...e.row });
-  // };
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -95,17 +73,6 @@ const Orders = () => {
   ];
   return (
     <Stack direction="column" alignItems="flex-start" gap={2}>
-      {/* <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <SearchableTable
-            selectRowHandler={selectOrderHandler}
-            rows={data}
-            columns={fields}
-          />
-        </Grid>
-      </Grid>
-      {selectedRow.symbol} */}
-      {/* {selectedRow.symbol && ( */}
       <Tabs value={value}>
         <>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -126,7 +93,6 @@ const Orders = () => {
           ))}
         </>
       </Tabs>
-      {/* )} */}
     </Stack>
   );
 };
@@ -138,6 +104,11 @@ const getFields = (type) => {
         field: "symbol",
         flex: 1,
         headerName: "Symbol",
+      },
+      {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
       },
       {
         field: "place_time",
@@ -183,6 +154,11 @@ const getFields = (type) => {
         headerName: "Symbol",
       },
       {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
+      },
+      {
         field: "place_time",
         flex: 1,
         headerName: "Place Time",
@@ -225,6 +201,11 @@ const getFields = (type) => {
         headerName: "Symbol",
       },
       {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
+      },
+      {
         field: "place_time",
         flex: 1,
         headerName: "Place Time",
@@ -263,6 +244,11 @@ const getFields = (type) => {
         field: "symbol",
         flex: 1,
         headerName: "Symbol",
+      },
+      {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
       },
       {
         field: "place_time",

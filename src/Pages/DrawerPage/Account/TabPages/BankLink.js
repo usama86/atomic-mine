@@ -12,6 +12,8 @@ import { useTheme } from "@emotion/react";
 import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 import { StatusModel, UnlinkModel } from "./Modals";
+import Typography from "../../../../UI/Typography/Typography";
+
 const BankLink = () => {
   const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
@@ -19,6 +21,7 @@ const BankLink = () => {
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const largeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
+  const [status, setStatus] = React.useState("Active");
   const [typographyVariant, setTypographyVariant] = React.useState("body");
   React.useEffect(() => {
     if (mediumScreen) {
@@ -37,6 +40,11 @@ const BankLink = () => {
     setRandom(`${Math.random()}`);
     enqueueSnackbar(Constants.Close_Modal_Success, { variant: "success" });
   };
+  const onChangeStatus = (e) => {
+    if (e.target.checked) setStatus("Frozen");
+    else setStatus("Active");
+  };
+
   return (
     <Stack direction="row" spacing={2}>
       <Card>
@@ -110,10 +118,17 @@ const BankLink = () => {
                 variant: typographyVariant,
               }}
             >
-              <Stack direction="row">
+              <Stack direction="row" sx={{ alignItems: "center" }}>
+                <Typography>{status}</Typography>
                 <Modal
                   closeDependancy={random}
-                  content={<StatusModel triggerClose={closeModalHandler} />}
+                  content={
+                    <StatusModel
+                      status={status}
+                      triggerClose={closeModalHandler}
+                      onChangeStatus={onChangeStatus}
+                    />
+                  }
                 >
                   <IconButton>
                     <FcSettings />

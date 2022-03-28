@@ -10,11 +10,39 @@ import Box from "./../../../../UI/Layout/Box";
 import Button from "./../../../../UI/Button/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
-
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 import { PositionClose } from "./../../Account/TabPages/Modals/";
+import Typography from "./../../../../UI/Typography/Typography";
 import Modal from "../../../../UI/Modal/Modal";
+import IconButton from "@mui/material/IconButton";
+import GFVData from "./../../../../Constants/mock_data_gfv.json";
+
+const GFVTableCols = [
+  {
+    field: "type",
+    headerName: "Type",
+    flex: 1,
+  },
+  {
+    field: "trade_date",
+    headerName: "Trade Date",
+    type: "date",
+    flex: 1,
+  },
+  {
+    field: "order",
+    headerName: "Order",
+    flex: 1,
+  },
+  {
+    field: "expires",
+    headerName: "Expires",
+    type: "date",
+    flex: 1,
+  },
+];
 
 const Balance = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -31,6 +59,16 @@ const Balance = () => {
       flex: 1,
     },
     {
+      field: "underlying_price",
+      headerName: "Underlying Price",
+      flex: 1,
+    },
+    {
+      field: "quantity",
+      headerName: "Quantity",
+      flex: 0.5,
+    },
+    {
       field: "daysToExpiration",
       headerName: "Days to expiration",
       flex: 1,
@@ -38,7 +76,7 @@ const Balance = () => {
     {
       field: "costBasis",
       headerName: "Cost Basis",
-      flex: 1,
+      flex: 0.5,
     },
     {
       field: "cmv",
@@ -48,7 +86,7 @@ const Balance = () => {
     {
       field: "pl",
       headerName: "P/L",
-      flex: 1,
+      flex: 0.5,
     },
     {
       field: "close-btn",
@@ -96,7 +134,33 @@ const Balance = () => {
               <LabelChild label={"Risk flag"}>33$</LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Good faith violation"}>22$</LabelChild>
+              <LabelChild
+                Icons
+                labelXsSize={10}
+                childrenXsSize={2}
+                label={"GFVs/Margin Calls"}
+                sxChild={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  alignItems: "center",
+                }}
+              >
+                22$
+                <Modal
+                  width="50vw"
+                  height="30vw"
+                  content={
+                    <>
+                      <Typography variant="h6">GFVs</Typography>
+                      <Table rows={GFVData} columns={GFVTableCols} />
+                    </>
+                  }
+                >
+                  <IconButton>
+                    <AiOutlineInfoCircle size={23} />
+                  </IconButton>
+                </Modal>
+              </LabelChild>
             </Grid>
 
             <Grid item xs={12}>
@@ -149,6 +213,8 @@ export default Balance;
 const row = [
   {
     id: 0,
+    underlying_price: "4.00",
+    quantity: "8",
     stockposition: "hello",
     daysToExpiration: "World",
     costBasis: "5$",
@@ -157,6 +223,8 @@ const row = [
   },
   {
     id: 1,
+    underlying_price: "4.00",
+    quantity: "8",
     stockposition: "hello1",
     daysToExpiration: "World1",
     costBasis: "6$",
@@ -165,6 +233,8 @@ const row = [
   },
   {
     id: 2,
+    underlying_price: "4.00",
+    quantity: "8",
     stockposition: "hello2",
     daysToExpiration: "World2",
     costBasis: "7$",
