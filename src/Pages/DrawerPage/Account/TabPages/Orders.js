@@ -13,7 +13,6 @@ import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import Tabs from "./../../../../UI/Tabs/Tabs";
 import OrderTable from "./../../PageUtils/OrderTable";
-
 import orders from "../../../../Constants/mock_data_orders.json";
 
 const Orders = () => {
@@ -107,6 +106,11 @@ const getFields = (type) => {
         headerName: "Symbol",
       },
       {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
+      },
+      {
         field: "place_time",
         flex: 0.7,
         headerName: "Place Time",
@@ -148,6 +152,11 @@ const getFields = (type) => {
         field: "symbol",
         flex: 1,
         headerName: "Symbol",
+      },
+      {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
       },
       {
         field: "place_time",
@@ -192,6 +201,11 @@ const getFields = (type) => {
         headerName: "Symbol",
       },
       {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
+      },
+      {
         field: "place_time",
         flex: 1,
         headerName: "Place Time",
@@ -230,6 +244,11 @@ const getFields = (type) => {
         field: "symbol",
         flex: 1,
         headerName: "Symbol",
+      },
+      {
+        field: "quantity",
+        flex: 0.6,
+        headerName: "Quantity",
       },
       {
         field: "place_time",

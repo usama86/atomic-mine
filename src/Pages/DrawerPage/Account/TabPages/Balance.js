@@ -15,6 +15,29 @@ import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 import { PositionClose } from "./../../Account/TabPages/Modals/";
 import Modal from "../../../../UI/Modal/Modal";
+import IconButton from "@mui/material/IconButton";
+import SearchTable from "./../../../../UI/Table/TableSearch";
+import GFVData from "./../../../../Constants/mock_data_gfv.json";
+
+const GFVTableCols = [
+  {
+    field: "order",
+    headerName: "Order",
+    flex: 1,
+  },
+  {
+    field: "trade-date",
+    headerName: "Trade Date",
+    type: "date",
+    flex: 1,
+  },
+  {
+    field: "expires",
+    headerName: "Expires",
+    type: "date",
+    flex: 1,
+  },
+];
 
 const Balance = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -118,7 +141,16 @@ const Balance = () => {
                 }}
               >
                 22$
-                <AiOutlineInfoCircle size={23} />
+                <Modal
+                  width="50vw"
+                  content={
+                    <SearchTable rows={GFVData} columns={GFVTableCols} />
+                  }
+                >
+                  <IconButton>
+                    <AiOutlineInfoCircle size={23} />
+                  </IconButton>
+                </Modal>
               </LabelChild>
             </Grid>
 
