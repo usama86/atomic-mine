@@ -7,26 +7,14 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 // const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 const CheckboxComp = ({ onlyCheckbox, Label, ...otherProps }) => {
-  const [checked, setChecked] = React.useState(false);
-
   return (
     <>
       {onlyCheckbox ? (
-        <Checkbox
-          {...otherProps}
-          checked={checked}
-          onChange={(e) => setChecked((prevState) => !prevState)}
-        />
+        <Checkbox {...otherProps} />
       ) : (
         <FormGroup>
           <FormControlLabel
-            control={
-              <Checkbox
-                {...otherProps}
-                checked={checked}
-                onChange={(e) => setChecked((prevState) => !prevState)}
-              />
-            }
+            control={<Checkbox {...otherProps} />}
             label={Label}
           />
         </FormGroup>

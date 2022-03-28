@@ -10,6 +10,7 @@ export default function BasicModal({
   content,
   width,
   closeDependancy,
+  height,
 }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -26,7 +27,7 @@ export default function BasicModal({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <StyledPaper width={width}>
+        <StyledPaper width={width} sx={height ? { height: height } : {}}>
           <Close>
             <IconButton onClick={handleClose}>
               <IoCloseOutline />

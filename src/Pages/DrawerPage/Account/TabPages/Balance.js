@@ -14,21 +14,26 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 import { PositionClose } from "./../../Account/TabPages/Modals/";
+import Typography from "./../../../../UI/Typography/Typography";
 import Modal from "../../../../UI/Modal/Modal";
 import IconButton from "@mui/material/IconButton";
-import SearchTable from "./../../../../UI/Table/TableSearch";
 import GFVData from "./../../../../Constants/mock_data_gfv.json";
 
 const GFVTableCols = [
   {
-    field: "order",
-    headerName: "Order",
+    field: "type",
+    headerName: "Type",
     flex: 1,
   },
   {
-    field: "trade-date",
+    field: "trade_date",
     headerName: "Trade Date",
     type: "date",
+    flex: 1,
+  },
+  {
+    field: "order",
+    headerName: "Order",
     flex: 1,
   },
   {
@@ -56,7 +61,7 @@ const Balance = () => {
     {
       field: "underlying_price",
       headerName: "Underlying Price",
-      flex: 0.5,
+      flex: 1,
     },
     {
       field: "quantity",
@@ -71,7 +76,7 @@ const Balance = () => {
     {
       field: "costBasis",
       headerName: "Cost Basis",
-      flex: 1,
+      flex: 0.5,
     },
     {
       field: "cmv",
@@ -81,7 +86,7 @@ const Balance = () => {
     {
       field: "pl",
       headerName: "P/L",
-      flex: 1,
+      flex: 0.5,
     },
     {
       field: "close-btn",
@@ -133,7 +138,7 @@ const Balance = () => {
                 Icons
                 labelXsSize={10}
                 childrenXsSize={2}
-                label={"Good faith violation"}
+                label={"GFVs/Margin Calls"}
                 sxChild={{
                   display: "flex",
                   justifyContent: "flex-end",
@@ -143,8 +148,12 @@ const Balance = () => {
                 22$
                 <Modal
                   width="50vw"
+                  height="30vw"
                   content={
-                    <SearchTable rows={GFVData} columns={GFVTableCols} />
+                    <>
+                      <Typography variant="h6">GFVs</Typography>
+                      <Table rows={GFVData} columns={GFVTableCols} />
+                    </>
                   }
                 >
                   <IconButton>
