@@ -14,8 +14,34 @@ import Tab from "@mui/material/Tab";
 import Tabs from "./../../../../UI/Tabs/Tabs";
 import OrderTable from "./../../PageUtils/OrderTable";
 import orders from "../../../../Constants/mock_data_orders.json";
+import { compareAsc } from "date-fns";
+import DateRangePicker from "../../../../UI/DateRangePicker/DateRangePicker";
 
 const Orders = () => {
+  const [data, setData] = React.useState([]);
+  React.useEffect(() => {
+    setData(orders);
+  }, []);
+  const datesHandler = (dates) => {
+    let temp = [...data];
+    if (dates) {
+      const filtered = temp.filter((each) => {
+        let consider_fillTime = new Date(each.fill_time);
+        let consider_placeTime = new Date(each.place_time);
+        const fillTimeTest =
+          compareAsc(consider_fillTime, dates[0]) === 1 &&
+          compareAsc(consider_fillTime, dates[1]) === -1;
+        const placeTimeTest =
+          compareAsc(consider_placeTime, dates[0]) === 1 &&
+          compareAsc(consider_placeTime, dates[1]) === -1;
+        return fillTimeTest || placeTimeTest;
+      });
+      setData([...filtered]);
+    }
+    if (!dates) {
+      setData(orders);
+    }
+  };
   const [value, setValue] = React.useState("1");
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -31,7 +57,7 @@ const Orders = () => {
             <OrderTable
               type={"Open"}
               column={getFields("Open")}
-              row={orders.filter((order) => order["status"] === "open")}
+              row={data.filter((order) => order["status"] === "open")}
             />
           ),
         },
@@ -42,7 +68,7 @@ const Orders = () => {
             <OrderTable
               type={"Filled"}
               column={getFields("Filled")}
-              row={orders.filter((order) => order["status"] === "filled")}
+              row={data.filter((order) => order["status"] === "filled")}
             />
           ),
         },
@@ -53,7 +79,7 @@ const Orders = () => {
             <OrderTable
               type={"Cancelled"}
               column={getFields("Cancelled")}
-              row={orders.filter((order) => order["status"] === "cancelled")}
+              row={data.filter((order) => order["status"] === "cancelled")}
             />
           ),
         },
@@ -64,7 +90,7 @@ const Orders = () => {
             <OrderTable
               type={"Rejected"}
               column={getFields("Rejected")}
-              row={orders.filter((order) => order["status"] === "rejected")}
+              row={data.filter((order) => order["status"] === "rejected")}
             />
           ),
         },
@@ -88,6 +114,7 @@ const Orders = () => {
           </Box>
           {TabsVal[0].controls.map((val, index) => (
             <TabPanel value={val.value} key={index}>
+              <DateRangePicker getDates={(e) => datesHandler(e)} />
               {val.component}
             </TabPanel>
           ))}

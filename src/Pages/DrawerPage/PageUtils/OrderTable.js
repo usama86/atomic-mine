@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import Box from "../../../UI/Layout/Box";
 import Table from "../../../UI/Table/SearchableTable";
-
 function Orders({ type, column, row }) {
   return (
     <>
