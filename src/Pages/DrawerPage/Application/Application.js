@@ -20,6 +20,8 @@ import {
   ApplicationReject,
 } from "./../Account/TabPages/Modals/";
 import { IoMdOpen } from "react-icons/io";
+import data from "../../../Constants/mock_data.json";
+
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
 
@@ -175,7 +177,7 @@ function Application() {
         >
           <Button>Select User</Button>
         </Modal> */}
-        <SearchUser getRow={selectRowHandler} />
+        <SearchUser data={data} getRow={selectRowHandler} />
       </Stack>
 
       <Tabs value={value}>

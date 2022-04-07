@@ -10,6 +10,7 @@ import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
 import { useSnackbar } from "notistack";
+import data from "../../../Constants/mock_data.json";
 
 function RiskMonitor() {
   const { enqueueSnackbar } = useSnackbar();
@@ -47,7 +48,7 @@ function RiskMonitor() {
   return (
     <Stack spacing={6}>
       <Stack direction="row" sx={{ width: "100%" }} gap={2}>
-        <SearchUser getRow={selectRowHandler} />
+        <SearchUser data={data} getRow={selectRowHandler} />
       </Stack>
 
       <Tabs value={value}>

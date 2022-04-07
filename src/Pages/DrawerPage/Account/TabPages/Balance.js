@@ -18,6 +18,7 @@ import Typography from "./../../../../UI/Typography/Typography";
 import Modal from "../../../../UI/Modal/Modal";
 import IconButton from "@mui/material/IconButton";
 import GFVData from "./../../../../Constants/mock_data_gfv.json";
+import Api from "../../../../Services/Api";
 
 const GFVTableCols = [
   {
@@ -44,14 +45,37 @@ const GFVTableCols = [
   },
 ];
 
-const Balance = () => {
+const Balance = (ssn) => {
   const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [random, setRandom] = React.useState("");
+  const [balanceData, setBalanceData] = React.useState({
+    id: "",
+    account: "",
+    market_value: ".93",
+    unsettled_cash: "",
+    settled_cash: "",
+    provisional_cash: "",
+    pending_deposit: "",
+    temp_cash_withheld: "",
+    buying_power: "",
+    net_acct_value: "",
+    gross_acct_value: "",
+    amt_of_unsettled_cash_used_to_fund_new_long_positions: "",
+  });
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
+
+  React.useEffect(() => {
+    async function fetchData() {
+      let getBalanceData = await Api.getBalance(ssn);
+      console.log(getBalanceData);
+      setBalanceData(getBalanceData.data.data);
+    }
+    fetchData();
+  }, [ssn]);
   const column = [
     {
       field: "stockposition",
@@ -109,22 +133,54 @@ const Balance = () => {
         <Card>
           <Grid sx={{ padding: "1rem" }} spacing={4} container>
             <Grid item container xs={12}>
-              <LabelChild label={"Net account value"}>2$</LabelChild>
+              <LabelChild
+                label={"Net account value"}
+                labelXsSize={9}
+                childrenXsSize={3}
+              >
+                {balanceData.net_acct_value}$
+              </LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Buying Power"}>3$</LabelChild>
+              <LabelChild
+                label={"Buying Power"}
+                labelXsSize={9}
+                childrenXsSize={3}
+              >
+                {balanceData.buying_power}$
+              </LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Settled"}>7$</LabelChild>
+              <LabelChild label={"Settled"} labelXsSize={9} childrenXsSize={3}>
+                {balanceData.settled_cash}$
+              </LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Unsettled"}>9$</LabelChild>
+              <LabelChild
+                label={"Unsettled"}
+                labelXsSize={9}
+                childrenXsSize={3}
+              >
+                {balanceData.unsettled_cash}$
+              </LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Pending deposit"}>15$</LabelChild>
+              <LabelChild
+                label={"Pending deposit"}
+                labelXsSize={9}
+                childrenXsSize={3}
+              >
+                {balanceData.pending_deposit}$
+              </LabelChild>
             </Grid>
             <Grid item container xs={12}>
-              <LabelChild label={"Provisional Cash"}>22$</LabelChild>
+              <LabelChild
+                label={"Provisional Cash"}
+                labelXsSize={9}
+                childrenXsSize={3}
+              >
+                {balanceData.provisional_cash}$
+              </LabelChild>
             </Grid>
           </Grid>
         </Card>
