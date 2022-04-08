@@ -5,7 +5,6 @@ import Table from "../../../UI/Table/TableWithGlobalFiltering";
 // import data from "../../../Constants/mock_data.json";
 
 const SearchUser = ({ getRow, data }) => {
-  console.log(data);
   const getFullName = (params) => {
     return `${params.row.kyc_info.first_name || ""} ${
       params.row.kyc_info.last_name || ""
@@ -60,7 +59,7 @@ const SearchUser = ({ getRow, data }) => {
         selectRowHandler={(e) => getRow(e)}
         rows={data}
         columns={fields}
-        rowID
+        rowID={"ssn"}
       />
     </Stack>
   );

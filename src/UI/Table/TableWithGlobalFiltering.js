@@ -1,6 +1,5 @@
 import React from "react";
 import Box from "../Layout/Box";
-import { DataGrid } from "@mui/x-data-grid";
 import SearchIcon from "@mui/icons-material/Search";
 import TextField from "../TextField/TextFieldComp";
 import IconButton from "@mui/material/IconButton";
@@ -57,7 +56,7 @@ function QuickSearchToolbar(props) {
   );
 }
 
-const Test = ({ rows, columns, height, selectRowHandler, rowID }) => {
+const Table = ({ rows, columns, selectRowHandler, rowID }) => {
   const [data, setData] = React.useState([]);
   const [searchText, setSearchText] = React.useState("");
   const requestSearch = (searchValue) => {
@@ -71,6 +70,8 @@ const Test = ({ rows, columns, height, selectRowHandler, rowID }) => {
     setData(filteredRows);
   };
   React.useEffect(() => {
+    console.log(rows);
+    console.log(rowID);
     setData(rows);
   }, [rows]);
   return (
@@ -86,11 +87,11 @@ const Test = ({ rows, columns, height, selectRowHandler, rowID }) => {
           },
         }}
         columns={columns}
-        getRowId={(row) => (rowID ? row.ssn : row.id)}
+        getRowId={(row) => row[rowID]}
         isRowSelectable={(params) => selectRowHandler(params)}
       />
     </Box>
   );
 };
 
-export default Test;
+export default Table;
