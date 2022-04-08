@@ -1,17 +1,10 @@
 import PropTypes from "prop-types";
 import Typography from "./Typography/Typography";
-import Grid from "./Layout/Grid";
+
 import Stack from "./Layout/Stack";
 import Box from "./Layout/Box";
 
-const LabelChild = ({
-  label,
-  labelXsSize,
-  childrenXsSize,
-  sxChild,
-  children,
-  typographyProps,
-}) => {
+const LabelChild = ({ label, sxChild, children, typographyProps }) => {
   return (
     <Stack
       sx={{ width: "100%" }}
