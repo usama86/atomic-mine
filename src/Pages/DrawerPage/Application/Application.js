@@ -20,7 +20,7 @@ import {
   ApplicationReject,
 } from "./../Account/TabPages/Modals/";
 import { IoMdOpen } from "react-icons/io";
-import data from "../../../Constants/mock_data.json";
+import data from "../../../Constants/mock_data_from_1.json";
 
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
@@ -167,6 +167,7 @@ function Application() {
       variant: "success",
     });
   };
+  console.log(data);
   return (
     <Stack spacing={6}>
       <Stack direction="row" sx={{ width: "100%" }} gap={2}>

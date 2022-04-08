@@ -10,7 +10,7 @@ import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
 import { useSnackbar } from "notistack";
-import data from "../../../Constants/mock_data.json";
+import data from "../../../Constants/mock_data_from_1.json";
 
 function RiskMonitor() {
   const { enqueueSnackbar } = useSnackbar();
