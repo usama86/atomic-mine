@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../../../../UI/Table/SearchableTable";
+import Table from "../../../../UI/Table/TableWithGlobalFiltering";
 import data from "../../../../Constants/mock_funds_data.json";
 import Card from "../../../../UI/Card/Card";
 
@@ -41,7 +41,7 @@ const fields = [
 const Funds = () => {
   return (
     <Card>
-      <Table rows={data} columns={fields} />
+      <Table rowID="id" rows={data} columns={fields} />
     </Card>
   );
 };

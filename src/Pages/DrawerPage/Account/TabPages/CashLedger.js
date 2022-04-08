@@ -1,5 +1,5 @@
 import React from "react";
-import Table from "../../../../UI/Table/SearchableTable";
+import Table from "../../../../UI/Table/TableWithGlobalFiltering";
 import Card from "../../../../UI/Card/Card";
 
 const fields = [
@@ -77,7 +77,7 @@ const data = [
 const CashLedger = () => {
   return (
     <Card>
-      <Table rows={data} columns={fields} />
+      <Table rowID="id" rows={data} columns={fields} />
     </Card>
   );
 };
