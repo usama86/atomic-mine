@@ -70,8 +70,6 @@ const Table = ({ rows, columns, selectRowHandler, rowID }) => {
     setData(filteredRows);
   };
   React.useEffect(() => {
-    console.log(rows);
-    console.log(rowID);
     setData(rows);
   }, [rows]);
   return (

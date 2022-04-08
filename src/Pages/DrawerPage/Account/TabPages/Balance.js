@@ -71,7 +71,6 @@ const Balance = (ssn) => {
   React.useEffect(() => {
     async function fetchData() {
       let getBalanceData = await Api.getBalance(ssn);
-      console.log(getBalanceData);
       setBalanceData(getBalanceData.data.data);
     }
     fetchData();
