@@ -49,7 +49,6 @@ const EditableTable = ({ rows, columns, height, selectRowHandler, rowID }) => {
     <div style={{ height: height, width: "100%", padding: "0.4rem" }}>
       <StyledTable
         isRowSelectable={(params) => selectRowHandler(params)}
-        sx={{}}
         getRowId={(row) => (rowID ? row.ssn : row.id)}
         components={{ Toolbar: Search }}
         componentsProps={{

@@ -1,10 +1,11 @@
 import React from "react";
 import Stack from "../../../UI/Layout/Stack";
-import Table from "../../../UI/Table/SearchableTable";
 import Typography from "../../../UI/Typography/Typography";
+import Table from "../../../UI/Table/TableWithGlobalFiltering";
 // import data from "../../../Constants/mock_data.json";
 
 const SearchUser = ({ getRow, data }) => {
+  console.log(data);
   const getFullName = (params) => {
     return `${params.row.kyc_info.first_name || ""} ${
       params.row.kyc_info.last_name || ""
