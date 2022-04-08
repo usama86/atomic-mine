@@ -93,3 +93,15 @@ const Table = ({ rows, columns, selectRowHandler, rowID }) => {
 };
 
 export default Table;
+
+Table.defaultProps = {
+  rows: [{ id: 0, first: "first", second: "second" }],
+  columns: [
+    { field: "first", headerName: "First" },
+    { field: "second", headerName: "Second" },
+  ],
+  selectRowHandler: (e) => {
+    console.log(e, "no props given");
+  },
+  rowID: "id",
+};
