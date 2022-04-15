@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const baseUrl = "http://54.147.249.123:8000";
+const baseUrl = "http://44.194.15.240:8000";
 
 const api = {
   getApprovedAccount: () => {
