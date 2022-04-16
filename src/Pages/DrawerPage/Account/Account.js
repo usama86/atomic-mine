@@ -69,7 +69,8 @@ function Account() {
   };
   const selectRowHandler = (e) => {
     setSearchVal(e.row);
-    enqueueSnackbar(`Selected user ${e.row.name}`, {
+    console.log(e.row);
+    enqueueSnackbar(`Selected user ${e.row.ssn} - ${e.row.username}`, {
       variant: "success",
     });
   };
