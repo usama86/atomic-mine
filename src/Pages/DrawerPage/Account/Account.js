@@ -6,6 +6,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import SearchUser from "./../PageUtils/SearchUser";
+import Typography from "./../../../UI/Typography/Typography";
 //AccountPages
 import Balance from "./TabPages/Balance";
 import RiskManagement from "./TabPages/RiskManagement";
@@ -79,6 +80,9 @@ function Account() {
       <Stack direction="row" gap={2} sx={{ width: "100%" }}>
         <SearchUser data={data} getRow={selectRowHandler} />
       </Stack>
+      <Typography variant="h5">
+        {searchVal.ssn} - {searchVal.username?.toUpperCase()}
+      </Typography>
       {searchVal.accountNumber !== "" ? (
         <Tabs value={value}>
           <>

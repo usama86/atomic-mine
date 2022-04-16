@@ -86,7 +86,10 @@ const Table = ({ rows, columns, selectRowHandler, rowID }) => {
         }}
         columns={columns}
         getRowId={(row) => row[rowID]}
-        isRowSelectable={(params) => selectRowHandler(params)}
+        isRowSelectable={(params) => {
+          console.log(params);
+          selectRowHandler(params);
+        }}
       />
     </Box>
   );

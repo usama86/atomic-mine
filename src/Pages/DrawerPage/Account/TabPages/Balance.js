@@ -74,16 +74,18 @@ const Balance = (ssn) => {
     setRandom(`${Math.random()}`);
   };
 
+  const fetchData = async () => {
+    let getBalanceData = await Api.getBalance(ssn);
+    setBalanceData(getBalanceData.data.data);
+    let getNotes = await Api.getNotes(ssn);
+    setAllNotes(getNotes.data.result);
+    let getPosition = await Api.ViewPositions(ssn);
+  };
+
   React.useEffect(() => {
-    async function fetchData() {
-      let getBalanceData = await Api.getBalance(ssn);
-      setBalanceData(getBalanceData.data.data);
-      let getNotes = await Api.getNotes(ssn);
-      setAllNotes(getNotes.data.result);
-      let getPosition = await Api.ViewPositions(ssn);
-    }
     fetchData();
   }, [ssn]);
+
   const column = [
     {
       field: "stockposition",
@@ -226,18 +228,17 @@ const Balance = (ssn) => {
                 </Modal>
               </LabelChild>
             </Grid>
-
             <Grid item xs={12}>
               <TextField
                 label="Notes"
                 fullWidth
                 size="small"
                 variant="outlined"
-                //isdefault={true}
+                // isdefault={true}
                 value={notes}
                 onChange={(e) => {
+                  console.log(e.target.value);
                   setNotes(e.target.value);
-                  console.log(notes);
                 }}
               />
             </Grid>
@@ -274,6 +275,9 @@ const Balance = (ssn) => {
                       enqueueSnackbar(postNotes.data.result.msg, {
                         variant: "success",
                       });
+
+                      // add get request
+                      fetchData();
                     } else
                       enqueueSnackbar(Constants.Save_Changes_Failed, {
                         variant: "error",
