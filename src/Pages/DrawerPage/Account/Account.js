@@ -71,9 +71,12 @@ function Account() {
   const selectRowHandler = (e) => {
     setSearchVal(e.row);
     console.log(e.row);
-    enqueueSnackbar(`Selected user ${e.row.ssn} - ${e.row.username}`, {
-      variant: "success",
-    });
+    enqueueSnackbar(
+      `Selected user ${e.row.ssn} - ${e.row.kyc_info?.first_name} ${e.row.kyc_info?.last_name}`,
+      {
+        variant: "success",
+      }
+    );
   };
   return (
     <Stack spacing={6}>
@@ -81,7 +84,8 @@ function Account() {
         <SearchUser data={data} getRow={selectRowHandler} />
       </Stack>
       <Typography variant="h5">
-        {searchVal.ssn} - {searchVal.username?.toUpperCase()}
+        {searchVal.ssn} - {searchVal.kyc_info?.first_name.toUpperCase()}{" "}
+        {searchVal.kyc_info?.last_name.toUpperCase()}
       </Typography>
       {searchVal.accountNumber !== "" ? (
         <Tabs value={value}>

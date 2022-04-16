@@ -271,12 +271,10 @@ const Balance = (ssn) => {
                 variant="outlined"
                 value={notes}
                 onChange={(e) => {
-                  // console.log(e.target.value);
                   setNotes(e.target.value);
                 }}
               />
             </Grid>
-
             <Grid item xs={12}>
               <Stack direction="row">
                 <Stack sx={{ flexGrow: 1 }}>
@@ -306,8 +304,6 @@ const Balance = (ssn) => {
                         enqueueSnackbar(postNotes.data.result.msg, {
                           variant: "success",
                         });
-
-                        // add get request
                         fetchData();
                       } else
                         enqueueSnackbar(Constants.Save_Changes_Failed, {
@@ -332,7 +328,7 @@ const Balance = (ssn) => {
   );
 };
 
-export default Balance;
+export default React.memo(Balance);
 
 const row = [
   {

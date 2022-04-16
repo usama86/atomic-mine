@@ -7,7 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 // import Avatar from '@mui/material/Avatar';
 import Typography from "@mui/material/Typography";
 
-export default function AlignItemsList({ data, height }) {
+const AlignItemsList = ({ data, height }) => {
   return (
     <List
       sx={{
@@ -50,4 +50,6 @@ export default function AlignItemsList({ data, height }) {
       })}
     </List>
   );
-}
+};
+
+export default React.memo(AlignItemsList);
