@@ -35,8 +35,8 @@ const api = {
   getBidAsk: (val) => {
     return Axios.get(`${baseUrl}/GetBidAsk/${val}`);
   },
-  getOrdersFilled: (val) => {
-    let data = Axios.get(`${baseUrl}/GetOrders/filled`, {
+  getOrdersFilled: async (val) => {
+    let data = await Axios.get(`${baseUrl}/GetOrders/filled`, {
       headers: {
         account: val.ssn,
       },
@@ -44,8 +44,8 @@ const api = {
     let finalObj = data.data.data.stocks.concat(data.data.data.options);
     return finalObj;
   },
-  getOrdersPending: (val) => {
-    let data = Axios.get(`${baseUrl}/GetOrders/pending`, {
+  getOrdersPending: async (val) => {
+    let data = await Axios.get(`${baseUrl}/GetOrders/pending`, {
       headers: {
         account: val.ssn,
       },
@@ -53,8 +53,8 @@ const api = {
     let finalObj = data.data.data.stocks.concat(data.data.data.options);
     return finalObj;
   },
-  getOrdersCancelled: (val) => {
-    let data = Axios.get(`${baseUrl}/GetOrders/canceled`, {
+  getOrdersCancelled: async (val) => {
+    let data = await Axios.get(`${baseUrl}/GetOrders/canceled`, {
       headers: {
         account: val.ssn,
       },
@@ -62,8 +62,8 @@ const api = {
     let finalObj = data.data.data.stocks.concat(data.data.data.options);
     return finalObj;
   },
-  getOrdersRejected: (val) => {
-    let data = Axios.get(`${baseUrl}/GetOrders/rejected`, {
+  getOrdersRejected: async (val) => {
+    let data = await Axios.get(`${baseUrl}/GetOrders/rejected`, {
       headers: {
         account: val.ssn,
       },
