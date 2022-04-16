@@ -14,7 +14,7 @@ export default function AlignItemsList({ data, height }) {
         width: "100%",
         maxWidth: 360,
         height: "249px",
-        overflowY: "scroll",
+        overflowY: "auto",
         bgcolor: "background.paper",
       }}
     >
