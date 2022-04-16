@@ -277,52 +277,49 @@ const Balance = (ssn) => {
                 }}
               />
             </Grid>
-            <Grid item container xs={12}>
-              <Stack sx={{ width: "50%" }}>
-                <List data={allNotes} />
-              </Stack>
-              <Stack
-                sx={{ width: "50%" }}
-                justifyContent="flex-end"
-                direction="row"
-                gap="1rem"
-              >
-                <UploadButton
-                  sx={{ color: "white" }}
-                  size="small"
-                  labelStyle={{ alignSelf: "flex-end", margin: 0 }}
-                />
-                <Button
-                  onClick={async (e) => {
-                    e.preventDefault();
-                    if (notes === "") {
-                      enqueueSnackbar("Please type something in notes", {
-                        variant: "error",
+            <Grid item xs={12}>
+              <Stack direction="row">
+                <Stack sx={{ flexGrow: 1 }}>
+                  <List data={allNotes} />
+                </Stack>
+                <Stack justifyContent="flex-end" direction="row" gap="1rem">
+                  <UploadButton
+                    sx={{ color: "white" }}
+                    size="small"
+                    labelStyle={{ alignSelf: "flex-end", margin: 0 }}
+                  />
+                  <Button
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      if (notes === "") {
+                        enqueueSnackbar("Please type something in notes", {
+                          variant: "error",
+                        });
+                        return;
+                      }
+                      let postNotes = await Api.addNote({
+                        account: ssn.ssn,
+                        body: notes,
                       });
-                      return;
-                    }
-                    let postNotes = await Api.addNote({
-                      account: ssn.ssn,
-                      body: notes,
-                    });
-                    if (postNotes.data.result.success) {
-                      setNotes("");
-                      enqueueSnackbar(postNotes.data.result.msg, {
-                        variant: "success",
-                      });
+                      if (postNotes.data.result.success) {
+                        setNotes("");
+                        enqueueSnackbar(postNotes.data.result.msg, {
+                          variant: "success",
+                        });
 
-                      // add get request
-                      fetchData();
-                    } else
-                      enqueueSnackbar(Constants.Save_Changes_Failed, {
-                        variant: "error",
-                      });
-                  }}
-                  sx={{ color: "white", alignSelf: "flex-end", margin: 0 }}
-                  size="small"
-                >
-                  Save
-                </Button>
+                        // add get request
+                        fetchData();
+                      } else
+                        enqueueSnackbar(Constants.Save_Changes_Failed, {
+                          variant: "error",
+                        });
+                    }}
+                    sx={{ color: "white", alignSelf: "flex-end", margin: 0 }}
+                    size="small"
+                  >
+                    Save
+                  </Button>
+                </Stack>
               </Stack>
             </Grid>
           </Grid>
