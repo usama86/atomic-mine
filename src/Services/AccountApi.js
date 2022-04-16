@@ -32,5 +32,44 @@ const api = {
     let finalObj = data.data.data.stocks.concat(data.data.data.options);
     return finalObj;
   },
+  getBidAsk: (val) => {
+    return Axios.get(`${baseUrl}/GetBidAsk/${val}`);
+  },
+  getOrdersFilled: (val) => {
+    let data = Axios.get(`${baseUrl}/GetOrders/filled`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let finalObj = data.data.data.stocks.concat(data.data.data.options);
+    return finalObj;
+  },
+  getOrdersPending: (val) => {
+    let data = Axios.get(`${baseUrl}/GetOrders/pending`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let finalObj = data.data.data.stocks.concat(data.data.data.options);
+    return finalObj;
+  },
+  getOrdersCancelled: (val) => {
+    let data = Axios.get(`${baseUrl}/GetOrders/canceled`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let finalObj = data.data.data.stocks.concat(data.data.data.options);
+    return finalObj;
+  },
+  getOrdersRejected: (val) => {
+    let data = Axios.get(`${baseUrl}/GetOrders/rejected`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let finalObj = data.data.data.stocks.concat(data.data.data.options);
+    return finalObj;
+  },
 };
 export default api;

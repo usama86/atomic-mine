@@ -82,6 +82,7 @@ const Balance = (ssn) => {
     let getNotes = await Api.getNotes(ssn);
     setAllNotes(getNotes.data.result);
     let getPosition = await Api.ViewPositions(ssn);
+    setPosition(getPosition);
   };
 
   React.useEffect(() => {
@@ -158,7 +159,12 @@ const Balance = (ssn) => {
       renderCell: (params) => (
         <Modal
           closeDependancy={random}
-          content={<PositionClose triggerClose={acceptHandler} />}
+          content={
+            <PositionClose
+              triggerClose={acceptHandler}
+              ticker={params.row.ticker}
+            />
+          }
         >
           <Button isdefault={true}>CLOSE</Button>
         </Modal>
