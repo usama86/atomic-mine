@@ -19,7 +19,7 @@ import PersonalInfo from "./TabPages/PersonalInfo";
 import Alert from "../../../UI/Alert/Alert";
 import { useSnackbar } from "notistack";
 // import data from "../../../Constants/mock_data.json";
-import Api from "../../../Services/Api";
+import Api from "../../../Services/AccountApi";
 
 function Account() {
   const { enqueueSnackbar } = useSnackbar();

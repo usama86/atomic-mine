@@ -15,10 +15,11 @@ import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 import { PositionClose } from "./../../Account/TabPages/Modals/";
 import Typography from "./../../../../UI/Typography/Typography";
+import List from "./../../../../UI/List/List";
 import Modal from "../../../../UI/Modal/Modal";
 import IconButton from "@mui/material/IconButton";
 import GFVData from "./../../../../Constants/mock_data_gfv.json";
-import Api from "../../../../Services/Api";
+import Api from "../../../../Services/AccountApi";
 
 const GFVTableCols = [
   {
@@ -64,6 +65,11 @@ const Balance = (ssn) => {
     gross_acct_value: "",
     amt_of_unsettled_cash_used_to_fund_new_long_positions: "",
   });
+
+  const [notes, setNotes] = React.useState("");
+
+  const [allNotes, setAllNotes] = React.useState([]);
+
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
@@ -72,6 +78,9 @@ const Balance = (ssn) => {
     async function fetchData() {
       let getBalanceData = await Api.getBalance(ssn);
       setBalanceData(getBalanceData.data.data);
+      let getNotes = await Api.getNotes(ssn);
+      setAllNotes(getNotes.data.result);
+      let getPosition = await Api.ViewPositions(ssn);
     }
     fetchData();
   }, [ssn]);
@@ -224,12 +233,20 @@ const Balance = (ssn) => {
                 fullWidth
                 size="small"
                 variant="outlined"
-                isdefault={true}
+                //isdefault={true}
+                value={notes}
+                onChange={(e) => {
+                  setNotes(e.target.value);
+                  console.log(notes);
+                }}
               />
             </Grid>
             <Grid item container xs={12}>
+              <Stack sx={{ width: "50%" }}>
+                <List data={allNotes} />
+              </Stack>
               <Stack
-                sx={{ width: "100%" }}
+                sx={{ width: "50%" }}
                 justifyContent="flex-end"
                 direction="row"
                 gap="1rem"
@@ -240,13 +257,29 @@ const Balance = (ssn) => {
                   labelStyle={{ alignSelf: "flex-end", margin: 0 }}
                 />
                 <Button
-                  onClick={(e) => {
+                  onClick={async (e) => {
                     e.preventDefault();
-                    enqueueSnackbar(Constants.Save_Changes_Success, {
-                      variant: "success",
+                    if (notes === "") {
+                      enqueueSnackbar("Please type something in notes", {
+                        variant: "error",
+                      });
+                      return;
+                    }
+                    let postNotes = await Api.addNote({
+                      account: ssn.ssn,
+                      body: notes,
                     });
+                    if (postNotes.data.result.success) {
+                      setNotes("");
+                      enqueueSnackbar(postNotes.data.result.msg, {
+                        variant: "success",
+                      });
+                    } else
+                      enqueueSnackbar(Constants.Save_Changes_Failed, {
+                        variant: "error",
+                      });
                   }}
-                  sx={{ color: "white" }}
+                  sx={{ color: "white", alignSelf: "flex-end", margin: 0 }}
                   size="small"
                 >
                   Save
