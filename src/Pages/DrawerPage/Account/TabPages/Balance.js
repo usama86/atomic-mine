@@ -5,7 +5,7 @@ import Card from "./../../../../UI/Card/Card";
 import Stack from "./../../../../UI/Layout/Stack";
 import TextField from "./../../../../UI/TextField/TextFieldComp";
 import UploadButton from "./../../../../UI/UploadButton/UploadButton";
-import Table from "./../../../../UI/Table/Table";
+import Table from "./../../../../UI/Table/TableWithGlobalFiltering";
 import Box from "./../../../../UI/Layout/Box";
 import Button from "./../../../../UI/Button/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -323,7 +323,7 @@ const Balance = (ssn) => {
         </Card>
       </Stack>
       <Box sx={{ height: "20rem" }}>
-        <Table columns={column} rows={position} />
+        <Table columns={column} rows={position} rowID="ticker" />
       </Box>
     </Stack>
   );
