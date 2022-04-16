@@ -3,23 +3,19 @@ import LabelChild from "./../../../../UI/LabelChild";
 import Grid from "./../../../../UI/Layout/Grid";
 import Card from "./../../../../UI/Card/Card";
 import Stack from "./../../../../UI/Layout/Stack";
-import TextField from "./../../../../UI/TextField/TextFieldComp";
-import UploadButton from "./../../../../UI/UploadButton/UploadButton";
 import Table from "./../../../../UI/Table/TableWithGlobalFiltering";
 import Box from "./../../../../UI/Layout/Box";
 import Button from "./../../../../UI/Button/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { useSnackbar } from "notistack";
-import Constants from "../../../../Constants/Constants";
 import { PositionClose } from "./../../Account/TabPages/Modals/";
 import Typography from "./../../../../UI/Typography/Typography";
-import List from "./../../../../UI/List/List";
 import Modal from "../../../../UI/Modal/Modal";
 import IconButton from "@mui/material/IconButton";
 import GFVData from "./../../../../Constants/mock_data_gfv.json";
 import Api from "../../../../Services/AccountApi";
+import AddNotes from "./AddNotes";
 
 const GFVTableCols = [
   {
@@ -47,7 +43,6 @@ const GFVTableCols = [
 ];
 
 const Balance = (ssn) => {
-  const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [random, setRandom] = React.useState("");
@@ -66,10 +61,6 @@ const Balance = (ssn) => {
     amt_of_unsettled_cash_used_to_fund_new_long_positions: "",
   });
 
-  const [notes, setNotes] = React.useState("");
-
-  const [allNotes, setAllNotes] = React.useState([]);
-
   const [position, setPosition] = React.useState([]);
 
   const acceptHandler = () => {
@@ -79,8 +70,6 @@ const Balance = (ssn) => {
   const fetchData = async () => {
     let getBalanceData = await Api.getBalance(ssn);
     setBalanceData(getBalanceData.data.data);
-    let getNotes = await Api.getNotes(ssn);
-    setAllNotes(getNotes.data.result);
     let getPosition = await Api.ViewPositions(ssn);
     setPosition(getPosition);
   };
@@ -263,61 +252,7 @@ const Balance = (ssn) => {
                 </Modal>
               </LabelChild>
             </Grid>
-            <Grid item xs={12}>
-              <TextField
-                label="Notes"
-                fullWidth
-                size="small"
-                variant="outlined"
-                value={notes}
-                onChange={(e) => {
-                  setNotes(e.target.value);
-                }}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Stack direction="row">
-                <Stack sx={{ flexGrow: 1 }}>
-                  <List data={allNotes} />
-                </Stack>
-                <Stack justifyContent="flex-end" direction="row" gap="1rem">
-                  <UploadButton
-                    sx={{ color: "white" }}
-                    size="small"
-                    labelStyle={{ alignSelf: "flex-end", margin: 0 }}
-                  />
-                  <Button
-                    onClick={async (e) => {
-                      e.preventDefault();
-                      if (notes === "") {
-                        enqueueSnackbar("Please type something in notes", {
-                          variant: "error",
-                        });
-                        return;
-                      }
-                      let postNotes = await Api.addNote({
-                        account: ssn.ssn,
-                        body: notes,
-                      });
-                      if (postNotes.data.result.success) {
-                        setNotes("");
-                        enqueueSnackbar(postNotes.data.result.msg, {
-                          variant: "success",
-                        });
-                        fetchData();
-                      } else
-                        enqueueSnackbar(Constants.Save_Changes_Failed, {
-                          variant: "error",
-                        });
-                    }}
-                    sx={{ color: "white", alignSelf: "flex-end", margin: 0 }}
-                    size="small"
-                  >
-                    Save
-                  </Button>
-                </Stack>
-              </Stack>
-            </Grid>
+            <AddNotes ssn={ssn} />
           </Grid>
         </Card>
       </Stack>
