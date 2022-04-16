@@ -20,7 +20,7 @@ export default function AlignItemsList({ data, height }) {
     >
       {data.map((val, ind) => {
         return (
-          <>
+          <React.Fragment key={ind}>
             <ListItem alignItems="flex-start" key={ind}>
               {/* <ListItemAvatar>
               <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
@@ -45,7 +45,7 @@ export default function AlignItemsList({ data, height }) {
             {data.length - 1 !== ind ? (
               <Divider variant="inset" component="li" />
             ) : null}
-          </>
+          </React.Fragment>
         );
       })}
     </List>
