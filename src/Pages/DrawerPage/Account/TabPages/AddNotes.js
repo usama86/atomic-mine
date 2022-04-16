@@ -38,7 +38,12 @@ const AddNotes = ({ ssn }) => {
           <Stack sx={{ flexGrow: 1 }}>
             <List data={allNotes} />
           </Stack>
-          <Stack justifyContent="flex-end" direction="row" gap="1rem">
+          <Stack
+            justifyContent="flex-end"
+            direction="row"
+            gap="1rem"
+            sx={{ height: "max-content" }}
+          >
             <UploadButton
               sx={{ color: "white" }}
               size="small"
