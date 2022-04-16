@@ -2,7 +2,7 @@ import React from "react";
 import DateRangePickerComp from "@wojtekmaj/react-daterange-picker";
 
 const DateRangePicker = ({ getDates }) => {
-  const [value, setValue] = React.useState([new Date(), new Date()]);
+  const [value, setValue] = React.useState(null);
   const handleChange = (e) => {
     getDates(e);
     setValue(e);

@@ -54,7 +54,11 @@ function Account() {
           component: <Balance ssn={searchVal.ssn} />,
         },
         { label: "Risk Management", value: "2", component: <RiskManagement /> },
-        { label: "Orders", value: "3", component: <Orders /> },
+        {
+          label: "Orders",
+          value: "3",
+          component: <Orders ssn={searchVal.ssn} />,
+        },
         { label: "Funds", value: "4", component: <Funds /> },
         { label: "Cash Ledger", value: "5", component: <CashLedger /> },
         { label: "Bank Link", value: "6", component: <BankLink /> },

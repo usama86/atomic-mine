@@ -13,21 +13,34 @@ import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import Tabs from "./../../../../UI/Tabs/Tabs";
 import OrderTable from "./../../PageUtils/OrderTable";
-import orders from "../../../../Constants/mock_data_orders.json";
+// import orders from "../../../../Constants/mock_data_orders.json";
 import { compareAsc } from "date-fns";
 import DateRangePicker from "../../../../UI/DateRangePicker/DateRangePicker";
+import Api from "../../../../Services/AccountApi";
 
-const Orders = () => {
+const Orders = (ssn) => {
   const [data, setData] = React.useState([]);
-  React.useEffect(() => {
+  const [value, setValue] = React.useState("1");
+
+  const fetchData = async () => {
+    let orders = [];
+    if (Number(value) === 1) orders = await Api.getOrdersPending(ssn);
+    else if (Number(value) === 2) orders = await Api.getOrdersFilled(ssn);
+    else if (Number(value) === 3) orders = await Api.getOrdersCancelled(ssn);
+    else orders = await Api.getOrdersRejected(ssn);
+
     setData(orders);
-  }, []);
+  };
+
+  React.useEffect(() => {
+    fetchData();
+  }, [value]);
   const datesHandler = (dates) => {
     let temp = [...data];
     if (dates) {
       const filtered = temp.filter((each) => {
-        let consider_fillTime = new Date(each.fill_time);
-        let consider_placeTime = new Date(each.place_time);
+        let consider_fillTime = new Date(each.filled_on);
+        let consider_placeTime = new Date(each.created_on);
         const fillTimeTest =
           compareAsc(consider_fillTime, dates[0]) === 1 &&
           compareAsc(consider_fillTime, dates[1]) === -1;
@@ -39,10 +52,10 @@ const Orders = () => {
       setData([...filtered]);
     }
     if (!dates) {
-      setData(orders);
+      setData(data);
     }
   };
-  const [value, setValue] = React.useState("1");
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -54,11 +67,7 @@ const Orders = () => {
           label: "Open",
           value: "1",
           component: (
-            <OrderTable
-              type={"Open"}
-              column={getFields("Open")}
-              row={data.filter((order) => order["status"] === "open")}
-            />
+            <OrderTable type={"Open"} column={getFields("Open")} row={data} />
           ),
         },
         {
@@ -68,7 +77,7 @@ const Orders = () => {
             <OrderTable
               type={"Filled"}
               column={getFields("Filled")}
-              row={data.filter((order) => order["status"] === "filled")}
+              row={data}
             />
           ),
         },
@@ -79,7 +88,7 @@ const Orders = () => {
             <OrderTable
               type={"Cancelled"}
               column={getFields("Cancelled")}
-              row={data.filter((order) => order["status"] === "cancelled")}
+              row={data}
             />
           ),
         },
@@ -90,7 +99,7 @@ const Orders = () => {
             <OrderTable
               type={"Rejected"}
               column={getFields("Rejected")}
-              row={data.filter((order) => order["status"] === "rejected")}
+              row={data}
             />
           ),
         },
@@ -124,38 +133,68 @@ const Orders = () => {
   );
 };
 
+const getType = (params) => {
+  if (params.row.type === "MO") return "Market";
+  else if (params.row.type === "LO") return "Limit";
+  else if (params.row.type === "NH") return "Not Held";
+  else return "";
+};
+const getTime = ({ value }) => {
+  let dateVal = new Date(value);
+  return (
+    dateVal.getDate() +
+    "/" +
+    (dateVal.getMonth() + 1) +
+    "/" +
+    dateVal.getFullYear()
+  );
+};
+
 const getFields = (type) => {
   if (type === "Open")
     return [
       {
-        field: "symbol",
+        field: "ticker",
         flex: 1,
         headerName: "Symbol",
       },
       {
-        field: "quantity",
+        field: "side",
+        flex: 1,
+        headerName: "Side",
+      },
+      {
+        field: "type",
+        flex: 1,
+        headerName: "Order Type",
+        valueGetter: getType,
+      },
+      {
+        field: "qty",
         flex: 0.6,
         headerName: "Quantity",
       },
       {
-        field: "place_time",
+        field: "created_on",
         flex: 0.7,
         headerName: "Place Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fill_time",
+        field: "filled_on",
         flex: 0.7,
         headerName: "Fill Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fillPrice",
+        field: "avg_filled_price",
         flex: 0.7,
         headerName: "Fill Price",
       },
       {
-        field: "placedBy",
+        field: "placed_by",
         flex: 0.7,
         headerName: "Placed by",
       },
@@ -176,34 +215,47 @@ const getFields = (type) => {
   if (type === "Filled")
     return [
       {
-        field: "symbol",
+        field: "ticker",
         flex: 1,
         headerName: "Symbol",
       },
       {
-        field: "quantity",
+        field: "side",
+        flex: 1,
+        headerName: "Side",
+      },
+      {
+        field: "type",
+        flex: 1,
+        headerName: "Order Type",
+        valueGetter: getType,
+      },
+      {
+        field: "qty",
         flex: 0.6,
         headerName: "Quantity",
       },
       {
-        field: "place_time",
+        field: "created_on",
         flex: 1,
         headerName: "Place Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fill_time",
+        field: "filled_on",
         flex: 1,
         headerName: "Fill Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fillPrice",
+        field: "avg_filled_price",
         flex: 0.7,
         headerName: "Fill Price",
       },
       {
-        field: "placedBy",
+        field: "placed_by",
         flex: 0.7,
         headerName: "Placed by",
       },
@@ -223,34 +275,47 @@ const getFields = (type) => {
   if (type === "Cancelled")
     return [
       {
-        field: "symbol",
+        field: "ticker",
         flex: 1,
         headerName: "Symbol",
       },
       {
-        field: "quantity",
+        field: "side",
+        flex: 1,
+        headerName: "Side",
+      },
+      {
+        field: "type",
+        flex: 1,
+        headerName: "Order Type",
+        valueGetter: getType,
+      },
+      {
+        field: "qty",
         flex: 0.6,
         headerName: "Quantity",
       },
       {
-        field: "place_time",
+        field: "created_on",
         flex: 1,
         headerName: "Place Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fill_time",
+        field: "filled_on",
         flex: 1,
         headerName: "Fill Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fillPrice",
+        field: "avg_filled_price",
         flex: 0.7,
         headerName: "Fill Price",
       },
       {
-        field: "placedBy",
+        field: "placed_by",
         flex: 0.7,
         headerName: "Placed by",
       },
@@ -268,34 +333,47 @@ const getFields = (type) => {
   if (type === "Rejected")
     return [
       {
-        field: "symbol",
+        field: "ticker",
         flex: 1,
         headerName: "Symbol",
       },
       {
-        field: "quantity",
+        field: "side",
+        flex: 1,
+        headerName: "Side",
+      },
+      {
+        field: "type",
+        flex: 1,
+        headerName: "Order Type",
+        valueGetter: getType,
+      },
+      {
+        field: "qty",
         flex: 0.6,
         headerName: "Quantity",
       },
       {
-        field: "place_time",
+        field: "created_on",
         flex: 1,
         headerName: "Place Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fill_time",
+        field: "filled_on",
         flex: 1,
         headerName: "Fill Time",
         type: "dateTime",
+        valueGetter: getTime,
       },
       {
-        field: "fillPrice",
+        field: "avg_filled_price",
         flex: 0.7,
         headerName: "Fill Price",
       },
       {
-        field: "placedBy",
+        field: "placed_by",
         flex: 0.7,
         headerName: "Placed by",
       },
