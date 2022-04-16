@@ -70,6 +70,8 @@ const Balance = (ssn) => {
 
   const [allNotes, setAllNotes] = React.useState([]);
 
+  const [position, setPosition] = React.useState([]);
+
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
@@ -86,40 +88,67 @@ const Balance = (ssn) => {
     fetchData();
   }, [ssn]);
 
+  const getPlValue = (params) => {
+    let total = params.row.returns_total;
+    let change = params.row.percent_change_total;
+
+    if (!total) total = 0;
+    if (!change) change = 0;
+    let val = Number(total) + Number(change);
+    return val;
+  };
+
+  const getExpirationDate = (params) => {
+    if (/\d/.test(params.row.ticker)) {
+      let [ticker, stock, expdate, cp, strike] = params.row.ticker.match(
+        "([A-Z]+)([0-9]+)([C|P])([0-9]+)"
+      );
+      let str = expdate + "";
+      str =
+        str.substring(0, 2) +
+        "/" +
+        str.substring(2, 4) +
+        "/" +
+        str.substring(4, 6);
+      return str;
+    } else return "";
+  };
   const column = [
     {
-      field: "stockposition",
+      field: "ticker",
       headerName: "Stock Position",
       flex: 1,
     },
     {
-      field: "underlying_price",
+      field: "last_price",
       headerName: "Underlying Price",
       flex: 1,
     },
     {
-      field: "quantity",
+      field: "qty",
       headerName: "Quantity",
       flex: 0.5,
     },
     {
       field: "daysToExpiration",
       headerName: "Days to expiration",
+      valueGetter: getExpirationDate,
       flex: 1,
     },
     {
-      field: "costBasis",
+      field: "cost_basis",
       headerName: "Cost Basis",
       flex: 0.5,
     },
     {
-      field: "cmv",
+      field: "last_price",
       headerName: "Current Market Value",
       flex: 1,
     },
     {
       field: "pl",
       headerName: "P/L",
+      valueGetter: getPlValue,
       flex: 0.5,
     },
     {
@@ -294,7 +323,7 @@ const Balance = (ssn) => {
         </Card>
       </Stack>
       <Box sx={{ height: "20rem" }}>
-        <Table columns={column} rows={row} />
+        <Table columns={column} rows={position} />
       </Box>
     </Stack>
   );
