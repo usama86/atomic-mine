@@ -263,14 +263,14 @@ const Balance = (ssn) => {
                 fullWidth
                 size="small"
                 variant="outlined"
-                // isdefault={true}
                 value={notes}
                 onChange={(e) => {
-                  console.log(e.target.value);
+                  // console.log(e.target.value);
                   setNotes(e.target.value);
                 }}
               />
             </Grid>
+
             <Grid item xs={12}>
               <Stack direction="row">
                 <Stack sx={{ flexGrow: 1 }}>
