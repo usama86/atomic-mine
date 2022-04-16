@@ -16,7 +16,7 @@ import IconButton from "@mui/material/IconButton";
 import GFVData from "./../../../../Constants/mock_data_gfv.json";
 import Api from "../../../../Services/AccountApi";
 import AddNotes from "./AddNotes";
-
+import Loader from "../../../../UI/Loader/Loader";
 const GFVTableCols = [
   {
     field: "type",
@@ -43,6 +43,7 @@ const GFVTableCols = [
 ];
 
 const Balance = (ssn) => {
+  const [loader, setLoader] = React.useState(false);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [random, setRandom] = React.useState("");
@@ -72,9 +73,11 @@ const Balance = (ssn) => {
     setBalanceData(getBalanceData.data.data);
     let getPosition = await Api.ViewPositions(ssn);
     setPosition(getPosition);
+    setLoader(false);
   };
 
   React.useEffect(() => {
+    setLoader(true);
     fetchData();
   }, [ssn]);
 
@@ -163,102 +166,112 @@ const Balance = (ssn) => {
 
   return (
     <Stack spacing={2}>
-      <Stack direction={matches ? "column" : "row"} spacing={2}>
-        <Card>
-          <Grid sx={{ padding: "1rem" }} spacing={4} container>
-            <Grid item container xs={12}>
-              <LabelChild
-                label={"Net account value"}
-                labelXsSize={9}
-                childrenXsSize={3}
-              >
-                {balanceData.net_acct_value}$
-              </LabelChild>
-            </Grid>
-            <Grid item container xs={12}>
-              <LabelChild
-                label={"Buying Power"}
-                labelXsSize={9}
-                childrenXsSize={3}
-              >
-                {balanceData.buying_power}$
-              </LabelChild>
-            </Grid>
-            <Grid item container xs={12}>
-              <LabelChild label={"Settled"} labelXsSize={9} childrenXsSize={3}>
-                {balanceData.settled_cash}$
-              </LabelChild>
-            </Grid>
-            <Grid item container xs={12}>
-              <LabelChild
-                label={"Unsettled"}
-                labelXsSize={9}
-                childrenXsSize={3}
-              >
-                {balanceData.unsettled_cash}$
-              </LabelChild>
-            </Grid>
-            <Grid item container xs={12}>
-              <LabelChild
-                label={"Pending deposit"}
-                labelXsSize={9}
-                childrenXsSize={3}
-              >
-                {balanceData.pending_deposit}$
-              </LabelChild>
-            </Grid>
-            <Grid item container xs={12}>
-              <LabelChild
-                label={"Provisional Cash"}
-                labelXsSize={9}
-                childrenXsSize={3}
-              >
-                {balanceData.provisional_cash}$
-              </LabelChild>
-            </Grid>
-          </Grid>
-        </Card>
-        <Card>
-          <Grid sx={{ padding: "1rem" }} spacing={4} container>
-            <Grid item container xs={12}>
-              <LabelChild label={"Risk flag"}>33$</LabelChild>
-            </Grid>
-            <Grid item container xs={12}>
-              <LabelChild
-                Icons
-                labelXsSize={10}
-                childrenXsSize={2}
-                label={"GFVs/Margin Calls"}
-                sxChild={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  alignItems: "center",
-                }}
-              >
-                22$
-                <Modal
-                  width="50vw"
-                  height="30vw"
-                  content={
-                    <>
-                      <Typography variant="h6">GFVs</Typography>
-                      <Table rows={GFVData} columns={GFVTableCols} />
-                    </>
-                  }
-                >
-                  <IconButton>
-                    <AiOutlineInfoCircle size={23} />
-                  </IconButton>
-                </Modal>
-              </LabelChild>
-            </Grid>
-            <AddNotes ssn={ssn} />
-          </Grid>
-        </Card>
-      </Stack>
-      <Box sx={{ height: "20rem" }}>
-        <Table columns={column} rows={position} rowID="ticker" />
-      </Box>
+      {!loader ? (
+        <React.Fragment>
+          <Stack direction={matches ? "column" : "row"} spacing={2}>
+            <Card>
+              <Grid sx={{ padding: "1rem" }} spacing={4} container>
+                <Grid item container xs={12}>
+                  <LabelChild
+                    label={"Net account value"}
+                    labelXsSize={9}
+                    childrenXsSize={3}
+                  >
+                    {balanceData.net_acct_value}$
+                  </LabelChild>
+                </Grid>
+                <Grid item container xs={12}>
+                  <LabelChild
+                    label={"Buying Power"}
+                    labelXsSize={9}
+                    childrenXsSize={3}
+                  >
+                    {balanceData.buying_power}$
+                  </LabelChild>
+                </Grid>
+                <Grid item container xs={12}>
+                  <LabelChild
+                    label={"Settled"}
+                    labelXsSize={9}
+                    childrenXsSize={3}
+                  >
+                    {balanceData.settled_cash}$
+                  </LabelChild>
+                </Grid>
+                <Grid item container xs={12}>
+                  <LabelChild
+                    label={"Unsettled"}
+                    labelXsSize={9}
+                    childrenXsSize={3}
+                  >
+                    {balanceData.unsettled_cash}$
+                  </LabelChild>
+                </Grid>
+                <Grid item container xs={12}>
+                  <LabelChild
+                    label={"Pending deposit"}
+                    labelXsSize={9}
+                    childrenXsSize={3}
+                  >
+                    {balanceData.pending_deposit}$
+                  </LabelChild>
+                </Grid>
+                <Grid item container xs={12}>
+                  <LabelChild
+                    label={"Provisional Cash"}
+                    labelXsSize={9}
+                    childrenXsSize={3}
+                  >
+                    {balanceData.provisional_cash}$
+                  </LabelChild>
+                </Grid>
+              </Grid>
+            </Card>
+            <Card>
+              <Grid sx={{ padding: "1rem" }} spacing={4} container>
+                <Grid item container xs={12}>
+                  <LabelChild label={"Risk flag"}>33$</LabelChild>
+                </Grid>
+                <Grid item container xs={12}>
+                  <LabelChild
+                    Icons
+                    labelXsSize={10}
+                    childrenXsSize={2}
+                    label={"GFVs/Margin Calls"}
+                    sxChild={{
+                      display: "flex",
+                      justifyContent: "flex-end",
+                      alignItems: "center",
+                    }}
+                  >
+                    22$
+                    <Modal
+                      width="50vw"
+                      height="30vw"
+                      content={
+                        <>
+                          <Typography variant="h6">GFVs</Typography>
+                          <Table rows={GFVData} columns={GFVTableCols} />
+                        </>
+                      }
+                    >
+                      <IconButton>
+                        <AiOutlineInfoCircle size={23} />
+                      </IconButton>
+                    </Modal>
+                  </LabelChild>
+                </Grid>
+                <AddNotes ssn={ssn} />
+              </Grid>
+            </Card>
+          </Stack>
+          <Box sx={{ height: "20rem" }}>
+            <Table columns={column} rows={position} rowID="ticker" />
+          </Box>
+        </React.Fragment>
+      ) : (
+        <Loader />
+      )}
     </Stack>
   );
 };

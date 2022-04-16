@@ -74,7 +74,6 @@ function Account() {
   };
   const selectRowHandler = (e) => {
     setSearchVal(e.row);
-    console.log(e.row);
     enqueueSnackbar(
       `Selected user ${e.row.ssn} - ${e.row.kyc_info?.first_name} ${e.row.kyc_info?.last_name}`,
       {
