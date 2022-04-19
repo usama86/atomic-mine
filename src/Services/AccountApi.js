@@ -13,6 +13,13 @@ const api = {
       },
     });
   },
+  getTags: (val) => {
+    return Axios.get(`${baseUrl}/GetTags`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+  },
   addNote: (body) => {
     return Axios.post(`${baseUrl}/AddNote`, body);
   },
@@ -70,6 +77,29 @@ const api = {
     });
     let finalObj = data.data.data.stocks.concat(data.data.data.options);
     return finalObj;
+  },
+  cancelOrder: (body) => {
+    return Axios.post(`${baseUrl}/CancelOrder`, body);
+  },
+  getGFVs: (val) => {
+    return Axios.get(`${baseUrl}/GetGFVs`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+  },
+  applyRestriction: (body) => {
+    return Axios.post(`${baseUrl}/ApplyRestriction`, body);
+  },
+  liftRestriction: (body) => {
+    return Axios.post(`${baseUrl}/LiftRestriction`, body);
+  },
+  getRestrictions: (val) => {
+    return Axios.get(`${baseUrl}/GetRestrictions`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
   },
 };
 export default api;

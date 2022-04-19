@@ -53,7 +53,11 @@ function Account() {
           value: "1",
           component: <Balance ssn={searchVal.ssn} />,
         },
-        { label: "Risk Management", value: "2", component: <RiskManagement /> },
+        {
+          label: "Risk Management",
+          value: "2",
+          component: <RiskManagement ssn={searchVal.ssn} />,
+        },
         {
           label: "Orders",
           value: "3",

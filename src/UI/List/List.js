@@ -5,7 +5,7 @@ import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
 // import ListItemAvatar from '@mui/material/ListItemAvatar';
 // import Avatar from '@mui/material/Avatar';
-import Typography from "@mui/material/Typography";
+// import Typography from "@mui/material/Typography";
 
 const AlignItemsList = ({ data, height }) => {
   return (
@@ -18,18 +18,20 @@ const AlignItemsList = ({ data, height }) => {
         bgcolor: "background.paper",
       }}
     >
-      {data.map((val, ind) => {
-        return (
-          <React.Fragment key={ind}>
-            <ListItem alignItems="flex-start" key={ind}>
-              {/* <ListItemAvatar>
+      {data &&
+        data.map((val, ind) => {
+          if (val && val.code && val.code === "LT")
+            return (
+              <React.Fragment key={ind}>
+                <ListItem alignItems="flex-start" key={ind}>
+                  {/* <ListItemAvatar>
               <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
             </ListItemAvatar> */}
-              <ListItemText
-                primary={val.administrator}
-                secondary={
-                  <React.Fragment>
-                    {/* <Typography
+                  <ListItemText
+                    primary={"Stock"}
+                    secondary={
+                      <React.Fragment>
+                        {/* <Typography
                     sx={{ display: "inline" }}
                     component="span"
                     variant="body2"
@@ -37,17 +39,46 @@ const AlignItemsList = ({ data, height }) => {
                   >
                     Sandra Adams
                   </Typography> */}
-                    {val.body}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            {data.length - 1 !== ind ? (
-              <Divider variant="inset" component="li" />
-            ) : null}
-          </React.Fragment>
-        );
-      })}
+                        {val.stock}
+                      </React.Fragment>
+                    }
+                  />
+                </ListItem>
+                {/* {data.length - 1 !== ind ? (
+                  <Divider variant="inset" component="li" />
+                ) : null} */}
+              </React.Fragment>
+            );
+          else
+            return (
+              <React.Fragment key={ind}>
+                <ListItem alignItems="flex-start" key={ind}>
+                  {/* <ListItemAvatar>
+              <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+            </ListItemAvatar> */}
+                  <ListItemText
+                    primary={val.administrator}
+                    secondary={
+                      <React.Fragment>
+                        {/* <Typography
+                    sx={{ display: "inline" }}
+                    component="span"
+                    variant="body2"
+                    color="text.primary"
+                  >
+                    Sandra Adams
+                  </Typography> */}
+                        {val.body}
+                      </React.Fragment>
+                    }
+                  />
+                </ListItem>
+                {data.length - 1 !== ind ? (
+                  <Divider variant="inset" component="li" />
+                ) : null}
+              </React.Fragment>
+            );
+        })}
     </List>
   );
 };

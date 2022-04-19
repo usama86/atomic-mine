@@ -64,15 +64,25 @@ const Balance = (ssn) => {
 
   const [position, setPosition] = React.useState([]);
 
+  const [gfvs, setGfvs] = React.useState([]);
+
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
+  const [riskFlag, setRiskFlag] = React.useState("");
 
   const fetchData = async () => {
     let getBalanceData = await Api.getBalance(ssn);
     setBalanceData(getBalanceData.data.data);
     let getPosition = await Api.ViewPositions(ssn);
     setPosition(getPosition);
+    ///NEED TO SET IT UP WITH RISKFLAG AND GETGFVS
+    let getRiskFlag = await Api.getTags(ssn);
+    if (getRiskFlag) setRiskFlag(getRiskFlag.data.result[0]);
+
+    let getGFVs = await Api.getGFVs(ssn);
+    setGfvs(getGFVs.data.data[ssn.ssn]);
+
     setLoader(false);
   };
 
@@ -230,7 +240,9 @@ const Balance = (ssn) => {
             <Card>
               <Grid sx={{ padding: "1rem" }} spacing={4} container>
                 <Grid item container xs={12}>
-                  <LabelChild label={"Risk flag"}>33$</LabelChild>
+                  <LabelChild label={"Risk flag"}>
+                    {riskFlag === "High Risk" ? "High" : ""}
+                  </LabelChild>
                 </Grid>
                 <Grid item container xs={12}>
                   <LabelChild
@@ -244,7 +256,7 @@ const Balance = (ssn) => {
                       alignItems: "center",
                     }}
                   >
-                    22$
+                    {gfvs === undefined || gfvs.length === 0 ? "0$" : ""}
                     <Modal
                       width="50vw"
                       height="30vw"
@@ -277,36 +289,3 @@ const Balance = (ssn) => {
 };
 
 export default React.memo(Balance);
-
-const row = [
-  {
-    id: 0,
-    underlying_price: "4.00",
-    quantity: "8",
-    stockposition: "hello",
-    daysToExpiration: "World",
-    costBasis: "5$",
-    cmv: "05-02-1990",
-    pl: "05-02-1990",
-  },
-  {
-    id: 1,
-    underlying_price: "4.00",
-    quantity: "8",
-    stockposition: "hello1",
-    daysToExpiration: "World1",
-    costBasis: "6$",
-    cmv: "05-02-1991",
-    pl: "05-02-1993",
-  },
-  {
-    id: 2,
-    underlying_price: "4.00",
-    quantity: "8",
-    stockposition: "hello2",
-    daysToExpiration: "World2",
-    costBasis: "7$",
-    cmv: "05-02-1992",
-    pl: "05-02-1994",
-  },
-];
