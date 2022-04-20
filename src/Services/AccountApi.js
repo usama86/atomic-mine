@@ -124,7 +124,7 @@ const api = {
     });
 
     let deposit =
-      getWithDrawl.data.data && getWithDrawl.data.data.length > 0
+      getDeposit.data.data && getDeposit.data.data.length > 0
         ? getDeposit.data.data.map((d) => ({ ...d, type: "deposit" }))
         : [];
 
@@ -137,8 +137,15 @@ const api = {
       getWithDrawl.data.data && getWithDrawl.data.data.length > 0
         ? getWithDrawl.data.data.map((d) => (d = { ...d, type: "withdrawal" }))
         : [];
-    let finalObj = deposit.data.data.concat(withDrawl.data.data);
+    let finalObj = deposit.concat(withDrawl);
     return finalObj;
+  },
+  getBankDetail: (val) => {
+    return Axios.get(`${baseUrl}/GetBankAccts`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
   },
 };
 export default api;

@@ -20,6 +20,7 @@ import DateRangePicker from "../../../../UI/DateRangePicker/DateRangePicker";
 import Api from "../../../../Services/AccountApi";
 import Constants from "../../../../Constants/Constants";
 import Loader from "../../../../UI/Loader/Loader";
+import { getTime } from "../../../../helpers/utils";
 
 const Orders = (ssn) => {
   const { enqueueSnackbar } = useSnackbar();
@@ -414,16 +415,6 @@ const getType = (params) => {
   else if (params.row.type === "LO") return "Limit";
   else if (params.row.type === "NH") return "Not Held";
   else return "";
-};
-const getTime = ({ value }) => {
-  let dateVal = new Date(value);
-  return (
-    dateVal.getDate() +
-    "/" +
-    (dateVal.getMonth() + 1) +
-    "/" +
-    dateVal.getFullYear()
-  );
 };
 
 export default Orders;

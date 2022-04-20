@@ -74,11 +74,27 @@ function Account() {
           value: "4",
           component: <Funds ssn={searchVal.ssn} />,
         },
-        { label: "Cash Ledger", value: "5", component: <CashLedger /> },
-        { label: "Bank Link", value: "6", component: <BankLink /> },
-        { label: "Docs", value: "7", component: <Docs /> },
-        { label: "Options", value: "8", component: <Options /> },
-        { label: "Personal Info", value: "9", component: <PersonalInfo /> },
+        {
+          label: "Cash Ledger",
+          value: "5",
+          component: <CashLedger ssn={searchVal.ssn} />,
+        },
+        {
+          label: "Bank Link",
+          value: "6",
+          component: <BankLink ssn={searchVal.ssn} />,
+        },
+        { label: "Docs", value: "7", component: <Docs ssn={searchVal.ssn} /> },
+        {
+          label: "Options",
+          value: "8",
+          component: <Options ssn={searchVal.ssn} />,
+        },
+        {
+          label: "Personal Info",
+          value: "9",
+          component: <PersonalInfo ssn={searchVal.ssn} />,
+        },
       ],
     },
   ];

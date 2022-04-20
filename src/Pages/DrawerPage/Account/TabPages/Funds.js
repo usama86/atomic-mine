@@ -3,6 +3,7 @@ import Table from "../../../../UI/Table/TableWithGlobalFiltering";
 import data from "../../../../Constants/mock_funds_data.json";
 import Card from "../../../../UI/Card/Card";
 import Api from "../../../../Services/AccountApi";
+import { getTime } from "../../../../helpers/utils";
 
 const Funds = (ssn) => {
   const fields = [
@@ -12,15 +13,16 @@ const Funds = (ssn) => {
       flex: 1,
     },
     {
-      field: "amount",
+      field: "qty",
       headerName: "Amount",
       flex: 1,
     },
     {
-      field: "initiated",
+      field: "created_on",
       headerName: "Date/Time initiated",
       flex: 1,
-      type: "date",
+      type: "dateTime",
+      valueGetter: getTime,
     },
     {
       field: "settled",
@@ -52,7 +54,12 @@ const Funds = (ssn) => {
 
   return (
     <Card>
-      <Table rowID="id" rows={data} columns={fields} />
+      <Table
+        rowID="id"
+        rows={funds}
+        columns={fields}
+        rowID={"transaction_id"}
+      />
     </Card>
   );
 };
