@@ -19,6 +19,8 @@ import { compareAsc } from "date-fns";
 import DateRangePicker from "../../../../UI/DateRangePicker/DateRangePicker";
 import Api from "../../../../Services/AccountApi";
 import Constants from "../../../../Constants/Constants";
+import Loader from "../../../../UI/Loader/Loader";
+import { getTime } from "../../../../helpers/utils";
 
 const Orders = (ssn) => {
   const { enqueueSnackbar } = useSnackbar();
@@ -273,7 +275,7 @@ const Orders = (ssn) => {
 
   const [data, setData] = React.useState([]);
   const [value, setValue] = React.useState("1");
-
+  const [loading, setLoading] = React.useState(false);
   const fetchData = async () => {
     let orders = [];
     //if (Number(value) === 1) orders = await Api.getOrdersPending(ssn);
@@ -283,6 +285,7 @@ const Orders = (ssn) => {
     else orders = await Api.getOrdersRejected(ssn);
 
     setData(orders);
+    setLoading(false);
   };
 
   const handleAcceptFunc = async (orderID) => {
@@ -300,8 +303,9 @@ const Orders = (ssn) => {
   };
 
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
-  }, [value]);
+  }, [value]); // eslint-disable-line react-hooks/exhaustive-deps
   const datesHandler = (dates) => {
     let temp = [...data];
     if (dates) {
@@ -390,8 +394,14 @@ const Orders = (ssn) => {
           </Box>
           {TabsVal[0].controls.map((val, index) => (
             <TabPanel value={val.value} key={index}>
-              <DateRangePicker getDates={(e) => datesHandler(e)} />
-              {val.component}
+              {!loading ? (
+                <>
+                  <DateRangePicker getDates={(e) => datesHandler(e)} />
+                  {val.component}
+                </>
+              ) : (
+                <Loader />
+              )}
             </TabPanel>
           ))}
         </>
@@ -405,16 +415,6 @@ const getType = (params) => {
   else if (params.row.type === "LO") return "Limit";
   else if (params.row.type === "NH") return "Not Held";
   else return "";
-};
-const getTime = ({ value }) => {
-  let dateVal = new Date(value);
-  return (
-    dateVal.getDate() +
-    "/" +
-    (dateVal.getMonth() + 1) +
-    "/" +
-    dateVal.getFullYear()
-  );
 };
 
 export default Orders;

@@ -21,7 +21,7 @@ const PositionClose = ({ triggerClose, ticker }) => {
   React.useEffect(() => {
     setIsLoading(true);
     fetchData();
-  }, [ticker]);
+  }, [ticker]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Stack gap={2}>

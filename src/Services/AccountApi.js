@@ -3,22 +3,37 @@ import Axios from "axios";
 const baseUrl = "http://44.194.15.240:8000";
 
 const api = {
-  getApprovedAccount: () => {
-    return Axios.get(`${baseUrl}/GetApprovedAccounts`);
+  getApprovedAccount: async () => {
+    try {
+      let response = await Axios.get(`${baseUrl}/GetApprovedAccounts`);
+      return response;
+    } catch (err) {
+      return err.response;
+    }
   },
-  getBalance: (val) => {
-    return Axios.get(`${baseUrl}/GetBalances`, {
-      headers: {
-        account: val.ssn,
-      },
-    });
+  getBalance: async (val) => {
+    try {
+      let response = await Axios.get(`${baseUrl}/GetBalances`, {
+        headers: {
+          account: val.ssn,
+        },
+      });
+      return response;
+    } catch (err) {
+      return err.response;
+    }
   },
-  getTags: (val) => {
-    return Axios.get(`${baseUrl}/GetTags`, {
-      headers: {
-        account: val.ssn,
-      },
-    });
+  getTags: async (val) => {
+    try {
+      let response = await Axios.get(`${baseUrl}/GetTags`, {
+        headers: {
+          account: val.ssn,
+        },
+      });
+      return response;
+    } catch (err) {
+      return err.response;
+    }
   },
   addNote: (body) => {
     return Axios.post(`${baseUrl}/AddNote`, body);
@@ -109,7 +124,7 @@ const api = {
     });
 
     let deposit =
-      getWithDrawl.data.data && getWithDrawl.data.data.length > 0
+      getDeposit.data.data && getDeposit.data.data.length > 0
         ? getDeposit.data.data.map((d) => ({ ...d, type: "deposit" }))
         : [];
 
@@ -122,8 +137,15 @@ const api = {
       getWithDrawl.data.data && getWithDrawl.data.data.length > 0
         ? getWithDrawl.data.data.map((d) => (d = { ...d, type: "withdrawal" }))
         : [];
-    let finalObj = deposit.data.data.concat(withDrawl.data.data);
+    let finalObj = deposit.concat(withDrawl);
     return finalObj;
+  },
+  getBankDetail: (val) => {
+    return Axios.get(`${baseUrl}/GetBankAccts`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
   },
 };
 export default api;

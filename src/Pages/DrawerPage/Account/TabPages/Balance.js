@@ -17,6 +17,8 @@ import GFVData from "./../../../../Constants/mock_data_gfv.json";
 import Api from "../../../../Services/AccountApi";
 import AddNotes from "./AddNotes";
 import Loader from "../../../../UI/Loader/Loader";
+import { useSnackbar } from "notistack";
+
 const GFVTableCols = [
   {
     field: "type",
@@ -42,25 +44,28 @@ const GFVTableCols = [
   },
 ];
 
+const defaultBalanceData = {
+  id: "",
+  account: "",
+  market_value: ".93",
+  unsettled_cash: "",
+  settled_cash: "",
+  provisional_cash: "",
+  pending_deposit: "",
+  temp_cash_withheld: "",
+  buying_power: "",
+  net_acct_value: "",
+  gross_acct_value: "",
+  amt_of_unsettled_cash_used_to_fund_new_long_positions: "",
+};
+
 const Balance = (ssn) => {
+  const { enqueueSnackbar } = useSnackbar();
   const [loader, setLoader] = React.useState(false);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [random, setRandom] = React.useState("");
-  const [balanceData, setBalanceData] = React.useState({
-    id: "",
-    account: "",
-    market_value: ".93",
-    unsettled_cash: "",
-    settled_cash: "",
-    provisional_cash: "",
-    pending_deposit: "",
-    temp_cash_withheld: "",
-    buying_power: "",
-    net_acct_value: "",
-    gross_acct_value: "",
-    amt_of_unsettled_cash_used_to_fund_new_long_positions: "",
-  });
+  const [balanceData, setBalanceData] = React.useState(defaultBalanceData);
 
   const [position, setPosition] = React.useState([]);
 
@@ -73,13 +78,29 @@ const Balance = (ssn) => {
 
   const fetchData = async () => {
     let getBalanceData = await Api.getBalance(ssn);
-    setBalanceData(getBalanceData.data.data);
+    if (getBalanceData.status === 200) {
+      setBalanceData(getBalanceData.data.data);
+    } else {
+      enqueueSnackbar(`Failed to get Balance data`, {
+        variant: "error",
+      });
+      setBalanceData(defaultBalanceData);
+    }
     let getPosition = await Api.ViewPositions(ssn);
+    // if (getPosition.length === 0)
+    //   enqueueSnackbar(`Failed to get Positions`, {
+    //     variant: "error",
+    //   });
     setPosition(getPosition);
     ///NEED TO SET IT UP WITH RISKFLAG AND GETGFVS
     let getRiskFlag = await Api.getTags(ssn);
-    if (getRiskFlag) setRiskFlag(getRiskFlag.data.result[0]);
-
+    if (getRiskFlag.status === 200) setRiskFlag(getRiskFlag.data.result[0]);
+    else {
+      enqueueSnackbar("Failed to get tags", {
+        variant: "error",
+      });
+      setRiskFlag("");
+    }
     let getGFVs = await Api.getGFVs(ssn);
     setGfvs(getGFVs.data.data[ssn.ssn]);
 
@@ -89,7 +110,7 @@ const Balance = (ssn) => {
   React.useEffect(() => {
     setLoader(true);
     fetchData();
-  }, [ssn]);
+  }, [ssn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getPlValue = (params) => {
     let total = params.row.returns_total;
@@ -103,9 +124,12 @@ const Balance = (ssn) => {
 
   const getExpirationDate = (params) => {
     if (/\d/.test(params.row.ticker)) {
-      let [ticker, stock, expdate, cp, strike] = params.row.ticker.match(
+      const expdate = params.row.ticker.match(
         "([A-Z]+)([0-9]+)([C|P])([0-9]+)"
-      );
+      )[2];
+      // let [ticker, stock, expdate, cp, strike] = params.row.ticker.match(
+      //   "([A-Z]+)([0-9]+)([C|P])([0-9]+)"
+      // );
       let str = expdate + "";
       str =
         str.substring(0, 2) +

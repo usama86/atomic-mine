@@ -39,10 +39,16 @@ function Account() {
   React.useEffect(() => {
     async function fetchData() {
       let getApprovedAccounts = await Api.getApprovedAccount();
+      if (getApprovedAccounts.status !== 200) {
+        enqueueSnackbar(`Failed to recieve approved accounts!`, {
+          variant: "error",
+        });
+        return setData(getApprovedAccounts);
+      }
       setData(getApprovedAccounts.data.data);
     }
     fetchData();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const TabsVal = [
     {
@@ -68,11 +74,27 @@ function Account() {
           value: "4",
           component: <Funds ssn={searchVal.ssn} />,
         },
-        { label: "Cash Ledger", value: "5", component: <CashLedger /> },
-        { label: "Bank Link", value: "6", component: <BankLink /> },
-        { label: "Docs", value: "7", component: <Docs /> },
-        { label: "Options", value: "8", component: <Options /> },
-        { label: "Personal Info", value: "9", component: <PersonalInfo /> },
+        {
+          label: "Cash Ledger",
+          value: "5",
+          component: <CashLedger ssn={searchVal.ssn} />,
+        },
+        {
+          label: "Bank Link",
+          value: "6",
+          component: <BankLink ssn={searchVal.ssn} />,
+        },
+        { label: "Docs", value: "7", component: <Docs ssn={searchVal.ssn} /> },
+        {
+          label: "Options",
+          value: "8",
+          component: <Options ssn={searchVal.ssn} />,
+        },
+        {
+          label: "Personal Info",
+          value: "9",
+          component: <PersonalInfo ssn={searchVal.ssn} />,
+        },
       ],
     },
   ];
@@ -91,41 +113,43 @@ function Account() {
   };
   return (
     <Stack spacing={6}>
-      <Stack direction="row" gap={2} sx={{ width: "100%" }}>
-        <SearchUser data={data} getRow={selectRowHandler} />
-      </Stack>
-      <Typography variant="h5">
-        {searchVal.ssn} - {searchVal.kyc_info?.first_name.toUpperCase()}{" "}
-        {searchVal.kyc_info?.last_name.toUpperCase()}
-      </Typography>
-      {searchVal.accountNumber !== "" ? (
-        <Tabs value={value}>
-          <>
-            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-              <TabList
-                scrollButtons="auto"
-                variant="scrollable"
-                onChange={handleChange}
-              >
-                {TabsVal[0].controls.map((val, index) => (
-                  <Tab label={val.label} key={index} value={val.value} />
-                ))}
-              </TabList>
-            </Box>
-            {TabsVal[0].controls.map((val, index) => (
-              <TabPanel value={val.value} key={index}>
-                {val.component}
-              </TabPanel>
-            ))}
-          </>
-        </Tabs>
-      ) : (
-        <Alert
-          title="No User Selected!"
-          severity="info"
-          message="Please select a user!"
-        />
-      )}
+      <>
+        <Stack direction="row" gap={2} sx={{ width: "100%" }}>
+          <SearchUser data={data} getRow={selectRowHandler} />
+        </Stack>
+        <Typography variant="h5">
+          {searchVal.ssn} - {searchVal.kyc_info?.first_name.toUpperCase()}{" "}
+          {searchVal.kyc_info?.last_name.toUpperCase()}
+        </Typography>
+        {searchVal.accountNumber !== "" ? (
+          <Tabs value={value}>
+            <>
+              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+                <TabList
+                  scrollButtons="auto"
+                  variant="scrollable"
+                  onChange={handleChange}
+                >
+                  {TabsVal[0].controls.map((val, index) => (
+                    <Tab label={val.label} key={index} value={val.value} />
+                  ))}
+                </TabList>
+              </Box>
+              {TabsVal[0].controls.map((val, index) => (
+                <TabPanel value={val.value} key={index}>
+                  {val.component}
+                </TabPanel>
+              ))}
+            </>
+          </Tabs>
+        ) : (
+          <Alert
+            title="No User Selected!"
+            severity="info"
+            message="Please select a user!"
+          />
+        )}
+      </>
     </Stack>
   );
 }
