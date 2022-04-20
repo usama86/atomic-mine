@@ -48,7 +48,7 @@ function Account() {
       setData(getApprovedAccounts.data.data);
     }
     fetchData();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const TabsVal = [
     {
