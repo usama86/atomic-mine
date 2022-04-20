@@ -18,7 +18,7 @@ const AddNotes = ({ ssn }) => {
   };
   React.useEffect(() => {
     fetchNotes();
-  }, [ssn]);
+  }, [ssn]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <React.Fragment>
       <Grid item xs={12}>
