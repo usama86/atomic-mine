@@ -12,6 +12,7 @@ const Constants = {
   loginButtonStyleOverrides: { color: "white" },
   Close_Modal_Success: "Saved!",
   Save_Changes_Success: "Changes Saved!",
+  Save_Changes_Failed: "Changes Failed!",
   Select_Order: "Select Order",
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Stack from "../../../UI/Layout/Stack";
 
-import Table from "../../../UI/Table/SearchableTable";
+import Table from "../../../UI/Table/TableWithGlobalFiltering";
 
 import data from "../../../Constants/mock_data_logs.json";
 const fields = [
@@ -24,7 +24,7 @@ const fields = [
 function AdminActivityLog() {
   return (
     <Stack sx={{ width: "100%" }}>
-      <Table rows={data} columns={fields} />
+      <Table rowID="id" rows={data} columns={fields} />
     </Stack>
   );
 }

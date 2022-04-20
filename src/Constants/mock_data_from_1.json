@@ -1,0 +1,35 @@
+[
+  {
+    "ssn": "999999999",
+    "username": "AVPT",
+    "email": "avpt@atomicvaults.com",
+    "phone": "123456789",
+    "password": "1234",
+    "is_suspended": false,
+    "tags": [],
+    "restrictions": [],
+    "created_on": "2022-03-29T03:19:41.400560+00:00",
+    "kyc_info": {
+      "AML_status": "A",
+      "CIP_status": "A",
+      "first_name": "AVPT",
+      "last_name": "AVPT",
+      "gender": "F",
+      "ssn": "999999999",
+      "dob": "02/11/1995",
+      "citizenship": null,
+      "address_num": null,
+      "address_street": null,
+      "address_city": null,
+      "address_state": null,
+      "address_zip": null,
+      "address_country": null,
+      "emp_status": "E",
+      "employer": null,
+      "emp_title": null,
+      "insider": false,
+      "politically_exposed": false,
+      "rule_3210": false
+    }
+  }
+]

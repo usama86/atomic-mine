@@ -6,6 +6,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import SearchUser from "./../PageUtils/SearchUser";
+import Typography from "./../../../UI/Typography/Typography";
 //AccountPages
 import Balance from "./TabPages/Balance";
 import RiskManagement from "./TabPages/RiskManagement";
@@ -18,6 +19,8 @@ import Options from "./TabPages/Options";
 import PersonalInfo from "./TabPages/PersonalInfo";
 import Alert from "../../../UI/Alert/Alert";
 import { useSnackbar } from "notistack";
+// import data from "../../../Constants/mock_data.json";
+import Api from "../../../Services/AccountApi";
 
 function Account() {
   const { enqueueSnackbar } = useSnackbar();
@@ -28,17 +31,43 @@ function Account() {
     id: "",
     name: "",
     social: "",
+    ssn: "",
   });
+  const [data, setData] = React.useState([]);
   const [value, setValue] = React.useState("1");
+
+  React.useEffect(() => {
+    async function fetchData() {
+      let getApprovedAccounts = await Api.getApprovedAccount();
+      setData(getApprovedAccounts.data.data);
+    }
+    fetchData();
+  }, []);
 
   const TabsVal = [
     {
       heading: "Tab Pages",
       controls: [
-        { label: "Balances", value: "1", component: <Balance /> },
-        { label: "Risk Management", value: "2", component: <RiskManagement /> },
-        { label: "Orders", value: "3", component: <Orders /> },
-        { label: "Funds", value: "4", component: <Funds /> },
+        {
+          label: "Balances",
+          value: "1",
+          component: <Balance ssn={searchVal.ssn} />,
+        },
+        {
+          label: "Risk Management",
+          value: "2",
+          component: <RiskManagement ssn={searchVal.ssn} />,
+        },
+        {
+          label: "Orders",
+          value: "3",
+          component: <Orders ssn={searchVal.ssn} />,
+        },
+        {
+          label: "Funds",
+          value: "4",
+          component: <Funds ssn={searchVal.ssn} />,
+        },
         { label: "Cash Ledger", value: "5", component: <CashLedger /> },
         { label: "Bank Link", value: "6", component: <BankLink /> },
         { label: "Docs", value: "7", component: <Docs /> },
@@ -53,15 +82,22 @@ function Account() {
   };
   const selectRowHandler = (e) => {
     setSearchVal(e.row);
-    enqueueSnackbar(`Selected user ${e.row.name}`, {
-      variant: "success",
-    });
+    enqueueSnackbar(
+      `Selected user ${e.row.ssn} - ${e.row.kyc_info?.first_name} ${e.row.kyc_info?.last_name}`,
+      {
+        variant: "success",
+      }
+    );
   };
   return (
     <Stack spacing={6}>
       <Stack direction="row" gap={2} sx={{ width: "100%" }}>
-        <SearchUser getRow={selectRowHandler} />
+        <SearchUser data={data} getRow={selectRowHandler} />
       </Stack>
+      <Typography variant="h5">
+        {searchVal.ssn} - {searchVal.kyc_info?.first_name.toUpperCase()}{" "}
+        {searchVal.kyc_info?.last_name.toUpperCase()}
+      </Typography>
       {searchVal.accountNumber !== "" ? (
         <Tabs value={value}>
           <>

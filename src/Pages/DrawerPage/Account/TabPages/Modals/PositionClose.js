@@ -3,16 +3,39 @@ import Typography from "../../../../../UI/Typography/Typography";
 import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
+import Api from "../../../../../Services/AccountApi";
 import { useTheme } from "@emotion/react";
+import Loader from "../../../../../UI/Loader/Loader";
 
-const PositionClose = ({ triggerClose }) => {
+const PositionClose = ({ triggerClose, ticker }) => {
+  const [isLoading, setIsLoading] = React.useState(false);
   const [type, setType] = React.useState("");
+  const [bidAsk, setBidAsk] = React.useState({});
   const theme = useTheme();
+  const fetchData = async () => {
+    let getBidVal = await Api.getBidAsk(ticker);
+    console.log(getBidVal.data.data);
+    setBidAsk(getBidVal.data.data);
+    setIsLoading(false);
+  };
+  React.useEffect(() => {
+    setIsLoading(true);
+    fetchData();
+  }, [ticker]);
 
   return (
     <Stack gap={2}>
-      <Typography variant="h6">Current bid: 9.10</Typography>
-      <Typography variant="h6">Current ask: 9.80</Typography>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Typography variant="h6">
+            Current bid:
+            {bidAsk.bid}
+          </Typography>
+          <Typography variant="h6">Current ask: {bidAsk.ask}</Typography>
+        </>
+      )}
 
       <Stack direction="row" gap={3} justifyContent="center">
         <Button

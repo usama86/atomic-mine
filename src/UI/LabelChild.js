@@ -1,24 +1,20 @@
 import PropTypes from "prop-types";
 import Typography from "./Typography/Typography";
-import Grid from "./Layout/Grid";
 
-const LabelChild = ({
-  label,
-  labelXsSize,
-  childrenXsSize,
-  sxChild,
-  children,
-  typographyProps,
-}) => {
+import Stack from "./Layout/Stack";
+import Box from "./Layout/Box";
+
+const LabelChild = ({ label, sxChild, children, typographyProps }) => {
   return (
-    <>
-      <Grid item xs={labelXsSize}>
-        <Typography {...typographyProps}>{label}</Typography>
-      </Grid>
-      <Grid item xs={childrenXsSize} sx={sxChild}>
-        {children}
-      </Grid>
-    </>
+    <Stack
+      sx={{ width: "100%" }}
+      direction="row"
+      alignItems="center"
+      justifyContent="space-between"
+    >
+      <Typography {...typographyProps}>{label}</Typography>
+      <Box sx={sxChild}>{children}</Box>
+    </Stack>
   );
 };
 

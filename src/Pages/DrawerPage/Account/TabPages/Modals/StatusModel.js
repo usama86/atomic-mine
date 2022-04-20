@@ -8,7 +8,6 @@ import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
 const Status = ({ triggerClose, status, onChangeStatus }) => {
   const onChange = (e) => {
-    console.log("hi");
     onChangeStatus(e);
   };
   return (

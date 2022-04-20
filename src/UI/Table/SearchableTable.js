@@ -13,7 +13,7 @@ const default_columns = [
   { field: "col2", headerName: "Column 2", width: 150 },
 ];
 
-const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
+const EditableTable = ({ rows, columns, height, selectRowHandler, rowID }) => {
   const [search, setSearch] = React.useState("");
   const [category, setCategory] = React.useState(columns[0].field);
   const [fields, setFields] = React.useState([]);
@@ -38,8 +38,10 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
   };
   React.useMemo(() => {
     let temp = [...rows];
-    const filtered = temp.filter((row) =>
-      row[category].toLowerCase().includes(search.toLowerCase())
+    const filtered = temp.filter(
+      (row) =>
+        row[category] &&
+        row[category].toLowerCase().includes(search.toLowerCase())
     );
     setData(filtered);
   }, [search, rows, category]);
@@ -47,7 +49,7 @@ const EditableTable = ({ rows, columns, height, selectRowHandler }) => {
     <div style={{ height: height, width: "100%", padding: "0.4rem" }}>
       <StyledTable
         isRowSelectable={(params) => selectRowHandler(params)}
-        sx={{}}
+        getRowId={(row) => (rowID ? row.ssn : row.id)}
         components={{ Toolbar: Search }}
         componentsProps={{
           toolbar: {
