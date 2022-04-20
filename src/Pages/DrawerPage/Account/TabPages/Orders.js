@@ -19,6 +19,7 @@ import { compareAsc } from "date-fns";
 import DateRangePicker from "../../../../UI/DateRangePicker/DateRangePicker";
 import Api from "../../../../Services/AccountApi";
 import Constants from "../../../../Constants/Constants";
+import Loader from "../../../../UI/Loader/Loader";
 
 const Orders = (ssn) => {
   const { enqueueSnackbar } = useSnackbar();
@@ -273,7 +274,7 @@ const Orders = (ssn) => {
 
   const [data, setData] = React.useState([]);
   const [value, setValue] = React.useState("1");
-
+  const [loading, setLoading] = React.useState(false);
   const fetchData = async () => {
     let orders = [];
     //if (Number(value) === 1) orders = await Api.getOrdersPending(ssn);
@@ -283,6 +284,7 @@ const Orders = (ssn) => {
     else orders = await Api.getOrdersRejected(ssn);
 
     setData(orders);
+    setLoading(false);
   };
 
   const handleAcceptFunc = async (orderID) => {
@@ -300,6 +302,7 @@ const Orders = (ssn) => {
   };
 
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
   }, [value]);
   const datesHandler = (dates) => {
@@ -390,8 +393,14 @@ const Orders = (ssn) => {
           </Box>
           {TabsVal[0].controls.map((val, index) => (
             <TabPanel value={val.value} key={index}>
-              <DateRangePicker getDates={(e) => datesHandler(e)} />
-              {val.component}
+              {!loading ? (
+                <>
+                  <DateRangePicker getDates={(e) => datesHandler(e)} />
+                  {val.component}
+                </>
+              ) : (
+                <Loader />
+              )}
             </TabPanel>
           ))}
         </>

@@ -39,6 +39,12 @@ function Account() {
   React.useEffect(() => {
     async function fetchData() {
       let getApprovedAccounts = await Api.getApprovedAccount();
+      if (getApprovedAccounts.status !== 200) {
+        enqueueSnackbar(`Failed to recieve approved accounts!`, {
+          variant: "error",
+        });
+        return setData(getApprovedAccounts);
+      }
       setData(getApprovedAccounts.data.data);
     }
     fetchData();
@@ -91,41 +97,43 @@ function Account() {
   };
   return (
     <Stack spacing={6}>
-      <Stack direction="row" gap={2} sx={{ width: "100%" }}>
-        <SearchUser data={data} getRow={selectRowHandler} />
-      </Stack>
-      <Typography variant="h5">
-        {searchVal.ssn} - {searchVal.kyc_info?.first_name.toUpperCase()}{" "}
-        {searchVal.kyc_info?.last_name.toUpperCase()}
-      </Typography>
-      {searchVal.accountNumber !== "" ? (
-        <Tabs value={value}>
-          <>
-            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-              <TabList
-                scrollButtons="auto"
-                variant="scrollable"
-                onChange={handleChange}
-              >
-                {TabsVal[0].controls.map((val, index) => (
-                  <Tab label={val.label} key={index} value={val.value} />
-                ))}
-              </TabList>
-            </Box>
-            {TabsVal[0].controls.map((val, index) => (
-              <TabPanel value={val.value} key={index}>
-                {val.component}
-              </TabPanel>
-            ))}
-          </>
-        </Tabs>
-      ) : (
-        <Alert
-          title="No User Selected!"
-          severity="info"
-          message="Please select a user!"
-        />
-      )}
+      <>
+        <Stack direction="row" gap={2} sx={{ width: "100%" }}>
+          <SearchUser data={data} getRow={selectRowHandler} />
+        </Stack>
+        <Typography variant="h5">
+          {searchVal.ssn} - {searchVal.kyc_info?.first_name.toUpperCase()}{" "}
+          {searchVal.kyc_info?.last_name.toUpperCase()}
+        </Typography>
+        {searchVal.accountNumber !== "" ? (
+          <Tabs value={value}>
+            <>
+              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+                <TabList
+                  scrollButtons="auto"
+                  variant="scrollable"
+                  onChange={handleChange}
+                >
+                  {TabsVal[0].controls.map((val, index) => (
+                    <Tab label={val.label} key={index} value={val.value} />
+                  ))}
+                </TabList>
+              </Box>
+              {TabsVal[0].controls.map((val, index) => (
+                <TabPanel value={val.value} key={index}>
+                  {val.component}
+                </TabPanel>
+              ))}
+            </>
+          </Tabs>
+        ) : (
+          <Alert
+            title="No User Selected!"
+            severity="info"
+            message="Please select a user!"
+          />
+        )}
+      </>
     </Stack>
   );
 }

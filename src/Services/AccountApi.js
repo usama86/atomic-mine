@@ -3,22 +3,37 @@ import Axios from "axios";
 const baseUrl = "http://44.194.15.240:8000";
 
 const api = {
-  getApprovedAccount: () => {
-    return Axios.get(`${baseUrl}/GetApprovedAccounts`);
+  getApprovedAccount: async () => {
+    try {
+      let response = await Axios.get(`${baseUrl}/GetApprovedAccounts`);
+      return response;
+    } catch (err) {
+      return err.response;
+    }
   },
-  getBalance: (val) => {
-    return Axios.get(`${baseUrl}/GetBalances`, {
-      headers: {
-        account: val.ssn,
-      },
-    });
+  getBalance: async (val) => {
+    try {
+      let response = await Axios.get(`${baseUrl}/GetBalsances`, {
+        headers: {
+          account: val.ssn,
+        },
+      });
+      return response;
+    } catch (err) {
+      return err.response;
+    }
   },
-  getTags: (val) => {
-    return Axios.get(`${baseUrl}/GetTags`, {
-      headers: {
-        account: val.ssn,
-      },
-    });
+  getTags: async (val) => {
+    try {
+      let response = await Axios.get(`${baseUrl}/GetTags`, {
+        headers: {
+          account: val.ssn,
+        },
+      });
+      return response;
+    } catch (err) {
+      return err.response;
+    }
   },
   addNote: (body) => {
     return Axios.post(`${baseUrl}/AddNote`, body);

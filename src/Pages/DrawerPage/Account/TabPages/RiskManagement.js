@@ -13,6 +13,7 @@ import { useTheme } from "@emotion/react";
 import { useSnackbar } from "notistack";
 import Button from "../../../../UI/Button/Button";
 import Constants from "../../../../Constants/Constants";
+import Loader from "../../../../UI/Loader/Loader";
 import {
   BlacklistOption,
   ChangeProvCash,
@@ -25,6 +26,7 @@ import Api from "../../../../Services/AccountApi";
 
 const RiskManagement = (ssn) => {
   const { enqueueSnackbar } = useSnackbar();
+  const [loading, setLoading] = React.useState(false);
   const [value, setValue] = React.useState([false, false, false, false]);
   const [code, setCode] = React.useState("");
 
@@ -57,9 +59,11 @@ const RiskManagement = (ssn) => {
     });
     setRiskData(returnData);
     setValue(getVal);
+    setLoading(false);
   };
 
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
   }, [ssn]);
 
@@ -161,33 +165,66 @@ const RiskManagement = (ssn) => {
   };
   return (
     <Stack direction="row" spacing={2}>
-      <Card>
-        <Grid sx={{ padding: "1rem" }} spacing={4} container>
-          <Grid
-            sx={{
-              alignItems: "center",
-            }}
-            item
-            container
-            xs={12}
-          >
-            <LabelChild
-              label={"Restrict Trading"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
+      {!loading ? (
+        <Card>
+          <Grid sx={{ padding: "1rem" }} spacing={4} container>
+            <Grid
+              sx={{
+                alignItems: "center",
               }}
+              item
+              container
+              xs={12}
             >
-              <Stack direction="row">
+              <LabelChild
+                label={"Restrict Trading"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
+              >
+                <Stack direction="row">
+                  <Modal
+                    closeDependancy={random}
+                    content={
+                      <RestrictTrading
+                        label={"Restrict Trading"}
+                        triggerClose={closeModalHandler}
+                        value={value[0]}
+                        changeValueHandler={setRiskManagment}
+                      />
+                    }
+                  >
+                    <IconButton sx={{ mr: "2rem" }}>
+                      <FcSettings />
+                    </IconButton>
+                  </Modal>
+                  {/* <Switch
+                  value={SwitchState.restrictTrading}
+                  onChanged={(e) => onChangeSwitch(e, "restrictTrading")}
+                /> */}
+                </Stack>
+              </LabelChild>
+            </Grid>
+            <Grid sx={{ alignItems: "center" }} item container xs={12}>
+              <LabelChild
+                label={"Liq only"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
+              >
                 <Modal
                   closeDependancy={random}
                   content={
                     <RestrictTrading
-                      label={"Restrict Trading"}
+                      label={"Liq only"}
                       triggerClose={closeModalHandler}
-                      value={value[0]}
+                      value={value[1]}
                       changeValueHandler={setRiskManagment}
                     />
                   }
@@ -196,110 +233,108 @@ const RiskManagement = (ssn) => {
                     <FcSettings />
                   </IconButton>
                 </Modal>
-                {/* <Switch
-                  value={SwitchState.restrictTrading}
-                  onChanged={(e) => onChangeSwitch(e, "restrictTrading")}
+              </LabelChild>
+            </Grid>
+            <Grid sx={{ alignItems: "center" }} item container xs={12}>
+              <LabelChild
+                label={"Restrict Deposits"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
+              >
+                <Modal
+                  closeDependancy={random}
+                  content={
+                    <RestrictTrading
+                      label={"Restrict Deposits"}
+                      triggerClose={closeModalHandler}
+                      value={value[2]}
+                      changeValueHandler={setRiskManagment}
+                    />
+                  }
+                >
+                  <IconButton sx={{ mr: "2rem" }}>
+                    <FcSettings />
+                  </IconButton>
+                </Modal>
+              </LabelChild>
+            </Grid>
+            <Grid sx={{ alignItems: "center" }} item container xs={12}>
+              <LabelChild
+                label={"Restrict WithDrawl"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
+              >
+                <Modal
+                  closeDependancy={random}
+                  content={
+                    <RestrictTrading
+                      label={"Restrict WithDrawl"}
+                      triggerClose={closeModalHandler}
+                      value={value[3]}
+                      changeValueHandler={setRiskManagment}
+                    />
+                  }
+                >
+                  <IconButton sx={{ mr: "2rem" }}>
+                    <FcSettings />
+                  </IconButton>
+                </Modal>
+              </LabelChild>
+            </Grid>
+            <Grid sx={{ alignItems: "center" }} item container xs={12}>
+              <LabelChild
+                label={"Change Prov Cash"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
+              >
+                <Stack direction="row">
+                  <Modal
+                    closeDependancy={random}
+                    content={
+                      <ChangeProvCash
+                        label={"Change Prov Cash"}
+                        triggerClose={closeModalHandler}
+                      />
+                    }
+                  >
+                    <IconButton sx={{ mr: "2rem" }}>
+                      <FcSettings />
+                    </IconButton>
+                  </Modal>
+                  {/* <Switch
+                  value={SwitchState.changeProvCash}
+                  onChanged={(e) => onChangeSwitch(e, "changeProvCash")}
                 /> */}
-              </Stack>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Liq only"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Modal
-                closeDependancy={random}
-                content={
-                  <RestrictTrading
-                    label={"Liq only"}
-                    triggerClose={closeModalHandler}
-                    value={value[1]}
-                    changeValueHandler={setRiskManagment}
-                  />
-                }
+                </Stack>
+              </LabelChild>
+            </Grid>
+            <Grid sx={{ alignItems: "center" }} item container xs={12}>
+              <LabelChild
+                label={"Change Buying Power"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
               >
-                <IconButton sx={{ mr: "2rem" }}>
-                  <FcSettings />
-                </IconButton>
-              </Modal>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Restrict Deposits"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Modal
-                closeDependancy={random}
-                content={
-                  <RestrictTrading
-                    label={"Restrict Deposits"}
-                    triggerClose={closeModalHandler}
-                    value={value[2]}
-                    changeValueHandler={setRiskManagment}
-                  />
-                }
-              >
-                <IconButton sx={{ mr: "2rem" }}>
-                  <FcSettings />
-                </IconButton>
-              </Modal>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Restrict WithDrawl"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Modal
-                closeDependancy={random}
-                content={
-                  <RestrictTrading
-                    label={"Restrict WithDrawl"}
-                    triggerClose={closeModalHandler}
-                    value={value[3]}
-                    changeValueHandler={setRiskManagment}
-                  />
-                }
-              >
-                <IconButton sx={{ mr: "2rem" }}>
-                  <FcSettings />
-                </IconButton>
-              </Modal>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Change Prov Cash"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Stack direction="row">
                 <Modal
                   closeDependancy={random}
                   content={
                     <ChangeProvCash
-                      label={"Change Prov Cash"}
+                      label={"Change Buying Power"}
                       triggerClose={closeModalHandler}
                     />
                   }
@@ -308,111 +343,84 @@ const RiskManagement = (ssn) => {
                     <FcSettings />
                   </IconButton>
                 </Modal>
-                {/* <Switch
-                  value={SwitchState.changeProvCash}
-                  onChanged={(e) => onChangeSwitch(e, "changeProvCash")}
-                /> */}
-              </Stack>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Change Buying Power"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Modal
-                closeDependancy={random}
-                content={
-                  <ChangeProvCash
-                    label={"Change Buying Power"}
-                    triggerClose={closeModalHandler}
-                  />
-                }
+              </LabelChild>
+            </Grid>
+            <Grid sx={{ alignItems: "center" }} item container xs={12}>
+              <LabelChild
+                label={"Restrict Ticker"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
               >
-                <IconButton sx={{ mr: "2rem" }}>
-                  <FcSettings />
-                </IconButton>
-              </Modal>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Restrict Ticker"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Stack direction="row">
-                <Modal
-                  closeDependancy={random}
-                  content={
-                    <BlacklistOption
-                      triggerClose={closeModalHandler}
-                      saveOption={saveOption}
-                      riskData={riskData}
-                    />
-                  }
-                >
-                  <IconButton sx={{ mr: "2rem" }}>
-                    <FcSettings />
-                  </IconButton>
-                </Modal>
-                {/* <Switch
+                <Stack direction="row">
+                  <Modal
+                    closeDependancy={random}
+                    content={
+                      <BlacklistOption
+                        triggerClose={closeModalHandler}
+                        saveOption={saveOption}
+                        riskData={riskData}
+                      />
+                    }
+                  >
+                    <IconButton sx={{ mr: "2rem" }}>
+                      <FcSettings />
+                    </IconButton>
+                  </Modal>
+                  {/* <Switch
                   value={SwitchState.blacklistOption}
                   onChanged={(e) => onChangeSwitch(e, "blacklistOption")}
                 /> */}
-              </Stack>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Risk Flag"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Stack direction="row">
-                <Modal
-                  closeDependancy={random}
-                  content={<Riskflag triggerClose={closeModalHandler} />}
-                >
-                  <IconButton sx={{ mr: "2rem" }}>
-                    <FcSettings />
-                  </IconButton>
-                </Modal>
-                {/* <Switch
+                </Stack>
+              </LabelChild>
+            </Grid>
+            <Grid sx={{ alignItems: "center" }} item container xs={12}>
+              <LabelChild
+                label={"Risk Flag"}
+                labelXsSize={10}
+                childrenXsSize={2}
+                sxChild={LabelChildStyled}
+                typographyProps={{
+                  variant: typographyVariant,
+                }}
+              >
+                <Stack direction="row">
+                  <Modal
+                    closeDependancy={random}
+                    content={<Riskflag triggerClose={closeModalHandler} />}
+                  >
+                    <IconButton sx={{ mr: "2rem" }}>
+                      <FcSettings />
+                    </IconButton>
+                  </Modal>
+                  {/* <Switch
                   value={SwitchState.riskFlag}
                   onChanged={(e) => onChangeSwitch(e, "riskFlag")}
                 /> */}
-              </Stack>
-            </LabelChild>
+                </Stack>
+              </LabelChild>
+            </Grid>
           </Grid>
-        </Grid>
-        <Stack sx={{ p: 2 }} alignItems="center">
-          <Button
-            onClick={(e) => {
-              e.preventDefault();
-              enqueueSnackbar(Constants.Save_Changes_Success, {
-                variant: "success",
-              });
-            }}
-            sx={{ color: "white" }}
-          >
-            Save Changes
-          </Button>
-        </Stack>
-      </Card>
+          <Stack sx={{ p: 2 }} alignItems="center">
+            <Button
+              onClick={(e) => {
+                e.preventDefault();
+                enqueueSnackbar(Constants.Save_Changes_Success, {
+                  variant: "success",
+                });
+              }}
+              sx={{ color: "white" }}
+            >
+              Save Changes
+            </Button>
+          </Stack>
+        </Card>
+      ) : (
+        <Loader />
+      )}
     </Stack>
   );
 };
