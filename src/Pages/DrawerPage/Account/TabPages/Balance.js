@@ -110,7 +110,7 @@ const Balance = (ssn) => {
   React.useEffect(() => {
     setLoader(true);
     fetchData();
-  }, [ssn]);
+  }, [ssn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getPlValue = (params) => {
     let total = params.row.returns_total;
@@ -124,9 +124,12 @@ const Balance = (ssn) => {
 
   const getExpirationDate = (params) => {
     if (/\d/.test(params.row.ticker)) {
-      let [ticker, stock, expdate, cp, strike] = params.row.ticker.match(
+      const expdate = params.row.ticker.match(
         "([A-Z]+)([0-9]+)([C|P])([0-9]+)"
-      );
+      )[2];
+      // let [ticker, stock, expdate, cp, strike] = params.row.ticker.match(
+      //   "([A-Z]+)([0-9]+)([C|P])([0-9]+)"
+      // );
       let str = expdate + "";
       str =
         str.substring(0, 2) +

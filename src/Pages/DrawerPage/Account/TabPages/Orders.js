@@ -305,7 +305,7 @@ const Orders = (ssn) => {
   React.useEffect(() => {
     setLoading(true);
     fetchData();
-  }, [value]);
+  }, [value]); // eslint-disable-line react-hooks/exhaustive-deps
   const datesHandler = (dates) => {
     let temp = [...data];
     if (dates) {

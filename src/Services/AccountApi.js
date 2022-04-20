@@ -13,7 +13,7 @@ const api = {
   },
   getBalance: async (val) => {
     try {
-      let response = await Axios.get(`${baseUrl}/GetBalsances`, {
+      let response = await Axios.get(`${baseUrl}/GetBalances`, {
         headers: {
           account: val.ssn,
         },

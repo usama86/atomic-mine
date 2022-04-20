@@ -1,6 +1,5 @@
 import React from "react";
 import Table from "../../../../UI/Table/TableWithGlobalFiltering";
-import data from "../../../../Constants/mock_funds_data.json";
 import Card from "../../../../UI/Card/Card";
 import Api from "../../../../Services/AccountApi";
 import { getTime } from "../../../../helpers/utils";
@@ -45,7 +44,7 @@ const Funds = (ssn) => {
 
   React.useEffect(() => {
     fetchData();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     let getFund = await Api.getFunds(ssn);
@@ -54,12 +53,7 @@ const Funds = (ssn) => {
 
   return (
     <Card>
-      <Table
-        rowID="id"
-        rows={funds}
-        columns={fields}
-        rowID={"transaction_id"}
-      />
+      <Table rows={funds} columns={fields} rowID={"transaction_id"} />
     </Card>
   );
 };

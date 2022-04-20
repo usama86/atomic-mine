@@ -43,7 +43,7 @@ const RiskManagement = (ssn) => {
     let getData = await Api.getRestrictions(ssn);
     let returnData = getData.data.data;
     let getVal = value.slice();
-    returnData.map((data) => {
+    returnData.forEach((data) => {
       if (data.code === "DNT") {
         getVal[0] = !getVal[0];
       }
@@ -65,7 +65,7 @@ const RiskManagement = (ssn) => {
   React.useEffect(() => {
     setLoading(true);
     fetchData();
-  }, [ssn]);
+  }, [ssn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   React.useEffect(() => {
     if (mediumScreen) {

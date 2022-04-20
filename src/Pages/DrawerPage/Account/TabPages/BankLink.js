@@ -40,7 +40,7 @@ const BankLink = (ssn) => {
 
   React.useEffect(() => {
     fetchData();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     let getBank = await Api.getBankDetail(ssn);
