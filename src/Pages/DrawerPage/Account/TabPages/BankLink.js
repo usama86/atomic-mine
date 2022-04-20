@@ -13,8 +13,9 @@ import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 import { StatusModel, UnlinkModel } from "./Modals";
 import Typography from "../../../../UI/Typography/Typography";
+import Api from "../../../../Services/AccountApi";
 
-const BankLink = () => {
+const BankLink = (ssn) => {
   const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
   const mediumScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -34,6 +35,17 @@ const BankLink = () => {
       setTypographyVariant("body");
     }
   }, [mediumScreen, smallScreen, largeScreen]);
+
+  const [bankData, setBankData] = React.useState([]);
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    let getBank = await Api.getBankDetail(ssn);
+    setBankData(getBank.data.data[0]);
+  };
 
   const [random, setRandom] = React.useState("");
   const closeModalHandler = (e) => {
@@ -66,7 +78,7 @@ const BankLink = () => {
                 variant: typographyVariant,
               }}
             >
-              {"Chase"}
+              {bankData?.bank_name}
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -79,7 +91,7 @@ const BankLink = () => {
                 variant: typographyVariant,
               }}
             >
-              {"12345"}
+              {bankData?.bank_routing_number}
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -92,7 +104,7 @@ const BankLink = () => {
                 variant: typographyVariant,
               }}
             >
-              {"12345"}
+              {bankData?.bank_acct_number}
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
