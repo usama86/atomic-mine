@@ -101,5 +101,29 @@ const api = {
       },
     });
   },
+  getFunds: async (val) => {
+    let getDeposit = await Axios.get(`${baseUrl}/GetDeposits`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+
+    let deposit =
+      getWithDrawl.data.data && getWithDrawl.data.data.length > 0
+        ? getDeposit.data.data.map((d) => ({ ...d, type: "deposit" }))
+        : [];
+
+    let getWithDrawl = await Axios.get(`${baseUrl}/GetWithdrawals`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let withDrawl =
+      getWithDrawl.data.data && getWithDrawl.data.data.length > 0
+        ? getWithDrawl.data.data.map((d) => (d = { ...d, type: "withdrawal" }))
+        : [];
+    let finalObj = deposit.data.data.concat(withDrawl.data.data);
+    return finalObj;
+  },
 };
 export default api;

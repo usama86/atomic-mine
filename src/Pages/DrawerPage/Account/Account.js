@@ -63,7 +63,11 @@ function Account() {
           value: "3",
           component: <Orders ssn={searchVal.ssn} />,
         },
-        { label: "Funds", value: "4", component: <Funds /> },
+        {
+          label: "Funds",
+          value: "4",
+          component: <Funds ssn={searchVal.ssn} />,
+        },
         { label: "Cash Ledger", value: "5", component: <CashLedger /> },
         { label: "Bank Link", value: "6", component: <BankLink /> },
         { label: "Docs", value: "7", component: <Docs /> },
