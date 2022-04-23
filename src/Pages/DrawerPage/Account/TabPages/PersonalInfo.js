@@ -7,10 +7,10 @@ import LabelChild from "./../../../../UI/LabelChild";
 import { LabelChildStyled } from "./TabPages.styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
-
+import Api from "../../../../Services/AccountApi";
 import DatePicker from "../../../../UI/Date/DatePickerComp";
 
-const PersonalInfo = () => {
+const PersonalInfo = (ssn) => {
   const theme = useTheme();
   const mediumScreen = useMediaQuery(theme.breakpoints.down("md"));
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -28,6 +28,17 @@ const PersonalInfo = () => {
       setTypographyVariant("body");
     }
   }, [mediumScreen, smallScreen, largeScreen]);
+
+  const [personalInfo, setPersonalInfo] = React.useState([]);
+
+  React.useEffect(() => {
+    fetchData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const fetchData = async () => {
+    let getAccount = await Api.getAccount(ssn);
+    setPersonalInfo(getAccount.data.data[0]);
+  };
 
   return (
     <Stack direction="row" spacing={2}>
@@ -50,7 +61,16 @@ const PersonalInfo = () => {
                 variant: typographyVariant,
               }}
             >
-              <TextField label="Name" isdefault />
+              <TextField
+                label=""
+                isdefault
+                disabled
+                value={
+                  personalInfo?.kyc_info?.first_name +
+                  " " +
+                  personalInfo?.kyc_info?.last_name
+                }
+              />
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -63,7 +83,12 @@ const PersonalInfo = () => {
                 variant: typographyVariant,
               }}
             >
-              <TextField label="SSN" isdefault />
+              <TextField
+                label=""
+                isdefault
+                disabled
+                value={personalInfo?.ssn}
+              />
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -76,7 +101,10 @@ const PersonalInfo = () => {
                 variant: typographyVariant,
               }}
             >
-              <DatePicker label="Date of Birth" />
+              <DatePicker
+                label="Date of Birth"
+                value={personalInfo?.kyc_info?.dob}
+              />
             </LabelChild>
           </Grid>
           <Grid sx={{ alignItems: "center" }} item container xs={12}>

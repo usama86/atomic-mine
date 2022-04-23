@@ -257,8 +257,17 @@ const api = {
   UnLinkBank: (body) => {
     return Axios.post(`${baseUrl}/UnlinkBank`, body);
   },
-  gtOptionsApprovalInfo: (val) => {
-    return Axios.get(`${baseUrl}/GetOptionsApprovalInfo`, {
+  getOptionsApprovalInfo: async (val) => {
+    let result = Axios.get(`${baseUrl}/GetOptionsApprovalInfo`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+
+    return result;
+  },
+  getAccount: (val) => {
+    return Axios.get(`${baseUrl}/GetAccount`, {
       headers: {
         account: val.ssn,
       },
