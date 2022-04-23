@@ -109,10 +109,14 @@ const PersonalInfo = (ssn) => {
                     variant: typographyVariant,
                   }}
                 >
-                  <DatePicker
+                  <TextField
                     label="Date of Birth"
                     value={personalInfo?.kyc_info?.dob}
                   />
+                  {/* <DatePicker
+                    label="Date of Birth"
+                    value={personalInfo?.kyc_info?.dob}
+                  /> */}
                 </LabelChild>
               </Grid>
               <Grid sx={{ alignItems: "center" }} item container xs={12}>
