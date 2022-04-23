@@ -12,11 +12,9 @@ const DatePickerComp = ({
   textFieldProps,
   ...props
 }) => {
-  const [open, setOpen] = React.useState(false);
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePicker
-        open={open}
         label={label}
         {...props}
         value={value}

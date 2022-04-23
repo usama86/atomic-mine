@@ -11,7 +11,6 @@ import Modal from "../../../../UI/Modal/Modal";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 import { useSnackbar } from "notistack";
-import Button from "../../../../UI/Button/Button";
 import Constants from "../../../../Constants/Constants";
 import Loader from "../../../../UI/Loader/Loader";
 import {
