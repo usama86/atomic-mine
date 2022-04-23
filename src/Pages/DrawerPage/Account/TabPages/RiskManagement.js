@@ -128,6 +128,21 @@ const RiskManagement = (ssn) => {
     // const LiftRestriction = await Api.liftRestriction({account:ssn,code:code)};
   };
 
+  const postNodesReq = async (account, content) => {
+    let postNotes = await Api.addNote({
+      account: account.ssn,
+      body: content,
+    });
+    if (postNotes.data.result.success) {
+      enqueueSnackbar(postNotes.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
+  };
+
   const saveOption = async (tsla) => {
     const setRestriction = await Api.applyRestriction({
       account: ssn.ssn,
@@ -193,6 +208,8 @@ const RiskManagement = (ssn) => {
                     closeDependancy={random}
                     content={
                       <RestrictTrading
+                        ssn={ssn}
+                        postNodesReq={postNodesReq}
                         label={"Restrict Trading"}
                         triggerClose={closeModalHandler}
                         value={value[0]}
