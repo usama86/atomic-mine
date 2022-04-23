@@ -99,6 +99,9 @@ const RiskManagement = (ssn) => {
       setValue(getVal);
     } else {
       let setRestriction = "";
+      if (code === "") {
+        return;
+      }
       codes === true
         ? (setRestriction = await Api.applyRestriction({
             account: ssn.ssn,
