@@ -1,83 +1,61 @@
 import React from "react";
 import Table from "../../../../UI/Table/TableWithGlobalFiltering";
 import Card from "../../../../UI/Card/Card";
+import Api from "../../../../Services/AccountApi";
+import { getTime } from "../../../../helpers/utils";
 
-const fields = [
-  {
-    field: "namedsymbol",
-    headerName: "Named Symbol",
-    flex: 1,
-  },
-  {
-    field: "action",
-    headerName: "Action",
-    flex: 1,
-  },
-  {
-    field: "amount",
-    headerName: "Amount",
-    flex: 1,
-  },
-  {
-    field: "date",
-    headerName: "Date/Time",
-    flex: 1,
-    type: "date",
-  },
-  {
-    field: "totalcashbalance",
-    headerName: "Total Cash Balance",
-    flex: 1,
-  },
-];
+let totalAmount = 0;
+const CashLedger = (ssn) => {
+  const [cashLedger, setCashLedger] = React.useState([]);
 
-const data = [
-  {
-    id: 1,
-    namedsymbol: "9",
-    action: "Deposit",
-    amount: "330",
-    date: "3/2/2022",
-    totalcashbalance: "$120",
-  },
-  {
-    id: 2,
-    namedsymbol: "39",
-    action: "Deposited",
-    amount: "3330",
-    date: "3/2/2021",
-    totalcashbalance: "$1230",
-  },
-  {
-    id: 3,
-    namedsymbol: "9",
-    action: "Buy",
-    amount: "230",
-    date: "1/2/2022",
-    totalcashbalance: "$1220",
-  },
-  {
-    id: 4,
-    namedsymbol: "19",
-    action: "Deposit",
-    amount: "1330",
-    date: "1/1/2022",
-    totalcashbalance: "$1120",
-  },
-  {
-    id: 5,
-    namedsymbol: "29",
-    action: "Buy",
-    amount: "330",
-    date: "3/22/2022",
-    totalcashbalance: "$1220",
-  },
-];
+  const getAmount = (params) => {
+    let amount = Number(params.row.avg_filled_price) * Number(params.row.qty);
+    totalAmount = amount + totalAmount;
+    return amount;
+  };
+  const fields = [
+    {
+      field: "ticker",
+      headerName: "Named Symbol",
+      flex: 1,
+    },
+    {
+      field: "side",
+      headerName: "Action",
+      flex: 1,
+    },
+    {
+      field: "amount",
+      headerName: "Amount",
+      flex: 1,
+      valueGetter: getAmount,
+    },
+    {
+      field: "filled_on",
+      headerName: "Date/Time",
+      flex: 1,
+      type: "dateTime",
+      valueGetter: getTime,
+    },
+    {
+      field: "totalBalance",
+      headerName: "Total Cash Balance",
+      flex: 1,
+    },
+  ];
 
-const CashLedger = () => {
+  React.useEffect(() => {
+    fetchData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const fetchData = async () => {
+    let getCashLedger = await Api.getCashLedger(ssn);
+    setCashLedger(getCashLedger);
+  };
+
   return (
     <Card>
-      <Table rowID="id" rows={data} columns={fields} />
+      <Table rowID="id" rows={cashLedger} columns={fields} />
     </Card>
   );
 };

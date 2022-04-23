@@ -6,7 +6,7 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
-const Status = ({ triggerClose, status, onChangeStatus }) => {
+const Status = ({ triggerClose, status, onChangeStatus, onSaveStatus }) => {
   const onChange = (e) => {
     onChangeStatus(e);
   };
@@ -23,6 +23,7 @@ const Status = ({ triggerClose, status, onChangeStatus }) => {
         <Button
           onClick={(e) => {
             e.preventDefault();
+            onSaveStatus();
             triggerClose();
           }}
           sx={{ color: "white" }}

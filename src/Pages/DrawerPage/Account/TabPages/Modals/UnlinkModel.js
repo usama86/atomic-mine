@@ -6,16 +6,24 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
-const UnlinkModel = ({ triggerClose }) => {
+const UnlinkModel = ({ triggerClose, LinkVal, onChangeLink, onSaveLink }) => {
+  const onChange = (e) => {
+    onChangeLink(e);
+  };
   return (
     <Stack gap={2}>
       <Typography variant="h6">Unlink</Typography>
-      <Checkbox Label="Unlink" />
+      <Checkbox
+        Label="Unlink"
+        onChange={onChange}
+        checked={LinkVal === "Unlink" ? false : true}
+      />
       <TextFieldComp isdefault={true} label="Notes" />
       <Stack direction="row" justifyContent="center">
         <Button
           onClick={(e) => {
             e.preventDefault();
+            onSaveLink();
             triggerClose();
           }}
           sx={{ color: "white" }}

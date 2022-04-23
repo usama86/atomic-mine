@@ -147,5 +147,63 @@ const api = {
       },
     });
   },
+  getCashLedger: async (val) => {
+    let filledOrders = await Axios.get(`${baseUrl}/GetOrders/filled`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let finalObj = filledOrders.data.data.stocks.concat(
+      filledOrders.data.data.options
+    );
+    let totalAmount = 0;
+    finalObj = finalObj.map((d, ind) => {
+      if (ind === 0) {
+        totalAmount = Number(d.avg_filled_price) * d.qty;
+        d = { ...d, totalBalance: totalAmount.toFixed(2) };
+      } else {
+        if (d.side.charAt(0) === "B")
+          totalAmount += Number(d.avg_filled_price) * d.qty;
+        else totalAmount -= Number(d.avg_filled_price) * d.qty;
+        d = { ...d, totalBalance: totalAmount.toFixed(2) };
+      }
+      return d;
+    });
+
+    // let getSettled = await Axios.get(`${baseUrl}/GetOrders/settled`, {
+    //   headers: {
+    //     account: val.ssn,
+    //   },
+    // });
+    // let getWithdrawals = await Axios.get(`${baseUrl}/GetWithdrawals`, {
+    //   headers: {
+    //     account: val.ssn,
+    //   },
+    // });
+    // let joinSettledWithdrawls = getSettled.data.data.concat(
+    //   getWithdrawals.data.data
+    // );
+
+    // let finalArray = joinSettledWithdrawls.concat(finalObj);
+
+    return finalObj;
+  },
+  freezeBankAcct: (body) => {
+    return Axios.post(`${baseUrl}/FreezeBankAcct`, body);
+  },
+  unfreezeBankAcct: (body) => {
+    return Axios.post(`${baseUrl}/UnfreezeBankAcct`, body);
+  },
+  UnLinkBank: (body) => {
+    return Axios.post(`${baseUrl}/UnlinkBank`, body);
+  },
+  gtOptionsApprovalInfo: (val) => {
+    return Axios.get(`${baseUrl}/GetOptionsApprovalInfo`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+  },
 };
+//http://44.194.15.240:8000/GetDeposits/settled    GetOptionsApprovalInfo
 export default api;
