@@ -23,6 +23,8 @@ const BankLink = (ssn) => {
   const largeScreen = useMediaQuery(theme.breakpoints.up("md"));
 
   const [status, setStatus] = React.useState("Active");
+  const [linkVal, setLinkVal] = React.useState("Unlink");
+
   const [typographyVariant, setTypographyVariant] = React.useState("body");
   React.useEffect(() => {
     if (mediumScreen) {
@@ -55,6 +57,51 @@ const BankLink = (ssn) => {
   const onChangeStatus = (e) => {
     if (e.target.checked) setStatus("Frozen");
     else setStatus("Active");
+  };
+
+  const onChangeLink = (e) => {
+    if (e.target.checked) setLinkVal("link");
+    else setLinkVal("Unlink");
+  };
+
+  const onSaveStatus = async () => {
+    let poststatus;
+    if (status === "Active")
+      poststatus = await Api.freezeBankAcct({
+        account: ssn.ssn,
+        bank_acct_number: bankData.bank_acct_number,
+      });
+    else
+      poststatus = await Api.unfreezeBankAcct({
+        account: ssn.ssn,
+        bank_acct_number: bankData.bank_acct_number,
+      });
+    if (poststatus.data.result.success) {
+      enqueueSnackbar(poststatus.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
+  };
+
+  const onSaveLink = async () => {
+    let postlink;
+    if (linkVal === "link") return;
+    else
+      postlink = await Api.UnLinkBank({
+        account: ssn.ssn,
+        bank_acct_number: bankData.bank_acct_number,
+      });
+    if (postlink.data.result.success) {
+      enqueueSnackbar(postlink.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
   };
 
   return (
@@ -139,6 +186,7 @@ const BankLink = (ssn) => {
                       status={status}
                       triggerClose={closeModalHandler}
                       onChangeStatus={onChangeStatus}
+                      onSaveStatus={onSaveStatus}
                     />
                   }
                 >
@@ -192,7 +240,14 @@ const BankLink = (ssn) => {
               <Stack direction="row">
                 <Modal
                   closeDependancy={random}
-                  content={<UnlinkModel triggerClose={closeModalHandler} />}
+                  content={
+                    <UnlinkModel
+                      triggerClose={closeModalHandler}
+                      LinkVal={linkVal}
+                      onChangeLink={onChangeLink}
+                      onSaveLink={onSaveLink}
+                    />
+                  }
                 >
                   <IconButton>
                     <FcSettings />
