@@ -46,13 +46,17 @@ const api = {
     });
   },
   ViewPositions: async (val) => {
-    let data = await Axios.get(`${baseUrl}/ViewPositions`, {
-      headers: {
-        account: val.ssn,
-      },
-    });
-    let finalObj = data.data.data.stocks.concat(data.data.data.options);
-    return finalObj;
+    try {
+      let data = await Axios.get(`${baseUrl}/ViewPositions`, {
+        headers: {
+          account: val.ssn,
+        },
+      });
+      let finalObj = data.data.data.stocks.concat(data.data.data.options);
+      return finalObj;
+    } catch (err) {
+      return err.response;
+    }
   },
   getBidAsk: (val) => {
     return Axios.get(`${baseUrl}/GetBidAsk/${val}`);
@@ -96,12 +100,17 @@ const api = {
   cancelOrder: (body) => {
     return Axios.post(`${baseUrl}/CancelOrder`, body);
   },
-  getGFVs: (val) => {
-    return Axios.get(`${baseUrl}/GetGFVs`, {
-      headers: {
-        account: val.ssn,
-      },
-    });
+  getGFVs: async (val) => {
+    try {
+      let response = Axios.get(`${baseUrl}/GetGFVs`, {
+        headers: {
+          account: val.ssn,
+        },
+      });
+      return response;
+    } catch (err) {
+      return err.response;
+    }
   },
   applyRestriction: (body) => {
     return Axios.post(`${baseUrl}/ApplyRestriction`, body);

@@ -87,11 +87,14 @@ const Balance = (ssn) => {
       setBalanceData(defaultBalanceData);
     }
     let getPosition = await Api.ViewPositions(ssn);
-    // if (getPosition.length === 0)
-    //   enqueueSnackbar(`Failed to get Positions`, {
-    //     variant: "error",
-    //   });
-    setPosition(getPosition);
+    if (Array.isArray(getPosition)) {
+      setPosition(getPosition);
+    } else {
+      setPosition([]);
+      enqueueSnackbar("Failed to get position", {
+        variant: "error",
+      });
+    }
     ///NEED TO SET IT UP WITH RISKFLAG AND GETGFVS
     let getRiskFlag = await Api.getTags(ssn);
     if (getRiskFlag.status === 200) setRiskFlag(getRiskFlag.data.result[0]);
@@ -102,7 +105,14 @@ const Balance = (ssn) => {
       setRiskFlag("");
     }
     let getGFVs = await Api.getGFVs(ssn);
-    setGfvs(getGFVs.data.data[ssn.ssn]);
+    if (getGFVs.status === 200) {
+      setGfvs(getGFVs.data.data[ssn.ssn]);
+    } else {
+      setGfvs([]);
+      enqueueSnackbar("Failed to get GFVs", {
+        variant: "error",
+      });
+    }
 
     setLoader(false);
   };
