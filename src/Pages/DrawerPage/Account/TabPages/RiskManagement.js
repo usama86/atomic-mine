@@ -242,6 +242,8 @@ const RiskManagement = (ssn) => {
                   closeDependancy={random}
                   content={
                     <RestrictTrading
+                      ssn={ssn}
+                      postNodesReq={postNodesReq}
                       label={"Liq only"}
                       triggerClose={closeModalHandler}
                       value={value[1]}
@@ -269,6 +271,8 @@ const RiskManagement = (ssn) => {
                   closeDependancy={random}
                   content={
                     <RestrictTrading
+                      ssn={ssn}
+                      postNodesReq={postNodesReq}
                       label={"Restrict Deposits"}
                       triggerClose={closeModalHandler}
                       value={value[2]}
@@ -296,6 +300,8 @@ const RiskManagement = (ssn) => {
                   closeDependancy={random}
                   content={
                     <RestrictTrading
+                      ssn={ssn}
+                      postNodesReq={postNodesReq}
                       label={"Restrict WithDrawl"}
                       triggerClose={closeModalHandler}
                       value={value[3]}
@@ -380,6 +386,8 @@ const RiskManagement = (ssn) => {
                     closeDependancy={random}
                     content={
                       <BlacklistOption
+                        ssn={ssn}
+                        postNodesReq={postNodesReq}
                         triggerClose={closeModalHandler}
                         saveOption={saveOption}
                         riskData={riskData}
@@ -424,7 +432,7 @@ const RiskManagement = (ssn) => {
               </LabelChild>
             </Grid>
           </Grid>
-          <Stack sx={{ p: 2 }} alignItems="center">
+          {/* <Stack sx={{ p: 2 }} alignItems="center">
             <Button
               onClick={(e) => {
                 e.preventDefault();
@@ -436,7 +444,7 @@ const RiskManagement = (ssn) => {
             >
               Save Changes
             </Button>
-          </Stack>
+          </Stack> */}
         </Card>
       ) : (
         <Loader />

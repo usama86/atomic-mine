@@ -39,8 +39,10 @@ const RestrictTrading = ({
           onClick={async (e) => {
             e.preventDefault();
             changeValueHandler(null, value, "save");
-            postNodesReq(ssn, notes);
-            setNotes("");
+            if (notes !== "") {
+              postNodesReq(ssn, notes);
+              setNotes("");
+            }
             triggerClose();
           }}
           sx={{ color: "white" }}
