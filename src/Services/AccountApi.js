@@ -273,6 +273,9 @@ const api = {
       },
     });
   },
+  closePosition: (body) => {
+    return Axios.post(`${baseUrl}/ClosePosition`, body);
+  },
 };
 //http://44.194.15.240:8000/GetDeposits/settled    GetOptionsApprovalInfo
 export default api;
