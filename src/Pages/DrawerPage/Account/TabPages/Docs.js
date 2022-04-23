@@ -6,7 +6,7 @@ import Tabs from "../../../../UI/Tabs/Tabs";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
-
+import Loader from "./../../../../UI/Loader/Loader";
 import Confirm from "./DocTabs/Confirm";
 import Agreements from "./DocTabs/Agreements";
 import Disclosures from "./DocTabs/Disclosures";
@@ -65,6 +65,7 @@ const data = {
 };
 
 const Docs = () => {
+  const [loading, setLoading] = React.useState(false);
   const [value, setValue] = React.useState("1");
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -102,30 +103,36 @@ const Docs = () => {
     },
   ];
   return (
-    <Stack spacing={2}>
-      <Card>
-        <Tabs height="30rem" value={value}>
-          <>
-            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-              <TabList
-                scrollButtons="auto"
-                variant="scrollable"
-                onChange={handleChange}
-              >
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Stack spacing={2}>
+          <Card>
+            <Tabs height="30rem" value={value}>
+              <>
+                <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+                  <TabList
+                    scrollButtons="auto"
+                    variant="scrollable"
+                    onChange={handleChange}
+                  >
+                    {TabsVal[0].controls.map((val, index) => (
+                      <Tab label={val.label} key={index} value={val.value} />
+                    ))}
+                  </TabList>
+                </Box>
                 {TabsVal[0].controls.map((val, index) => (
-                  <Tab label={val.label} key={index} value={val.value} />
+                  <TabPanel value={val.value} key={index}>
+                    {val.component}
+                  </TabPanel>
                 ))}
-              </TabList>
-            </Box>
-            {TabsVal[0].controls.map((val, index) => (
-              <TabPanel value={val.value} key={index}>
-                {val.component}
-              </TabPanel>
-            ))}
-          </>
-        </Tabs>
-      </Card>
-    </Stack>
+              </>
+            </Tabs>
+          </Card>
+        </Stack>
+      )}
+    </>
   );
 };
 

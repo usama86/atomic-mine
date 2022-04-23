@@ -2,10 +2,11 @@ import React from "react";
 import Table from "../../../../UI/Table/TableWithGlobalFiltering";
 import Card from "../../../../UI/Card/Card";
 import Api from "../../../../Services/AccountApi";
+import Loader from "./../../../../UI/Loader/Loader";
 
 const CashLedger = (ssn) => {
+  const [loading, setLoading] = React.useState(false);
   const [cashLedger, setCashLedger] = React.useState([]);
-
   const getAmount = (params) => {
     let amount = 0;
     if (params.row.avg_filled_price)
@@ -59,18 +60,26 @@ const CashLedger = (ssn) => {
   ];
 
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     let getCashLedger = await Api.getCashLedger(ssn);
     setCashLedger(getCashLedger);
+    setLoading(false);
   };
 
   return (
-    <Card>
-      <Table rows={cashLedger} columns={fields} multipleID />
-    </Card>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Card>
+          <Table rows={cashLedger} columns={fields} multipleID />
+        </Card>
+      )}
+    </>
   );
 };
 

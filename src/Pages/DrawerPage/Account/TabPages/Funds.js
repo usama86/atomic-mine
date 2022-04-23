@@ -3,6 +3,7 @@ import Table from "../../../../UI/Table/TableWithGlobalFiltering";
 import Card from "../../../../UI/Card/Card";
 import Api from "../../../../Services/AccountApi";
 import { getTime } from "../../../../helpers/utils";
+import Loader from "./../../../../UI/Loader/Loader";
 
 const Funds = (ssn) => {
   const fields = [
@@ -41,20 +42,28 @@ const Funds = (ssn) => {
     },
   ];
   const [funds, setFunds] = React.useState([]);
-
+  const [loading, setLoading] = React.useState(false);
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     let getFund = await Api.getFunds(ssn);
     setFunds(getFund);
+    setLoading(false);
   };
 
   return (
-    <Card>
-      <Table rows={funds} columns={fields} rowID={"transaction_id"} />
-    </Card>
+    <React.Fragment>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Card>
+          <Table rows={funds} columns={fields} rowID={"transaction_id"} />
+        </Card>
+      )}
+    </React.Fragment>
   );
 };
 
