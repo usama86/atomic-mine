@@ -9,8 +9,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 import Api from "../../../../Services/AccountApi";
 import DatePicker from "../../../../UI/Date/DatePickerComp";
+import Loader from "./../../../../UI/Loader/Loader";
 
 const PersonalInfo = (ssn) => {
+  const [loading, setLoading] = React.useState(false);
   const theme = useTheme();
   const mediumScreen = useMediaQuery(theme.breakpoints.down("md"));
   const smallScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -32,110 +34,122 @@ const PersonalInfo = (ssn) => {
   const [personalInfo, setPersonalInfo] = React.useState([]);
 
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     let getAccount = await Api.getAccount(ssn);
     setPersonalInfo(getAccount.data.data[0]);
+    setLoading(false);
   };
 
   return (
-    <Stack direction="row" spacing={2}>
-      <Card>
-        <Grid sx={{ padding: "1rem" }} spacing={4} container>
-          <Grid
-            sx={{
-              alignItems: "center",
-            }}
-            item
-            container
-            xs={12}
-          >
-            <LabelChild
-              label={"Name"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <TextField
-                label=""
-                isdefault
-                disabled
-                value={
-                  personalInfo?.kyc_info?.first_name +
-                  " " +
-                  personalInfo?.kyc_info?.last_name
-                }
-              />
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"SSN"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <TextField
-                label=""
-                isdefault
-                disabled
-                value={personalInfo?.ssn}
-              />
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Date of Birth"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <DatePicker
-                label="Date of Birth"
-                value={personalInfo?.kyc_info?.dob}
-              />
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Introducing Brokers"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              {"Plaid"}
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Driving License"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Stack direction="row">{"Driving License"}</Stack>
-            </LabelChild>
-          </Grid>
-        </Grid>
-      </Card>
-    </Stack>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Stack direction="row" spacing={2}>
+          <Card>
+            <Grid sx={{ padding: "1rem" }} spacing={4} container>
+              <Grid
+                sx={{
+                  alignItems: "center",
+                }}
+                item
+                container
+                xs={12}
+              >
+                <LabelChild
+                  label={"Name"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  <TextField
+                    label=""
+                    isdefault
+                    disabled
+                    value={
+                      personalInfo?.kyc_info?.first_name +
+                      " " +
+                      personalInfo?.kyc_info?.last_name
+                    }
+                  />
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"SSN"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  <TextField
+                    label=""
+                    isdefault
+                    disabled
+                    value={personalInfo?.ssn}
+                  />
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Date of Birth"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  <TextField
+                    label="Date of Birth"
+                    value={personalInfo?.kyc_info?.dob}
+                  />
+                  {/* <DatePicker
+                    label="Date of Birth"
+                    value={personalInfo?.kyc_info?.dob}
+                  /> */}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Introducing Brokers"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  {"Plaid"}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Driving License"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  <Stack direction="row">{"Driving License"}</Stack>
+                </LabelChild>
+              </Grid>
+            </Grid>
+          </Card>
+        </Stack>
+      )}
+    </>
   );
 };
 

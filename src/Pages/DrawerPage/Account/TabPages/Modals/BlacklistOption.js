@@ -6,8 +6,9 @@ import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import List from "../../../../../UI/List/List";
 
-const BlacklistOption = ({ triggerClose, ...props }) => {
+const BlacklistOption = ({ triggerClose, ssn, postNotesReq, ...props }) => {
   const [value, setValue] = React.useState("");
+  const [notes, setNotes] = React.useState("");
   return (
     <Stack gap={2}>
       <TextFieldComp
@@ -23,13 +24,23 @@ const BlacklistOption = ({ triggerClose, ...props }) => {
       />
       {/* <Checkbox Label="No Trade" /> */}
       {/* <Checkbox Label="Liq Only" /> */}
-      <TextFieldComp fullWidth isdefault={true} label="Notes" />
+      <TextFieldComp
+        value={notes}
+        onChange={(e) => setNotes(e.target.value)}
+        fullWidth
+        isdefault={true}
+        label="Notes"
+      />
       <List data={props.riskData} />
       <Stack direction="row" justifyContent="center">
         <Button
           onClick={(e) => {
             e.preventDefault();
             props.saveOption(value);
+            if (notes !== "") {
+              postNotesReq(ssn, notes);
+              setNotes("");
+            }
             triggerClose();
           }}
           sx={{ color: "white" }}

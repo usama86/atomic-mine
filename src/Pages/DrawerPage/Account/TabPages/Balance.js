@@ -199,6 +199,8 @@ const Balance = (ssn) => {
             <PositionClose
               triggerClose={acceptHandler}
               ticker={params.row.ticker}
+              ssn={ssn.ssn}
+              {...params}
             />
           }
         >

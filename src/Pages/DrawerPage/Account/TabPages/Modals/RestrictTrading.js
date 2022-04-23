@@ -12,7 +12,10 @@ const RestrictTrading = ({
   label,
   value,
   changeValueHandler,
+  ssn,
+  postNotesReq,
 }) => {
+  const [notes, setNotes] = React.useState("");
   return (
     <Stack gap={2}>
       <Stack direction="row" justifyContent="space-between">
@@ -23,13 +26,23 @@ const RestrictTrading = ({
         />
       </Stack>
       <Box>
-        <TextFieldComp fullWidth isdefault={true} label="Notes" />
+        <TextFieldComp
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+          fullWidth
+          isdefault={true}
+          label="Notes"
+        />
       </Box>
       <Stack alignItems="center">
         <Button
-          onClick={(e) => {
+          onClick={async (e) => {
             e.preventDefault();
             changeValueHandler(null, value, "save");
+            if (notes !== "") {
+              postNotesReq(ssn, notes);
+              setNotes("");
+            }
             triggerClose();
           }}
           sx={{ color: "white" }}

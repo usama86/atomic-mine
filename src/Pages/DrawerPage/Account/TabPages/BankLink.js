@@ -14,8 +14,10 @@ import Constants from "../../../../Constants/Constants";
 import { StatusModel, UnlinkModel } from "./Modals";
 import Typography from "../../../../UI/Typography/Typography";
 import Api from "../../../../Services/AccountApi";
+import Loader from "./../../../../UI/Loader/Loader";
 
 const BankLink = (ssn) => {
+  const [loading, setLoading] = React.useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const theme = useTheme();
   const mediumScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -41,12 +43,14 @@ const BankLink = (ssn) => {
   const [bankData, setBankData] = React.useState([]);
 
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     let getBank = await Api.getBankDetail(ssn);
     setBankData(getBank.data.data[0]);
+    setLoading(false);
   };
 
   const [random, setRandom] = React.useState("");
@@ -66,6 +70,11 @@ const BankLink = (ssn) => {
 
   const onSaveStatus = async () => {
     let poststatus;
+    if (!bankData) {
+      return enqueueSnackbar("No Bank Information Found!", {
+        variant: "error",
+      });
+    }
     if (status === "Active")
       poststatus = await Api.freezeBankAcct({
         account: ssn.ssn,
@@ -104,165 +113,190 @@ const BankLink = (ssn) => {
       });
   };
 
+  const postNotesReq = async (account, content) => {
+    let postNotes = await Api.addNote({
+      account: account.ssn,
+      body: content,
+    });
+    if (postNotes.data.result.success) {
+      enqueueSnackbar(postNotes.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
+  };
+
   return (
-    <Stack direction="row" spacing={2}>
-      <Card>
-        <Grid sx={{ padding: "1rem" }} spacing={4} container>
-          <Grid
-            sx={{
-              alignItems: "center",
-            }}
-            item
-            container
-            xs={12}
-          >
-            <LabelChild
-              label={"Bank Name"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              {bankData?.bank_name}
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"ABA #"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              {bankData?.bank_routing_number}
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Account #"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              {bankData?.bank_acct_number}
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Plaid / Micro"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              {"Plaid"}
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Status"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Stack direction="row" sx={{ alignItems: "center" }}>
-                <Typography>{status}</Typography>
-                <Modal
-                  closeDependancy={random}
-                  content={
-                    <StatusModel
-                      status={status}
-                      triggerClose={closeModalHandler}
-                      onChangeStatus={onChangeStatus}
-                      onSaveStatus={onSaveStatus}
-                    />
-                  }
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Stack direction="row" spacing={2}>
+          <Card>
+            <Grid sx={{ padding: "1rem" }} spacing={4} container>
+              <Grid
+                sx={{
+                  alignItems: "center",
+                }}
+                item
+                container
+                xs={12}
+              >
+                <LabelChild
+                  label={"Bank Name"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
                 >
-                  <IconButton>
-                    <FcSettings />
-                  </IconButton>
-                </Modal>
-                {/* <Switch
+                  {!bankData?.bank_name && "Not Found"}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"ABA #"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  {!bankData?.bank_routing_number && "Not Found"}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Account #"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  {!bankData?.bank_acct_number && "Not Found"}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Plaid / Micro"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  {"Plaid"}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Status"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  <Stack direction="row" sx={{ alignItems: "center" }}>
+                    <Typography>{status}</Typography>
+                    <Modal
+                      closeDependancy={random}
+                      content={
+                        <StatusModel
+                          ssn={ssn}
+                          postNotesReq={postNotesReq}
+                          status={status}
+                          triggerClose={closeModalHandler}
+                          onChangeStatus={onChangeStatus}
+                          onSaveStatus={onSaveStatus}
+                        />
+                      }
+                    >
+                      <IconButton>
+                        <FcSettings />
+                      </IconButton>
+                    </Modal>
+                    {/* <Switch
                   value={SwitchState.changeProvCash}
                   onChanged={(e) => onChangeSwitch(e, "changeProvCash")}
                 /> */}
-              </Stack>
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Info"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              {"N/A"}
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"GIACT"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              {"PASS"}
-            </LabelChild>
-          </Grid>
-          <Grid sx={{ alignItems: "center" }} item container xs={12}>
-            <LabelChild
-              label={"Unlink"}
-              labelXsSize={10}
-              childrenXsSize={2}
-              sxChild={LabelChildStyled}
-              typographyProps={{
-                variant: typographyVariant,
-              }}
-            >
-              <Stack direction="row">
-                <Modal
-                  closeDependancy={random}
-                  content={
-                    <UnlinkModel
-                      triggerClose={closeModalHandler}
-                      LinkVal={linkVal}
-                      onChangeLink={onChangeLink}
-                      onSaveLink={onSaveLink}
-                    />
-                  }
+                  </Stack>
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Info"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
                 >
-                  <IconButton>
-                    <FcSettings />
-                  </IconButton>
-                </Modal>
-                {/* <Switch
+                  {"N/A"}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"GIACT"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  {"PASS"}
+                </LabelChild>
+              </Grid>
+              <Grid sx={{ alignItems: "center" }} item container xs={12}>
+                <LabelChild
+                  label={"Unlink"}
+                  labelXsSize={10}
+                  childrenXsSize={2}
+                  sxChild={LabelChildStyled}
+                  typographyProps={{
+                    variant: typographyVariant,
+                  }}
+                >
+                  <Stack direction="row">
+                    <Modal
+                      closeDependancy={random}
+                      content={
+                        <UnlinkModel
+                          ssn={ssn}
+                          postNotesReq={postNotesReq}
+                          triggerClose={closeModalHandler}
+                          LinkVal={linkVal}
+                          onChangeLink={onChangeLink}
+                          onSaveLink={onSaveLink}
+                        />
+                      }
+                    >
+                      <IconButton>
+                        <FcSettings />
+                      </IconButton>
+                    </Modal>
+                    {/* <Switch
                   value={SwitchState.riskFlag}
                   onChanged={(e) => onChangeSwitch(e, "riskFlag")}
                 /> */}
-              </Stack>
-            </LabelChild>
-          </Grid>
-        </Grid>
-      </Card>
-    </Stack>
+                  </Stack>
+                </LabelChild>
+              </Grid>
+            </Grid>
+          </Card>
+        </Stack>
+      )}{" "}
+    </>
   );
 };
 

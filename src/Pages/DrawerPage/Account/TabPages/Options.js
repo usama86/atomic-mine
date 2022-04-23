@@ -8,17 +8,21 @@ import Button from "../../../../UI/Button/Button";
 import OptionsInfo from "./Modals/OptionsInfo";
 import Api from "../../../../Services/AccountApi";
 import { getTime } from "../../../../helpers/utils";
+import Loader from "./../../../../UI/Loader/Loader";
 
 const Options = (ssn) => {
+  const [loading, setLoading] = React.useState(false);
   const [options, setOptions] = React.useState([]);
 
   React.useEffect(() => {
+    setLoading(true);
     fetchData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     let getOptions = await Api.getOptionsApprovalInfo(ssn);
     setOptions(getOptions.data.data);
+    setLoading(false);
   };
 
   const getLevel = (params) => {
@@ -80,13 +84,19 @@ const Options = (ssn) => {
   ];
 
   return (
-    <Stack spacing={2}>
-      <Card>
-        <Box sx={{ height: "20rem" }}>
-          <Table rowID={"ssn"} columns={column} rows={options} />
-        </Box>
-      </Card>
-    </Stack>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Stack spacing={2}>
+          <Card>
+            <Box sx={{ height: "20rem" }}>
+              <Table rowID={"ssn"} columns={column} rows={options} />
+            </Box>
+          </Card>
+        </Stack>
+      )}
+    </>
   );
 };
 

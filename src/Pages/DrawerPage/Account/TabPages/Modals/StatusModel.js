@@ -6,7 +6,15 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
-const Status = ({ triggerClose, status, onChangeStatus, onSaveStatus }) => {
+const Status = ({
+  triggerClose,
+  status,
+  onChangeStatus,
+  onSaveStatus,
+  ssn,
+  postNotesReq,
+}) => {
+  const [notes, setNotes] = React.useState("");
   const onChange = (e) => {
     onChangeStatus(e);
   };
@@ -18,12 +26,21 @@ const Status = ({ triggerClose, status, onChangeStatus, onSaveStatus }) => {
         onChange={onChange}
         checked={status === "Active" ? false : true}
       />
-      <TextFieldComp isdefault={true} label="Notes" />
+      <TextFieldComp
+        value={notes}
+        onChange={(e) => setNotes(e.target.value)}
+        isdefault={true}
+        label="Notes"
+      />
       <Stack direction="row" justifyContent="center">
         <Button
           onClick={(e) => {
             e.preventDefault();
             onSaveStatus();
+            if (notes !== "") {
+              postNotesReq(ssn, notes);
+              setNotes("");
+            }
             triggerClose();
           }}
           sx={{ color: "white" }}
