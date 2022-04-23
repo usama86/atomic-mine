@@ -6,7 +6,7 @@ import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import List from "../../../../../UI/List/List";
 
-const BlacklistOption = ({ triggerClose, ssn, postNodesReq, ...props }) => {
+const BlacklistOption = ({ triggerClose, ssn, postNotesReq, ...props }) => {
   const [value, setValue] = React.useState("");
   const [notes, setNotes] = React.useState("");
   return (
@@ -38,7 +38,7 @@ const BlacklistOption = ({ triggerClose, ssn, postNodesReq, ...props }) => {
             e.preventDefault();
             props.saveOption(value);
             if (notes !== "") {
-              postNodesReq(ssn, notes);
+              postNotesReq(ssn, notes);
               setNotes("");
             }
             triggerClose();

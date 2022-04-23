@@ -6,10 +6,18 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
-const UnlinkModel = ({ triggerClose, LinkVal, onChangeLink, onSaveLink }) => {
+const UnlinkModel = ({
+  triggerClose,
+  LinkVal,
+  onChangeLink,
+  onSaveLink,
+  ssn,
+  postNotesReq,
+}) => {
   const onChange = (e) => {
     onChangeLink(e);
   };
+  const [notes, setNotes] = React.useState("");
   return (
     <Stack gap={2}>
       <Typography variant="h6">Unlink</Typography>
@@ -18,12 +26,21 @@ const UnlinkModel = ({ triggerClose, LinkVal, onChangeLink, onSaveLink }) => {
         onChange={onChange}
         checked={LinkVal === "Unlink" ? false : true}
       />
-      <TextFieldComp isdefault={true} label="Notes" />
+      <TextFieldComp
+        value={notes}
+        onChange={(e) => setNotes(e.target.value)}
+        isdefault={true}
+        label="Notes"
+      />
       <Stack direction="row" justifyContent="center">
         <Button
           onClick={(e) => {
             e.preventDefault();
             onSaveLink();
+            if (notes !== "") {
+              postNotesReq(ssn, notes);
+              setNotes("");
+            }
             triggerClose();
           }}
           sx={{ color: "white" }}

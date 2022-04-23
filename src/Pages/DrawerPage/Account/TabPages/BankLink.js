@@ -70,6 +70,11 @@ const BankLink = (ssn) => {
 
   const onSaveStatus = async () => {
     let poststatus;
+    if (!bankData) {
+      return enqueueSnackbar("No Bank Information Found!", {
+        variant: "error",
+      });
+    }
     if (status === "Active")
       poststatus = await Api.freezeBankAcct({
         account: ssn.ssn,
@@ -108,6 +113,21 @@ const BankLink = (ssn) => {
       });
   };
 
+  const postNotesReq = async (account, content) => {
+    let postNotes = await Api.addNote({
+      account: account.ssn,
+      body: content,
+    });
+    if (postNotes.data.result.success) {
+      enqueueSnackbar(postNotes.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
+  };
+
   return (
     <>
       {loading ? (
@@ -133,7 +153,7 @@ const BankLink = (ssn) => {
                     variant: typographyVariant,
                   }}
                 >
-                  {bankData?.bank_name}
+                  {!bankData?.bank_name && "Not Found"}
                 </LabelChild>
               </Grid>
               <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -146,7 +166,7 @@ const BankLink = (ssn) => {
                     variant: typographyVariant,
                   }}
                 >
-                  {bankData?.bank_routing_number}
+                  {!bankData?.bank_routing_number && "Not Found"}
                 </LabelChild>
               </Grid>
               <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -159,7 +179,7 @@ const BankLink = (ssn) => {
                     variant: typographyVariant,
                   }}
                 >
-                  {bankData?.bank_acct_number}
+                  {!bankData?.bank_acct_number && "Not Found"}
                 </LabelChild>
               </Grid>
               <Grid sx={{ alignItems: "center" }} item container xs={12}>
@@ -191,6 +211,8 @@ const BankLink = (ssn) => {
                       closeDependancy={random}
                       content={
                         <StatusModel
+                          ssn={ssn}
+                          postNotesReq={postNotesReq}
                           status={status}
                           triggerClose={closeModalHandler}
                           onChangeStatus={onChangeStatus}
@@ -250,6 +272,8 @@ const BankLink = (ssn) => {
                       closeDependancy={random}
                       content={
                         <UnlinkModel
+                          ssn={ssn}
+                          postNotesReq={postNotesReq}
                           triggerClose={closeModalHandler}
                           LinkVal={linkVal}
                           onChangeLink={onChangeLink}

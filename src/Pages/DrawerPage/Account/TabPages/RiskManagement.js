@@ -128,7 +128,7 @@ const RiskManagement = (ssn) => {
     // const LiftRestriction = await Api.liftRestriction({account:ssn,code:code)};
   };
 
-  const postNodesReq = async (account, content) => {
+  const postNotesReq = async (account, content) => {
     let postNotes = await Api.addNote({
       account: account.ssn,
       body: content,
@@ -209,7 +209,7 @@ const RiskManagement = (ssn) => {
                     content={
                       <RestrictTrading
                         ssn={ssn}
-                        postNodesReq={postNodesReq}
+                        postNotesReq={postNotesReq}
                         label={"Restrict Trading"}
                         triggerClose={closeModalHandler}
                         value={value[0]}
@@ -243,7 +243,7 @@ const RiskManagement = (ssn) => {
                   content={
                     <RestrictTrading
                       ssn={ssn}
-                      postNodesReq={postNodesReq}
+                      postNotesReq={postNotesReq}
                       label={"Liq only"}
                       triggerClose={closeModalHandler}
                       value={value[1]}
@@ -272,7 +272,7 @@ const RiskManagement = (ssn) => {
                   content={
                     <RestrictTrading
                       ssn={ssn}
-                      postNodesReq={postNodesReq}
+                      postNotesReq={postNotesReq}
                       label={"Restrict Deposits"}
                       triggerClose={closeModalHandler}
                       value={value[2]}
@@ -301,7 +301,7 @@ const RiskManagement = (ssn) => {
                   content={
                     <RestrictTrading
                       ssn={ssn}
-                      postNodesReq={postNodesReq}
+                      postNotesReq={postNotesReq}
                       label={"Restrict WithDrawl"}
                       triggerClose={closeModalHandler}
                       value={value[3]}
@@ -387,7 +387,7 @@ const RiskManagement = (ssn) => {
                     content={
                       <BlacklistOption
                         ssn={ssn}
-                        postNodesReq={postNodesReq}
+                        postNotesReq={postNotesReq}
                         triggerClose={closeModalHandler}
                         saveOption={saveOption}
                         riskData={riskData}

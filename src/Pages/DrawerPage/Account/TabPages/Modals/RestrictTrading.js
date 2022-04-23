@@ -13,7 +13,7 @@ const RestrictTrading = ({
   value,
   changeValueHandler,
   ssn,
-  postNodesReq,
+  postNotesReq,
 }) => {
   const [notes, setNotes] = React.useState("");
   return (
@@ -40,7 +40,7 @@ const RestrictTrading = ({
             e.preventDefault();
             changeValueHandler(null, value, "save");
             if (notes !== "") {
-              postNodesReq(ssn, notes);
+              postNotesReq(ssn, notes);
               setNotes("");
             }
             triggerClose();
