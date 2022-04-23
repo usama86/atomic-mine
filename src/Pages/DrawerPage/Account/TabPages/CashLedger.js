@@ -2,16 +2,30 @@ import React from "react";
 import Table from "../../../../UI/Table/TableWithGlobalFiltering";
 import Card from "../../../../UI/Card/Card";
 import Api from "../../../../Services/AccountApi";
-import { getTime } from "../../../../helpers/utils";
 
-let totalAmount = 0;
 const CashLedger = (ssn) => {
   const [cashLedger, setCashLedger] = React.useState([]);
 
   const getAmount = (params) => {
-    let amount = Number(params.row.avg_filled_price) * Number(params.row.qty);
-    totalAmount = amount + totalAmount;
-    return amount;
+    let amount = 0;
+    if (params.row.avg_filled_price)
+      amount = Number(params.row.avg_filled_price) * Number(params.row.qty);
+    else amount = Number(params.row.qty);
+    return amount.toFixed(2);
+  };
+  const getTime = (params) => {
+    let datee = "";
+    if (params.row.filled_on) datee = params.row.filled_on;
+    else datee = params.row.created_on;
+    let dateVal = new Date(datee);
+
+    return (
+      dateVal.getDate() +
+      "/" +
+      (dateVal.getMonth() + 1) +
+      "/" +
+      dateVal.getFullYear()
+    );
   };
   const fields = [
     {
@@ -55,7 +69,7 @@ const CashLedger = (ssn) => {
 
   return (
     <Card>
-      <Table rowID="id" rows={cashLedger} columns={fields} />
+      <Table rows={cashLedger} columns={fields} multipleID />
     </Card>
   );
 };

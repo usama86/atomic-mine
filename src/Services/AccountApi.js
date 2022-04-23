@@ -159,34 +159,85 @@ const api = {
     let totalAmount = 0;
     finalObj = finalObj.map((d, ind) => {
       if (ind === 0) {
-        totalAmount = Number(d.avg_filled_price) * d.qty;
-        d = { ...d, totalBalance: totalAmount.toFixed(2) };
+        totalAmount = Number(d.avg_filled_price) * Number(d.qty);
+        d = { ...d, totalBalance: Number(totalAmount).toFixed(2) };
       } else {
         if (d.side.charAt(0) === "B")
-          totalAmount += Number(d.avg_filled_price) * d.qty;
-        else totalAmount -= Number(d.avg_filled_price) * d.qty;
-        d = { ...d, totalBalance: totalAmount.toFixed(2) };
+          totalAmount += Number(d.avg_filled_price) * Number(d.qty);
+        else totalAmount -= Number(d.avg_filled_price) * Number(d.qty);
+        d = { ...d, totalBalance: Number(totalAmount).toFixed(2) };
       }
       return d;
     });
 
-    // let getSettled = await Axios.get(`${baseUrl}/GetOrders/settled`, {
-    //   headers: {
-    //     account: val.ssn,
-    //   },
-    // });
-    // let getWithdrawals = await Axios.get(`${baseUrl}/GetWithdrawals`, {
-    //   headers: {
-    //     account: val.ssn,
-    //   },
-    // });
-    // let joinSettledWithdrawls = getSettled.data.data.concat(
-    //   getWithdrawals.data.data
-    // );
+    let getSettled = await Axios.get(`${baseUrl}/GetDeposits/settled`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let settledData = getSettled.data.data;
+    let totalSettledPrice = 0;
+    settledData = settledData.map((d, ind) => {
+      if (ind === 0) {
+        let getFilledOrderLastPrice =
+          Number(finalObj[finalObj.length - 1].totalBalance) + d.qty;
+        totalSettledPrice = getFilledOrderLastPrice;
+        d = {
+          ...d,
+          side: "Deposit",
+          id: d.transaction_id,
+          totalBalance: Number(totalSettledPrice).toFixed(2),
+        }; //add
+      } else {
+        totalSettledPrice += Number(d.qty);
+        d = {
+          ...d,
+          side: "Deposit",
+          id: d.transaction_id,
+          totalBalance: Number(totalSettledPrice).toFixed(2),
+        };
+      }
 
-    // let finalArray = joinSettledWithdrawls.concat(finalObj);
+      return d;
+    });
 
-    return finalObj;
+    //side
+    let getWithdrawals = await Axios.get(`${baseUrl}/GetWithdrawals`, {
+      headers: {
+        account: val.ssn,
+      },
+    });
+    let withdrawalsData = getWithdrawals.data.data;
+    let totalWithDrawlPrice = 0;
+    withdrawalsData = withdrawalsData.map((d, ind) => {
+      if (ind === 0) {
+        let gettotalSettledPrice =
+          Number(settledData[settledData.length - 1].totalBalance) -
+          Number(d.qty);
+        totalWithDrawlPrice = gettotalSettledPrice;
+        d = {
+          ...d,
+          side: "WithDrawl",
+          id: d.transaction_id,
+          totalBalance: Number(totalWithDrawlPrice).toFixed(2),
+        }; //sub
+      } else {
+        totalWithDrawlPrice -= d.qty;
+        d = {
+          ...d,
+          side: "WithDrawl",
+          id: d.transaction_id,
+          totalBalance: Number(totalWithDrawlPrice).toFixed(2),
+        };
+      }
+
+      return d;
+    });
+    let joinSettledWithdrawls = settledData.concat(withdrawalsData);
+
+    let finalArray = finalObj.concat(joinSettledWithdrawls);
+
+    return finalArray;
   },
   freezeBankAcct: (body) => {
     return Axios.post(`${baseUrl}/FreezeBankAcct`, body);
