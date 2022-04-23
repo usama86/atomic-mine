@@ -1,16 +1,5 @@
 import React from "react";
 import Stack from "../../../../../UI/Layout/Stack";
-import { styled } from "@mui/material/styles";
-import Typography from "../../../../../UI/Typography/Typography";
-
-const StyledOrdered = styled("ol")({
-  margin: "0.6rem 0",
-  overflow: "auto",
-});
-
-const StyledList = styled("li")({
-  marginTop: "0.5rem",
-});
 
 const OptionsInfo = (props) => {
   return (
