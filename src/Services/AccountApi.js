@@ -102,7 +102,7 @@ const api = {
   },
   getGFVs: async (val) => {
     try {
-      let response = Axios.get(`${baseUrl}/GetGFVs`, {
+      let response = await Axios.get(`${baseUrl}/GetsGFVs`, {
         headers: {
           account: val.ssn,
         },
