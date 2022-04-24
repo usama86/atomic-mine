@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
 import Box from "../../../UI/Layout/Box";
 import Table from "../../../UI/Table/TableWithGlobalFiltering";
+import Button from "../../../UI/Button/Button";
+
 function Orders({ type, column, row }) {
   return (
     <>
       <Box sx={{ height: "20rem", width: "100%" }}>
+        <Button sx={{ color: "#fff" }}>NEW</Button>
         <Table columns={column} rows={row} rowID="id" />
       </Box>
     </>
