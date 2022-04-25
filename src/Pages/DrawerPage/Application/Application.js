@@ -20,13 +20,24 @@ import {
   ApplicationReject,
 } from "./../Account/TabPages/Modals/";
 import { IoMdOpen } from "react-icons/io";
-import data from "../../../Constants/mock_data_from_1.json";
+import Api from "../../../Services/AccountApi";
 
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
 
+  const [searchVal, setSearchVal] = React.useState({
+    accountNumber: "",
+    contact: "",
+    email: "",
+    id: "",
+    name: "",
+    social: "",
+    ssn: "",
+  });
+
   const [value, setValue] = React.useState("1");
   const [random, setRandom] = React.useState("");
+  const [data, setData] = React.useState([]);
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
@@ -121,53 +132,103 @@ function Application() {
         {
           label: "AML",
           value: "1",
-          component: <OrderTable type="AML" column={column} row={row} />,
+          component: (
+            <OrderTable
+              type="AML"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
+          ),
         },
         {
           label: "CIP",
           value: "2",
-          component: <OrderTable type="CIP" column={column} row={row} />,
+          component: (
+            <OrderTable
+              type="CIP"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
+          ),
         },
         {
           label: "Volant Suspended",
           value: "3",
           component: (
-            <OrderTable type="Volant Suspended" column={column} row={row} />
+            <OrderTable
+              type="Volant Suspended"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
           ),
         },
         {
           label: "Additional Info",
           value: "4",
           component: (
-            <OrderTable type="Additional Info" column={column} row={row} />
+            <OrderTable
+              type="Additional Info"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
           ),
         },
         {
           label: "Waiting for Info",
           value: "5",
           component: (
-            <OrderTable type="Additional Info" column={column} row={row} />
+            <OrderTable
+              type="Additional Info"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
           ),
         },
         {
           label: "3210/407",
           value: "6",
-          component: <OrderTable type="3210/407" column={column} row={row} />,
+          component: (
+            <OrderTable
+              type="3210/407"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
+          ),
         },
       ],
     },
   ];
 
+  React.useEffect(() => {
+    async function fetchData() {
+      let getApprovedAccounts = await Api.getApprovedAccount();
+      if (getApprovedAccounts.status !== 200) {
+        enqueueSnackbar(`Failed to recieve approved accounts!`, {
+          variant: "error",
+        });
+        return setData(getApprovedAccounts);
+      }
+      setData(getApprovedAccounts.data.data);
+    }
+    fetchData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   const selectRowHandler = (e) => {
-    // setSearchVal(e.row);
+    setSearchVal(e.row);
     enqueueSnackbar(`Selected user ${e.row.name}`, {
       variant: "success",
     });
   };
-  console.log(data);
+
   return (
     <Stack spacing={6}>
       <Stack direction="row" sx={{ width: "100%" }} gap={2}>

@@ -10,12 +10,40 @@ import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
 import { useSnackbar } from "notistack";
-import data from "../../../Constants/mock_data_from_1.json";
+// import data from "../../../Constants/mock_data_from_1.json";
+import TradeSurvillence from "./TabPages/TradeSurveillance";
+import Api from "../../../Services/AccountApi";
 
 function RiskMonitor() {
   const { enqueueSnackbar } = useSnackbar();
 
   const [value, setValue] = React.useState("1");
+
+  const [data, setData] = React.useState([]);
+
+  const [searchVal, setSearchVal] = React.useState({
+    accountNumber: "",
+    contact: "",
+    email: "",
+    id: "",
+    name: "",
+    social: "",
+    ssn: "",
+  });
+
+  React.useEffect(() => {
+    async function fetchData() {
+      let getApprovedAccounts = await Api.getApprovedAccount();
+      if (getApprovedAccounts.status !== 200) {
+        enqueueSnackbar(`Failed to recieve approved accounts!`, {
+          variant: "error",
+        });
+        return setData(getApprovedAccounts);
+      }
+      setData(getApprovedAccounts.data.data);
+    }
+    fetchData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const TabsVal = [
     {
@@ -24,14 +52,19 @@ function RiskMonitor() {
         {
           label: "Low Equity",
           value: "1",
-          component: <OrderTable type="Low Equity" column={column} row={row} />,
+          component: (
+            <OrderTable
+              type="Low Equity"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
+          ),
         },
         {
           label: "Trade Surveillance",
           value: "2",
-          component: (
-            <OrderTable type="Trade Surveillance" column={column} row={row} />
-          ),
+          component: <TradeSurvillence ssn={searchVal.ssn} />,
         },
       ],
     },
@@ -41,6 +74,7 @@ function RiskMonitor() {
     setValue(newValue);
   };
   const selectRowHandler = (e) => {
+    setSearchVal(e.row);
     enqueueSnackbar(`Selected user ${e.row.name}`, {
       variant: "success",
     });

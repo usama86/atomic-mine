@@ -8,7 +8,6 @@ import { LabelChildStyled } from "./TabPages.styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 import Api from "../../../../Services/AccountApi";
-import DatePicker from "../../../../UI/Date/DatePickerComp";
 import Loader from "./../../../../UI/Loader/Loader";
 
 const PersonalInfo = (ssn) => {
