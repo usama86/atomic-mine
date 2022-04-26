@@ -22,6 +22,7 @@ import {
 import { IoMdOpen } from "react-icons/io";
 import Api from "../../../Services/AccountApi";
 import AML from "./TabPages/AML";
+//getAmlData
 
 function Application() {
   const { enqueueSnackbar } = useSnackbar();
@@ -134,12 +135,7 @@ function Application() {
           label: "AML",
           value: "1",
           component: (
-            <OrderTable
-              type="AML"
-              column={column}
-              row={row}
-              ssn={searchVal.ssn}
-            />
+            <AML type="AML" column={column} row={row} ssn={searchVal.ssn} />
           ),
         },
         {

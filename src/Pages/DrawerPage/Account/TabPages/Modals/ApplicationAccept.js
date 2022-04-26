@@ -6,7 +6,7 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 
-const ApplicationAccept = ({ triggerClose }) => {
+const ApplicationAccept = ({ triggerClose, onAcceptApplication }) => {
   return (
     <Stack gap={2}>
       <Typography variant="h6">Accept</Typography>
@@ -15,6 +15,7 @@ const ApplicationAccept = ({ triggerClose }) => {
       <Stack direction="row" justifyContent="center">
         <Button
           onClick={(e) => {
+            onAcceptApplication();
             e.preventDefault();
             triggerClose();
           }}

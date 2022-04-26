@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Box from "./../../../../UI/Layout/Box";
 import Table from "./../../../../UI/Table/TableWithGlobalFiltering";
-import RiskApi from "../../../../Services/RiskMonitorApi";
+import ApplicationApi from "../../../../Services/ApplicationApi";
 import Stack from "../../../../UI/Layout/Stack";
 import Modal from "../../../../UI/Modal/Modal";
 import InfoApplication from "../../Account/TabPages/Modals/InfoApplication";
@@ -15,8 +15,12 @@ import {
   ApplicationReject,
 } from "./../../Account/TabPages/Modals/";
 import { IoMdOpen } from "react-icons/io";
+import Api from "../../../../Services/ApplicationApi";
+import Constants from "../../../../Constants/Constants";
+import { useSnackbar } from "notistack";
 
 function AML() {
+  const { enqueueSnackbar } = useSnackbar();
   const column = [
     {
       field: "account",
@@ -55,7 +59,12 @@ function AML() {
           <>
             <Modal
               closeDependancy={random}
-              content={<ApplicationAccept triggerClose={acceptHandler} />}
+              content={
+                <ApplicationAccept
+                  onAcceptApplication={onAcceptApplication}
+                  triggerClose={acceptHandler}
+                />
+              }
             >
               <IconButton>
                 <DoneIcon color="success" />
@@ -101,6 +110,18 @@ function AML() {
       },
     },
   ];
+
+  const onAcceptApplication = async () => {
+    let postAML = await Api.approveAML({ account: ["617672387"] });
+    if (postAML.data.result.success) {
+      enqueueSnackbar(postAML.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
+  };
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
@@ -111,8 +132,8 @@ function AML() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
-    let getAML = await RiskApi.getAML();
-    setAML(getAML.data.data);
+    let getAML = await ApplicationApi.getAmlData();
+    setAML(getAML);
   };
 
   return (
