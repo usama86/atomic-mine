@@ -112,7 +112,7 @@ function AML() {
   ];
 
   const onAcceptApplication = async () => {
-    let postAML = await Api.approveAML({ account: ["617672387"] });
+    let postAML = await Api.approveAML({ accounts: ["617672387"] });
     if (postAML.data.result.success) {
       enqueueSnackbar(postAML.data.result.msg, {
         variant: "success",
