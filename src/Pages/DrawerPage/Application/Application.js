@@ -21,6 +21,7 @@ import {
 } from "./../Account/TabPages/Modals/";
 import { IoMdOpen } from "react-icons/io";
 import Api from "../../../Services/AccountApi";
+import AML from "./TabPages/AML";
 
 function Application() {
   const { enqueueSnackbar } = useSnackbar();

@@ -10,6 +10,9 @@ const api = {
       },
     });
   },
+  getNegativeNAVs: () => {
+    return Axios.get(`${baseUrl}/GetNegativeNAVs`);
+  },
   addTSEvt: (body) => {
     return Axios.post(`${baseUrl}/AddTSEvt`, body);
   },

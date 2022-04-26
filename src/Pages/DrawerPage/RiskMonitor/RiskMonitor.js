@@ -12,6 +12,7 @@ import OrderTable from "./../PageUtils/OrderTable";
 import { useSnackbar } from "notistack";
 // import data from "../../../Constants/mock_data_from_1.json";
 import TradeSurvillence from "./TabPages/TradeSurveillance";
+import LowEquity from "./TabPages/LowEquity";
 import Api from "../../../Services/AccountApi";
 
 function RiskMonitor() {
@@ -52,14 +53,7 @@ function RiskMonitor() {
         {
           label: "Low Equity",
           value: "1",
-          component: (
-            <OrderTable
-              type="Low Equity"
-              column={column}
-              row={row}
-              ssn={searchVal.ssn}
-            />
-          ),
+          component: <LowEquity />,
         },
         {
           label: "Trade Surveillance",
