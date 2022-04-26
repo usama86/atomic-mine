@@ -36,6 +36,9 @@ function Application() {
     social: "",
     ssn: "",
   });
+  React.useEffect(() => {
+    console.log(searchVal.ssn);
+  }, [searchVal]);
 
   const [value, setValue] = React.useState("1");
   const [random, setRandom] = React.useState("");
@@ -54,6 +57,8 @@ function Application() {
       headerName: "Name",
       flex: 1,
       renderCell: (params) => {
+        console.log("hello");
+        console.log(searchVal);
         return (
           <Stack
             direction="row"
@@ -81,13 +86,17 @@ function Application() {
           <>
             <Modal
               closeDependancy={random}
-              content={<ApplicationAccept triggerClose={acceptHandler} />}
+              content={
+                <ApplicationAccept
+                  ssn={searchVal.ssn}
+                  triggerClose={acceptHandler}
+                />
+              }
             >
               <IconButton>
                 <DoneIcon color="success" />
               </IconButton>
             </Modal>
-
             <Modal
               closeDependancy={random}
               content={<ApplicationReject triggerClose={acceptHandler} />}
@@ -221,9 +230,13 @@ function Application() {
   };
   const selectRowHandler = (e) => {
     setSearchVal(e.row);
-    enqueueSnackbar(`Selected user ${e.row.name}`, {
-      variant: "success",
-    });
+    console.log(e.row);
+    enqueueSnackbar(
+      `Selected user ${e.row.kyc_info.first_name} ${e.row.kyc_info.last_name}`,
+      {
+        variant: "success",
+      }
+    );
   };
 
   return (

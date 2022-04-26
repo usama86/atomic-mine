@@ -36,22 +36,22 @@ function Account() {
   const [data, setData] = React.useState([]);
   const [value, setValue] = React.useState("1");
 
-  async function fetchData() {
-    let getApprovedAccounts = [];
-
-    getApprovedAccounts = await Api.getApprovedAccount();
-    if (getApprovedAccounts.status !== 200) {
-      enqueueSnackbar(`Failed to recieve approved accounts!`, {
-        variant: "error",
-      });
-      return setData(getApprovedAccounts);
-    }
-
-    setData(getApprovedAccounts.data.data);
-  }
-
   React.useEffect(() => {
-    fetchData();
+    let mounted = true;
+    async function fetchData() {
+      let getApprovedAccounts = await Api.getApprovedAccount();
+      if (getApprovedAccounts.status !== 200) {
+        enqueueSnackbar(`Failed to recieve approved accounts!`, {
+          variant: "error",
+        });
+        return setData(getApprovedAccounts);
+      }
+      setData(getApprovedAccounts.data.data);
+    }
+    if (mounted) {
+      fetchData();
+    }
+    return () => (mounted = false);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const TabsVal = [
