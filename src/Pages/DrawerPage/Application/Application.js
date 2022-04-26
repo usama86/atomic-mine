@@ -22,6 +22,7 @@ import {
 import { IoMdOpen } from "react-icons/io";
 import Api from "../../../Services/AccountApi";
 import AML from "./TabPages/AML";
+import CIP from "./TabPages/CIP";
 //getAmlData
 
 function Application() {
@@ -57,8 +58,6 @@ function Application() {
       headerName: "Name",
       flex: 1,
       renderCell: (params) => {
-        console.log("hello");
-        console.log(searchVal);
         return (
           <Stack
             direction="row"
@@ -86,12 +85,7 @@ function Application() {
           <>
             <Modal
               closeDependancy={random}
-              content={
-                <ApplicationAccept
-                  ssn={searchVal.ssn}
-                  triggerClose={acceptHandler}
-                />
-              }
+              content={<ApplicationAccept triggerClose={acceptHandler} />}
             >
               <IconButton>
                 <DoneIcon color="success" />
@@ -144,19 +138,20 @@ function Application() {
           label: "AML",
           value: "1",
           component: (
-            <AML type="AML" column={column} row={row} ssn={searchVal.ssn} />
+            <AML
+              searchVal={searchVal}
+              type="AML"
+              column={column}
+              row={row}
+              ssn={searchVal.ssn}
+            />
           ),
         },
         {
           label: "CIP",
           value: "2",
           component: (
-            <OrderTable
-              type="CIP"
-              column={column}
-              row={row}
-              ssn={searchVal.ssn}
-            />
+            <CIP type="CIP" column={column} row={row} ssn={searchVal.ssn} />
           ),
         },
         {
@@ -228,6 +223,7 @@ function Application() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   const selectRowHandler = (e) => {
     setSearchVal(e.row);
     console.log(e.row);
@@ -240,39 +236,41 @@ function Application() {
   };
 
   return (
-    <Stack spacing={6}>
-      <Stack direction="row" sx={{ width: "100%" }} gap={2}>
-        {/* <Modal
+    <>
+      <Stack spacing={6}>
+        <Stack direction="row" sx={{ width: "100%" }} gap={2}>
+          {/* <Modal
           closeDependancy={searchVal.accountNumber}
           width="80vw"
           content={<SearchUser getRow={selectRowHandler} />}
         >
           <Button>Select User</Button>
         </Modal> */}
-        <SearchUser data={data} getRow={selectRowHandler} />
+          <SearchUser data={data} getRow={selectRowHandler} />
+        </Stack>
+        {/* ADD USER INFO OR SOMETHING */}
+        <Tabs value={value}>
+          <>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <TabList
+                scrollButtons="auto"
+                variant="scrollable"
+                onChange={handleChange}
+              >
+                {TabsVal[0].controls.map((val, index) => (
+                  <Tab label={val.label} key={index} value={val.value} />
+                ))}
+              </TabList>
+            </Box>
+            {TabsVal[0].controls.map((val, index) => (
+              <TabPanel value={val.value} key={index}>
+                {val.component}
+              </TabPanel>
+            ))}
+          </>
+        </Tabs>
       </Stack>
-
-      <Tabs value={value}>
-        <>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList
-              scrollButtons="auto"
-              variant="scrollable"
-              onChange={handleChange}
-            >
-              {TabsVal[0].controls.map((val, index) => (
-                <Tab label={val.label} key={index} value={val.value} />
-              ))}
-            </TabList>
-          </Box>
-          {TabsVal[0].controls.map((val, index) => (
-            <TabPanel value={val.value} key={index}>
-              {val.component}
-            </TabPanel>
-          ))}
-        </>
-      </Tabs>
-    </Stack>
+    </>
   );
 }
 

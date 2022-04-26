@@ -16,10 +16,11 @@ import {
 } from "./../../Account/TabPages/Modals/";
 import { IoMdOpen } from "react-icons/io";
 import Api from "../../../../Services/ApplicationApi";
+import AccountApi from "./../../../../Services/AccountApi";
 import Constants from "../../../../Constants/Constants";
 import { useSnackbar } from "notistack";
 
-function AML() {
+function AML(props) {
   const { enqueueSnackbar } = useSnackbar();
   const column = [
     {
@@ -61,6 +62,7 @@ function AML() {
               closeDependancy={random}
               content={
                 <ApplicationAccept
+                  ssn={props.ssn}
                   onAcceptApplication={onAcceptApplication}
                   triggerClose={acceptHandler}
                 />
@@ -73,7 +75,12 @@ function AML() {
 
             <Modal
               closeDependancy={random}
-              content={<ApplicationReject triggerClose={acceptHandler} />}
+              content={
+                <ApplicationReject
+                  onRejectApplication={onRejectApplication}
+                  triggerClose={acceptHandler}
+                />
+              }
             >
               <IconButton>
                 <CloseIcon color="error" />
@@ -111,7 +118,13 @@ function AML() {
     },
   ];
 
-  const onAcceptApplication = async () => {
+  const onAcceptApplication = async (notes) => {
+    if (notes !== "") {
+      await AccountApi.addNote({
+        account: props.ssn,
+        body: notes,
+      });
+    }
     let postAML = await Api.approveAML({ accounts: ["617672387"] });
     if (postAML.data.result.success) {
       enqueueSnackbar(postAML.data.result.msg, {
@@ -122,9 +135,30 @@ function AML() {
         variant: "error",
       });
   };
+
+  const onRejectApplication = async (notes) => {
+    if (notes !== "") {
+      await AccountApi.addNote({
+        account: props.ssn,
+        body: notes,
+      });
+    }
+    let postAML = await Api.rejectAML({ accounts: ["617672387"] });
+
+    if (postAML.data.result.success) {
+      enqueueSnackbar(postAML.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
+  };
+
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
+
   const [random, setRandom] = React.useState("");
   const [AML, setAML] = React.useState([]);
   React.useEffect(() => {

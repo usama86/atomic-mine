@@ -6,6 +6,9 @@ const api = {
   getAmlData: () => {
     return row;
   },
+  getCipData: () => {
+    return row;
+  },
   approveAML: (body) => {
     return Axios.post(`${baseUrl}/ApproveAML`, body);
   },

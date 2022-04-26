@@ -8,19 +8,17 @@ import Checkbox from "../../../../../UI/Checkbox/Checkbox";
 import Api from "../../../../../Services/AccountApi";
 
 const ApplicationAccept = ({ ssn, triggerClose, onAcceptApplication }) => {
-  // console.log(ssn);
   const [value, setValue] = React.useState("");
   const [checked, setChecked] = React.useState(false);
   return (
     <Stack gap={2}>
-      <Typography
+      <Typography variant="h6">Accept</Typography>
+      <TextFieldComp
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        variant="h6"
-      >
-        Accept
-      </Typography>
-      <TextFieldComp isdefault={true} label="Notes" />
+        isdefault={true}
+        label="Notes"
+      />
       <Checkbox
         checked={checked}
         onChange={(e) => setChecked((prevState) => !prevState)}
@@ -29,12 +27,9 @@ const ApplicationAccept = ({ ssn, triggerClose, onAcceptApplication }) => {
       <Stack direction="row" justifyContent="center">
         <Button
           disabled={!checked}
-          onClick={(e) => {
-            // let postNotes = await Api.addNote({
-            //   account: ssn
-            // })
-            onAcceptApplication();
+          onClick={async (e) => {
             e.preventDefault();
+            onAcceptApplication(value);
             triggerClose();
           }}
           sx={{ color: "white" }}
