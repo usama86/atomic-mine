@@ -6,45 +6,45 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import SearchUser from "./../PageUtils/SearchUser";
-import Checkbox from "./../../../UI/Checkbox/Checkbox";
+// import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
 // import OrderTable from "./../PageUtils/OrderTable";
-import { useSnackbar } from "notistack";
+// import { useSnackbar } from "notistack";
 // import data from "../../../Constants/mock_data_from_1.json";
 import TradeSurvillence from "./TabPages/TradeSurveillance";
 import LowEquity from "./TabPages/LowEquity";
-import Api from "../../../Services/AccountApi";
+// import Api from "../../../Services/AccountApi";
 
 function RiskMonitor() {
-  const { enqueueSnackbar } = useSnackbar();
+  // const { enqueueSnackbar } = useSnackbar();
 
   const [value, setValue] = React.useState("1");
 
-  const [data, setData] = React.useState([]);
+  // const [data, setData] = React.useState([]);
 
-  const [searchVal, setSearchVal] = React.useState({
-    accountNumber: "",
-    contact: "",
-    email: "",
-    id: "",
-    name: "",
-    social: "",
-    ssn: "",
-  });
+  // const [searchVal, setSearchVal] = React.useState({
+  //   accountNumber: "",
+  //   contact: "",
+  //   email: "",
+  //   id: "",
+  //   name: "",
+  //   social: "",
+  //   ssn: "",
+  // });
 
-  React.useEffect(() => {
-    async function fetchData() {
-      let getApprovedAccounts = await Api.getApprovedAccount();
-      if (getApprovedAccounts.status !== 200) {
-        enqueueSnackbar(`Failed to recieve approved accounts!`, {
-          variant: "error",
-        });
-        return setData(getApprovedAccounts);
-      }
-      setData(getApprovedAccounts.data.data);
-    }
-    fetchData();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // React.useEffect(() => {
+  //   async function fetchData() {
+  //     let getApprovedAccounts = await Api.getApprovedAccount();
+  //     if (getApprovedAccounts.status !== 200) {
+  //       enqueueSnackbar(`Failed to recieve approved accounts!`, {
+  //         variant: "error",
+  //       });
+  //       return setData(getApprovedAccounts);
+  //     }
+  //     setData(getApprovedAccounts.data.data);
+  //   }
+  //   fetchData();
+  // }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const TabsVal = [
     {
@@ -58,7 +58,7 @@ function RiskMonitor() {
         {
           label: "Trade Surveillance",
           value: "2",
-          component: <TradeSurvillence ssn={searchVal.ssn} />,
+          component: <TradeSurvillence />,
         },
       ],
     },
@@ -67,17 +67,17 @@ function RiskMonitor() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const selectRowHandler = (e) => {
-    setSearchVal(e.row);
-    enqueueSnackbar(`Selected user ${e.row.name}`, {
-      variant: "success",
-    });
-  };
+  // const selectRowHandler = (e) => {
+  //   setSearchVal(e.row);
+  //   enqueueSnackbar(`Selected user ${e.row.name}`, {
+  //     variant: "success",
+  //   });
+  // };
   return (
     <Stack spacing={6}>
-      <Stack direction="row" sx={{ width: "100%" }} gap={2}>
+      {/* <Stack direction="row" sx={{ width: "100%" }} gap={2}>
         <SearchUser data={data} getRow={selectRowHandler} />
-      </Stack>
+      </Stack> */}
 
       <Tabs value={value}>
         <>

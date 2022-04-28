@@ -5,11 +5,11 @@ import Box from "../../../UI/Layout/Box";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
-import SearchUser from "./../PageUtils/SearchUser";
+// import SearchUser from "./../PageUtils/SearchUser";
 //AccountPages
 import OrderTable from "./../PageUtils/OrderTable";
 import Modal from "../../../UI/Modal/Modal";
-import { useSnackbar } from "notistack";
+// import { useSnackbar } from "notistack";
 import InfoApplication from "../Account/TabPages/Modals/InfoApplication";
 import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
@@ -20,30 +20,30 @@ import {
   ApplicationReject,
 } from "./../Account/TabPages/Modals/";
 import { IoMdOpen } from "react-icons/io";
-import Api from "../../../Services/AccountApi";
+// import Api from "../../../Services/AccountApi";
 import AML from "./TabPages/AML";
 import CIP from "./TabPages/CIP";
 //getAmlData
 
 function Application() {
-  const { enqueueSnackbar } = useSnackbar();
+  // const { enqueueSnackbar } = useSnackbar();
 
-  const [searchVal, setSearchVal] = React.useState({
-    accountNumber: "",
-    contact: "",
-    email: "",
-    id: "",
-    name: "",
-    social: "",
-    ssn: "",
-  });
-  React.useEffect(() => {
-    console.log(searchVal.ssn);
-  }, [searchVal]);
+  // const [searchVal, setSearchVal] = React.useState({
+  //   accountNumber: "",
+  //   contact: "",
+  //   email: "",
+  //   id: "",
+  //   name: "",
+  //   social: "",
+  //   ssn: "",
+  // });
+  // React.useEffect(() => {
+  //   console.log(searchVal.ssn);
+  // }, [searchVal]);
 
   const [value, setValue] = React.useState("1");
   const [random, setRandom] = React.useState("");
-  const [data, setData] = React.useState([]);
+  // const [data, setData] = React.useState([]);
   const acceptHandler = () => {
     setRandom(`${Math.random()}`);
   };
@@ -139,20 +139,18 @@ function Application() {
           value: "1",
           component: (
             <AML
-              searchVal={searchVal}
+              // searchVal={searchVal}
               type="AML"
               column={column}
               row={row}
-              ssn={searchVal.ssn}
+              // ssn={searchVal.ssn}
             />
           ),
         },
         {
           label: "CIP",
           value: "2",
-          component: (
-            <CIP type="CIP" column={column} row={row} ssn={searchVal.ssn} />
-          ),
+          component: <CIP type="CIP" column={column} row={row} />,
         },
         {
           label: "Volant Suspended",
@@ -162,7 +160,7 @@ function Application() {
               type="Volant Suspended"
               column={column}
               row={row}
-              ssn={searchVal.ssn}
+              // ssn={searchVal.ssn}
             />
           ),
         },
@@ -174,7 +172,7 @@ function Application() {
               type="Additional Info"
               column={column}
               row={row}
-              ssn={searchVal.ssn}
+              // ssn={searchVal.ssn}
             />
           ),
         },
@@ -186,7 +184,7 @@ function Application() {
               type="Additional Info"
               column={column}
               row={row}
-              ssn={searchVal.ssn}
+              // ssn={searchVal.ssn}
             />
           ),
         },
@@ -198,7 +196,7 @@ function Application() {
               type="3210/407"
               column={column}
               row={row}
-              ssn={searchVal.ssn}
+              // ssn={searchVal.ssn}
             />
           ),
         },
@@ -206,48 +204,48 @@ function Application() {
     },
   ];
 
-  React.useEffect(() => {
-    async function fetchData() {
-      let getApprovedAccounts = await Api.getApprovedAccount();
-      if (getApprovedAccounts.status !== 200) {
-        enqueueSnackbar(`Failed to recieve approved accounts!`, {
-          variant: "error",
-        });
-        return setData(getApprovedAccounts);
-      }
-      setData(getApprovedAccounts.data.data);
-    }
-    fetchData();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // React.useEffect(() => {
+  //   async function fetchData() {
+  //     let getApprovedAccounts = await Api.getApprovedAccount();
+  //     if (getApprovedAccounts.status !== 200) {
+  //       enqueueSnackbar(`Failed to recieve approved accounts!`, {
+  //         variant: "error",
+  //       });
+  //       return setData(getApprovedAccounts);
+  //     }
+  //     setData(getApprovedAccounts.data.data);
+  //   }
+  //   fetchData();
+  // }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const selectRowHandler = (e) => {
-    setSearchVal(e.row);
-    console.log(e.row);
-    enqueueSnackbar(
-      `Selected user ${e.row.kyc_info.first_name} ${e.row.kyc_info.last_name}`,
-      {
-        variant: "success",
-      }
-    );
-  };
+  // const selectRowHandler = (e) => {
+  //   setSearchVal(e.row);
+  //   console.log(e.row);
+  //   enqueueSnackbar(
+  //     `Selected user ${e.row.kyc_info.first_name} ${e.row.kyc_info.last_name}`,
+  //     {
+  //       variant: "success",
+  //     }
+  //   );
+  // };
 
   return (
     <>
       <Stack spacing={6}>
-        <Stack direction="row" sx={{ width: "100%" }} gap={2}>
-          {/* <Modal
+        {/* <Stack direction="row" sx={{ width: "100%" }} gap={2}> */}
+        {/* <Modal
           closeDependancy={searchVal.accountNumber}
           width="80vw"
           content={<SearchUser getRow={selectRowHandler} />}
         >
           <Button>Select User</Button>
         </Modal> */}
-          <SearchUser data={data} getRow={selectRowHandler} />
-        </Stack>
+        {/* <SearchUser data={data} getRow={selectRowHandler} />
+        </Stack> */}
         {/* ADD USER INFO OR SOMETHING */}
         <Tabs value={value}>
           <>

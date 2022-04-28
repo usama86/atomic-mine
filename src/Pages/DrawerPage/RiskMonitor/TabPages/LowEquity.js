@@ -15,12 +15,12 @@ function LowEquity() {
       flex: 1,
     },
     {
-      field: "reason",
+      field: "code",
       headerName: "Reason",
       flex: 1,
     },
     {
-      field: "code",
+      field: "equity",
       headerName: "Equity",
       flex: 1,
     },
@@ -30,7 +30,7 @@ function LowEquity() {
       flex: 1,
     },
     {
-      field: "tagged_on",
+      field: "occurred_on",
       headerName: "Date",
       flex: 1,
       type: "dateTime",

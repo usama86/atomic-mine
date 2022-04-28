@@ -6,12 +6,24 @@ import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
 import Tabs from "./../../../../UI/Tabs/Tabs";
 import { getFields } from "./getFields";
-import orders from "../../../../Constants/mock_data_expiration_autoLiquidation.json";
+import Api from "../../../../Services/ExpirationApi";
 
-const AutoLiquidation = () => {
+const Exercise = () => {
   const [value, setValue] = React.useState("1");
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+  const [pending, setPending] = React.useState([]);
+  const [archive, setArchive] = React.useState([]);
+  React.useEffect(() => {
+    fetchData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const fetchData = async () => {
+    let getPending = await Api.getAutoExercisesPending();
+    let getArchive = await Api.getAutoExercisesComplete();
+    setPending(getPending);
+    setArchive(getArchive);
   };
   const TabsVal = [
     {
@@ -24,7 +36,8 @@ const AutoLiquidation = () => {
             <OrderTable
               type={"Pending"}
               column={getFields("Pending", "Exercise")}
-              row={orders}
+              row={pending}
+              rowID={"account"}
             />
           ),
         },
@@ -35,7 +48,8 @@ const AutoLiquidation = () => {
             <OrderTable
               type={"Archived"}
               column={getFields("Archived", "Exercise")}
-              row={orders}
+              row={archive}
+              rowID={"account"}
             />
           ),
         },
@@ -66,4 +80,4 @@ const AutoLiquidation = () => {
   );
 };
 
-export default AutoLiquidation;
+export default Exercise;

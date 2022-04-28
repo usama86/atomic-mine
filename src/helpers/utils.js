@@ -8,6 +8,22 @@ export const getTime = ({ value }) => {
     "/" +
     (dateVal.getMonth() + 1) +
     "/" +
-    dateVal.getFullYear()
+    dateVal.getFullYear() +
+    " " +
+    dateVal.toLocaleTimeString()
   );
+};
+
+export const getObjectKeyCombinedArray = (result) => {
+  let newVal = [];
+  const keys = Object.keys(result);
+  keys.forEach((k) => {
+    const objKey = result[k];
+    if (objKey.length > 0) {
+      objKey.map((d) => {
+        newVal.push(d);
+      });
+    }
+  });
+  return newVal;
 };

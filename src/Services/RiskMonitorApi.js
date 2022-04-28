@@ -3,12 +3,8 @@ import Axios from "axios";
 const baseUrl = "http://35.171.58.224:8000";
 
 const api = {
-  getTSEvts: (val) => {
-    return Axios.get(`${baseUrl}/GetTSEvts`, {
-      headers: {
-        account: val,
-      },
-    });
+  getTSEvts: () => {
+    return Axios.get(`${baseUrl}/GetTSEvts`);
   },
   getNegativeNAVs: () => {
     return Axios.get(`${baseUrl}/GetNegativeNAVs`);

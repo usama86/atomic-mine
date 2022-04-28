@@ -8,7 +8,7 @@ import Checkbox from "../../../../UI/Checkbox/Checkbox";
 import Modal from "../../../../UI/Modal/Modal";
 import AddNew from "./Modals/TradeNewModel";
 
-function TradeSurvveillance(props) {
+function TradeSurvveillance() {
   const column = [
     {
       field: "account",
@@ -16,22 +16,22 @@ function TradeSurvveillance(props) {
       flex: 1,
     },
     {
-      field: "reason",
+      field: "code",
       headerName: "Reason",
       flex: 1,
     },
     {
-      field: "code",
+      field: "equity",
       headerName: "Equity",
       flex: 1,
     },
     {
-      field: "order_id",
+      field: "NAV",
       headerName: "NAV",
       flex: 1,
     },
     {
-      field: "date",
+      field: "occurred_on",
       headerName: "Date",
       flex: 1,
     },
@@ -51,7 +51,7 @@ function TradeSurvveillance(props) {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
-    let getTSE = await RiskApi.getTSEvts(props.ssn);
+    let getTSE = await RiskApi.getTSEvts();
     setTSE(getTSE.data.data);
   };
   return (
@@ -63,7 +63,7 @@ function TradeSurvveillance(props) {
         >
           <Button sx={{ color: "#fff" }}>NEW</Button>
         </Modal>
-        <Table columns={column} rows={TSE} rowID="id" />
+        <Table columns={column} rows={TSE} rowID="account" />
       </Box>
     </>
   );
