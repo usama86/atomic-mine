@@ -20,7 +20,7 @@ export const getObjectKeyCombinedArray = (result) => {
   keys.forEach((k) => {
     const objKey = result[k];
     if (objKey.length > 0) {
-      objKey.map((d) => {
+      objKey.forEach((d) => {
         newVal.push(d);
       });
     }

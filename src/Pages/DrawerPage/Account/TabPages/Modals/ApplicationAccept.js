@@ -5,7 +5,6 @@ import TextFieldComp from "../../../../../UI/TextField/TextFieldComp";
 import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Checkbox from "../../../../../UI/Checkbox/Checkbox";
-import Api from "../../../../../Services/AccountApi";
 
 const ApplicationAccept = ({ ssn, triggerClose, onAcceptApplication }) => {
   const [value, setValue] = React.useState("");

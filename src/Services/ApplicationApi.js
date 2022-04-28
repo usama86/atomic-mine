@@ -59,25 +59,25 @@ const api = {
   },
 };
 
-const row = [
-  {
-    id: 0,
-    account: "123456789",
-    name: "Bella",
-    acceptReject: "",
-  },
-  {
-    id: 1,
-    account: "13452",
-    name: "Brockley",
-    acceptReject: "",
-  },
-  {
-    id: 2,
-    account: "14523",
-    name: "Brandom",
-    acceptReject: "",
-  },
-];
+// const row = [
+//   {
+//     id: 0,
+//     account: "123456789",
+//     name: "Bella",
+//     acceptReject: "",
+//   },
+//   {
+//     id: 1,
+//     account: "13452",
+//     name: "Brockley",
+//     acceptReject: "",
+//   },
+//   {
+//     id: 2,
+//     account: "14523",
+//     name: "Brandom",
+//     acceptReject: "",
+//   },
+// ];
 
 export default api;
