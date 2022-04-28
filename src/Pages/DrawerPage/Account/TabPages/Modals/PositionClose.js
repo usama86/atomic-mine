@@ -18,7 +18,7 @@ const PositionClose = ({ triggerClose, ticker, ssn, ...params }) => {
   const theme = useTheme();
   const fetchData = async () => {
     let getBidVal = await Api.getBidAsk(ticker);
-    console.log(getBidVal.data.data);
+
     setBidAsk(getBidVal.data.data);
     setIsLoading(false);
   };
