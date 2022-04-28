@@ -29,7 +29,7 @@ const ApplicationAccept = ({ ssn, triggerClose, onAcceptApplication }) => {
           disabled={!checked}
           onClick={async (e) => {
             e.preventDefault();
-            onAcceptApplication(value);
+            onAcceptApplication(value, ssn);
             triggerClose();
           }}
           sx={{ color: "white" }}

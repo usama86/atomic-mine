@@ -18,7 +18,7 @@ import AccountApi from "./../../../../Services/AccountApi";
 import { useSnackbar } from "notistack";
 import Constants from "../../../../Constants/Constants";
 
-const CIP = ({ type, row, ssn }) => {
+const CIP = ({ type, row }) => {
   const { enqueueSnackbar } = useSnackbar();
   const [CIP, setCIP] = React.useState([]);
   const [random, setRandom] = React.useState("");
@@ -33,7 +33,7 @@ const CIP = ({ type, row, ssn }) => {
   React.useEffect(() => {
     fetchData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  const onAcceptApplication = async (notes) => {
+  const onAcceptApplication = async (notes, ssn) => {
     if (notes !== "") {
       await AccountApi.addNote({
         account: ssn,
@@ -50,7 +50,7 @@ const CIP = ({ type, row, ssn }) => {
         variant: "error",
       });
   };
-  const onRejectApplication = async (notes) => {
+  const onRejectApplication = async (notes, ssn) => {
     if (notes !== "") {
       await AccountApi.addNote({
         account: ssn,
@@ -108,7 +108,7 @@ const CIP = ({ type, row, ssn }) => {
               closeDependancy={random}
               content={
                 <ApplicationAccept
-                  ssn={ssn}
+                  ssn={params.row.account}
                   onAcceptApplication={onAcceptApplication}
                   triggerClose={acceptHandler}
                 />
@@ -123,6 +123,7 @@ const CIP = ({ type, row, ssn }) => {
               closeDependancy={random}
               content={
                 <ApplicationReject
+                  ssn={params.row.account}
                   onRejectApplication={onRejectApplication}
                   triggerClose={acceptHandler}
                 />

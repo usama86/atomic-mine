@@ -6,7 +6,7 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Search from "./../../../../../UI/AutoComplete/Autocomplete";
 
-const ApplicationReject = ({ triggerClose, onRejectApplication }) => {
+const ApplicationReject = ({ triggerClose, onRejectApplication, ssn }) => {
   const [value, setValue] = React.useState("");
   return (
     <Stack gap={2}>
@@ -24,7 +24,7 @@ const ApplicationReject = ({ triggerClose, onRejectApplication }) => {
         </Button>
         <Button
           onClick={(e) => {
-            onRejectApplication(value);
+            onRejectApplication(value, ssn);
             e.preventDefault();
             triggerClose();
           }}

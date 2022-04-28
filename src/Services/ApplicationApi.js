@@ -3,11 +3,47 @@ import Axios from "axios";
 const baseUrl = "http://35.171.58.224:8000";
 
 const api = {
-  getAmlData: () => {
-    return row;
+  getAmlData: async () => {
+    try {
+      const res = await Axios.get(`${baseUrl}/GetKYCPendingAccounts/AML`);
+      const result = res.data.data;
+
+      const newVal = result.map((data, index) => {
+        return {
+          id: index,
+          account: `${data.ssn.slice(0, 3)}-${data.ssn.slice(
+            3,
+            5
+          )}-${data.ssn.slice(5)}`,
+          name: data.username,
+          acceptReject: "",
+        };
+      });
+      return newVal;
+    } catch (err) {
+      console.log(err);
+    }
   },
-  getCipData: () => {
-    return row;
+  getCipData: async () => {
+    try {
+      const res = await Axios.get(`${baseUrl}/GetKYCPendingAccounts/CIP`);
+      const result = res.data.data;
+
+      const newVal = result.map((data, index) => {
+        return {
+          id: index,
+          account: `${data.ssn.slice(0, 3)}-${data.ssn.slice(
+            3,
+            5
+          )}-${data.ssn.slice(5)}`,
+          name: data.username,
+          acceptReject: "",
+        };
+      });
+      return newVal;
+    } catch (err) {
+      console.log(err);
+    }
   },
   approveAML: (body) => {
     return Axios.post(`${baseUrl}/ApproveAML`, body);
@@ -26,21 +62,21 @@ const api = {
 const row = [
   {
     id: 0,
-    account: "12534",
+    account: "123456789",
     name: "Bella",
-    acceptReject: "true",
+    acceptReject: "",
   },
   {
     id: 1,
     account: "13452",
     name: "Brockley",
-    acceptReject: "false",
+    acceptReject: "",
   },
   {
     id: 2,
     account: "14523",
     name: "Brandom",
-    acceptReject: "true",
+    acceptReject: "",
   },
 ];
 

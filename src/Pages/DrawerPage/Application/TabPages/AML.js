@@ -62,7 +62,7 @@ function AML(props) {
               closeDependancy={random}
               content={
                 <ApplicationAccept
-                  ssn={props.ssn}
+                  ssn={params.row.account}
                   onAcceptApplication={onAcceptApplication}
                   triggerClose={acceptHandler}
                 />
@@ -77,6 +77,7 @@ function AML(props) {
               closeDependancy={random}
               content={
                 <ApplicationReject
+                  ssn={params.row.account}
                   onRejectApplication={onRejectApplication}
                   triggerClose={acceptHandler}
                 />
@@ -118,14 +119,14 @@ function AML(props) {
     },
   ];
 
-  const onAcceptApplication = async (notes) => {
+  const onAcceptApplication = async (notes, ssn) => {
     if (notes !== "") {
       await AccountApi.addNote({
-        account: props.ssn,
+        account: ssn,
         body: notes,
       });
     }
-    let postAML = await Api.approveAML({ accounts: ["617672387"] });
+    let postAML = await Api.approveAML({ accounts: [ssn] });
     if (postAML.data.result.success) {
       enqueueSnackbar(postAML.data.result.msg, {
         variant: "success",
@@ -136,14 +137,14 @@ function AML(props) {
       });
   };
 
-  const onRejectApplication = async (notes) => {
+  const onRejectApplication = async (notes, ssn) => {
     if (notes !== "") {
       await AccountApi.addNote({
-        account: props.ssn,
+        account: ssn,
         body: notes,
       });
     }
-    let postAML = await Api.rejectAML({ accounts: ["617672387"] });
+    let postAML = await Api.rejectAML({ accounts: [ssn] });
 
     if (postAML.data.result.success) {
       enqueueSnackbar(postAML.data.result.msg, {
