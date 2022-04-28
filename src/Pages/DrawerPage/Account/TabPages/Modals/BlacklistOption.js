@@ -19,7 +19,6 @@ const BlacklistOption = ({ triggerClose, ssn, postNotesReq, ...props }) => {
         onChange={(e) => {
           setValue(e.target.value);
           // console.log(e.target.value);
-          console.log(value);
         }}
       />
       {/* <Checkbox Label="No Trade" /> */}

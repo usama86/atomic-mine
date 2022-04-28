@@ -5,45 +5,46 @@ import Box from "../../../UI/Layout/Box";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Tab from "@mui/material/Tab";
-import SearchUser from "./../PageUtils/SearchUser";
-import Checkbox from "./../../../UI/Checkbox/Checkbox";
+// import SearchUser from "./../PageUtils/SearchUser";
+// import Checkbox from "./../../../UI/Checkbox/Checkbox";
 //AccountPages
-import OrderTable from "./../PageUtils/OrderTable";
-import { useSnackbar } from "notistack";
+// import OrderTable from "./../PageUtils/OrderTable";
+// import { useSnackbar } from "notistack";
 // import data from "../../../Constants/mock_data_from_1.json";
 import TradeSurvillence from "./TabPages/TradeSurveillance";
-import Api from "../../../Services/AccountApi";
+import LowEquity from "./TabPages/LowEquity";
+// import Api from "../../../Services/AccountApi";
 
 function RiskMonitor() {
-  const { enqueueSnackbar } = useSnackbar();
+  // const { enqueueSnackbar } = useSnackbar();
 
   const [value, setValue] = React.useState("1");
 
-  const [data, setData] = React.useState([]);
+  // const [data, setData] = React.useState([]);
 
-  const [searchVal, setSearchVal] = React.useState({
-    accountNumber: "",
-    contact: "",
-    email: "",
-    id: "",
-    name: "",
-    social: "",
-    ssn: "",
-  });
+  // const [searchVal, setSearchVal] = React.useState({
+  //   accountNumber: "",
+  //   contact: "",
+  //   email: "",
+  //   id: "",
+  //   name: "",
+  //   social: "",
+  //   ssn: "",
+  // });
 
-  React.useEffect(() => {
-    async function fetchData() {
-      let getApprovedAccounts = await Api.getApprovedAccount();
-      if (getApprovedAccounts.status !== 200) {
-        enqueueSnackbar(`Failed to recieve approved accounts!`, {
-          variant: "error",
-        });
-        return setData(getApprovedAccounts);
-      }
-      setData(getApprovedAccounts.data.data);
-    }
-    fetchData();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // React.useEffect(() => {
+  //   async function fetchData() {
+  //     let getApprovedAccounts = await Api.getApprovedAccount();
+  //     if (getApprovedAccounts.status !== 200) {
+  //       enqueueSnackbar(`Failed to recieve approved accounts!`, {
+  //         variant: "error",
+  //       });
+  //       return setData(getApprovedAccounts);
+  //     }
+  //     setData(getApprovedAccounts.data.data);
+  //   }
+  //   fetchData();
+  // }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const TabsVal = [
     {
@@ -52,19 +53,12 @@ function RiskMonitor() {
         {
           label: "Low Equity",
           value: "1",
-          component: (
-            <OrderTable
-              type="Low Equity"
-              column={column}
-              row={row}
-              ssn={searchVal.ssn}
-            />
-          ),
+          component: <LowEquity />,
         },
         {
           label: "Trade Surveillance",
           value: "2",
-          component: <TradeSurvillence ssn={searchVal.ssn} />,
+          component: <TradeSurvillence />,
         },
       ],
     },
@@ -73,17 +67,17 @@ function RiskMonitor() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const selectRowHandler = (e) => {
-    setSearchVal(e.row);
-    enqueueSnackbar(`Selected user ${e.row.name}`, {
-      variant: "success",
-    });
-  };
+  // const selectRowHandler = (e) => {
+  //   setSearchVal(e.row);
+  //   enqueueSnackbar(`Selected user ${e.row.name}`, {
+  //     variant: "success",
+  //   });
+  // };
   return (
     <Stack spacing={6}>
-      <Stack direction="row" sx={{ width: "100%" }} gap={2}>
+      {/* <Stack direction="row" sx={{ width: "100%" }} gap={2}>
         <SearchUser data={data} getRow={selectRowHandler} />
-      </Stack>
+      </Stack> */}
 
       <Tabs value={value}>
         <>
@@ -109,68 +103,68 @@ function RiskMonitor() {
   );
 }
 
-const column = [
-  {
-    field: "account",
-    headerName: "Account #",
-    flex: 1,
-  },
-  {
-    field: "reason",
-    headerName: "Reason",
-    flex: 1,
-  },
-  {
-    field: "equity",
-    headerName: "Equity",
-    flex: 1,
-  },
-  {
-    field: "nav",
-    headerName: "NAV",
-    flex: 1,
-  },
-  {
-    field: "date",
-    headerName: "Date",
-    flex: 1,
-  },
-  {
-    field: "reviewed",
-    headerName: "Reviewed",
-    flex: 1,
-    preventSearch: true,
-    renderCell: (params) => <Checkbox onlyCheckbox />,
-  },
-];
-const row = [
-  {
-    id: 0,
-    account: "12534",
-    reason: "reversed",
-    equity: "50%",
-    nav: "$900",
-    reviewed: "yes",
-    date: "12/2/2025",
-  },
-  {
-    id: 1,
-    account: "14253",
-    reason: "reversed",
-    equity: "50%",
-    nav: "$900",
-    reviewed: "yes",
-    date: "12/2/2025",
-  },
-  {
-    id: 2,
-    account: "53124",
-    reason: "reversed",
-    equity: "50%",
-    nav: "$900",
-    reviewed: "yes",
-    date: "12/2/2025",
-  },
-];
+// const column = [
+//   {
+//     field: "account",
+//     headerName: "Account #",
+//     flex: 1,
+//   },
+//   {
+//     field: "reason",
+//     headerName: "Reason",
+//     flex: 1,
+//   },
+//   {
+//     field: "equity",
+//     headerName: "Equity",
+//     flex: 1,
+//   },
+//   {
+//     field: "nav",
+//     headerName: "NAV",
+//     flex: 1,
+//   },
+//   {
+//     field: "date",
+//     headerName: "Date",
+//     flex: 1,
+//   },
+//   {
+//     field: "reviewed",
+//     headerName: "Reviewed",
+//     flex: 1,
+//     preventSearch: true,
+//     renderCell: (params) => <Checkbox onlyCheckbox />,
+//   },
+// ];
+// const row = [
+//   {
+//     id: 0,
+//     account: "12534",
+//     reason: "reversed",
+//     equity: "50%",
+//     nav: "$900",
+//     reviewed: "yes",
+//     date: "12/2/2025",
+//   },
+//   {
+//     id: 1,
+//     account: "14253",
+//     reason: "reversed",
+//     equity: "50%",
+//     nav: "$900",
+//     reviewed: "yes",
+//     date: "12/2/2025",
+//   },
+//   {
+//     id: 2,
+//     account: "53124",
+//     reason: "reversed",
+//     equity: "50%",
+//     nav: "$900",
+//     reviewed: "yes",
+//     date: "12/2/2025",
+//   },
+// ];
 
 export default RiskMonitor;

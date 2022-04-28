@@ -8,32 +8,64 @@ import Tabs from "./../../../../UI/Tabs/Tabs";
 import Button from "../../../../UI/Button/Button";
 import Stack from "../../../../UI/Layout/Stack";
 import { getFields } from "./getFields";
-import orders from "../../../../Constants/mock_data_expiration_autoLiquidation.json";
 import Modal from "../../../../UI/Modal/Modal";
 import TextField from "../../../../UI/TextField/TextFieldComp";
-import DatePicker from "../../../../UI/Date/DatePickerComp";
 import { useSnackbar } from "notistack";
+import Api from "../../../../Services/ExpirationApi";
+import Constants from "../../../../Constants/Constants";
 
 export const AddNew = ({ setRandom }) => {
   const { enqueueSnackbar } = useSnackbar();
-  const [date, setDate] = React.useState(new Date());
-  const clickBtnHandler = (e) => {
+  const [account, setAccount] = React.useState("");
+  const [position, setPosition] = React.useState("");
+  const [quantity, setQuantity] = React.useState("");
+
+  const clickBtnHandler = async (e) => {
     setRandom(`${Math.random()}`);
+    let postEarly = await Api.requestExercise({
+      account: account,
+      ticker: position,
+      Qty: quantity,
+    });
+    if (postEarly.data.result.success) {
+      setAccount("");
+      setPosition("");
+      enqueueSnackbar(postEarly.data.result.msg, {
+        variant: "success",
+      });
+    } else
+      enqueueSnackbar(Constants.Save_Changes_Failed, {
+        variant: "error",
+      });
     enqueueSnackbar(`Added Successfully!`, {
       variant: "success",
     });
   };
   return (
     <Stack justifyContent="space-between" gap="16px" alignItems="center">
-      <TextField fullWidth size="small" isdefault={true} label="Account" />
-      <TextField fullWidth size="small" isdefault={true} label="Position" />
-      <TextField fullWidth size="small" isdefault={true} label="Quantity" />
-      <DatePicker
-        value={date}
-        setValue={(e) => setDate(e)}
-        textFieldProps={{ size: "small", fullWidth: true }}
+      <TextField
+        fullWidth
+        size="small"
+        value={account}
+        onChange={(e) => setAccount(e.target.value)}
         isdefault={true}
-        label="Time Stamp"
+        label="Account"
+      />
+      <TextField
+        fullWidth
+        size="small"
+        value={position}
+        onChange={(e) => setPosition(e.target.value)}
+        isdefault={true}
+        label="Position"
+      />
+      <TextField
+        fullWidth
+        size="small"
+        value={quantity}
+        onChange={(e) => setQuantity(e.target.value)}
+        isdefault={true}
+        label="Quantity"
       />
       <Button onClick={clickBtnHandler}>Done</Button>
     </Stack>
@@ -46,15 +78,29 @@ const PendingPage = (props) => {
       <OrderTable
         type={"Pending"}
         column={getFields("Pending", "Early")}
-        row={orders}
+        row={props.row}
+        rowID={"account"}
       />
     </Box>
   );
 };
 
-const AutoLiquidation = () => {
+const Early = () => {
   const [random, setRandom] = React.useState("");
   const [value, setValue] = React.useState("1");
+  const [pending, setPending] = React.useState([]);
+  const [archive, setArchive] = React.useState([]);
+
+  React.useEffect(() => {
+    fetchData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const fetchData = async () => {
+    let getPending = await Api.getEarlyExercisesPending();
+    let getArchive = await Api.getEarlyExercisesComplete();
+    setPending(getPending);
+    setArchive(getArchive);
+  };
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -65,7 +111,7 @@ const AutoLiquidation = () => {
         {
           label: "Pending",
           value: "1",
-          component: <PendingPage />,
+          component: <PendingPage row={pending} />,
         },
         {
           label: "Archive",
@@ -74,7 +120,8 @@ const AutoLiquidation = () => {
             <OrderTable
               type={"Archived"}
               column={getFields("Archived", "Early")}
-              row={orders}
+              row={archive}
+              rowID={"account"}
             />
           ),
         },
@@ -123,4 +170,4 @@ const AutoLiquidation = () => {
   );
 };
 
-export default AutoLiquidation;
+export default Early;

@@ -6,11 +6,17 @@ import Button from "../../../../../UI/Button/Button";
 import Stack from "../../../../../UI/Layout/Stack";
 import Search from "./../../../../../UI/AutoComplete/Autocomplete";
 
-const ApplicationReject = ({ triggerClose }) => {
+const ApplicationReject = ({ triggerClose, onRejectApplication, ssn }) => {
+  const [value, setValue] = React.useState("");
   return (
     <Stack gap={2}>
       <Typography variant="h6">Reject</Typography>
-      <TextFieldComp isdefault={true} label="Notes" />
+      <TextFieldComp
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        isdefault={true}
+        label="Notes"
+      />
       <Search Label="Rejected Because" />
       <Stack direction="row" justifyContent="space-between">
         <Button sx={{ color: "white" }} isdefault={true}>
@@ -18,6 +24,7 @@ const ApplicationReject = ({ triggerClose }) => {
         </Button>
         <Button
           onClick={(e) => {
+            onRejectApplication(value, ssn);
             e.preventDefault();
             triggerClose();
           }}

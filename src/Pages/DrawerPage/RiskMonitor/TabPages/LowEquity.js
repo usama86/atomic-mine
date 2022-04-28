@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Box from "./../../../../UI/Layout/Box";
 import Table from "./../../../../UI/Table/TableWithGlobalFiltering";
-import Button from "../../../../UI/Button/Button";
 import RiskApi from "../../../../Services/RiskMonitorApi";
 import Checkbox from "../../../../UI/Checkbox/Checkbox";
-import Modal from "../../../../UI/Modal/Modal";
-import AddNew from "./Modals/TradeNewModel";
+import { getTime } from "../../../../helpers/utils";
+// import Button from "../../../UI/Button/Button";
 
-function TradeSurvveillance() {
+function LowEquity() {
   const column = [
     {
       field: "account",
@@ -34,6 +33,8 @@ function TradeSurvveillance() {
       field: "occurred_on",
       headerName: "Date",
       flex: 1,
+      type: "dateTime",
+      valueGetter: getTime,
     },
     {
       field: "reviewed",
@@ -44,40 +45,35 @@ function TradeSurvveillance() {
     },
   ];
 
-  const [TSE, setTSE] = React.useState([]);
-  const [random, setRandom] = React.useState("");
+  const [negativeNAVs, setNegativeNAVs] = React.useState([]);
   React.useEffect(() => {
     fetchData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
-    let getTSE = await RiskApi.getTSEvts();
-    setTSE(getTSE.data.data);
+    let getNegativeNAVs = await RiskApi.getNegativeNAVs();
+    setNegativeNAVs(getNegativeNAVs.data.data);
   };
+
   return (
     <>
       <Box sx={{ height: "20rem", width: "100%" }}>
-        <Modal
-          closeDependancy={random}
-          content={<AddNew setRandom={setRandom} />}
-        >
-          <Button sx={{ color: "#fff" }}>NEW</Button>
-        </Modal>
-        <Table columns={column} rows={TSE} rowID="account" />
+        {/* <Button sx={{ color: "#fff" }}>NEW</Button> */}
+        <Table columns={column} rows={negativeNAVs} rowID="account" />
       </Box>
     </>
   );
 }
 
-TradeSurvveillance.propTypes = {
+LowEquity.propTypes = {
   type: PropTypes.string,
   column: PropTypes.array,
   row: PropTypes.array,
 };
-TradeSurvveillance.defaultProps = {
+LowEquity.defaultProps = {
   type: "Default Type",
   column: [],
   row: [],
 };
 
-export default TradeSurvveillance;
+export default LowEquity;

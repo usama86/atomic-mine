@@ -172,8 +172,8 @@ const api = {
         d = { ...d, totalBalance: Number(totalAmount).toFixed(2) };
       } else {
         if (d.side.charAt(0) === "B")
-          totalAmount += Number(d.avg_filled_price) * Number(d.qty);
-        else totalAmount -= Number(d.avg_filled_price) * Number(d.qty);
+          totalAmount -= Number(d.avg_filled_price) * Number(d.qty);
+        else totalAmount += Number(d.avg_filled_price) * Number(d.qty);
         d = { ...d, totalBalance: Number(totalAmount).toFixed(2) };
       }
       return d;

@@ -37,6 +37,7 @@ function Account() {
   const [value, setValue] = React.useState("1");
 
   React.useEffect(() => {
+    let mounted = true;
     async function fetchData() {
       let getApprovedAccounts = await Api.getApprovedAccount();
       if (getApprovedAccounts.status !== 200) {
@@ -47,7 +48,10 @@ function Account() {
       }
       setData(getApprovedAccounts.data.data);
     }
-    fetchData();
+    if (mounted) {
+      fetchData();
+    }
+    return () => (mounted = false);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const TabsVal = [

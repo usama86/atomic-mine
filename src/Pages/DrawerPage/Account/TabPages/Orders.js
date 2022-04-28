@@ -289,9 +289,8 @@ const Orders = (ssn) => {
   };
 
   const handleAcceptFunc = async (orderID) => {
-    console.log(orderID);
     let cancelOrder = await Api.cancelOrder({ order_id: orderID });
-    console.log(cancelOrder);
+
     if (cancelOrder.data.result.success) {
       enqueueSnackbar(cancelOrder.data.result.msg, {
         variant: "success",

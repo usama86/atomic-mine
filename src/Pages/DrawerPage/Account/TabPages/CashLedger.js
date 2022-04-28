@@ -25,7 +25,9 @@ const CashLedger = (ssn) => {
       "/" +
       (dateVal.getMonth() + 1) +
       "/" +
-      dateVal.getFullYear()
+      dateVal.getFullYear() +
+      " " +
+      dateVal.toLocaleTimeString()
     );
   };
   const fields = [

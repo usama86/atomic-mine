@@ -61,7 +61,7 @@ const defaultBalanceData = {
 
 const Balance = (ssn) => {
   const { enqueueSnackbar } = useSnackbar();
-  const [loader, setLoader] = React.useState(false);
+  const [loader, setLoader] = React.useState(true);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
   const [random, setRandom] = React.useState("");
@@ -118,8 +118,10 @@ const Balance = (ssn) => {
   };
 
   React.useEffect(() => {
-    setLoader(true);
-    fetchData();
+    if (loader) fetchData();
+    return () => {
+      setLoader(false);
+    };
   }, [ssn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getPlValue = (params) => {

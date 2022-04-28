@@ -1,4 +1,5 @@
 import Button from "../../../../UI/Button/Button";
+import { getTime } from "../../../../helpers/utils";
 export const getFields = (type, page) => {
   if (page === "AutoLiquidation") {
     if (type === "Pending")
@@ -88,7 +89,7 @@ export const getFields = (type, page) => {
           headerName: "Acc #",
         },
         {
-          field: "position",
+          field: "ticker",
           flex: 0.7,
           headerName: "Position",
         },
@@ -98,7 +99,7 @@ export const getFields = (type, page) => {
           headerName: "Underlying Price",
         },
         {
-          field: "quantity",
+          field: "qty",
           flex: 0.7,
           headerName: "Quantity",
         },
@@ -108,7 +109,7 @@ export const getFields = (type, page) => {
           headerName: "Buying Power",
         },
         {
-          field: "requested_timestamp",
+          field: "completed_on",
           flex: 1,
           headerName: "Req. Time Stamp",
           type: "date",
@@ -123,17 +124,17 @@ export const getFields = (type, page) => {
           headerName: "Acc #",
         },
         {
-          field: "position",
+          field: "ticker",
           flex: 0.7,
           headerName: "Position",
         },
         {
-          field: "quantity",
+          field: "qty",
           flex: 0.7,
           headerName: "Quantity",
         },
         {
-          field: "timestamp",
+          field: "completed_on",
           flex: 1,
           headerName: "Time Stamp",
           type: "date",
@@ -148,20 +149,21 @@ export const getFields = (type, page) => {
         headerName: "Acc #",
       },
       {
-        field: "position",
+        field: "ticker",
         flex: 0.7,
         headerName: "Position",
       },
       {
-        field: "quantity",
+        field: "qty",
         flex: 0.7,
         headerName: "Quantity",
       },
       {
-        field: "requested_timestamp",
+        field: "DNE_request_timestamp",
         flex: 1,
         headerName: "Req. Time Stamp",
-        type: "date",
+        type: "dateTime",
+        valueGetter: getTime,
       },
     ];
   }
@@ -174,26 +176,26 @@ export const getFields = (type, page) => {
           headerName: "Acc #",
         },
         {
-          field: "position",
+          field: "ticker",
           flex: 0.7,
           headerName: "Position",
         },
         {
-          field: "quantity",
+          field: "qty",
           flex: 0.7,
           headerName: "Quantity",
         },
         {
           field: "fill_price",
           flex: 0.7,
-          headerName: "Fill Price",
+          headerName: "Underlying Price",
         },
-        {
-          field: "requested_timestamp",
-          flex: 1,
-          headerName: "Req. Time Stamp",
-          type: "date",
-        },
+        // {
+        //   field: "completed_on",
+        //   flex: 1,
+        //   headerName: "Req. Time Stamp",
+        //   type: "date",
+        // },
       ];
     if (type === "Archived")
       return [
@@ -203,19 +205,24 @@ export const getFields = (type, page) => {
           headerName: "Acc #",
         },
         {
-          field: "position",
+          field: "ticker",
           flex: 0.7,
           headerName: "Position",
         },
         {
-          field: "quantity",
+          field: "qty",
           flex: 0.7,
           headerName: "Quantity",
         },
         {
-          field: "timestamp",
+          field: "fill_price",
+          flex: 0.7,
+          headerName: "Underlying Price",
+        },
+        {
+          field: "completed_on",
           flex: 1,
-          headerName: "Time Stamp",
+          headerName: "Req. Time Stamp",
           type: "date",
         },
       ];
